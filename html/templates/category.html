@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang = "kor">
+<html>
+    <head>
+        <meta charset = "UTF-8">
+        <meta name="viewport" content="user-scalable=0, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width" />
+        <meta http-equiv="Cache-Control" content="no-cache">
+        <meta http-equiv="Exprires" content="-1">
+        <meta http-equiv="Pragma" content="no-cache">
+        <title>Warframe Trade Status</title>
+        <!---------------------------------------------------------------------->
+        <link rel="stylesheet" type = "text/css" href = "{{ url_for('static', filename = 'css/result.css', v = 0.1) }}" />
+        <link rel="stylesheet" type = "text/css" href = "{{ url_for('static', filename = 'css/index.css', v = 0.1) }}" />
+        <link rel="stylesheet" type = "text/css" href = "{{ url_for('static', filename = 'css/table.css', v = 0.1) }}" />
+        <link rel="stylesheet" type = "text/css" href = "{{ url_for('static', filename = 'css/category.css', v = 0.1) }}" />
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&amp;" rel="stylesheet">
+        <!---------------------------------------------------------------------->
+        <script src="{{ url_for('static', filename = 'js/AutoComplete.min.js') }}" type="text/javascript"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+        <script src="https://cdn.datatables.net/t/bs-3.3.6/jqc-1.12.0,dt-1.10.11/datatables.min.js"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171057981-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-171057981-1');
+        </script>
+    </head>
+    <body>
+        <script>
+            window.onload = function () {
+                var input = document.getElementById("item_name");
+                input.addEventListener('click', function(){
+                    var all_items = {{ all_item_kr | tojson }};
+                    new AutoComplete(document.querySelector('#item_name'), all_items);
+                });
+            };
+        </script>
+        <div>
+            <ul class="header">
+                <li class="header_logo">
+                    <a href="http://rpc-flask-app.run.goorm.io/">
+                        <img alt="WTS" src="{{ url_for('static', filename = './image/icon/logo.png', v = 0.1) }}">
+                    </a>
+                </li>
+                <li class="header_menubar">
+                    <script>
+                        function pop_menu(){
+                            var button = document.getElementById("x_button");
+                            var close = document.getElementById("menubar");
+                            button.style.display = "table";
+                            close.style.animationName = "movemenu_0";
+                            close.style.display = "block";
+                        };
+                        
+                        function delay() {
+                            var close = document.getElementById("menubar");
+                            close.style.display = "none";
+                            close.style.display = "none";
+                        };
+                        
+                        function close_menu(){
+                            var button = document.getElementById("x_button");
+                            var close = document.getElementById("menubar");
+                            button.style.display = "none";
+                            close.style.animationName = "movemenu_1";
+                            setTimeout("delay()", 500);
+                        };
+                    </script>
+                    <span class="icon_1" onclick="pop_menu()"><i class="fa fa-bars fa-2x"></i></span>
+                    <span class="icon_2" onclick="close_menu()" id="x_button"><i class="fa fa-times fa-2x"></i></span>
+                    <ul class="mobile_menus" id="menubar">
+                        <div class="text_menus_0">
+                            <a>메뉴</a>
+                        </div>
+                        <li>
+                            <a class="text_menus_1" href="http://rpc-flask-app.run.goorm.io/notice">공지사항</a>
+                        </li>
+                        <li>
+                            <a class="text_menus_2" href="http://rpc-flask-app.run.goorm.io/category">카테고리</a>
+                        </li>
+                        <li>
+                            <a class="text_menus_3">시세 분석(준비중)</a>
+                        </li>
+                        <li>
+                            <a class="text_menus_4">백테스트(준비중)</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="header_search">
+                    <script>
+                        function input_search(){
+                            var msg = document.getElementById("item_name").value;
+                            if (msg == ""){
+                                console.log("검색값 없음");
+                            }else {
+                                var links = String(msg);
+                                location.href = "http://rpc-flask-app.run.goorm.io/result/" + links;
+                            }
+                        }
+                    </script>
+                    <div class="auto_search">
+                        <div class="text_boxs"></div>
+                        <input type="text" id="item_name" onkeypress="if(event.keyCode==13) {input_search(); return false;}" placeholder="검색" autocomplete="yes">
+                        <span class="icon" onclick="input_search()"><i class="fa fa-search"></i></span>
+                    </div>
+                </li>
+                <li class="header_menu">
+                    <div class="text_boxss"></div>
+                    <a class="text_menu">메뉴</a>
+                    <ul class="header_menu_nav">
+                        <li>
+                            <div class="text_boxss_1"></div>
+                            <a class="text_menu_1" href="http://rpc-flask-app.run.goorm.io/notice">공지사항</a>
+                        </li>
+                        <li>
+                            <div class="text_boxss_2"></div>
+                            <a class="text_menu_2" href="http://rpc-flask-app.run.goorm.io/category">카테고리</a>
+                        </li>
+                        <li>
+                            <div class="text_boxss_3"></div>
+                            <a class="text_menu_3">시세 분석(준비중)</a>
+                        </li>
+                        <li>
+                            <div class="text_boxss_4"></div>
+                            <a class="text_menu_4">백테스트(준비중)</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="header_info">
+                    <a>로그인</a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="menu">
+            <div style="background-color: #ffffff; float: left; width: 100%; min-height: 20px; height: auto;">
+                <script>
+                    function find_down(){
+                        var button = document.getElementById("c_0");
+                        button.style.display = "none";
+                    };
+
+                    function find_up_1(){
+                        var button = document.getElementById("c_0");
+                        if(button.style.display == "block") {
+                                button.style.display = "none";
+                        }else {
+                            button.style.display = "block";
+                            var item_0 = document.getElementById("weapon");
+                            item_0.style.display = "table";
+                            var item_1 = document.getElementById("mode");
+                            item_1.style.display = "none";
+                            var item_2 = document.getElementById("etc");
+                            item_2.style.display = "none";
+                            var item_3 = document.getElementById("rec");
+                            item_3.style.display = "none";
+                        }
+                    };
+
+                    function find_up_2(){
+                        var button = document.getElementById("c_0");
+                        if(button.style.display == "block") {
+                            button.style.display = "none";
+                        }else {
+                            button.style.display = "block";
+                            var item_0 = document.getElementById("weapon");
+                            item_0.style.display = "none";
+                            var item_1 = document.getElementById("mode");
+                            item_1.style.display = "table";
+                            var item_2 = document.getElementById("etc");
+                            item_2.style.display = "none";
+                            var item_3 = document.getElementById("rec");
+                            item_3.style.display = "none";
+                        }
+                    };
+                    
+                    function find_up_3(){
+                        var button = document.getElementById("c_0");
+                        if(button.style.display == "block") {
+                            button.style.display = "none";
+                        }else {
+                            button.style.display = "block";
+                            var item_0 = document.getElementById("weapon");
+                            item_0.style.display = "none";
+                            var item_1 = document.getElementById("mode");
+                            item_1.style.display = "none";
+                            var item_2 = document.getElementById("etc");
+                            item_2.style.display = "table";
+                            var item_3 = document.getElementById("rec");
+                            item_3.style.display = "none";
+                        }
+                    };
+                    
+                    function find_up_4(){
+                        var button = document.getElementById("c_0");
+                        if(button.style.display == "block") {
+                            button.style.display = "none";
+                        }else {
+                            button.style.display = "block";
+                            var item_0 = document.getElementById("weapon");
+                            item_0.style.display = "none";
+                            var item_1 = document.getElementById("mode");
+                            item_1.style.display = "none";
+                            var item_2 = document.getElementById("etc");
+                            item_2.style.display = "none";
+                            var item_3 = document.getElementById("rec");
+                            item_3.style.display = "table";
+                        }
+                    };
+                    
+                    function href_site(click_value){
+                        var input_item = click_value.innerText;
+                        location.href = "http://rpc-flask-app.run.goorm.io/result/" + input_item;
+                    };
+                    
+                    function search_value(click_id){
+                        var button = click_id.value;
+                        if(button == 1) {
+                            var value = "프라임드 모드 모음";
+                            document.getElementById("category_value").innerHTML = value;
+                            document.getElementById("change_category").innerHTML = "{% for i in range(0, rec_len_data_0) %}<div class='item_0'><p><img alt='{{ rec_kr_name_0[i] }}' src='{{ url_for('static', filename = rec_image_0[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ rec_name_0[i] }}'>{{ rec_kr_name_0[i] }}</a><div class='item_0_text'>가격: {{ rec_price_0[i] }}</div></div>{% endfor %}";
+                        }else if(button == 2) {
+                            var value = "워프레임";
+                            document.getElementById("category_value").innerHTML = value;
+                            document.getElementById("change_category").innerHTML = "{% for i in range(0, type_warframe_len) %}<div class='item_0'><p><img alt='{{ type_warframe_item_kr[i] }}' src='{{ url_for('static', filename = type_warframe_path_1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_warframe_item[i] }}'>{{ type_warframe_item_kr[i] }}</a><div class='item_0_text'>가격: {{ type_warframe_price[i] }}</div></div>{% endfor %}";
+                        }else if(button == 3) {
+                            var value = "주무기";
+                            document.getElementById("category_value").innerHTML = value;
+                            document.getElementById("change_category").innerHTML = "{% for i in range(0, type_primary_len) %}<div class='item_0'><p><img alt='{{ type_primary_item_kr[i] }}' src='{{ url_for('static', filename = type_primary_path_1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_primary_item[i] }}'>{{ type_primary_item_kr[i] }}</a><div class='item_0_text'>가격: {{ type_primary_price[i] }}</div></div>{% endfor %}";
+                        }else if(button == 4) {
+                            var value = "보조무기";
+                            document.getElementById("category_value").innerHTML = value;
+                            document.getElementById("change_category").innerHTML = "{% for i in range(0, type_secondary_len) %}<div class='item_0'><p><img alt='{{ type_secondary_item_kr[i] }}' src='{{ url_for('static', filename = type_secondary_path_1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_secondary_item[i] }}'>{{ type_secondary_item_kr[i] }}</a><div class='item_0_text'>가격: {{ type_secondary_price[i] }}</div></div>{% endfor %}";
+                        }else if(button == 5) {
+                            var value = "근접무기";
+                            document.getElementById("category_value").innerHTML = value;
+                            document.getElementById("change_category").innerHTML = "{% for i in range(0, type_melee_len) %}<div class='item_0'><p><img alt='{{ type_melee_item_kr[i] }}' src='{{ url_for('static', filename = type_melee_path_1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_melee_item[i] }}'>{{ type_melee_item_kr[i] }}</a><div class='item_0_text'>가격: {{ type_melee_price[i] }}</div></div>{% endfor %}";
+                        }else if(button == 6) {
+                            var value = "워프레임 모드";
+                            document.getElementById("category_value").innerHTML = value;
+                            document.getElementById("change_category").innerHTML = "{% for i in range(0, type_warframe_mod_len) %}<div class='item_0'><p><img alt='{{ type_warframe_mod_item_kr[i] }}' src='{{ url_for('static', filename = type_warframe_mod_path_1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_warframe_mod_item[i] }}'>{{ type_warframe_mod_item_kr[i] }}</a><div class='item_0_text'>가격: {{ type_warframe_mod_price[i] }}</div></div>{% endfor %}";
+                        }else if(button == 8) {
+                            var value = "주무기 모드";
+                            document.getElementById("category_value").innerHTML = value;
+                            document.getElementById("change_category").innerHTML = "{% for i in range(0, type_primary_mod_len) %}<div class='item_0'><p><img alt='{{ type_primary_mod_item_kr[i] }}' src='{{ url_for('static', filename = type_primary_mod_path_1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_primary_mod_item[i] }}'>{{ type_primary_mod_item_kr[i] }}</a><div class='item_0_text'>가격: {{ type_primary_mod_price[i] }}</div></div>{% endfor %}";
+                        }else if(button == 9) {
+                            var value = "보조무기 모드";
+                            document.getElementById("category_value").innerHTML = value;
+                            document.getElementById("change_category").innerHTML = "{% for i in range(0, type_secondary_mod_len) %}<div class='item_0'><p><img alt='{{ type_secondary_mod_item_kr[i] }}' src='{{ url_for('static', filename = type_secondary_mod_path_1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_secondary_mod_item[i] }}'>{{ type_secondary_mod_item_kr[i] }}</a><div class='item_0_text'>가격: {{ type_secondary_mod_price[i] }}</div></div>{% endfor %}";
+                        }else if(button == 10) {
+                            var value = "근접무기 모드";
+                            document.getElementById("category_value").innerHTML = value;
+                            document.getElementById("change_category").innerHTML = "{% for i in range(0, type_melee_mod_len) %}<div class='item_0'><p><img alt='{{ type_melee_mod_item_kr[i] }}' src='{{ url_for('static', filename = type_melee_mod_path_1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_melee_mod_item[i] }}'>{{ type_melee_mod_item_kr[i] }}</a><div class='item_0_text'>가격: {{ type_melee_mod_price[i] }}</div></div>{% endfor %}";
+                        }else if(button == 11) {
+                            var value = "아케인";
+                            document.getElementById("category_value").innerHTML = value;
+                            document.getElementById("change_category").innerHTML = "{% for i in range(0, type_arcane_len) %}<div class='item_0'><p><img alt='{{ type_arcane_item_kr[i] }}' src='{{ url_for('static', filename = type_arcane_path_1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_arcane_item[i] }}'>{{ type_arcane_item_kr[i] }}</a><div class='item_0_text'>가격: {{ type_arcane_price[i] }}</div></div>{% endfor %}";
+                        }else {
+                            var value = "기타";
+                            document.getElementById("category_value").innerHTML = value;
+                            document.getElementById("change_category").innerHTML = "준비중";
+                        };
+                    };
+                </script>
+                <div class="category_0">
+                    <a>카테고리</a>
+                </div>
+                <div class="category_1">
+                    <ul>
+                        <li class="category_top" onclick="find_up_4()">
+                            <a>추천</a>
+                        </li>
+                        <li class="category_top" id="search_value" onclick="find_down(), search_value(this)" value="2">
+                            <a>워프레임</a>
+                        </li>
+                        <li class="category_top" onclick="find_up_1()">
+                            <a>무기</a>
+                        </li>
+                        <li class="category_top" onclick="find_up_2()">
+                            <a>모드</a>
+                        </li>
+                        <li class="category_top" onclick="find_up_3()">
+                            <a>기타</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="category_2" id="c_0">
+                    <ul class="weapon" id="weapon">
+                        <li onclick="search_value(this)" value="3">
+                            <a>주무기</a>
+                        </li>
+                        <li onclick="search_value(this)" value="4">
+                            <a>보조무기</a>
+                        </li>
+                        <li onclick="search_value(this)" value="5">
+                            <a>근접무기</a>
+                        </li>
+                    </ul>
+                    <ul class="mode" id="mode">
+                        <li onclick="search_value(this)" value="6">
+                            <a>워프레임 모드</a>
+                        </li>
+                        <li onclick="search_value(this)" value="8">
+                            <a>주무기 모드</a>
+                        </li>
+                        <li onclick="search_value(this)" value="9">
+                            <a>보조무기 모드</a>
+                        </li>
+                        <li onclick="search_value(this)" value="10">
+                            <a>근접무기 모드</a>
+                        </li>
+                    </ul>
+                    <ul class="etc" id="etc">
+                        <li onclick="search_value(this)" value="11">
+                            <a>아케인</a>
+                        </li>
+                    </ul>
+                    <ul class="rec" id="rec">
+                        <li onclick="search_value(this)" value="1">
+                            <a>프라임드 모드 모음</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        
+        <div class="menu_1">
+            <div style="background-color: #ffffff; float: left; width: 100%; min-height: 50px; height: auto;">
+                <script>
+                    function find_menu_value(){
+                        var value = document.getElementById("category_value").innerHTML;
+                        return value;
+                    };
+                    
+                    function search_value_1(click_id){
+                        var menu_value = find_menu_value();
+                        var button = click_id.value;
+                        
+                        if(menu_value == "워프레임") {
+                            if(button == 1) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_warframe_len) %}<div class='item_0'><p><img alt='{{ type_warframe_item_kr_pr1[i] }}' src='{{ url_for('static', filename = type_warframe_path_1_pr1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_warframe_item_pr1[i] }}'>{{ type_warframe_item_kr_pr1[i] }}</a><div class='item_0_text'>가격: {{ type_warframe_price_pr1[i] }}</div></div>{% endfor %}";
+                                click_id.value = 2;
+                            }else if(button == 2) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_warframe_len) %}<div class='item_0'><p><img alt='{{ type_warframe_item_kr_pr2[i] }}' src='{{ url_for('static', filename = type_warframe_path_1_pr2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_warframe_item_pr2[i] }}'>{{ type_warframe_item_kr_pr2[i] }}</a><div class='item_0_text'>가격: {{ type_warframe_price_pr2[i] }}</div></div>{% endfor %}";
+                                click_id.value = 1;
+                            }else if(button == 3) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_warframe_len) %}<div class='item_0'><p><img alt='{{ type_warframe_item_kr_pe1[i] }}' src='{{ url_for('static', filename = type_warframe_path_1_pe1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_warframe_item_pe1[i] }}'>{{ type_warframe_item_kr_pe1[i] }}</a><div class='item_0_text'>퍼센트: {{ type_warframe_percent_pe1[i] }}%</div></div>{% endfor %}";
+                                click_id.value = 4;
+                            }else if(button == 4) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_warframe_len) %}<div class='item_0'><p><img alt='{{ type_warframe_item_kr_pe2[i] }}' src='{{ url_for('static', filename = type_warframe_path_1_pe2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_warframe_item_pe2[i] }}'>{{ type_warframe_item_kr_pe2[i] }}</a><div class='item_0_text'>퍼센트: {{ type_warframe_percent_pe2[i] }}%</div></div>{% endfor %}";
+                                click_id.value = 3;
+                            }else if(button == 5) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_warframe_len) %}<div class='item_0'><p><img alt='{{ type_warframe_item_kr_vo1[i] }}' src='{{ url_for('static', filename = type_warframe_path_1_vo1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_warframe_item_vo1[i] }}'>{{ type_warframe_item_kr_vo1[i] }}</a><div class='item_0_text'>거래량: {{ type_warframe_volume_vo1[i] }}</div></div>{% endfor %}";
+                                click_id.value = 6;
+                            }else if(button == 6) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_warframe_len) %}<div class='item_0'><p><img alt='{{ type_warframe_item_kr_vo2[i] }}' src='{{ url_for('static', filename = type_warframe_path_1_vo2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_warframe_item_vo2[i] }}'>{{ type_warframe_item_kr_vo2[i] }}</a><div class='item_0_text'>거래량: {{ type_warframe_volume_vo2[i] }}</div></div>{% endfor %}";
+                                click_id.value = 5;
+                            }else {
+                                console.log("오류!");
+                            };
+                        }else if(menu_value == "주무기") {
+                            if(button == 1) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_primary_len) %}<div class='item_0'><p><img alt='{{ type_primary_item_kr_pr1[i] }}' src='{{ url_for('static', filename = type_primary_path_1_pr1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_primary_item_pr1[i] }}'>{{ type_primary_item_kr_pr1[i] }}</a><div class='item_0_text'>가격: {{ type_primary_price_pr1[i] }}</div></div>{% endfor %}";
+                                click_id.value = 2;
+                            }else if(button == 2) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_primary_len) %}<div class='item_0'><p><img alt='{{ type_primary_item_kr_pr2[i] }}' src='{{ url_for('static', filename = type_primary_path_1_pr2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_primary_item_pr2[i] }}'>{{ type_primary_item_kr_pr2[i] }}</a><div class='item_0_text'>가격: {{ type_primary_price_pr2[i] }}</div></div>{% endfor %}";
+                                click_id.value = 1;
+                            }else if(button == 3) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_primary_len) %}<div class='item_0'><p><img alt='{{ type_primary_item_kr_pe1[i] }}' src='{{ url_for('static', filename = type_primary_path_1_pe1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_primary_item_pe1[i] }}'>{{ type_primary_item_kr_pe1[i] }}</a><div class='item_0_text'>퍼센트: {{ type_primary_percent_pe1[i] }}%</div></div>{% endfor %}";
+                                click_id.value = 4;
+                            }else if(button == 4) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_primary_len) %}<div class='item_0'><p><img alt='{{ type_primary_item_kr_pe2[i] }}' src='{{ url_for('static', filename = type_primary_path_1_pe2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_primary_item_pe2[i] }}'>{{ type_primary_item_kr_pe2[i] }}</a><div class='item_0_text'>퍼센트: {{ type_primary_percent_pe2[i] }}%</div></div>{% endfor %}";
+                                click_id.value = 3;
+                            }else if(button == 5) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_primary_len) %}<div class='item_0'><p><img alt='{{ type_primary_item_kr_vo1[i] }}' src='{{ url_for('static', filename = type_primary_path_1_vo1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_primary_item_vo1[i] }}'>{{ type_primary_item_kr_vo1[i] }}</a><div class='item_0_text'>거래량: {{ type_primary_volume_vo1[i] }}</div></div>{% endfor %}";
+                                click_id.value = 6;
+                            }else if(button == 6) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_primary_len) %}<div class='item_0'><p><img alt='{{ type_primary_item_kr_vo2[i] }}' src='{{ url_for('static', filename = type_primary_path_1_vo2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_primary_item_vo2[i] }}'>{{ type_primary_item_kr_vo2[i] }}</a><div class='item_0_text'>거래량: {{ type_primary_volume_vo2[i] }}</div></div>{% endfor %}";
+                                click_id.value = 5;
+                            }else {
+                                console.log("오류!");
+                            };
+                        }else if(menu_value == "보조무기") {
+                            if(button == 1) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_secondary_len) %}<div class='item_0'><p><img alt='{{ type_secondary_item_kr_pr1[i] }}' src='{{ url_for('static', filename = type_secondary_path_1_pr1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_secondary_item_pr1[i] }}'>{{ type_secondary_item_kr_pr1[i] }}</a><div class='item_0_text'>가격: {{ type_secondary_price_pr1[i] }}</div></div>{% endfor %}";
+                                click_id.value = 2;
+                            }else if(button == 2) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_secondary_len) %}<div class='item_0'><p><img alt='{{ type_secondary_item_kr_pr2[i] }}' src='{{ url_for('static', filename = type_secondary_path_1_pr2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_secondary_item_pr2[i] }}'>{{ type_secondary_item_kr_pr2[i] }}</a><div class='item_0_text'>가격: {{ type_secondary_price_pr2[i] }}</div></div>{% endfor %}";
+                                click_id.value = 1;
+                            }else if(button == 3) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_secondary_len) %}<div class='item_0'><p><img alt='{{ type_secondary_item_kr_pe1[i] }}' src='{{ url_for('static', filename = type_secondary_path_1_pe1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_secondary_item_pe1[i] }}'>{{ type_secondary_item_kr_pe1[i] }}</a><div class='item_0_text'>퍼센트: {{ type_secondary_percent_pe1[i] }}%</div></div>{% endfor %}";
+                                click_id.value = 4;
+                            }else if(button == 4) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_secondary_len) %}<div class='item_0'><p><img alt='{{ type_secondary_item_kr_pe2[i] }}' src='{{ url_for('static', filename = type_secondary_path_1_pe2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_secondary_item_pe2[i] }}'>{{ type_secondary_item_kr_pe2[i] }}</a><div class='item_0_text'>퍼센트: {{ type_secondary_percent_pe2[i] }}%</div></div>{% endfor %}";
+                                click_id.value = 3;
+                            }else if(button == 5) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_secondary_len) %}<div class='item_0'><p><img alt='{{ type_secondary_item_kr_vo1[i] }}' src='{{ url_for('static', filename = type_secondary_path_1_vo1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_secondary_item_vo1[i] }}'>{{ type_secondary_item_kr_vo1[i] }}</a><div class='item_0_text'>거래량: {{ type_secondary_volume_vo1[i] }}</div></div>{% endfor %}";
+                                click_id.value = 6;
+                            }else if(button == 6) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_secondary_len) %}<div class='item_0'><p><img alt='{{ type_secondary_item_kr_vo2[i] }}' src='{{ url_for('static', filename = type_secondary_path_1_vo2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_secondary_item_vo2[i] }}'>{{ type_secondary_item_kr_vo2[i] }}</a><div class='item_0_text'>거래량: {{ type_secondary_volume_vo2[i] }}</div></div>{% endfor %}";
+                                click_id.value = 5;
+                            }else {
+                                console.log("오류!");
+                            };
+                        }else if(menu_value == "근접무기") {
+                            if(button == 1) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_melee_len) %}<div class='item_0'><p><img alt='{{ type_melee_item_kr_pr1[i] }}' src='{{ url_for('static', filename = type_melee_path_1_pr1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_melee_item_pr1[i] }}'>{{ type_melee_item_kr_pr1[i] }}</a><div class='item_0_text'>가격: {{ type_melee_price_pr1[i] }}</div></div>{% endfor %}";
+                                click_id.value = 2;
+                            }else if(button == 2) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_melee_len) %}<div class='item_0'><p><img alt='{{ type_melee_item_kr_pr2[i] }}' src='{{ url_for('static', filename = type_melee_path_1_pr2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_melee_item_pr2[i] }}'>{{ type_melee_item_kr_pr2[i] }}</a><div class='item_0_text'>가격: {{ type_melee_price_pr2[i] }}</div></div>{% endfor %}";
+                                click_id.value = 1;
+                            }else if(button == 3) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_melee_len) %}<div class='item_0'><p><img alt='{{ type_melee_item_kr_pe1[i] }}' src='{{ url_for('static', filename = type_melee_path_1_pe1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_melee_item_pe1[i] }}'>{{ type_melee_item_kr_pe1[i] }}</a><div class='item_0_text'>퍼센트: {{ type_melee_percent_pe1[i] }}%</div></div>{% endfor %}";
+                                click_id.value = 4;
+                            }else if(button == 4) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_melee_len) %}<div class='item_0'><p><img alt='{{ type_melee_item_kr_pe2[i] }}' src='{{ url_for('static', filename = type_melee_path_1_pe2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_melee_item_pe2[i] }}'>{{ type_melee_item_kr_pe2[i] }}</a><div class='item_0_text'>퍼센트: {{ type_melee_percent_pe2[i] }}%</div></div>{% endfor %}";
+                                click_id.value = 3;
+                            }else if(button == 5) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_melee_len) %}<div class='item_0'><p><img alt='{{ type_melee_item_kr_vo1[i] }}' src='{{ url_for('static', filename = type_melee_path_1_vo1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_melee_item_vo1[i] }}'>{{ type_melee_item_kr_vo1[i] }}</a><div class='item_0_text'>거래량: {{ type_melee_volume_vo1[i] }}</div></div>{% endfor %}";
+                                click_id.value = 6;
+                            }else if(button == 6) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_melee_len) %}<div class='item_0'><p><img alt='{{ type_melee_item_kr_vo2[i] }}' src='{{ url_for('static', filename = type_melee_path_1_vo2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_melee_item_vo2[i] }}'>{{ type_melee_item_kr_vo2[i] }}</a><div class='item_0_text'>거래량: {{ type_melee_volume_vo2[i] }}</div></div>{% endfor %}";
+                                click_id.value = 5;
+                            }else {
+                                console.log("오류!");
+                            };
+                        }else if(menu_value == "워프레임 모드") {
+                            if(button == 1) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_warframe_mod_len) %}<div class='item_0'><p><img alt='{{ type_warframe_mod_item_kr_pr1[i] }}' src='{{ url_for('static', filename = type_warframe_mod_path_1_pr1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_warframe_mod_item_pr1[i] }}'>{{ type_warframe_mod_item_kr_pr1[i] }}</a><div class='item_0_text'>가격: {{ type_warframe_mod_price_pr1[i] }}</div></div>{% endfor %}";
+                                click_id.value = 2;
+                            }else if(button == 2) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_warframe_mod_len) %}<div class='item_0'><p><img alt='{{ type_warframe_mod_item_kr_pr2[i] }}' src='{{ url_for('static', filename = type_warframe_mod_path_1_pr2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_warframe_mod_item_pr2[i] }}'>{{ type_warframe_mod_item_kr_pr2[i] }}</a><div class='item_0_text'>가격: {{ type_warframe_mod_price_pr2[i] }}</div></div>{% endfor %}";
+                                click_id.value = 1;
+                            }else if(button == 3) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_warframe_mod_len) %}<div class='item_0'><p><img alt='{{ type_warframe_mod_item_kr_pe1[i] }}' src='{{ url_for('static', filename = type_warframe_mod_path_1_pe1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_warframe_mod_item_pe1[i] }}'>{{ type_warframe_mod_item_kr_pe1[i] }}</a><div class='item_0_text'>퍼센트: {{ type_warframe_mod_percent_pe1[i] }}%</div></div>{% endfor %}";
+                                click_id.value = 4;
+                            }else if(button == 4) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_warframe_mod_len) %}<div class='item_0'><p><img alt='{{ type_warframe_mod_item_kr_pe2[i] }}' src='{{ url_for('static', filename = type_warframe_mod_path_1_pe2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_warframe_mod_item_pe2[i] }}'>{{ type_warframe_mod_item_kr_pe2[i] }}</a><div class='item_0_text'>퍼센트: {{ type_warframe_mod_percent_pe2[i] }}%</div></div>{% endfor %}";
+                                click_id.value = 3;
+                            }else if(button == 5) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_warframe_mod_len) %}<div class='item_0'><p><img alt='{{ type_warframe_mod_item_kr_vo1[i] }}' src='{{ url_for('static', filename = type_warframe_mod_path_1_vo1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_warframe_mod_item_vo1[i] }}'>{{ type_warframe_mod_item_kr_vo1[i] }}</a><div class='item_0_text'>거래량: {{ type_warframe_mod_volume_vo1[i] }}</div></div>{% endfor %}";
+                                click_id.value = 6;
+                            }else if(button == 6) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_warframe_mod_len) %}<div class='item_0'><p><img alt='{{ type_warframe_mod_item_kr_vo2[i] }}' src='{{ url_for('static', filename = type_warframe_mod_path_1_vo2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_warframe_mod_item_vo2[i] }}'>{{ type_warframe_mod_item_kr_vo2[i] }}</a><div class='item_0_text'>거래량: {{ type_warframe_mod_volume_vo2[i] }}</div></div>{% endfor %}";
+                                click_id.value = 5;
+                            }else {
+                                console.log("오류!");
+                            };
+                        }else if(menu_value == "주무기 모드") {
+                            if(button == 1) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_primary_mod_len) %}<div class='item_0'><p><img alt='{{ type_primary_mod_item_kr_pr1[i] }}' src='{{ url_for('static', filename = type_primary_mod_path_1_pr1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_primary_mod_item_pr1[i] }}'>{{ type_primary_mod_item_kr_pr1[i] }}</a><div class='item_0_text'>가격: {{ type_primary_mod_price_pr1[i] }}</div></div>{% endfor %}";
+                                click_id.value = 2;
+                            }else if(button == 2) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_primary_mod_len) %}<div class='item_0'><p><img alt='{{ type_primary_mod_item_kr_pr2[i] }}' src='{{ url_for('static', filename = type_primary_mod_path_1_pr2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_primary_mod_item_pr2[i] }}'>{{ type_primary_mod_item_kr_pr2[i] }}</a><div class='item_0_text'>가격: {{ type_primary_mod_price_pr2[i] }}</div></div>{% endfor %}";
+                                click_id.value = 1;
+                            }else if(button == 3) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_primary_mod_len) %}<div class='item_0'><p><img alt='{{ type_primary_mod_item_kr_pe1[i] }}' src='{{ url_for('static', filename = type_primary_mod_path_1_pe1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_primary_mod_item_pe1[i] }}'>{{ type_primary_mod_item_kr_pe1[i] }}</a><div class='item_0_text'>퍼센트: {{ type_primary_mod_percent_pe1[i] }}%</div></div>{% endfor %}";
+                                click_id.value = 4;
+                            }else if(button == 4) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_primary_mod_len) %}<div class='item_0'><p><img alt='{{ type_primary_mod_item_kr_pe2[i] }}' src='{{ url_for('static', filename = type_primary_mod_path_1_pe2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_primary_mod_item_pe2[i] }}'>{{ type_primary_mod_item_kr_pe2[i] }}</a><div class='item_0_text'>퍼센트: {{ type_primary_mod_percent_pe2[i] }}%</div></div>{% endfor %}";
+                                click_id.value = 3;
+                            }else if(button == 5) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_primary_mod_len) %}<div class='item_0'><p><img alt='{{ type_primary_mod_item_kr_vo1[i] }}' src='{{ url_for('static', filename = type_primary_mod_path_1_vo1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_primary_mod_item_vo1[i] }}'>{{ type_primary_mod_item_kr_vo1[i] }}</a><div class='item_0_text'>거래량: {{ type_primary_mod_volume_vo1[i] }}</div></div>{% endfor %}";
+                                click_id.value = 6;
+                            }else if(button == 6) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_primary_mod_len) %}<div class='item_0'><p><img alt='{{ type_primary_mod_item_kr_vo2[i] }}' src='{{ url_for('static', filename = type_primary_mod_path_1_vo2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_primary_mod_item_vo2[i] }}'>{{ type_primary_mod_item_kr_vo2[i] }}</a><div class='item_0_text'>거래량: {{ type_primary_mod_volume_vo2[i] }}</div></div>{% endfor %}";
+                                click_id.value = 5;
+                            }else {
+                                console.log("오류!");
+                            };
+                        }else if(menu_value == "보조무기 모드") {
+                            if(button == 1) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_secondary_mod_len) %}<div class='item_0'><p><img alt='{{ type_secondary_mod_item_kr_pr1[i] }}' src='{{ url_for('static', filename = type_secondary_mod_path_1_pr1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_secondary_mod_item_pr1[i] }}'>{{ type_secondary_mod_item_kr_pr1[i] }}</a><div class='item_0_text'>가격: {{ type_secondary_mod_price_pr1[i] }}</div></div>{% endfor %}";
+                                click_id.value = 2;
+                            }else if(button == 2) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_secondary_mod_len) %}<div class='item_0'><p><img alt='{{ type_secondary_mod_item_kr_pr2[i] }}' src='{{ url_for('static', filename = type_secondary_mod_path_1_pr2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_secondary_mod_item_pr2[i] }}'>{{ type_secondary_mod_item_kr_pr2[i] }}</a><div class='item_0_text'>가격: {{ type_secondary_mod_price_pr2[i] }}</div></div>{% endfor %}";
+                                click_id.value = 1;
+                            }else if(button == 3) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_secondary_mod_len) %}<div class='item_0'><p><img alt='{{ type_secondary_mod_item_kr_pe1[i] }}' src='{{ url_for('static', filename = type_secondary_mod_path_1_pe1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_secondary_mod_item_pe1[i] }}'>{{ type_secondary_mod_item_kr_pe1[i] }}</a><div class='item_0_text'>퍼센트: {{ type_secondary_mod_percent_pe1[i] }}%</div></div>{% endfor %}";
+                                click_id.value = 4;
+                            }else if(button == 4) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_secondary_mod_len) %}<div class='item_0'><p><img alt='{{ type_secondary_mod_item_kr_pe2[i] }}' src='{{ url_for('static', filename = type_secondary_mod_path_1_pe2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_secondary_mod_item_pe2[i] }}'>{{ type_secondary_mod_item_kr_pe2[i] }}</a><div class='item_0_text'>퍼센트: {{ type_secondary_mod_percent_pe2[i] }}%</div></div>{% endfor %}";
+                                click_id.value = 3;
+                            }else if(button == 5) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_secondary_mod_len) %}<div class='item_0'><p><img alt='{{ type_secondary_mod_item_kr_vo1[i] }}' src='{{ url_for('static', filename = type_secondary_mod_path_1_vo1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_secondary_mod_item_vo1[i] }}'>{{ type_secondary_mod_item_kr_vo1[i] }}</a><div class='item_0_text'>거래량: {{ type_secondary_mod_volume_vo1[i] }}</div></div>{% endfor %}";
+                                click_id.value = 6;
+                            }else if(button == 6) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_secondary_mod_len) %}<div class='item_0'><p><img alt='{{ type_secondary_mod_item_kr_vo2[i] }}' src='{{ url_for('static', filename = type_secondary_mod_path_1_vo2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_secondary_mod_item_vo2[i] }}'>{{ type_secondary_mod_item_kr_vo2[i] }}</a><div class='item_0_text'>거래량: {{ type_secondary_mod_volume_vo2[i] }}</div></div>{% endfor %}";
+                                click_id.value = 5;
+                            }else {
+                                console.log("오류!");
+                            };
+                        }else if(menu_value == "근접무기 모드") {
+                            if(button == 1) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_melee_mod_len) %}<div class='item_0'><p><img alt='{{ type_melee_mod_item_kr_pr1[i] }}' src='{{ url_for('static', filename = type_melee_mod_path_1_pr1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_melee_mod_item_pr1[i] }}'>{{ type_melee_mod_item_kr_pr1[i] }}</a><div class='item_0_text'>가격: {{ type_melee_mod_price_pr1[i] }}</div></div>{% endfor %}";
+                                click_id.value = 2;
+                            }else if(button == 2) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_melee_mod_len) %}<div class='item_0'><p><img alt='{{ type_melee_mod_item_kr_pr2[i] }}' src='{{ url_for('static', filename = type_melee_mod_path_1_pr2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_melee_mod_item_pr2[i] }}'>{{ type_melee_mod_item_kr_pr2[i] }}</a><div class='item_0_text'>가격: {{ type_melee_mod_price_pr2[i] }}</div></div>{% endfor %}";
+                                click_id.value = 1;
+                            }else if(button == 3) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_melee_mod_len) %}<div class='item_0'><p><img alt='{{ type_melee_mod_item_kr_pe1[i] }}' src='{{ url_for('static', filename = type_melee_mod_path_1_pe1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_melee_mod_item_pe1[i] }}'>{{ type_melee_mod_item_kr_pe1[i] }}</a><div class='item_0_text'>퍼센트: {{ type_melee_mod_percent_pe1[i] }}%</div></div>{% endfor %}";
+                                click_id.value = 4;
+                            }else if(button == 4) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_melee_mod_len) %}<div class='item_0'><p><img alt='{{ type_melee_mod_item_kr_pe2[i] }}' src='{{ url_for('static', filename = type_melee_mod_path_1_pe2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_melee_mod_item_pe2[i] }}'>{{ type_melee_mod_item_kr_pe2[i] }}</a><div class='item_0_text'>퍼센트: {{ type_melee_mod_percent_pe2[i] }}%</div></div>{% endfor %}";
+                                click_id.value = 3;
+                            }else if(button == 5) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_melee_mod_len) %}<div class='item_0'><p><img alt='{{ type_melee_mod_item_kr_vo1[i] }}' src='{{ url_for('static', filename = type_melee_mod_path_1_vo1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_melee_mod_item_vo1[i] }}'>{{ type_melee_mod_item_kr_vo1[i] }}</a><div class='item_0_text'>거래량: {{ type_melee_mod_volume_vo1[i] }}</div></div>{% endfor %}";
+                                click_id.value = 6;
+                            }else if(button == 6) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_melee_mod_len) %}<div class='item_0'><p><img alt='{{ type_melee_mod_item_kr_vo2[i] }}' src='{{ url_for('static', filename = type_melee_mod_path_1_vo2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_melee_mod_item_vo2[i] }}'>{{ type_melee_mod_item_kr_vo2[i] }}</a><div class='item_0_text'>거래량: {{ type_melee_mod_volume_vo2[i] }}</div></div>{% endfor %}";
+                                click_id.value = 5;
+                            }else {
+                                console.log("오류!");
+                            };
+                        }else if(menu_value == "아케인") {
+                            if(button == 1) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_arcane_len) %}<div class='item_0'><p><img alt='{{ type_arcane_item_kr_pr1[i] }}' src='{{ url_for('static', filename = type_arcane_path_1_pr1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_arcane_item_pr1[i] }}'>{{ type_arcane_item_kr_pr1[i] }}</a><div class='item_0_text'>가격: {{ type_arcane_price_pr1[i] }}</div></div>{% endfor %}";
+                                click_id.value = 2;
+                            }else if(button == 2) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_arcane_len) %}<div class='item_0'><p><img alt='{{ type_arcane_item_kr_pr2[i] }}' src='{{ url_for('static', filename = type_arcane_path_1_pr2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_arcane_item_pr2[i] }}'>{{ type_arcane_item_kr_pr2[i] }}</a><div class='item_0_text'>가격: {{ type_arcane_price_pr2[i] }}</div></div>{% endfor %}";
+                                click_id.value = 1;
+                            }else if(button == 3) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_arcane_len) %}<div class='item_0'><p><img alt='{{ type_arcane_item_kr_pe1[i] }}' src='{{ url_for('static', filename = type_arcane_path_1_pe1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_arcane_item_pe1[i] }}'>{{ type_arcane_item_kr_pe1[i] }}</a><div class='item_0_text'>퍼센트: {{ type_arcane_percent_pe1[i] }}%</div></div>{% endfor %}";
+                                click_id.value = 4;
+                            }else if(button == 4) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_arcane_len) %}<div class='item_0'><p><img alt='{{ type_arcane_item_kr_pe2[i] }}' src='{{ url_for('static', filename = type_arcane_path_1_pe2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_arcane_item_pe2[i] }}'>{{ type_arcane_item_kr_pe2[i] }}</a><div class='item_0_text'>퍼센트: {{ type_arcane_percent_pe2[i] }}%</div></div>{% endfor %}";
+                                click_id.value = 3;
+                            }else if(button == 5) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_arcane_len) %}<div class='item_0'><p><img alt='{{ type_arcane_item_kr_vo1[i] }}' src='{{ url_for('static', filename = type_arcane_path_1_vo1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_arcane_item_vo1[i] }}'>{{ type_arcane_item_kr_vo1[i] }}</a><div class='item_0_text'>거래량: {{ type_arcane_volume_vo1[i] }}</div></div>{% endfor %}";
+                                click_id.value = 6;
+                            }else if(button == 6) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_arcane_len) %}<div class='item_0'><p><img alt='{{ type_arcane_item_kr_vo2[i] }}' src='{{ url_for('static', filename = type_arcane_path_1_vo2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_arcane_item_vo2[i] }}'>{{ type_arcane_item_kr_vo2[i] }}</a><div class='item_0_text'>거래량: {{ type_arcane_volume_vo2[i] }}</div></div>{% endfor %}";
+                                click_id.value = 5;
+                            }else {
+                                console.log("오류!");
+                            };
+                        }else if(menu_value == "프라임드 모드 모음") {
+                            if(button == 1) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, rec_len_data_0) %}<div class='item_0'><p><img alt='{{ rec_kr_name_0_pr1[i] }}' src='{{ url_for('static', filename = rec_image_0_pr1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ rec_name_0_pr1[i] }}'>{{ rec_kr_name_0_pr1[i] }}</a><div class='item_0_text'>가격: {{ rec_price_0_pr1[i] }}</div></div>{% endfor %}";
+                                click_id.value = 2;            
+                            }else if(button == 2) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, rec_len_data_0) %}<div class='item_0'><p><img alt='{{ rec_kr_name_0_pr2[i] }}' src='{{ url_for('static', filename = rec_image_0_pr2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ rec_name_0_pr2[i] }}'>{{ rec_kr_name_0_pr2[i] }}</a><div class='item_0_text'>가격: {{ rec_price_0_pr2[i] }}</div></div>{% endfor %}";
+                                click_id.value = 1;
+                            }else if(button == 3) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, rec_len_data_0) %}<div class='item_0'><p><img alt='{{ rec_kr_name_0_pe1[i] }}' src='{{ url_for('static', filename = rec_image_0_pe1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ rec_name_0_pe1[i] }}'>{{ rec_kr_name_0_pe1[i] }}</a><div class='item_0_text'>퍼센트: {{ rec_percent_0_pe1[i] }}%</div></div>{% endfor %}";
+                                click_id.value = 4;
+                            }else if(button == 4) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, rec_len_data_0) %}<div class='item_0'><p><img alt='{{ rec_kr_name_0_pe2[i] }}' src='{{ url_for('static', filename = rec_image_0_pe2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ rec_name_0_pe2[i] }}'>{{ rec_kr_name_0_pe2[i] }}</a><div class='item_0_text'>퍼센트: {{ rec_percent_0_pe2[i] }}%</div></div>{% endfor %}";
+                                click_id.value = 3;
+                            }else if(button == 5) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, rec_len_data_0) %}<div class='item_0'><p><img alt='{{ rec_kr_name_0_vo1[i] }}' src='{{ url_for('static', filename = rec_image_0_vo1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ rec_name_0_vo1[i] }}'>{{ rec_kr_name_0_vo1[i] }}</a><div class='item_0_text'>거래량: {{ rec_volume_0_vo1[i] }}</div></div>{% endfor %}";
+                                click_id.value = 6;
+                            }else if(button == 6) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, rec_len_data_0) %}<div class='item_0'><p><img alt='{{ rec_kr_name_0_vo2[i] }}' src='{{ url_for('static', filename = rec_image_0_vo2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ rec_name_0_vo2[i] }}'>{{ rec_kr_name_0_vo2[i] }}</a><div class='item_0_text'>거래량: {{ rec_volume_0_vo2[i] }}</div></div>{% endfor %}";
+                                click_id.value = 5;
+                            }else {
+                                console.log("오류!");
+                            };
+                        }else {
+                            console.log("오류!");
+                        };
+                    };
+                </script>
+                <div class="category_0">
+                    <a id="category_value_1">정렬</a>
+                </div>
+                <div class="category_4">
+                    <ul>
+                        <li class="category_top_1" onclick="search_value_1(this)" value="1">
+                            <a>가격</a>
+                        </li>
+                        <li class="category_top_1" onclick="search_value_1(this)" value="3">
+                            <a>퍼센트</a>
+                        </li>
+                        <li class="category_top_1" onclick="search_value_1(this)" value="5">
+                            <a>거래량</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="menu_1">
+            <div style="background-color: #ffffff; float: left; width: 100%; min-height: 750px; height: auto;">
+                <script>
+                    
+                </script>
+                <div class="category_0">
+                    <a id="category_value">워프레임</a>
+                </div>
+                <div class="category_3">
+                    <div class="category_box" id="change_category">
+                        {% for i in range(0, type_warframe_len) %}
+                        <div class="item_0">
+                            <p>
+                                <img alt="{{ type_warframe_item_kr[i] }}" src="{{ url_for('static', filename = type_warframe_path_1[i], v = 0.1) }}">
+                            </p>
+                            <a onclick="href_site(this);" value="{{ type_warframe_item[i] }}">{{ type_warframe_item_kr[i] }}</a>
+                            <div class="item_0_text">가격: {{ type_warframe_price[i] }}</div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+            </div>
+        </div>
+            
+        <div class="footer">
+            <div class="footer_box_0">
+                <div class="footer_box_1">
+                    <div class="footer_link">
+                        <h3>링크</h3>
+                        <a href="https://warframe.market/">워프레임 마켓</a>
+                        <br>
+                        <a href="https://github.com/Hyeonho-Lee/Warframe-Crawling">깃허브</a>
+                    </div>
+                    <div class="footer_dev">
+                        <h3>제작</h3>
+                        <a>R.PC (개발)</a>
+                        <br>
+                        <a>Tomatotomato<br>(디자인)</a>
+                    </div>
+                    <div class="footer_email">
+                        <h3>이메일</h3>
+                        <a>prohenho7138@gmail.com</a>
+                    </div>
+                </div>
+                
+                <div class="footer_info">
+                    <h3>정보</h3>
+                    <a>
+                        WTS는 warframe 팬유저가 제작한 것으로 Digital Extremes와 관련없는 사이트 입니다.
+                    </a>
+                    <br>
+                    <a>
+                        이 사이트에 사용된 데이터는 https://warframe.market/ 에서 제공 받았습니다.
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer_box_2">
+                <div class="footer_count">
+                    <div class="footer_count_1">
+                        <h3>누적 접속자</h3>
+                        <a>{{ visit_count }}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>

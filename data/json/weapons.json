@@ -1,0 +1,424 @@
+{
+    "weapons": [
+        {
+            "name": "baza_prime",
+            "type": "primary",
+            "en_name": "Baza_prime",
+            "kr_name": "바자 프라임"
+        },
+        {
+            "name": "boar_prime",
+            "type": "primary",
+            "en_name": "Boar Prime",
+            "kr_name": "보어 프라임"
+        },
+        {
+            "name": "boltor_prime",
+            "type": "primary",
+            "en_name": "Boltor Prime",
+            "kr_name": "볼터 프라임"
+        },
+        {
+            "name": "braton_prime",
+            "type": "primary",
+            "en_name": "Braton Prime",
+            "kr_name": "브래튼 프라임"
+        },
+        {
+            "name": "burston_prime",
+            "type": "primary",
+            "en_name": "Burston Prime",
+            "kr_name": "버스튼 프라임"
+        },
+        {
+            "name": "cernos_prime",
+            "type": "primary",
+            "en_name": "Cernos Prime",
+            "kr_name": "세르노스 프라임"
+        },
+        {
+            "name": "latron_prime",
+            "type": "primary",
+            "en_name": "Latron Prime",
+            "kr_name": "래트론 프라임"
+        },
+        {
+            "name": "paris_prime",
+            "type": "primary",
+            "en_name": "Paris Prime",
+            "kr_name": "패리스 프라임"
+        },
+        {
+            "name": "rubico_prime",
+            "type": "primary",
+            "en_name": "Rubico Prime",
+            "kr_name": "루비코 프라임"
+        },
+        {
+            "name": "soma_prime",
+            "type": "primary",
+            "en_name": "Soma Prime",
+            "kr_name": "소마 프라임"
+        },
+        {
+            "name": "stradavar_prime",
+            "type": "primary",
+            "en_name": "Stradavar Prime",
+            "kr_name": "스트라다바 프라임"
+        },
+        {
+            "name": "sybaris_prime",
+            "type": "primary",
+            "en_name": "Sybaris Prime",
+            "kr_name": "시바리스 프라임"
+        },
+        {
+            "name": "tiberon_prime",
+            "type": "primary",
+            "en_name": "Tiberon Prime",
+            "kr_name": "티버론 프라임"
+        },
+        {
+            "name": "tigris_prime",
+            "type": "primary",
+            "en_name": "Tigris Prime",
+            "kr_name": "티그리스 프라임"
+        },
+        {
+            "name": "vectis_prime",
+            "type": "primary",
+            "en_name": "Vectis Prime",
+            "kr_name": "벡티스 프라임"
+        },
+        {
+            "name": "zhuge_prime",
+            "type": "primary",
+            "en_name": "Zhuge Prime",
+            "kr_name": "제갈 프라임"
+        },
+        {
+            "name": "akbolto_prime",
+            "type": "secondary",
+            "en_name": "Akbolto Prime",
+            "kr_name": "아크볼토 프라임"
+        },
+        {
+            "name": "akbronco_prime",
+            "type": "secondary",
+            "en_name": "Akbronco Prime",
+            "kr_name": "아크브롱코 프라임"
+        },
+        {
+            "name": "akjagara_prime",
+            "type": "secondary",
+            "en_name": "Akjagara Prime",
+            "kr_name": "아크자가라 프라임"
+        },
+        {
+            "name": "aklex_prime",
+            "type": "secondary",
+            "en_name": "Aklex Prime",
+            "kr_name": "아클렉스 프라임"
+        },
+        {
+            "name": "aksomati_prime",
+            "type": "secondary",
+            "en_name": "Aksomati Prime",
+            "kr_name": "아크소마티 프라임"
+        },
+        {
+            "name": "akstiletto_prime",
+            "type": "secondary",
+            "en_name": "Akstiletto Prime",
+            "kr_name": "아크스틸레토 프라임"
+        },
+        {
+            "name": "akvasto_prime",
+            "type": "secondary",
+            "en_name": "Akvasto Prime",
+            "kr_name": "아크바스토 프라임"
+        },
+        {
+            "name": "ballistica_prime",
+            "type": "secondary",
+            "en_name": "Ballistica Prime",
+            "kr_name": "발리스티카 프라임"
+        },
+        {
+            "name": "bronco_prime",
+            "type": "secondary",
+            "en_name": "Bronco Prime",
+            "kr_name": "브롱코 프라임"
+        },
+        {
+            "name": "euphona_prime",
+            "type": "secondary",
+            "en_name": "Euphona Prime",
+            "kr_name": "유포나 프라임"
+        },
+        {
+            "name": "hikou_prime",
+            "type": "secondary",
+            "en_name": "Hikou Prime",
+            "kr_name": "히코우 프라임"
+        },
+        {
+            "name": "lex_prime",
+            "type": "secondary",
+            "en_name": "Lex Prime",
+            "kr_name": "렉스 프라임"
+        },
+        {
+            "name": "pyrana_prime",
+            "type": "secondary",
+            "en_name": "Pyrana Prime",
+            "kr_name": "파이라나 프라임"
+        },
+        {
+            "name": "sicarus_prime",
+            "type": "secondary",
+            "en_name": "Sicarus Prime",
+            "kr_name": "시카루스 프라임"
+        },
+        {
+            "name": "spira_prime",
+            "type": "secondary",
+            "en_name": "Spira Prime",
+            "kr_name": "스피라 프라임"
+        },
+        {
+            "name": "vasto_prime",
+            "type": "secondary",
+            "en_name": "Vasto Prime",
+            "kr_name": "바스토 프라임"
+        },
+        {
+            "name": "ankyros_prime",
+            "type": "melee",
+            "en_name": "Ankyros Prime",
+            "kr_name": "앤카이로스 프라임"
+        },
+        {
+            "name": "dakra_prime",
+            "type": "melee",
+            "en_name": "Dakra Prime",
+            "kr_name": "다크라 프라임"
+        },
+        {
+            "name": "destreza_prime",
+            "type": "melee",
+            "en_name": "Destreza Prime",
+            "kr_name": "데스트레자 프라임"
+        },
+        {
+            "name": "dual_kamas_prime",
+            "type": "melee",
+            "en_name": "Dual Kamas Prime",
+            "kr_name": "듀얼 카마스 프라임"
+        },
+        {
+            "name": "fang_prime",
+            "type": "melee",
+            "en_name": "Fang Prime",
+            "kr_name": "팽 프라임"
+        },
+        {
+            "name": "fragor_prime",
+            "type": "melee",
+            "en_name": "Fragor Prime",
+            "kr_name": "프레거 프라임"
+        },
+        {
+            "name": "galatine_prime",
+            "type": "melee",
+            "en_name": "Galatine Prime",
+            "kr_name": "갈라틴 프라임"
+        },
+        {
+            "name": "glaive_prime",
+            "type": "melee",
+            "en_name": "Glaive Prime",
+            "kr_name": "글레이브 프라임"
+        },
+        {
+            "name": "gram_prime",
+            "type": "melee",
+            "en_name": "Gram Prime",
+            "kr_name": "그람 프라임"
+        },
+        {
+            "name": "kogake_prime",
+            "type": "melee",
+            "en_name": "Kogake Prime",
+            "kr_name": "코가케 프라임"
+        },
+        {
+            "name": "kronen_prime",
+            "type": "melee",
+            "en_name": "Kronen Prime",
+            "kr_name": "크로넨 프라임"
+        },
+        {
+            "name": "nami_skyla_prime",
+            "type": "melee",
+            "en_name": "Nami Skyla Prime",
+            "kr_name": "나미 스카일라 프라임"
+        },
+        {
+            "name": "nikana_prime",
+            "type": "melee",
+            "en_name": "Nikana Prime",
+            "kr_name": "니카나 프라임"
+        },
+        {
+            "name": "ninkondi_prime",
+            "type": "melee",
+            "en_name": "Ninkondi Prime",
+            "kr_name": "닌콘디 프라임"
+        },
+        {
+            "name": "orthos_prime",
+            "type": "melee",
+            "en_name": "Orths Prime",
+            "kr_name": "오르도스 프라임"
+        },
+        {
+            "name": "reaper_prime",
+            "type": "melee",
+            "en_name": "Reaper Prime",
+            "kr_name": "리퍼 프라임"
+        },
+        {
+            "name": "redeemer_prime",
+            "type": "melee",
+            "en_name": "Redeemer Prime",
+            "kr_name": "리디머 프라임"
+        },
+        {
+            "name": "scindo_prime",
+            "type": "melee",
+            "en_name": "Scindo Prime",
+            "kr_name": "신도 프라임"
+        },
+        {
+            "name": "silva_and_aegis_prime",
+            "type": "melee",
+            "en_name": "Silva & Aegis Prime",
+            "kr_name": "실바 & 이지스 프라임"
+        },
+        {
+            "name": "tekko_prime",
+            "type": "melee",
+            "en_name": "Tekko Prime",
+            "kr_name": "텟코 프라임"
+        },
+        {
+            "name": "tipedo_prime",
+            "type": "melee",
+            "en_name": "Tipedo Prime",
+            "kr_name": "티페도 프라임"
+        },
+        {
+            "name": "venka_prime",
+            "type": "melee",
+            "en_name": "Venka Prime",
+            "kr_name": "벤카 프라임"
+        },
+        {
+            "name": "tipedo_prime",
+            "type": "melee",
+            "en_name": "Tipedo Prime",
+            "kr_name": "티페도 프라임"
+        },
+        {
+            "name": "shedu",
+            "type": "primary",
+            "en_name": "Shedu",
+            "kr_name": "세두"
+        },
+        {
+            "name": "braton_vandal",
+            "type": "primary",
+            "en_name": "Braton Vandal",
+            "kr_name": "브래튼 반달"
+        },
+        {
+            "name": "dera_vandal",
+            "type": "primary",
+            "en_name": "Dera Vandal",
+            "kr_name": "데라 반달"
+        },
+        {
+            "name": "karak_wraith",
+            "type": "primary",
+            "en_name": "Karak Wraith",
+            "kr_name": "카락 레이스"
+        },
+        {
+            "name": "gorgon_wraith",
+            "type": "primary",
+            "en_name": "Gorgon Wraith",
+            "kr_name": "고르곤 레이스"
+        },
+        {
+            "name": "latron_wraith",
+            "type": "primary",
+            "en_name": "Latron Wraith",
+            "kr_name": "래트론 레이스"
+        },
+        {
+            "name": "strun_wraith",
+            "type": "primary",
+            "en_name": "Strun Wraith",
+            "kr_name": "스트런 레이스"
+        },
+        {
+            "name": "snipetron_vandal",
+            "type": "primary",
+            "en_name": "Snipetron Vandal",
+            "kr_name": "스나이프트론 반달"
+        },
+        {
+            "name": "lato_vandal",
+            "type": "secondary",
+            "en_name": "Lato Vandal",
+            "kr_name": "라토 반달"
+        },
+        {
+            "name": "twin_vipers_wraith",
+            "type": "secondary",
+            "en_name": "Twin Vipers Wraith",
+            "kr_name": "트윈 바이퍼즈 레이스"
+        },
+        {
+            "name": "furax_wraith",
+            "type": "melee",
+            "en_name": "Furax Wraith",
+            "kr_name": "퓨랙스 레이스"
+        },
+        {
+            "name": "pathocyst",
+            "type": "melee",
+            "en_name": "Pathocyst",
+            "kr_name": "패소시스트"
+        },
+        {
+            "name": "imperator_vandal",
+            "type": "primary",
+            "en_name": "Imperator Vandal",
+            "kr_name": "임페라토르 반달"
+        },
+        {
+            "name": "panthera_prime",
+            "type": "primary",
+            "en_name": "Panthera Prime",
+            "kr_name": "팬서라 프라임"
+        },
+        {
+            "name": "karyst_prime",
+            "type": "melee",
+            "en_name": "Karyst Prime",
+            "kr_name": "캐리스트 프라임"
+        }
+    ]
+}

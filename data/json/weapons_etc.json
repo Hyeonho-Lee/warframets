@@ -1,0 +1,196 @@
+{
+    "weapons_etc": [
+        {
+            "name": "rakta_cernos",
+            "type": "primary",
+            "en_name": "Rakta Cernos",
+            "kr_name": "락타 세르노스"
+        },
+        {
+            "name": "vulkar_wraith",
+            "type": "primary",
+            "en_name": "Vulkar Wraith",
+            "kr_name": "불카 레이스"
+        },
+        {
+            "name": "sancti_tigris",
+            "type": "primary",
+            "en_name": "Sancti Tigris",
+            "kr_name": "생티 티그리스"
+        },
+        {
+            "name": "vaykor_hek",
+            "type": "primary",
+            "en_name": "Vaykor Hek",
+            "kr_name": "베이코어 헥"
+        },
+        {
+            "name": "synoid_simulor",
+            "type": "primary",
+            "en_name": "Synoid Simulor",
+            "kr_name": "사이노이드 시뮬러"
+        },
+        {
+            "name": "secura_penta",
+            "type": "primary",
+            "en_name": "Secura Penta",
+            "kr_name": "세큐라 펜타"
+        },
+        {
+            "name": "quanta_vandal",
+            "type": "primary",
+            "en_name": "Quanta Vandal",
+            "kr_name": "콴타 반달"
+        },
+        {
+            "name": "prisma_grinlok",
+            "type": "primary",
+            "en_name": "Prisma Grinlok",
+            "kr_name": "프리즈마 그린락"
+        },
+        {
+            "name": "supra_vandal",
+            "type": "primary",
+            "en_name": "Supra Vandal",
+            "kr_name": "수프라 반달"
+        },
+        {
+            "name": "prisma_tetra",
+            "type": "primary",
+            "en_name": "Prisma Tetra",
+            "kr_name": "프리즈마 테트라"
+        },
+        {
+            "name": "prisma_grakata",
+            "type": "primary",
+            "en_name": "Prisma Grakata",
+            "kr_name": "프리즈마 그라카타"
+        },
+        {
+            "name": "viper_wraith",
+            "type": "secondary",
+            "en_name": "Viper Wraith",
+            "kr_name": "바이퍼 레이스"
+        },
+        {
+            "name": "vaykor_marelok",
+            "type": "secondary",
+            "en_name": "Vaykor Marelok",
+            "kr_name": "베이코어 메어락"
+        },
+        {
+            "name": "synoid_gammacor",
+            "type": "secondary",
+            "en_name": "Synoid Gammacor",
+            "kr_name": "사이노이드 감마코어"
+        },
+        {
+            "name": "rakta_ballistica",
+            "type": "secondary",
+            "en_name": "Rakta Ballistica",
+            "kr_name": "락타 발리스티카"
+        },
+        {
+            "name": "mara_detron",
+            "type": "secondary",
+            "en_name": "Mara Detron",
+            "kr_name": "마라 데트론"
+        },
+        {
+            "name": "prisma_angstrum",
+            "type": "secondary",
+            "en_name": "Prisma Angstrum",
+            "kr_name": "프리즈마 앙스트럼"
+        },
+        {
+            "name": "secura_dual_cestra",
+            "type": "secondary",
+            "en_name": "Secura Dual Cestra",
+            "kr_name": "세큐라 듀얼 세스트라"
+        },
+        {
+            "name": "prisma_twin_gremlins",
+            "type": "secondary",
+            "en_name": "Prisma Twin Gremlins",
+            "kr_name": "프리즈마 트윈 그렘린즈"
+        },
+        {
+            "name": "telos_akbolto",
+            "type": "secondary",
+            "en_name": "Telos Akbolto",
+            "kr_name": "텔로스 아크볼토"
+        },
+        {
+            "name": "sancti_castanas",
+            "type": "secondary",
+            "en_name": "Sancti Castanas",
+            "kr_name": "생티 캐스타나스"
+        },
+        {
+            "name": "prisma_skana",
+            "type": "melee",
+            "en_name": "Prisma Skana",
+            "kr_name": "프리즈마 스카나"
+        },
+        {
+            "name": "prisma_dual_cleavers",
+            "type": "melee",
+            "en_name": "Prisma Dual Cleavers",
+            "kr_name": "프리즈마 듀얼 클리버즈"
+        },
+        {
+            "name": "machete_wraith",
+            "type": "melee",
+            "en_name": "Machete Wraith",
+            "kr_name": "마체테 레이스"
+        },
+        {
+            "name": "prova_vandal",
+            "type": "melee",
+            "en_name": "Prova Vandal",
+            "kr_name": "프로바 반달"
+        },
+        {
+            "name": "rakta_dark_dagger",
+            "type": "melee",
+            "en_name": "Rakta Dark Dagger",
+            "kr_name": "락타 다크 대거"
+        },
+        {
+            "name": "prisma_obex",
+            "type": "melee",
+            "en_name": "Prisma Obex",
+            "kr_name": "프리즈마 오벡스"
+        },
+        {
+            "name": "vaykor_sydon",
+            "type": "melee",
+            "en_name": "Vaykor Sydon",
+            "kr_name": "베이코어 사이돈"
+        },
+        {
+            "name": "synoid_heliocor",
+            "type": "melee",
+            "en_name": "Synoid Heliocor",
+            "kr_name": "사이노이드 헬리오코어"
+        },
+        {
+            "name": "sancti_magistar",
+            "type": "melee",
+            "en_name": "Sancti Magistar",
+            "kr_name": "생티 마기스타"
+        },
+        {
+            "name": "telos_boltor",
+            "type": "melee",
+            "en_name": "Telos Boltor",
+            "kr_name": "텔로스 볼터"
+        },
+        {
+            "name": "secura_lecta",
+            "type": "melee",
+            "en_name": "Secura Lecta",
+            "kr_name": "세큐라 렉타"
+        }
+    ]
+}

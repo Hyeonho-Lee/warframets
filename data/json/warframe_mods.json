@@ -1,0 +1,370 @@
+{
+    "warframe_mods": [
+        {
+            "name": "adaptation",
+            "type": "warframe_mod",
+            "en_name": "Adaptation",
+            "kr_name": "어댑테이션"
+        },
+        {
+            "name": "aero_vantage",
+            "type": "warframe_mod",
+            "en_name": "Aero Vantage",
+            "kr_name": "에어로 밴티지"
+        },
+        {
+            "name": "agility_drift",
+            "type": "warframe_mod",
+            "en_name": "Agility Drift",
+            "kr_name": "어질리티 드리프트"
+        },
+        {
+            "name": "armored_agility",
+            "type": "warframe_mod",
+            "en_name": "Armored Agility",
+            "kr_name": "아머드 어질리티"
+        },
+        {
+            "name": "augur_accord",
+            "type": "warframe_mod",
+            "en_name": "Augur Accord",
+            "kr_name": "어거 어코드"
+        },
+        {
+            "name": "augur_message",
+            "type": "warframe_mod",
+            "en_name": "Augur Message",
+            "kr_name": "어거 메시지"
+        },
+        {
+            "name": "augur_reach",
+            "type": "warframe_mod",
+            "en_name": "Augur Reach",
+            "kr_name": "어거 리치"
+        },
+        {
+            "name": "augur_secrets",
+            "type": "warframe_mod",
+            "en_name": "Augur Secrets",
+            "kr_name": "어거 시크릿츠"
+        },
+        {
+            "name": "aviator",
+            "type": "warframe_mod",
+            "en_name": "Aviator",
+            "kr_name": "에비에이터"
+        },
+        {
+            "name": "blind_rage",
+            "type": "warframe_mod",
+            "en_name": "Blind Rage",
+            "kr_name": "블라인드 레이지"
+        },
+        {
+            "name": "coaction_drift",
+            "type": "warframe_mod",
+            "en_name": "Coaction Drift",
+            "kr_name": "코액션 드리프트"
+        },
+        {
+            "name": "constitution",
+            "type": "warframe_mod",
+            "en_name": "Constitution",
+            "kr_name": "컨스티튜션"
+        },
+        {
+            "name": "continuity",
+            "type": "warframe_mod",
+            "en_name": "Continuity",
+            "kr_name": "컨티뉴어티"
+        },
+        {
+            "name": "cunning_drift",
+            "type": "warframe_mod",
+            "en_name": "Cunning Drift",
+            "kr_name": "커닝 드리프트"
+        },
+        {
+            "name": "endurance_drift",
+            "type": "warframe_mod",
+            "en_name": "Endurance Drift",
+            "kr_name": "엔듀런스 드리프트"
+        },
+        {
+            "name": "enemy_sense",
+            "type": "warframe_mod",
+            "en_name": "Enemy Sense",
+            "kr_name": "에너미 센스"
+        },
+        {
+            "name": "energy_conversion",
+            "type": "warframe_mod",
+            "en_name": "Energy Conversion",
+            "kr_name": "에너지 컨버젼"
+        },
+        {
+            "name": "equilibrium",
+            "type": "warframe_mod",
+            "en_name": "Equilibrium",
+            "kr_name": "이퀄리브리엄"
+        },
+        {
+            "name": "firewalker",
+            "type": "warframe_mod",
+            "en_name": "Firewalker",
+            "kr_name": "파이어워커"
+        },
+        {
+            "name": "fleeting_expertise",
+            "type": "warframe_mod",
+            "en_name": "Fleeting Expertise",
+            "kr_name": "플리팅 엑스퍼티즈"
+        },
+        {
+            "name": "flow",
+            "type": "warframe_mod",
+            "en_name": "Flow",
+            "kr_name": "플로우"
+        },
+        {
+            "name": "fortitude",
+            "type": "warframe_mod",
+            "en_name": "Fortitude",
+            "kr_name": "포티튜드"
+        },
+        {
+            "name": "gladiator_aegis",
+            "type": "warframe_mod",
+            "en_name": "Gladiator Aegis",
+            "kr_name": "글래디에이터 이지스"
+        },
+        {
+            "name": "gladiator_finesse",
+            "type": "warframe_mod",
+            "en_name": "Gladiator Finesse",
+            "kr_name": "글래디에이터 피네스"
+        },
+        {
+            "name": "gladiator_resolve",
+            "type": "warframe_mod",
+            "en_name": "Gladiator Resolve",
+            "kr_name": "글래디에이터 리졸브"
+        },
+        {
+            "name": "handspring",
+            "type": "warframe_mod",
+            "en_name": "Handspring",
+            "kr_name": "핸드스프링"
+        },
+        {
+            "name": "health_conversion",
+            "type": "warframe_mod",
+            "en_name": "Health Conversion",
+            "kr_name": "헬스 컨버전"
+        },
+        {
+            "name": "hunter_adrenaline",
+            "type": "warframe_mod",
+            "en_name": "Hunter Adrenaline",
+            "kr_name": "헌터 아드레날린"
+        },
+        {
+            "name": "ice_spring",
+            "type": "warframe_mod",
+            "en_name": "Ice Spring",
+            "kr_name": "아이스 스프링"
+        },
+        {
+            "name": "intensify",
+            "type": "warframe_mod",
+            "en_name": "Intensify",
+            "kr_name": "인텐시파이"
+        },
+        {
+            "name": "lightning_dash",
+            "type": "warframe_mod",
+            "en_name": "Lightning Dash",
+            "kr_name": "라이트닝 대쉬"
+        },
+        {
+            "name": "master_thief",
+            "type": "warframe_mod",
+            "en_name": "Master Thief",
+            "kr_name": "마스터 시프"
+        },
+        {
+            "name": "mecha_pulse",
+            "type": "warframe_mod",
+            "en_name": "Mecha Pulse",
+            "kr_name": "메카 펄스"
+        },
+        {
+            "name": "motus_signal",
+            "type": "warframe_mod",
+            "en_name": "Motus Signal",
+            "kr_name": "모터스 시그널"
+        },
+        {
+            "name": "narrow_minded",
+            "type": "warframe_mod",
+            "en_name": "Narrow Minded",
+            "kr_name": "내로우 마인디드"
+        },
+        {
+            "name": "natural_talent",
+            "type": "warframe_mod",
+            "en_name": "Natural Talent",
+            "kr_name": "내츄럴 탈렌트"
+        },
+        {
+            "name": "overextended",
+            "type": "warframe_mod",
+            "en_name": " Overextended",
+            "kr_name": "오버익스텐디드"
+        },
+        {
+            "name": "pain_threshold",
+            "type": "warframe_mod",
+            "en_name": "Pain Threshold",
+            "kr_name": "페인 쓰레쉬홀드"
+        },
+        {
+            "name": "power_drift",
+            "type": "warframe_mod",
+            "en_name": "Power Drift",
+            "kr_name": "파워 드리프트"
+        },
+        {
+            "name": "primed_continuity",
+            "type": "warframe_mod",
+            "en_name": "Primed Continuity",
+            "kr_name": "프라임드 컨티뉴어티"
+        },
+        {
+            "name": "primed_flow",
+            "type": "warframe_mod",
+            "en_name": "Primed Flow",
+            "kr_name": "프라임드 플로우"
+        },
+        {
+            "name": "rage",
+            "type": "warframe_mod",
+            "en_name": "Rage",
+            "kr_name": "레이지"
+        },
+        {
+            "name": "reflection",
+            "type": "warframe_mod",
+            "en_name": "Reflection",
+            "kr_name": "리플렉션"
+        },
+        {
+            "name": "reflex_guard",
+            "type": "warframe_mod",
+            "en_name": "Reflex Guard",
+            "kr_name": "리플렉스 가드"
+        },
+        {
+            "name": "rolling_guard",
+            "type": "warframe_mod",
+            "en_name": "Rolling Guard",
+            "kr_name": "롤링 가드"
+        },
+        {
+            "name": "rush",
+            "type": "warframe_mod",
+            "en_name": "Rush",
+            "kr_name": "러쉬"
+        },
+        {
+            "name": "speed_drift",
+            "type": "warframe_mod",
+            "en_name": "Speed Drift",
+            "kr_name": "스피드 드리프트"
+        },
+        {
+            "name": "stealth_drift",
+            "type": "warframe_mod",
+            "en_name": "Stealth Drift",
+            "kr_name": "스텔스 드리프트"
+        },
+        {
+            "name": "strain_consume",
+            "type": "warframe_mod",
+            "en_name": "Strain Consume",
+            "kr_name": "스트레인 컨슘"
+        },
+        {
+            "name": "streamline",
+            "type": "warframe_mod",
+            "en_name": "Streamline",
+            "kr_name": "스트림라인"
+        },
+        {
+            "name": "streamlined_form",
+            "type": "warframe_mod",
+            "en_name": "Streamlined Form",
+            "kr_name": "스트림라인드 폼"
+        },
+        {
+            "name": "stretch",
+            "type": "warframe_mod",
+            "en_name": "Stretch",
+            "kr_name": "스트레치"
+        },
+        {
+            "name": "sure_footed",
+            "type": "warframe_mod",
+            "en_name": "Sure Footed",
+            "kr_name": "슈어 풋티드"
+        },
+        {
+            "name": "synth_reflex",
+            "type": "warframe_mod",
+            "en_name": "Synth Reflex",
+            "kr_name": "신스 리플렉트"
+        },
+        {
+            "name": "tek_collateral",
+            "type": "warframe_mod",
+            "en_name": "Tek Collateral",
+            "kr_name": "텍 콜래트랄"
+        },
+        {
+            "name": "toxic_flight",
+            "type": "warframe_mod",
+            "en_name": "Toxic Flight",
+            "kr_name": "톡식 플라이트"
+        },
+        {
+            "name": "transient_fortitude",
+            "type": "warframe_mod",
+            "en_name": "Transient Fortitude",
+            "kr_name": "트랜지언트 포티튜드"
+        },
+        {
+            "name": "vigilante_pursuit",
+            "type": "warframe_mod",
+            "en_name": "Vigilante Pursuit",
+            "kr_name": "비질란티 퍼수트"
+        },
+        {
+            "name": "vigilante_vigor",
+            "type": "warframe_mod",
+            "en_name": "Vigilante Vigor",
+            "kr_name": "비질란티 비거"
+        },
+        {
+            "name": "vigor",
+            "type": "warframe_mod",
+            "en_name": "Vigor",
+            "kr_name": "비거"
+        },
+        {
+            "name": "vigorous_swap",
+            "type": "warframe_mod",
+            "en_name": "Vigorous Swap",
+            "kr_name": "비거러스 스왑"
+        }
+    ]
+}

@@ -1,0 +1,190 @@
+{
+    "aura_mods": [
+        {
+            "name": "aerodynamic",
+            "type": "aura_mod",
+            "en_name": "Aerodynamic",
+            "kr_name": "에어로다이내믹"
+        },
+        {
+            "name": "brief_respite",
+            "type": "aura_mod",
+            "en_name": "Brief Respite",
+            "kr_name": "브리프 리스파이트"
+        },
+        {
+            "name": "combat_discipline",
+            "type": "aura_mod",
+            "en_name": "Combat Discipline",
+            "kr_name": "컴뱃 디서플린"
+        },
+        {
+            "name": "corrosive_projection",
+            "type": "aura_mod",
+            "en_name": "Corrosive Projection",
+            "kr_name": "코로시브 프로젝션"
+        },
+        {
+            "name": "dead_eye",
+            "type": "aura_mod",
+            "en_name": "Dead Eye",
+            "kr_name": "데드 아이"
+        },
+        {
+            "name": "empowered_blades",
+            "type": "aura_mod",
+            "en_name": "Empowered Blades",
+            "kr_name": "임파워드 블레이드"
+        },
+        {
+            "name": "enemy_radar",
+            "type": "aura_mod",
+            "en_name": "Enemy Radar",
+            "kr_name": "에너미 레이더"
+        },
+        {
+            "name": "energy_siphon",
+            "type": "aura_mod",
+            "en_name": "Energy Siphon",
+            "kr_name": "에너지 사이펀"
+        },
+        {
+            "name": "growing_power",
+            "type": "aura_mod",
+            "en_name": "Growing Power",
+            "kr_name": "그로잉 파워"
+        },
+        {
+            "name": "infested_impedance",
+            "type": "aura_mod",
+            "en_name": "Infested Impedance",
+            "kr_name": "인페스티드 임피던스"
+        },
+        {
+            "name": "loot_detector",
+            "type": "aura_mod",
+            "en_name": "Loot Detector",
+            "kr_name": "루트 디텍터"
+        },
+        {
+            "name": "mecha_empowered",
+            "type": "aura_mod",
+            "en_name": "Mecha Empowered",
+            "kr_name": "메카 임파워드"
+        },
+        {
+            "name": "melee_guidance",
+            "type": "aura_mod",
+            "en_name": "Melee Guidance",
+            "kr_name": "밀리 가이던스"
+        },
+        {
+            "name": "physique",
+            "type": "aura_mod",
+            "en_name": "Physique",
+            "kr_name": "피지크"
+        },
+        {
+            "name": "pistol_amp",
+            "type": "aura_mod",
+            "en_name": "Pistol Amp",
+            "kr_name": "피스톨 앰프"
+        },
+        {
+            "name": "pistol_scavenger",
+            "type": "aura_mod",
+            "en_name": "Pistol Scavenger",
+            "kr_name": "피스톨 스케빈져"
+        },
+        {
+            "name": "power_donation",
+            "type": "aura_mod",
+            "en_name": "Power Donation",
+            "kr_name": "파워 도네이션"
+        },
+        {
+            "name": "rejuvenation",
+            "type": "aura_mod",
+            "en_name": "Rejuvenation",
+            "kr_name": "리쥬버네이션"
+        },
+        {
+            "name": "rifle_amp",
+            "type": "aura_mod",
+            "en_name": "Rifle Amp",
+            "kr_name": "라이플 앰프"
+        },
+        {
+            "name": "rifle_scavenger",
+            "type": "aura_mod",
+            "en_name": "Rifle Scavenger",
+            "kr_name": "라이플 스케빈져"
+        },
+        {
+            "name": "shepherd",
+            "type": "aura_mod",
+            "en_name": "Shepherd",
+            "kr_name": "셰퍼드"
+        },
+        {
+            "name": "shield_disruption",
+            "type": "aura_mod",
+            "en_name": "Shield Disruption",
+            "kr_name": "실드 디스럽션"
+        },
+        {
+            "name": "shotgun_amp",
+            "type": "aura_mod",
+            "en_name": "Shotgun Amp",
+            "kr_name": "샷건 앰프"
+        },
+        {
+            "name": "shotgun_scavenger",
+            "type": "aura_mod",
+            "en_name": "Shotgun Scavenger",
+            "kr_name": "샷건 스케빈져"
+        },
+        {
+            "name": "sniper_scavenger",
+            "type": "aura_mod",
+            "en_name": "Sniper Scavenger",
+            "kr_name": "스나이퍼 스케빈져"
+        },
+        {
+            "name": "speed_holster",
+            "type": "aura_mod",
+            "en_name": "Speed Holster",
+            "kr_name": "스피드 홀스터"
+        },
+        {
+            "name": "sprint_boost",
+            "type": "aura_mod",
+            "en_name": "Sprint Boost",
+            "kr_name": "스프린트 부스트"
+        },
+        {
+            "name": "stand_united",
+            "type": "aura_mod",
+            "en_name": "Stand United",
+            "kr_name": "스탠드 유나이티드"
+        },
+        {
+            "name": "steel_charge",
+            "type": "aura_mod",
+            "en_name": "Steel Charge",
+            "kr_name": "스틸 차지"
+        },
+        {
+            "name": "swift_momentum",
+            "type": "aura_mod",
+            "en_name": "Swift Momentum",
+            "kr_name": "스위프트 모멘텀"
+        },
+        {
+            "name": "toxin_resistance",
+            "type": "aura_mod",
+            "en_name": "Toxin Resistance",
+            "kr_name": "톡신 레지스턴스"
+        }
+    ]
+}
