@@ -1468,7 +1468,8 @@ def calculator(get_name):
                         names.append(name)
                         values.append(value)
                     tf = values[2].isdigit()
-                    if tf == False:
+                    print(values)
+                    if tf == False or values[0] == '' or values[1] == '':
                         return redirect('/error/')
                     if int(values[3]) == 0:
                         input_first_date = str(values[0])
@@ -1512,7 +1513,7 @@ def calculator(get_name):
                             input_count_0 = int(values[3]) #소지가능 갯수
 
                             cal_price_0 = round((input_second_price * input_count_0), 2)
-                            cal_price_1 = input_cash - cal_price_0
+                            cal_price_1 = round(input_cash - cal_price_0, 2)
                             cal_price_2 = round((input_second_price - input_first_price) * -1, 2) #개당 이윤
                             cal_price_3 = round(cal_price_2 * input_count_0, 2)
                             cal_price_4 = cal_price_3 + input_cash

@@ -19695,3 +19695,87 @@ pandas.errors.EmptyDataError: No columns to parse from file
 172.17.0.1 - - [15/Aug/2020 05:27:27] "[37mGET /static/image/item_image/weapon/Cernos_Prime/Cernos_Prime.png?v=0.1 HTTP/1.1[0m" 200 -
 172.17.0.1 - - [15/Aug/2020 05:27:27] "[37mGET /static/image/item_image/weapon/Akjagara_Prime/Akjagara_Prime.png?v=0.1 HTTP/1.1[0m" 200 -
 172.17.0.1 - - [15/Aug/2020 05:27:28] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+172.17.0.1 - - [15/Aug/2020 05:45:27] "[37mGET / HTTP/1.1[0m" 200 -
+172.17.0.1 - - [15/Aug/2020 05:45:28] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+172.17.0.1 - - [15/Aug/2020 05:45:34] "[32mGET /result/ivara_prime_set HTTP/1.1[0m" 308 -
+172.17.0.1 - - [15/Aug/2020 05:45:35] "[32mGET /result/ivara_prime_set/ HTTP/1.1[0m" 302 -
+172.17.0.1 - - [15/Aug/2020 05:45:35] "[37mGET /error/ HTTP/1.1[0m" 200 -
+172.17.0.1 - - [15/Aug/2020 05:45:35] "[37mGET /static/css/index.css?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [15/Aug/2020 05:45:35] "[37mGET /static/css/result.css?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [15/Aug/2020 05:45:35] "[37mGET /static/js/AutoComplete.min.js HTTP/1.1[0m" 200 -
+172.17.0.1 - - [15/Aug/2020 05:45:35] "[37mGET /static/css/table.css?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [15/Aug/2020 05:45:35] "[37mGET /static/image/icon/logo.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [15/Aug/2020 05:45:36] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+172.17.0.1 - - [15/Aug/2020 05:51:21] "[37mGET /result/이바라%20프라임/ HTTP/1.1[0m" 200 -
+172.17.0.1 - - [15/Aug/2020 05:51:29] "[37mGET / HTTP/1.1[0m" 200 -
+172.17.0.1 - - [15/Aug/2020 06:15:17] "[37mGET / HTTP/1.1[0m" 200 -
+172.17.0.1 - - [15/Aug/2020 06:15:18] "[37mGET /static/js/jquery-ui.js HTTP/1.1[0m" 200 -
+172.17.0.1 - - [15/Aug/2020 06:15:18] "[37mGET /static/css/index.css?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [15/Aug/2020 06:15:18] "[37mGET /static/css/table.css?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [15/Aug/2020 06:15:18] "[37mGET /static/js/AutoComplete.min.js HTTP/1.1[0m" 200 -
+172.17.0.1 - - [15/Aug/2020 06:15:18] "[37mGET /static/js/jquery-3.5.1.min.js HTTP/1.1[0m" 200 -
+172.17.0.1 - - [15/Aug/2020 06:15:18] "[37mGET /static/image/icon/logo.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [15/Aug/2020 06:15:18] "[37mGET /static/image/item_image/mod/Primed_Pressure_Point/Primed_Pressure_Point.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [15/Aug/2020 06:15:18] "[37mGET /static/image/item_image/weapon/Sancti_Castanas/Sancti_Castanas.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [15/Aug/2020 06:15:18] "[37mGET /static/image/item_image/weapon/Kogake_Prime/Kogake_Prime.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [15/Aug/2020 06:15:18] "[37mGET /static/image/item_image/warframe/Chroma_Prime/Chroma_Prime.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [15/Aug/2020 06:15:18] "[37mGET /static/image/item_image/warframe/Ivara_Prime/Ivara_Prime.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [15/Aug/2020 06:15:18] "[37mGET /static/image/item_image/warframe/Loki_Prime/Loki_Prime.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [15/Aug/2020 06:15:18] "[37mGET /static/image/item_image/weapon/Scindo_Prime/Scindo_Prime.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [15/Aug/2020 06:15:18] "[37mGET /static/image/item_image/weapon/Imperator_Vandal/Imperator_Vandal.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [15/Aug/2020 06:15:18] "[37mGET /static/image/item_image/mod/Primed_Flow/Primed_Flow.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [15/Aug/2020 06:15:18] "[37mGET /static/image/item_image/mod/Primed_Continuity/Primed_Continuity.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [15/Aug/2020 06:15:18] "[37mGET /static/image/item_image/warframe/Oberon_Prime/Oberon_Prime.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [15/Aug/2020 06:15:18] "[37mGET /static/image/item_image/weapon/Telos_Boltor/Telos_Boltor.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [15/Aug/2020 06:15:19] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+172.17.0.1 - - [15/Aug/2020 06:15:25] "[37mGET /static/image/item_image/mod/High_Voltage/High_Voltage.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [15/Aug/2020 06:15:25] "[37mGET /static/image/item_image/weapon/Pathocyst/Pathocyst.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [15/Aug/2020 06:15:25] "[37mGET /static/image/item_image/mod/Jolt/Jolt.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [15/Aug/2020 06:15:25] "[37mGET /static/image/item_image/weapon/Supra_Vandal/Supra_Vandal.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [15/Aug/2020 06:15:25] "[37mGET /static/image/item_image/mod/Voltaic_Strike/Voltaic_Strike.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [15/Aug/2020 06:15:25] "[37mGET /static/image/item_image/weapon/Karyst_Prime/Karyst_Prime.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [15/Aug/2020 06:15:25] "[37mGET /static/image/item_image/weapon/Panthera_Prime/Panthera_Prime.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [15/Aug/2020 06:15:25] "[37mGET /static/image/item_image/weapon/Rakta_Dark_Dagger/Rakta_Dark_Dagger.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [15/Aug/2020 06:15:30] "[37mGET /category/ HTTP/1.1[0m" 200 -
+172.17.0.1 - - [15/Aug/2020 06:15:34] "[37mGET /static/image/item_image/mod/Primed_Ravage/Primed_Ravage.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [15/Aug/2020 06:15:34] "[37mGET /static/image/item_image/mod/Primed_Fast_Hands/Primed_Fast_Hands.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [15/Aug/2020 06:15:34] "[37mGET /static/image/item_image/mod/Primed_Charged_Shell/Primed_Charged_Shell.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [15/Aug/2020 06:15:34] "[37mGET /static/image/item_image/mod/Primed_Heated_Charge/Primed_Heated_Charge.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [15/Aug/2020 06:15:34] "[37mGET /static/image/item_image/mod/Primed_Pistol_Ammo_Mutation/Primed_Pistol_Ammo_Mutation.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [15/Aug/2020 06:15:34] "[37mGET /static/image/item_image/mod/Primed_Cryo_Rounds/Primed_Cryo_Rounds.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [15/Aug/2020 06:15:34] "[37mGET /static/image/item_image/mod/Primed_Shotgun_Ammo_Mutation/Primed_Shotgun_Ammo_Mutation.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [15/Aug/2020 06:15:34] "[37mGET /static/image/item_image/mod/Primed_Rifle_Ammo_Mutation/Primed_Rifle_Ammo_Mutation.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [15/Aug/2020 06:15:34] "[37mGET /static/image/item_image/mod/Primed_Quickdraw/Primed_Quickdraw.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [15/Aug/2020 06:15:34] "[37mGET /static/image/item_image/mod/Primed_Pistol_Gambit/Primed_Pistol_Gambit.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [15/Aug/2020 06:15:34] "[37mGET /static/image/item_image/mod/Primed_Slip_Magazine/Primed_Slip_Magazine.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [15/Aug/2020 06:15:34] "[37mGET /static/image/item_image/mod/Primed_Heavy_Trauma/Primed_Heavy_Trauma.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [15/Aug/2020 06:15:34] "[37mGET /static/image/item_image/mod/Primed_Target_Cracker/Primed_Target_Cracker.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [15/Aug/2020 06:15:34] "[37mGET /static/image/item_image/mod/Primed_Reach/Primed_Reach.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [15/Aug/2020 06:15:39] "[32mGET /result/프라임드%20리치 HTTP/1.1[0m" 308 -
+172.17.0.1 - - [15/Aug/2020 06:15:39] "[37mGET /result/프라임드%20리치/ HTTP/1.1[0m" 200 -
+172.17.0.1 - - [15/Aug/2020 06:15:41] "[32mGET /calculator/프라임드%20리치 HTTP/1.1[0m" 308 -
+172.17.0.1 - - [15/Aug/2020 06:15:41] "[37mGET /calculator/프라임드%20리치/ HTTP/1.1[0m" 200 -
+[2020-08-15 06:15:46,932] ERROR in app: Exception on /calculator/프라임드 리치/ [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "flask_app.py", line 1498, in calculator
+    if datetime.datetime.strptime(values[1], '%Y-%m-%d') >= datetime.datetime.strptime(values[0], '%Y-%m-%d'):
+  File "/usr/local/lib/python3.7/_strptime.py", line 577, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "/usr/local/lib/python3.7/_strptime.py", line 359, in _strptime
+    (data_string, format))
+ValueError: time data '' does not match format '%Y-%m-%d'
+172.17.0.1 - - [15/Aug/2020 06:15:46] "[1m[35mPOST /calculator/프라임드%20리치/ HTTP/1.1[0m" 500 -
+172.17.0.1 - - [15/Aug/2020 06:15:57] "[37mPOST /calculator/프라임드%20리치/ HTTP/1.1[0m" 200 -
+172.17.0.1 - - [15/Aug/2020 06:16:01] "[37mPOST /calculator/프라임드%20리치/ HTTP/1.1[0m" 200 -
