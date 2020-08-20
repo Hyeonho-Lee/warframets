@@ -54,7 +54,7 @@
         },
         {
             "index": 4,
-            "index_number": 352,
+            "index_number": 351,
             "image": "./image/item_image/mod/Primed_Rifle_Ammo_Mutation/Primed_Rifle_Ammo_Mutation.png",
             "subject": "프라임드 모드 모음집",
             "name": "primed_rifle_ammo_mutation",
@@ -67,7 +67,7 @@
         },
         {
             "index": 5,
-            "index_number": 379,
+            "index_number": 378,
             "image": "./image/item_image/mod/Primed_Charged_Shell/Primed_Charged_Shell.png",
             "subject": "프라임드 모드 모음집",
             "name": "primed_charged_shell",
@@ -80,7 +80,7 @@
         },
         {
             "index": 6,
-            "index_number": 380,
+            "index_number": 379,
             "image": "./image/item_image/mod/Primed_Point_Blank/Primed_Point_Blank.png",
             "subject": "프라임드 모드 모음집",
             "name": "primed_point_blank",
@@ -93,7 +93,7 @@
         },
         {
             "index": 7,
-            "index_number": 381,
+            "index_number": 380,
             "image": "./image/item_image/mod/Primed_Ravage/Primed_Ravage.png",
             "subject": "프라임드 모드 모음집",
             "name": "primed_ravage",
@@ -106,7 +106,7 @@
         },
         {
             "index": 8,
-            "index_number": 382,
+            "index_number": 381,
             "image": "./image/item_image/mod/Primed_Shotgun_Ammo_Mutation/Primed_Shotgun_Ammo_Mutation.png",
             "subject": "프라임드 모드 모음집",
             "name": "primed_shotgun_ammo_mutation",
@@ -119,7 +119,7 @@
         },
         {
             "index": 9,
-            "index_number": 447,
+            "index_number": 446,
             "image": "./image/item_image/mod/Primed_Heated_Charge/Primed_Heated_Charge.png",
             "subject": "프라임드 모드 모음집",
             "name": "primed_heated_charge",
@@ -132,7 +132,7 @@
         },
         {
             "index": 10,
-            "index_number": 448,
+            "index_number": 447,
             "image": "./image/item_image/mod/Primed_Pistol_Ammo_Mutation/Primed_Pistol_Ammo_Mutation.png",
             "subject": "프라임드 모드 모음집",
             "name": "primed_pistol_ammo_mutation",
@@ -145,7 +145,7 @@
         },
         {
             "index": 11,
-            "index_number": 449,
+            "index_number": 448,
             "image": "./image/item_image/mod/Primed_Pistol_Gambit/Primed_Pistol_Gambit.png",
             "subject": "프라임드 모드 모음집",
             "name": "primed_pistol_gambit",
@@ -158,7 +158,7 @@
         },
         {
             "index": 12,
-            "index_number": 450,
+            "index_number": 449,
             "image": "./image/item_image/mod/Primed_Quickdraw/Primed_Quickdraw.png",
             "subject": "프라임드 모드 모음집",
             "name": "primed_quickdraw",
@@ -171,7 +171,7 @@
         },
         {
             "index": 13,
-            "index_number": 451,
+            "index_number": 450,
             "image": "./image/item_image/mod/Primed_Slip_Magazine/Primed_Slip_Magazine.png",
             "subject": "프라임드 모드 모음집",
             "name": "primed_slip_magazine",
@@ -184,7 +184,7 @@
         },
         {
             "index": 14,
-            "index_number": 452,
+            "index_number": 451,
             "image": "./image/item_image/mod/Primed_Target_Cracker/Primed_Target_Cracker.png",
             "subject": "프라임드 모드 모음집",
             "name": "primed_target_cracker",
@@ -197,7 +197,7 @@
         },
         {
             "index": 15,
-            "index_number": 506,
+            "index_number": 505,
             "image": "./image/item_image/mod/Primed_Fever_Strike/Primed_Fever_Strike.png",
             "subject": "프라임드 모드 모음집",
             "name": "primed_fever_strike",
@@ -210,7 +210,7 @@
         },
         {
             "index": 16,
-            "index_number": 507,
+            "index_number": 506,
             "image": "./image/item_image/mod/Primed_Heavy_Trauma/Primed_Heavy_Trauma.png",
             "subject": "프라임드 모드 모음집",
             "name": "primed_heavy_trauma",
@@ -223,7 +223,7 @@
         },
         {
             "index": 17,
-            "index_number": 508,
+            "index_number": 507,
             "image": "./image/item_image/mod/Primed_Pressure_Point/Primed_Pressure_Point.png",
             "subject": "프라임드 모드 모음집",
             "name": "primed_pressure_point",
@@ -236,7 +236,7 @@
         },
         {
             "index": 18,
-            "index_number": 509,
+            "index_number": 508,
             "image": "./image/item_image/mod/Primed_Reach/Primed_Reach.png",
             "subject": "프라임드 모드 모음집",
             "name": "primed_reach",

@@ -199,12 +199,6 @@
             "kr_name": "프로톤 제트"
         },
         {
-            "name": "recover",
-            "type": "rifle_mod",
-            "en_name": "Recover",
-            "kr_name": "리커버"
-        },
-        {
             "name": "rifle_aptitude",
             "type": "rifle_mod",
             "en_name": "Rifle Aptitude",

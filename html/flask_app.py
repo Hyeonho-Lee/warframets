@@ -1,4 +1,5 @@
 import os
+import sys
 import json
 import math
 import datetime
@@ -1539,7 +1540,13 @@ def calculator(get_name):
             else:
                 return redirect('/error/')
 
+@app.errorhandler(404)
+def page_not_found(error):
+    visit_count = get_visit()
+    all_item, all_item_kr, all_path, all_path_0, all_path_1, all_type, all_type_kr = get_all_item()
+    return render_template('error.html', **locals()), 404
+
 #=======================================================================#
 if __name__ == '__main__':
     app.static_folder = 'static'
-    app.run(host = '0.0.0.0', port = '5000', debug=False)
+    app.run(host = '0.0.0.0', port = 5000, debug=False)
