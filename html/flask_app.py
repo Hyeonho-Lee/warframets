@@ -6,6 +6,7 @@ import datetime
 import pandas as pd
 import numpy as np
 import random
+import ssl
 from flask import Flask, url_for, render_template, request, redirect, session
 
 #https://www.chartjs.org/
@@ -1548,5 +1549,7 @@ def page_not_found(error):
 
 #=======================================================================#
 if __name__ == '__main__':
+    #ssl_context = ssl.SSLContext(ssl.PROTOCOL_TLS)
+    #ssl_context.load_cert_chain(certfile='', keyfile='', password=random)
     app.static_folder = 'static'
-    app.run(host = '0.0.0.0', port = 5000, debug=False)
+    app.run(host = '0.0.0.0', port = 5001, debug=False)
