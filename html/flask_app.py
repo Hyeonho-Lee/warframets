@@ -1297,17 +1297,17 @@ def category():
     rec_name_0_pe2, rec_kr_name_0_pe2, rec_percent_0_pe2, rec_image_0_pe2 = sort_array("퍼센트", "True", rec_name_0, rec_kr_name_0, rec_price_0, rec_percent_0, rec_volume_0, rec_image_0)
     rec_name_0_vo1, rec_kr_name_0_vo1, rec_volume_0_vo1, rec_image_0_vo1 = sort_array("거래량", "False", rec_name_0, rec_kr_name_0, rec_price_0, rec_percent_0, rec_volume_0, rec_image_0)
     rec_name_0_vo2, rec_kr_name_0_vo2, rec_volume_0_vo2, rec_image_0_vo2 = sort_array("거래량", "True", rec_name_0, rec_kr_name_0, rec_price_0, rec_percent_0, rec_volume_0, rec_image_0)
-    
+
     return render_template('category.html', **locals())
 
-#=======================================================================#
+###########################################################################
 
 @app.route('/calculator/<get_name>/', methods=['GET', 'POST'])
 def calculator(get_name):
 
     visit_count = get_visit()
     all_item, all_item_kr, all_path, all_path_0, all_path_1, all_type, all_type_kr = get_all_item()
-    
+
     def find_path(name, types):
         if types == 'path':
             for i, v in enumerate(all_item):

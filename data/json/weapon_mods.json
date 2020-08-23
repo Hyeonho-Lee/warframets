@@ -1357,12 +1357,6 @@
             "kr_name": "세이즈믹 웨이브"
         },
         {
-            "name": "serrated_edges",
-            "type": "melee_mod",
-            "en_name": "Serrated Edges",
-            "kr_name": "서레이티드 엣지즈"
-        },
-        {
             "name": "shattering_impact",
             "type": "melee_mod",
             "en_name": "Shattering Impact",
