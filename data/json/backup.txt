@@ -1,0 +1,1778 @@
+        {
+            "name": "hunter_munitions",
+            "type": "primary_mod",
+            "en_name": "Hunter Munitions",
+            "kr_name": ""
+        },
+        {
+            "name": "hunter_track",
+            "type": "primary_mod",
+            "en_name": "Hunter Track",
+            "kr_name": ""
+        },
+        {
+            "name": "vigilante_armaments",
+            "type": "primary_mod",
+            "en_name": "Vigilante Armaments",
+            "kr_name": ""
+        },
+        {
+            "name": "vigilante_fervor",
+            "type": "primary_mod",
+            "en_name": "Vigilante Fervor",
+            "kr_name": ""
+        },
+        {
+            "name": "vigilante_offense",
+            "type": "primary_mod",
+            "en_name": "Vigilante Offense",
+            "kr_name": ""
+        },
+        {
+            "name": "vigilante_supplies",
+            "type": "primary_mod",
+            "en_name": "Vigilante Supplies",
+            "kr_name": ""
+        },
+        {
+            "name": "adhesive_blast",
+            "type": "rifle_mod",
+            "en_name": "Adhesive Blast",
+            "kr_name": ""
+        },
+        {
+            "name": "agile_aim",
+            "type": "rifle_mod",
+            "en_name": "Agile Aim",
+            "kr_name": ""
+        },
+        {
+            "name": "ammo_drum",
+            "type": "rifle_mod",
+            "en_name": "Ammo Drum",
+            "kr_name": ""
+        },
+        {
+            "name": "argon_scope",
+            "type": "rifle_mod",
+            "en_name": "Argon Scope",
+            "kr_name": ""
+        },
+        {
+            "name": "bladed_rounds",
+            "type": "rifle_mod",
+            "en_name": "Bladed Rounds",
+            "kr_name": ""
+        },
+        {
+            "name": "catalyzer_link",
+            "type": "rifle_mod",
+            "en_name": "Catalyzer Link",
+            "kr_name": ""
+        },
+        {
+            "name": "cautious_shot",
+            "type": "rifle_mod",
+            "en_name": "Cautious Shot",
+            "kr_name": ""
+        },
+        {
+            "name": "continuous_misery",
+            "type": "rifle_mod",
+            "en_name": "Continuous Misery",
+            "kr_name": ""
+        },
+        {
+            "name": "crash_course",
+            "type": "rifle_mod",
+            "en_name": "Crash Course",
+            "kr_name": ""
+        },
+        {
+            "name": "critical_delay",
+            "type": "rifle_mod",
+            "en_name": "Critical Delay",
+            "kr_name": ""
+        },
+        {
+            "name": "cryo_rounds",
+            "type": "rifle_mod",
+            "en_name": "Cryo Rounds",
+            "kr_name": ""
+        },
+        {
+            "name": "fanged_fusillade",
+            "type": "rifle_mod",
+            "en_name": "Fanged Fusillade",
+            "kr_name": ""
+        },
+        {
+            "name": "firestorm",
+            "type": "rifle_mod",
+            "en_name": "Firestorm",
+            "kr_name": ""
+        },
+        {
+            "name": "hammer_shot",
+            "type": "rifle_mod",
+            "en_name": "Hammer Shot",
+            "kr_name": ""
+        },
+        {
+            "name": "heavy_caliber",
+            "type": "rifle_mod",
+            "en_name": "Heavy Caliber",
+            "kr_name": ""
+        },
+        {
+            "name": "hellfire",
+            "type": "rifle_mod",
+            "en_name": "Hellfire",
+            "kr_name": ""
+        },
+        {
+            "name": "high_voltage",
+            "type": "rifle_mod",
+            "en_name": "High Voltage",
+            "kr_name": ""
+        },
+        {
+            "name": "hush",
+            "type": "rifle_mod",
+            "en_name": "Hush",
+            "kr_name": ""
+        },
+        {
+            "name": "infected_clip",
+            "type": "rifle_mod",
+            "en_name": "Infected Clip",
+            "kr_name": ""
+        },
+        {
+            "name": "lucky_shot",
+            "type": "rifle_mod",
+            "en_name": "Lucky Shot",
+            "kr_name": ""
+        },
+        {
+            "name": "malignant_force",
+            "type": "rifle_mod",
+            "en_name": "Malignant Force",
+            "kr_name": ""
+        },
+        {
+            "name": "metal_auger",
+            "type": "rifle_mod",
+            "en_name": "Metal Auger",
+            "kr_name": ""
+        },
+        {
+            "name": "piercing_caliber",
+            "type": "rifle_mod",
+            "en_name": "Piercing Caliber",
+            "kr_name": ""
+        },
+        {
+            "name": "point_strike",
+            "type": "rifle_mod",
+            "en_name": "Point Strike",
+            "kr_name": ""
+        },
+        {
+            "name": "primed_cryo_rounds",
+            "type": "rifle_mod",
+            "en_name": "Primed Cryo Rounds",
+            "kr_name": ""
+        },
+        {
+            "name": "primed_fast_hands",
+            "type": "rifle_mod",
+            "en_name": "Primed Fast Hands",
+            "kr_name": ""
+        },
+        {
+            "name": "proton_jet",
+            "type": "rifle_mod",
+            "en_name": "Proton Jet",
+            "kr_name": ""
+        },
+        {
+            "name": "recover",
+            "type": "rifle_mod",
+            "en_name": "Recover",
+            "kr_name": ""
+        },
+        {
+            "name": "rifle_aptitude",
+            "type": "rifle_mod",
+            "en_name": "Rifle Aptitude",
+            "kr_name": ""
+        },
+        {
+            "name": "rime_rounds",
+            "type": "rifle_mod",
+            "en_name": "Rime Rounds",
+            "kr_name": ""
+        },
+        {
+            "name": "ripper_rounds",
+            "type": "rifle_mod",
+            "en_name": "Ripper Rounds",
+            "kr_name": ""
+        },
+        {
+            "name": "serrated_rounds",
+            "type": "rifle_mod",
+            "en_name": "Serrated Rounds",
+            "kr_name": ""
+        },
+        {
+            "name": "serration",
+            "type": "rifle_mod",
+            "en_name": "Serration",
+            "kr_name": ""
+        },
+        {
+            "name": "shred",
+            "type": "rifle_mod",
+            "en_name": "Shred",
+            "kr_name": ""
+        },
+        {
+            "name": "sinister_reach",
+            "type": "rifle_mod",
+            "en_name": "Sinister Reach",
+            "kr_name": ""
+        },
+        {
+            "name": "speed_trigger",
+            "type": "rifle_mod",
+            "en_name": "Speed Trigger",
+            "kr_name": ""
+        },
+        {
+            "name": "split_chamber",
+            "type": "rifle_mod",
+            "en_name": "Split Chamber",
+            "kr_name": ""
+        },
+        {
+            "name": "stabilizer",
+            "type": "rifle_mod",
+            "en_name": "Stabilizer",
+            "kr_name": ""
+        },
+        {
+            "name": "stormbringer",
+            "type": "rifle_mod",
+            "en_name": "Stormbringer",
+            "kr_name": ""
+        },
+        {
+            "name": "terminal_velocity",
+            "type": "rifle_mod",
+            "en_name": "Terminal Velocity",
+            "kr_name": ""
+        },
+        {
+            "name": "thermite_rounds",
+            "type": "rifle_mod",
+            "en_name": "Thermite Rounds",
+            "kr_name": ""
+        },
+        {
+            "name": "twitch",
+            "type": "rifle_mod",
+            "en_name": "Twitch",
+            "kr_name": ""
+        },
+        {
+            "name": "vile_acceleration",
+            "type": "rifle_mod",
+            "en_name": "Vile Acceleration",
+            "kr_name": ""
+        },
+        {
+            "name": "vile_precision",
+            "type": "rifle_mod",
+            "en_name": "Vile Precision",
+            "kr_name": ""
+        },
+        {
+            "name": "vital_sense",
+            "type": "rifle_mod",
+            "en_name": "Vital Sense",
+            "kr_name": ""
+        },
+        {
+            "name": "wildfire",
+            "type": "rifle_mod",
+            "en_name": "Wildfire",
+            "kr_name": ""
+        },
+        {
+            "name": "deft_tempo",
+            "type": "assaultrifle_mod",
+            "en_name": "Deft Tempo",
+            "kr_name": ""
+        },
+        {
+            "name": "guided_ordnance",
+            "type": "assaultrifle_mod",
+            "en_name": "Guided Ordnance",
+            "kr_name": ""
+        },
+        {
+            "name": "gun_glide",
+            "type": "assaultrifle_mod",
+            "en_name": "Gun Glide",
+            "kr_name": ""
+        },
+        {
+            "name": "hydraulic_gauge",
+            "type": "assaultrifle_mod",
+            "en_name": "Hydraulic Gauge",
+            "kr_name": ""
+        },
+        {
+            "name": "loose_hatch",
+            "type": "assaultrifle_mod",
+            "en_name": "Loose Hatch",
+            "kr_name": ""
+        },
+        {
+            "name": "maximum_capacity",
+            "type": "assaultrifle_mod",
+            "en_name": "Maximum Capacity",
+            "kr_name": ""
+        },
+        {
+            "name": "rifle_ammo_mutation",
+            "type": "assaultrifle_mod",
+            "en_name": "Rifle Ammo Mutation",
+            "kr_name": ""
+        },
+        {
+            "name": "primed_rifle_ammo_mutation",
+            "type": "assaultrifle_mod",
+            "en_name": "Primed Rifle Ammo Mutation",
+            "kr_name": ""
+        },
+        {
+            "name": "tactical_reload",
+            "type": "assaultrifle_mod",
+            "en_name": "Tactical Reload",
+            "kr_name": ""
+        },
+        {
+            "name": "tainted_mag",
+            "type": "assaultrifle_mod",
+            "en_name": "Tainted Mag",
+            "kr_name": ""
+        },
+        {
+            "name": "accelerated_blast",
+            "type": "shotgun_mod",
+            "en_name": "Accelerated Blast",
+            "kr_name": ""
+        },
+        {
+            "name": "ammo_stock",
+            "type": "shotgun_mod",
+            "en_name": "Ammo Stock",
+            "kr_name": ""
+        },
+        {
+            "name": "blaze",
+            "type": "shotgun_mod",
+            "en_name": "Blaze",
+            "kr_name": ""
+        },
+        {
+            "name": "blunderbuss",
+            "type": "shotgun_mod",
+            "en_name": "Blunderbuss",
+            "kr_name": ""
+        },
+        {
+            "name": "breach_loader",
+            "type": "shotgun_mod",
+            "en_name": "Breach Loader",
+            "kr_name": ""
+        },
+        {
+            "name": "burdened_magazine",
+            "type": "shotgun_mod",
+            "en_name": "Burdened Magazine",
+            "kr_name": ""
+        },
+        {
+            "name": "charged_shell",
+            "type": "shotgun_mod",
+            "en_name": "Charged Shell",
+            "kr_name": ""
+        },
+        {
+            "name": "chilling_grasp",
+            "type": "shotgun_mod",
+            "en_name": "Chilling Grasp",
+            "kr_name": ""
+        },
+        {
+            "name": "chilling_reload",
+            "type": "shotgun_mod",
+            "en_name": "Chilling Reload",
+            "kr_name": ""
+        },
+        {
+            "name": "contagious_spread",
+            "type": "shotgun_mod",
+            "en_name": "Contagious Spread",
+            "kr_name": ""
+        },
+        {
+            "name": "critical_deceleration",
+            "type": "shotgun_mod",
+            "en_name": "Critical Deceleration",
+            "kr_name": ""
+        },
+        {
+            "name": "fatal_acceleration",
+            "type": "shotgun_mod",
+            "en_name": "Fatal Acceleration",
+            "kr_name": ""
+        },
+        {
+            "name": "frail_momentum",
+            "type": "shotgun_mod",
+            "en_name": "Frail Momentum",
+            "kr_name": ""
+        },
+        {
+            "name": "frigid_blast",
+            "type": "shotgun_mod",
+            "en_name": "Frigid Blast",
+            "kr_name": ""
+        },
+        {
+            "name": "full_contact",
+            "type": "shotgun_mod",
+            "en_name": "Full Contact",
+            "kr_name": ""
+        },
+        {
+            "name": "incendiary_coat",
+            "type": "shotgun_mod",
+            "en_name": "Incendiary Coat",
+            "kr_name": ""
+        },
+        {
+            "name": "laser_sight",
+            "type": "shotgun_mod",
+            "en_name": "Laser Sight",
+            "kr_name": ""
+        },
+        {
+            "name": "motus_setup",
+            "type": "shotgun_mod",
+            "en_name": "Motus Setup",
+            "kr_name": ""
+        },
+        {
+            "name": "narrow_barrel",
+            "type": "shotgun_mod",
+            "en_name": "Narrow Barrel",
+            "kr_name": ""
+        },
+        {
+            "name": "point_blank",
+            "type": "shotgun_mod",
+            "en_name": "Point Blank",
+            "kr_name": ""
+        },
+        {
+            "name": "primed_cleanse_corpus",
+            "type": "shotgun_mod",
+            "en_name": "Primed Cleanse Corpus",
+            "kr_name": ""
+        },
+        {
+            "name": "primed_cleanse_corrupted",
+            "type": "shotgun_mod",
+            "en_name": "Primed Cleanse Corrupted",
+            "kr_name": ""
+        },
+        {
+            "name": "primed_cleanse_grineer",
+            "type": "shotgun_mod",
+            "en_name": "Primed Cleanse Grineer",
+            "kr_name": ""
+        },
+        {
+            "name": "primed_cleanse_infested",
+            "type": "shotgun_mod",
+            "en_name": "Primed Cleanse Infested",
+            "kr_name": ""
+        },
+        {
+            "name": "primed_charged_shell",
+            "type": "shotgun_mod",
+            "en_name": "Primed Charged Shell",
+            "kr_name": ""
+        },
+        {
+            "name": "primed_point_blank",
+            "type": "shotgun_mod",
+            "en_name": "Primed Point Blank",
+            "kr_name": ""
+        },
+        {
+            "name": "primed_ravage",
+            "type": "shotgun_mod",
+            "en_name": "Primed Ravage",
+            "kr_name": ""
+        },
+        {
+            "name": "primed_shotgun_ammo_mutation",
+            "type": "shotgun_mod",
+            "en_name": "Primed Shotgun Ammo Mutation",
+            "kr_name": ""
+        },
+        {
+            "name": "prize_kill",
+            "type": "shotgun_mod",
+            "en_name": "Prize Kill",
+            "kr_name": ""
+        },
+        {
+            "name": "ravage",
+            "type": "shotgun_mod",
+            "en_name": "Ravage",
+            "kr_name": ""
+        },
+        {
+            "name": "repeater_clip",
+            "type": "shotgun_mod",
+            "en_name": "Repeater Clip",
+            "kr_name": ""
+        },
+        {
+            "name": "scattering_inferno",
+            "type": "shotgun_mod",
+            "en_name": "Scattering Inferno",
+            "kr_name": ""
+        },
+        {
+            "name": "seeking_force",
+            "type": "shotgun_mod",
+            "en_name": "Seeking Force",
+            "kr_name": ""
+        },
+        {
+            "name": "seeking_fury",
+            "type": "shotgun_mod",
+            "en_name": "Seeking Fury",
+            "kr_name": ""
+        },
+        {
+            "name": "shell_compression",
+            "type": "shotgun_mod",
+            "en_name": "Shell Compression",
+            "kr_name": ""
+        },
+        {
+            "name": "shell_shock",
+            "type": "shotgun_mod",
+            "en_name": "Shell Shock",
+            "kr_name": ""
+        },
+        {
+            "name": "shotgun_ammo_mutation",
+            "type": "shotgun_mod",
+            "en_name": "Shotgun Ammo Mutation",
+            "kr_name": ""
+        },
+        {
+            "name": "shotgun_savvy",
+            "type": "shotgun_mod",
+            "en_name": "Shotgun Savvy",
+            "kr_name": ""
+        },
+        {
+            "name": "shotgun_spazz",
+            "type": "shotgun_mod",
+            "en_name": "Shotgun Spazz",
+            "kr_name": ""
+        },
+        {
+            "name": "shrapnel_shot",
+            "type": "shotgun_mod",
+            "en_name": "Shrapnel Shot",
+            "kr_name": ""
+        },
+        {
+            "name": "silent_battery",
+            "type": "shotgun_mod",
+            "en_name": "Silent Battery",
+            "kr_name": ""
+        },
+        {
+            "name": "snap_shot",
+            "type": "shotgun_mod",
+            "en_name": "Snap Shot",
+            "kr_name": ""
+        },
+        {
+            "name": "soft_hands",
+            "type": "shotgun_mod",
+            "en_name": "Soft Hands",
+            "kr_name": ""
+        },
+        {
+            "name": "sweeping_serration",
+            "type": "shotgun_mod",
+            "en_name": "Sweeping Serration",
+            "kr_name": ""
+        },
+        {
+            "name": "tainted_shell",
+            "type": "shotgun_mod",
+            "en_name": "Tainted Shell",
+            "kr_name": ""
+        },
+        {
+            "name": "toxic_barrage",
+            "type": "shotgun_mod",
+            "en_name": "Toxic Barrage",
+            "kr_name": ""
+        },
+        {
+            "name": "vicious_spread",
+            "type": "shotgun_mod",
+            "en_name": "Vicious Spread",
+            "kr_name": ""
+        },
+        {
+            "name": "aero_agility",
+            "type": "sniper_mod",
+            "en_name": "Aero Agility",
+            "kr_name": ""
+        },
+        {
+            "name": "charged_chamber",
+            "type": "sniper_mod",
+            "en_name": "Charged Chamber",
+            "kr_name": ""
+        },
+        {
+            "name": "depleted_reload",
+            "type": "sniper_mod",
+            "en_name": "Depleted Reload",
+            "kr_name": ""
+        },
+        {
+            "name": "emergent_aftermath",
+            "type": "sniper_mod",
+            "en_name": "Emergent Aftermath",
+            "kr_name": ""
+        },
+        {
+            "name": "harkonar_scope",
+            "type": "sniper_mod",
+            "en_name": "Harkonar Scope",
+            "kr_name": ""
+        },
+        {
+            "name": "primed_chamber",
+            "type": "sniper_mod",
+            "en_name": "Primed Chamber",
+            "kr_name": ""
+        },
+        {
+            "name": "sharpshooter",
+            "type": "sniper_mod",
+            "en_name": "Sharpshooter",
+            "kr_name": ""
+        },
+        {
+            "name": "sniper_ammo_mutation",
+            "type": "sniper_mod",
+            "en_name": "Sniper Ammo Mutation",
+            "kr_name": ""
+        },
+        {
+            "name": "target_acquired",
+            "type": "sniper_mod",
+            "en_name": "Target Acquired",
+            "kr_name": ""
+        },
+        {
+            "name": "arrow_mutation",
+            "type": "bow_mod",
+            "en_name": "Arrow Mutation",
+            "kr_name": ""
+        },
+        {
+            "name": "plan_b",
+            "type": "bow_mod",
+            "en_name": "Plan B",
+            "kr_name": ""
+        },
+        {
+            "name": "soaring_strike",
+            "type": "bow_mod",
+            "en_name": "Soaring Strike",
+            "kr_name": ""
+        },
+        {
+            "name": "split_flights",
+            "type": "bow_mod",
+            "en_name": "Split Flights",
+            "kr_name": ""
+        },
+        {
+            "name": "thunderbolt",
+            "type": "bow_mod",
+            "en_name": "Thunderbolt",
+            "kr_name": ""
+        },
+        {
+            "name": "anemic_agility",
+            "type": "pistol_mod",
+            "en_name": "Anemic Agility",
+            "kr_name": ""
+        },
+        {
+            "name": "augur_pact",
+            "type": "pistol_mod",
+            "en_name": "Augur Pact",
+            "kr_name": ""
+        },
+        {
+            "name": "augur_seeker",
+            "type": "pistol_mod",
+            "en_name": "Augur Seeker",
+            "kr_name": ""
+        },
+        {
+            "name": "barrel_diffusion",
+            "type": "pistol_mod",
+            "en_name": "Barrel Diffusion",
+            "kr_name": ""
+        },
+        {
+            "name": "blind_shot",
+            "type": "pistol_mod",
+            "en_name": "Blind Shot",
+            "kr_name": ""
+        },
+        {
+            "name": "bore",
+            "type": "pistol_mod",
+            "en_name": "Bore",
+            "kr_name": ""
+        },
+        {
+            "name": "concealed_explosives",
+            "type": "pistol_mod",
+            "en_name": "Concealed Explosives",
+            "kr_name": ""
+        },
+        {
+            "name": "concussion_rounds",
+            "type": "pistol_mod",
+            "en_name": "Concussion Rounds",
+            "kr_name": ""
+        },
+        {
+            "name": "convulsion",
+            "type": "pistol_mod",
+            "en_name": "Convulsion",
+            "kr_name": ""
+        },
+        {
+            "name": "creeping_bullseye",
+            "type": "pistol_mod",
+            "en_name": "Creeping Bullseye",
+            "kr_name": ""
+        },
+        {
+            "name": "deep_freeze",
+            "type": "pistol_mod",
+            "en_name": "Deep Freeze",
+            "kr_name": ""
+        },
+        {
+            "name": "eject_magazine",
+            "type": "pistol_mod",
+            "en_name": "Eject Magazine",
+            "kr_name": ""
+        },
+        {
+            "name": "embedded_catalyzer",
+            "type": "pistol_mod",
+            "en_name": "Embedded Catalyzer",
+            "kr_name": ""
+        },
+        {
+            "name": "expel_corpus",
+            "type": "pistol_mod",
+            "en_name": "Expel Corpus",
+            "kr_name": ""
+        },
+        {
+            "name": "expel_corrupted",
+            "type": "pistol_mod",
+            "en_name": "Expel Corrupted",
+            "kr_name": ""
+        },
+        {
+            "name": "expel_grineer",
+            "type": "pistol_mod",
+            "en_name": "Expel Grineer",
+            "kr_name": ""
+        },
+        {
+            "name": "expel_infested",
+            "type": "pistol_mod",
+            "en_name": "Expel Infested",
+            "kr_name": ""
+        },
+        {
+            "name": "frostbite",
+            "type": "pistol_mod",
+            "en_name": "Frostbite",
+            "kr_name": ""
+        },
+        {
+            "name": "fulmination",
+            "type": "pistol_mod",
+            "en_name": "Fulmination",
+            "kr_name": ""
+        },
+        {
+            "name": "gunslinger",
+            "type": "pistol_mod",
+            "en_name": "Gunslinger",
+            "kr_name": ""
+        },
+        {
+            "name": "heated_charge",
+            "type": "pistol_mod",
+            "en_name": "Heated Charge",
+            "kr_name": ""
+        },
+        {
+            "name": "heavy_warhead",
+            "type": "pistol_mod",
+            "en_name": "Heavy Warhead",
+            "kr_name": ""
+        },
+        {
+            "name": "hollow_point",
+            "type": "pistol_mod",
+            "en_name": "Hollow Point",
+            "kr_name": ""
+        },
+        {
+            "name": "hornet_strike",
+            "type": "pistol_mod",
+            "en_name": "Hornet Strike",
+            "kr_name": ""
+        },
+        {
+            "name": "hydraulic_barrel",
+            "type": "pistol_mod",
+            "en_name": "Hydraulic Barrel",
+            "kr_name": ""
+        },
+        {
+            "name": "hydraulic_crosshairs",
+            "type": "pistol_mod",
+            "en_name": "Hydraulic Crosshairs",
+            "kr_name": ""
+        },
+        {
+            "name": "ice_storm",
+            "type": "pistol_mod",
+            "en_name": "Ice Storm",
+            "kr_name": ""
+        },
+        {
+            "name": "jolt",
+            "type": "pistol_mod",
+            "en_name": "Jolt",
+            "kr_name": ""
+        },
+        {
+            "name": "lethal_torrent",
+            "type": "pistol_mod",
+            "en_name": "Lethal Torrent",
+            "kr_name": ""
+        },
+        {
+            "name": "magnum_force",
+            "type": "pistol_mod",
+            "en_name": "Magnum Force",
+            "kr_name": ""
+        },
+        {
+            "name": "maim",
+            "type": "pistol_mod",
+            "en_name": "Maim",
+            "kr_name": ""
+        },
+        {
+            "name": "pathogen_rounds",
+            "type": "pistol_mod",
+            "en_name": "Pathogen Rounds",
+            "kr_name": ""
+        },
+        {
+            "name": "pistol_ammo_mutation",
+            "type": "pistol_mod",
+            "en_name": "Pistol Ammo Mutation",
+            "kr_name": ""
+        },
+        {
+            "name": "pistol_gambit",
+            "type": "pistol_mod",
+            "en_name": "Pistol Gambit",
+            "kr_name": ""
+        },
+        {
+            "name": "pistol_pestilence",
+            "type": "pistol_mod",
+            "en_name": "Pistol Pestilence",
+            "kr_name": ""
+        },
+        {
+            "name": "pressurized_magazine",
+            "type": "pistol_mod",
+            "en_name": "Pressurized Magazine",
+            "kr_name": ""
+        },
+        {
+            "name": "primed_expel_corpus",
+            "type": "pistol_mod",
+            "en_name": "Primed Expel Corpus",
+            "kr_name": ""
+        },
+        {
+            "name": "primed_expel_corrupted",
+            "type": "pistol_mod",
+            "en_name": "Primed Expel Corrupted",
+            "kr_name": ""
+        },
+        {
+            "name": "primed_expel_grineer",
+            "type": "pistol_mod",
+            "en_name": "Primed Expel Grineer",
+            "kr_name": ""
+        },
+        {
+            "name": "primed_expel_infested",
+            "type": "pistol_mod",
+            "en_name": "Primed Expel Infested",
+            "kr_name": ""
+        },
+        {
+            "name": "primed_heated_charge",
+            "type": "pistol_mod",
+            "en_name": "Primed Heated Charge",
+            "kr_name": ""
+        },
+        {
+            "name": "primed_pistol_ammo_mutation",
+            "type": "pistol_mod",
+            "en_name": "Primed Pistol Ammo Mutation",
+            "kr_name": ""
+        },
+        {
+            "name": "primed_pistol_gambit",
+            "type": "pistol_mod",
+            "en_name": "Primed Pistol Gambit",
+            "kr_name": ""
+        },
+        {
+            "name": "primed_quickdraw",
+            "type": "pistol_mod",
+            "en_name": "Primed Quickdraw",
+            "kr_name": ""
+        },
+        {
+            "name": "primed_slip_magazine",
+            "type": "pistol_mod",
+            "en_name": "Primed Slip Magazine",
+            "kr_name": ""
+        },
+        {
+            "name": "primed_target_cracker",
+            "type": "pistol_mod",
+            "en_name": "Primed Target Cracker",
+            "kr_name": ""
+        },
+        {
+            "name": "pummel",
+            "type": "pistol_mod",
+            "en_name": "Pummel",
+            "kr_name": ""
+        },
+        {
+            "name": "reflex_draw",
+            "type": "pistol_mod",
+            "en_name": "Reflex Draw",
+            "kr_name": ""
+        },
+        {
+            "name": "ruinous_extension",
+            "type": "pistol_mod",
+            "en_name": "Ruinous Extension",
+            "kr_name": ""
+        },
+        {
+            "name": "scorch",
+            "type": "pistol_mod",
+            "en_name": "Scorch",
+            "kr_name": ""
+        },
+        {
+            "name": "seeker",
+            "type": "pistol_mod",
+            "en_name": "Seeker",
+            "kr_name": ""
+        },
+        {
+            "name": "sharpened_bullets",
+            "type": "pistol_mod",
+            "en_name": "Sharpened Bullets",
+            "kr_name": ""
+        },
+        {
+            "name": "spry_sights",
+            "type": "pistol_mod",
+            "en_name": "Spry Sights",
+            "kr_name": ""
+        },
+        {
+            "name": "steady_hands",
+            "type": "pistol_mod",
+            "en_name": "Steady Hands",
+            "kr_name": ""
+        },
+        {
+            "name": "strafing_slide",
+            "type": "pistol_mod",
+            "en_name": "Strafing Slide",
+            "kr_name": ""
+        },
+        {
+            "name": "stunning_speed",
+            "type": "pistol_mod",
+            "en_name": "Stunning Speed",
+            "kr_name": ""
+        },
+        {
+            "name": "sure_shot",
+            "type": "pistol_mod",
+            "en_name": "Sure Shot",
+            "kr_name": ""
+        },
+        {
+            "name": "synth_charge",
+            "type": "pistol_mod",
+            "en_name": "Synth Charge",
+            "kr_name": ""
+        },
+        {
+            "name": "tainted_clip",
+            "type": "pistol_mod",
+            "en_name": "Tainted Clip",
+            "kr_name": ""
+        },
+        {
+            "name": "target_cracker",
+            "type": "pistol_mod",
+            "en_name": "Target Cracker",
+            "kr_name": ""
+        },
+        {
+            "name": "targeting_subsystem",
+            "type": "pistol_mod",
+            "en_name": "Targeting Subsystem",
+            "kr_name": ""
+        },{
+            "name": "auger_strike",
+            "type": "melee_mod",
+            "en_name": "Auger Strike",
+            "kr_name": ""
+        },
+        {
+            "name": "berserker",
+            "type": "melee_mod",
+            "en_name": "Berserker",
+            "kr_name": ""
+        },
+        {
+            "name": "blood_rush",
+            "type": "melee_mod",
+            "en_name": "Blood Rush",
+            "kr_name": ""
+        },
+        {
+            "name": "body_count",
+            "type": "melee_mod",
+            "en_name": "Body Count",
+            "kr_name": ""
+        },
+        {
+            "name": "buzz_kill",
+            "type": "melee_mod",
+            "en_name": "Buzz Kill",
+            "kr_name": ""
+        },
+        {
+            "name": "collision_force",
+            "type": "melee_mod",
+            "en_name": "Collision Force",
+            "kr_name": ""
+        },
+        {
+            "name": "condition_overload",
+            "type": "melee_mod",
+            "en_name": "Condition Overload",
+            "kr_name": ""
+        },
+        {
+            "name": "corrupt_charge",
+            "type": "melee_mod",
+            "en_name": "Corrupt Charge",
+            "kr_name": ""
+        },
+        {
+            "name": "counterweight",
+            "type": "melee_mod",
+            "en_name": "Counterweight",
+            "kr_name": ""
+        },
+        {
+            "name": "covert_lethality",
+            "type": "melee_mod",
+            "en_name": "Covert Lethality",
+            "kr_name": ""
+        },
+        {
+            "name": "dispatch_overdrive",
+            "type": "melee_mod",
+            "en_name": "Dispatch Overdrive",
+            "kr_name": ""
+        },
+        {
+            "name": "drifting_contact",
+            "type": "melee_mod",
+            "en_name": "Drifting Contact",
+            "kr_name": ""
+        },
+        {
+            "name": "enduring_affliction",
+            "type": "melee_mod",
+            "en_name": "Enduring Affliction",
+            "kr_name": ""
+        },
+        {
+            "name": "enduring_strike",
+            "type": "melee_mod",
+            "en_name": "Enduring Strike",
+            "kr_name": ""
+        },
+        {
+            "name": "energy_channel",
+            "type": "melee_mod",
+            "en_name": "Energy Channel",
+            "kr_name": ""
+        },
+        {
+            "name": "explosive_demise",
+            "type": "melee_mod",
+            "en_name": "Explosive Demise",
+            "kr_name": ""
+        },
+        {
+            "name": "fever_strike",
+            "type": "melee_mod",
+            "en_name": "Fever Strike",
+            "kr_name": ""
+        },
+        {
+            "name": "finishing_touch",
+            "type": "melee_mod",
+            "en_name": "Finishing Touch",
+            "kr_name": ""
+        },
+        {
+            "name": "focus_energy",
+            "type": "melee_mod",
+            "en_name": "Focus Energy",
+            "kr_name": ""
+        },
+        {
+            "name": "fury",
+            "type": "melee_mod",
+            "en_name": "Fury",
+            "kr_name": ""
+        },
+        {
+            "name": "gladiator_might",
+            "type": "melee_mod",
+            "en_name": "Gladiator Might",
+            "kr_name": ""
+        },
+        {
+            "name": "gladiator_rush",
+            "type": "melee_mod",
+            "en_name": "Gladiator Rush",
+            "kr_name": ""
+        },
+        {
+            "name": "gladiator_vice",
+            "type": "melee_mod",
+            "en_name": "Gladiator Vice",
+            "kr_name": ""
+        },
+        {
+            "name": "guardian_derision",
+            "type": "melee_mod",
+            "en_name": "Guardian Derision",
+            "kr_name": ""
+        },
+        {
+            "name": "healing_return",
+            "type": "melee_mod",
+            "en_name": "Healing Return",
+            "kr_name": ""
+        },
+        {
+            "name": "heartseeker",
+            "type": "melee_mod",
+            "en_name": "Heartseeker",
+            "kr_name": ""
+        },
+        {
+            "name": "heavy_trauma",
+            "type": "melee_mod",
+            "en_name": "Heavy Trauma",
+            "kr_name": ""
+        },
+        {
+            "name": "impenetrable_offense",
+            "type": "melee_mod",
+            "en_name": "Impenetrable Offense",
+            "kr_name": ""
+        },{
+            "name": "jagged_edge",
+            "type": "melee_mod",
+            "en_name": "Jagged Edge",
+            "kr_name": ""
+        },
+        {
+            "name": "killing_blow",
+            "type": "melee_mod",
+            "en_name": "Killing Blow",
+            "kr_name": ""
+        },
+        {
+            "name": "lasting_sting",
+            "type": "melee_mod",
+            "en_name": "Lasting Sting",
+            "kr_name": ""
+        },
+        {
+            "name": "life_strike",
+            "type": "melee_mod",
+            "en_name": "Life Strike",
+            "kr_name": ""
+        },
+        {
+            "name": "maiming_strike",
+            "type": "melee_mod",
+            "en_name": "Maiming Strike",
+            "kr_name": ""
+        },
+        {
+            "name": "martial_fury",
+            "type": "melee_mod",
+            "en_name": "Martial Fury",
+            "kr_name": ""
+        },
+        {
+            "name": "molten_impact",
+            "type": "melee_mod",
+            "en_name": "Molten Impact",
+            "kr_name": ""
+        },
+        {
+            "name": "mortal_conduct",
+            "type": "melee_mod",
+            "en_name": "Mortal Conduct",
+            "kr_name": ""
+        },
+        {
+            "name": "motus_impact",
+            "type": "melee_mod",
+            "en_name": "Motus Impact",
+            "kr_name": ""
+        },
+        {
+            "name": "north_wind",
+            "type": "melee_mod",
+            "en_name": "North Wind",
+            "kr_name": ""
+        },
+        {
+            "name": "organ_shatter",
+            "type": "melee_mod",
+            "en_name": "Organ Shatter",
+            "kr_name": ""
+        },
+        {
+            "name": "power_throw",
+            "type": "melee_mod",
+            "en_name": "Power Throw",
+            "kr_name": ""
+        },
+        {
+            "name": "pressure_point",
+            "type": "melee_mod",
+            "en_name": "Pressure Point",
+            "kr_name": ""
+        },
+        {
+            "name": "primed_fever_strike",
+            "type": "melee_mod",
+            "en_name": "Primed Fever Strike",
+            "kr_name": ""
+        },
+        {
+            "name": "primed_heavy_trauma",
+            "type": "melee_mod",
+            "en_name": "Primed Heavy Trauma",
+            "kr_name": ""
+        },
+        {
+            "name": "primed_pressure_point",
+            "type": "melee_mod",
+            "en_name": "Primed Pressure Point",
+            "kr_name": ""
+        },
+        {
+            "name": "primed_reach",
+            "type": "melee_mod",
+            "en_name": "Primed Reach",
+            "kr_name": ""
+        },
+        {
+            "name": "primed_smite_corpus",
+            "type": "melee_mod",
+            "en_name": "Primed Smite Corpus",
+            "kr_name": ""
+        },
+        {
+            "name": "primed_smite_corrupted",
+            "type": "melee_mod",
+            "en_name": "Primed Smite Corrupted",
+            "kr_name": ""
+        },
+        {
+            "name": "primed_smite_grineer",
+            "type": "melee_mod",
+            "en_name": "Primed Smite Grineer",
+            "kr_name": ""
+        },
+        {
+            "name": "primed_smite_infested",
+            "type": "melee_mod",
+            "en_name": "Primed Smite Infested",
+            "kr_name": ""
+        },{
+            "name": "proton_snap",
+            "type": "melee_mod",
+            "en_name": "Proton Snap",
+            "kr_name": ""
+        },
+        {
+            "name": "quickening",
+            "type": "melee_mod",
+            "en_name": "Quickening",
+            "kr_name": ""
+        },
+        {
+            "name": "reach",
+            "type": "melee_mod",
+            "en_name": "Reach",
+            "kr_name": ""
+        },
+        {
+            "name": "rebound",
+            "type": "melee_mod",
+            "en_name": "Rebound",
+            "kr_name": ""
+        },
+        {
+            "name": "reflex_coil",
+            "type": "melee_mod",
+            "en_name": "Reflex Coil",
+            "kr_name": ""
+        },
+        {
+            "name": "relentless_assault",
+            "type": "melee_mod",
+            "en_name": "Relentless Assault",
+            "kr_name": ""
+        },
+        {
+            "name": "relentless_combination",
+            "type": "melee_mod",
+            "en_name": "Relentless Combination",
+            "kr_name": ""
+        },
+        {
+            "name": "rending_strike",
+            "type": "melee_mod",
+            "en_name": "Rending Strike",
+            "kr_name": ""
+        },
+        {
+            "name": "seismic_wave",
+            "type": "melee_mod",
+            "en_name": "Seismic Wave",
+            "kr_name": ""
+        },
+        {
+            "name": "serrated_edges",
+            "type": "melee_mod",
+            "en_name": "Serrated Edges",
+            "kr_name": ""
+        },
+        {
+            "name": "shattering_impact",
+            "type": "melee_mod",
+            "en_name": "Shattering Impact",
+            "kr_name": ""
+        },
+        {
+            "name": "shocking_touch",
+            "type": "melee_mod",
+            "en_name": "Shocking Touch",
+            "kr_name": ""
+        },
+        {
+            "name": "spoiled_strike",
+            "type": "melee_mod",
+            "en_name": "Spoiled Strike",
+            "kr_name": ""
+        },
+        {
+            "name": "stand_ground",
+            "type": "melee_mod",
+            "en_name": "Stand Ground",
+            "kr_name": ""
+        },
+        {
+            "name": "strain_infection",
+            "type": "melee_mod",
+            "en_name": "Strain Infection",
+            "kr_name": ""
+        },
+        {
+            "name": "sundering_strike",
+            "type": "melee_mod",
+            "en_name": "Sundering Strike",
+            "kr_name": ""
+        },
+        {
+            "name": "tek_gravity",
+            "type": "melee_mod",
+            "en_name": "Tek Gravity",
+            "kr_name": ""
+        },
+        {
+            "name": "true_punishment",
+            "type": "melee_mod",
+            "en_name": "True Punishment",
+            "kr_name": ""
+        },
+        {
+            "name": "true_steel",
+            "type": "melee_mod",
+            "en_name": "True Steel",
+            "kr_name": ""
+        },
+        {
+            "name": "vicious_frost",
+            "type": "melee_mod",
+            "en_name": "Vicious Frost",
+            "kr_name": ""
+        },
+        {
+            "name": "virulent_scourge",
+            "type": "melee_mod",
+            "en_name": "Virulent Scourge",
+            "kr_name": ""
+        },
+        {
+            "name": "volcanic_edge",
+            "type": "melee_mod",
+            "en_name": "Volcanic Edge",
+            "kr_name": ""
+        },
+        {
+            "name": "voltaic_strike",
+            "type": "melee_mod",
+            "en_name": "Voltaic Strike",
+            "kr_name": ""
+        },
+        {
+            "name": "weeping_wounds",
+            "type": "melee_mod",
+            "en_name": "Weeping Wounds",
+            "kr_name": ""
+        },
+        {
+            "name": "whirlwind",
+            "type": "melee_mod",
+            "en_name": "Whirlwind",
+            "kr_name": ""
+        },{
+            "name": "astral_twilight",
+            "type": "stance_mod",
+            "en_name": "Astral Twilight",
+            "kr_name": ""
+        },
+        {
+            "name": "atlantis_vulcan",
+            "type": "stance_mod",
+            "en_name": "Atlantis Vulcan",
+            "kr_name": ""
+        },
+        {
+            "name": "biting_piranha",
+            "type": "stance_mod",
+            "en_name": "Biting Piranha",
+            "kr_name": ""
+        },
+        {
+            "name": "bleeding_willow",
+            "type": "stance_mod",
+            "en_name": "Bleeding Willow",
+            "kr_name": ""
+        },
+        {
+            "name": "blind_justice",
+            "type": "stance_mod",
+            "en_name": "Blind Justice",
+            "kr_name": ""
+        },
+        {
+            "name": "brutal_tide",
+            "type": "stance_mod",
+            "en_name": "Brutal Tide",
+            "kr_name": ""
+        },
+        {
+            "name": "bullet_dance",
+            "type": "stance_mod",
+            "en_name": "Bullet Dance",
+            "kr_name": ""
+        },
+        {
+            "name": "burning_wasp",
+            "type": "stance_mod",
+            "en_name": "Burning Wasp",
+            "kr_name": ""
+        },
+        {
+            "name": "carving_mantis",
+            "type": "stance_mod",
+            "en_name": "Carving Mantis",
+            "kr_name": ""
+        },
+        {
+            "name": "celestial_nightfall",
+            "type": "stance_mod",
+            "en_name": "Celestial Nightfall",
+            "kr_name": ""
+        },
+        {
+            "name": "clashing_forest",
+            "type": "stance_mod",
+            "en_name": "Clashing Forest",
+            "kr_name": ""
+        },
+        {
+            "name": "cleaving_whirlwind",
+            "type": "stance_mod",
+            "en_name": "Cleaving Whirlwind",
+            "kr_name": ""
+        },
+        {
+            "name": "coiling_viper",
+            "type": "stance_mod",
+            "en_name": "Coiling Viper",
+            "kr_name": ""
+        },
+        {
+            "name": "crashing_havoc",
+            "type": "stance_mod",
+            "en_name": "Crashing Havoc",
+            "kr_name": ""
+        },
+        {
+            "name": "crashing_timber",
+            "type": "stance_mod",
+            "en_name": "Crashing Timber",
+            "kr_name": ""
+        },
+        {
+            "name": "crimson_dervish",
+            "type": "stance_mod",
+            "en_name": "Crimson Dervish",
+            "kr_name": ""
+        },
+        {
+            "name": "crossing_snakes",
+            "type": "stance_mod",
+            "en_name": "Crossing Snakes",
+            "kr_name": ""
+        },
+        {
+            "name": "crushing_ruin",
+            "type": "stance_mod",
+            "en_name": "Crushing Ruin",
+            "kr_name": ""
+        },
+        {
+            "name": "cyclone_kraken",
+            "type": "stance_mod",
+            "en_name": "Cyclone Kraken",
+            "kr_name": ""
+        },
+        {
+            "name": "decisive_judgement",
+            "type": "stance_mod",
+            "en_name": "Decisive Judgement",
+            "kr_name": ""
+        },
+        {
+            "name": "defiled_snapdragon",
+            "type": "stance_mod",
+            "en_name": "Defiled Snapdragon",
+            "kr_name": ""
+        },
+        {
+            "name": "dividing_blades",
+            "type": "stance_mod",
+            "en_name": "Dividing Blades",
+            "kr_name": ""
+        },
+        {
+            "name": "eleventh_storm",
+            "type": "stance_mod",
+            "en_name": "Eleventh Storm",
+            "kr_name": ""
+        },
+        {
+            "name": "fateful_truth",
+            "type": "stance_mod",
+            "en_name": "Fateful Truth",
+            "kr_name": ""
+        },
+        {
+            "name": "final_harbinger",
+            "type": "stance_mod",
+            "en_name": "Final Harbinger",
+            "kr_name": ""
+        },
+        {
+            "name": "flailing_branch",
+            "type": "stance_mod",
+            "en_name": "Flailing Branch",
+            "kr_name": ""
+        },
+        {
+            "name": "four_riders",
+            "type": "stance_mod",
+            "en_name": "Four Riders",
+            "kr_name": ""
+        },
+        {
+            "name": "fracturing_wind",
+            "type": "stance_mod",
+            "en_name": "Fracturing Wind",
+            "kr_name": ""
+        },
+        {
+            "name": "gemini_cross",
+            "type": "stance_mod",
+            "en_name": "Gemini Cross",
+            "kr_name": ""
+        },
+        {
+            "name": "gleaming_talon",
+            "type": "stance_mod",
+            "en_name": "Gleaming Talon",
+            "kr_name": ""
+        },
+        {
+            "name": "gnashing_payara",
+            "type": "stance_mod",
+            "en_name": "Gnashing Payara",
+            "kr_name": ""
+        },
+        {
+            "name": "grim_fury",
+            "type": "stance_mod",
+            "en_name": "Grim Fury",
+            "kr_name": ""
+        },
+        {
+            "name": "high_noon",
+            "type": "stance_mod",
+            "en_name": "High Noon",
+            "kr_name": ""
+        },
+        {
+            "name": "homing_fang",
+            "type": "stance_mod",
+            "en_name": "Homing Fang",
+            "kr_name": ""
+        },
+        {
+            "name": "iron_phoenix",
+            "type": "stance_mod",
+            "en_name": "Iron Phoenix",
+            "kr_name": ""
+        },
+        {
+            "name": "lashing_coil",
+            "type": "stance_mod",
+            "en_name": "Lashing Coil",
+            "kr_name": ""
+        },
+        {
+            "name": "last_herald",
+            "type": "stance_mod",
+            "en_name": "Last Herald",
+            "kr_name": ""
+        },
+        {
+            "name": "mafic_rain",
+            "type": "stance_mod",
+            "en_name": "Mafic Rain",
+            "kr_name": ""
+        },
+        {
+            "name": "malicious_raptor",
+            "type": "stance_mod",
+            "en_name": "Malicious Raptor",
+            "kr_name": ""
+        },

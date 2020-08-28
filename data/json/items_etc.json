@@ -1,0 +1,442 @@
+{
+    "items_etc": [
+        {
+            "name": "arcane_consequence",
+            "type": "arcane",
+            "en_name": "",
+            "kr_name": "아케인 콘시퀀스"
+        },
+        {
+            "name": "arcane_ice",
+            "type": "arcane",
+            "en_name": "",
+            "kr_name": "아케인 아이스"
+        },
+        {
+            "name": "arcane_momentum",
+            "type": "arcane",
+            "en_name": "",
+            "kr_name": "아케인 모멘텀"
+        },
+        {
+            "name": "arcane_nullifier",
+            "type": "arcane",
+            "en_name": "",
+            "kr_name": "아케인 널리파이어"
+        },
+        {
+            "name": "arcane_tempo",
+            "type": "arcane",
+            "en_name": "",
+            "kr_name": "아케인 템포"
+        },
+        {
+            "name": "arcane_warmth",
+            "type": "arcane",
+            "en_name": "",
+            "kr_name": "아케인 웜스"
+        },
+        {
+            "name": "arcane_deflection",
+            "type": "arcane",
+            "en_name": "",
+            "kr_name": "아케인 디플렉션"
+        },
+        {
+            "name": "arcane_healing",
+            "type": "arcane",
+            "en_name": "",
+            "kr_name": "아케인 힐링"
+        },
+        {
+            "name": "arcane_resistance",
+            "type": "arcane",
+            "en_name": "",
+            "kr_name": "아케인 레지스턴스"
+        },
+        {
+            "name": "arcane_victory",
+            "type": "arcane",
+            "en_name": "",
+            "kr_name": "아케인 빅토리"
+        },
+        {
+            "name": "arcane_acceleration",
+            "type": "arcane",
+            "en_name": "",
+            "kr_name": "아케인 엑셀레이션"
+        },
+        {
+            "name": "arcane_agility",
+            "type": "arcane",
+            "en_name": "",
+            "kr_name": "아케인 어질리티"
+        },
+        {
+            "name": "arcane_awakening",
+            "type": "arcane",
+            "en_name": "",
+            "kr_name": "아케인 어웨이크닝"
+        },
+        {
+            "name": "arcane_eruption",
+            "type": "arcane",
+            "en_name": "",
+            "kr_name": "아케인 이럽션"
+        },
+        {
+            "name": "arcane_guardian",
+            "type": "arcane",
+            "en_name": "",
+            "kr_name": "아케인 가디언"
+        },
+        {
+            "name": "arcane_phantasm",
+            "type": "arcane",
+            "en_name": "",
+            "kr_name": "아케인 판타즘"
+        },
+        {
+            "name": "arcane_strike",
+            "type": "arcane",
+            "en_name": "",
+            "kr_name": "아케인 스트라이크"
+        },
+        {
+            "name": "arcane_aegis",
+            "type": "arcane",
+            "en_name": "",
+            "kr_name": "아케인 이지스"
+        },
+        {
+            "name": "arcane_precision",
+            "type": "arcane",
+            "en_name": "",
+            "kr_name": "아케인 프리지션"
+        },
+        {
+            "name": "arcane_pulse",
+            "type": "arcane",
+            "en_name": "",
+            "kr_name": "아케인 펄스"
+        },
+        {
+            "name": "arcane_ultimatum",
+            "type": "arcane",
+            "en_name": "",
+            "kr_name": "아케인 얼티메이텀"
+        },
+        {
+            "name": "arcane_trickery",
+            "type": "arcane",
+            "en_name": "",
+            "kr_name": "아케인 트리커리"
+        },
+        {
+            "name": "arcane_velocity",
+            "type": "arcane",
+            "en_name": "",
+            "kr_name": "아케인 벨로서티"
+        },
+        {
+            "name": "arcane_arachne",
+            "type": "arcane",
+            "en_name": "",
+            "kr_name": "아케인 아라크네"
+        },
+        {
+            "name": "arcane_avenger",
+            "type": "arcane",
+            "en_name": "",
+            "kr_name": "아케인 어벤저"
+        },
+        {
+            "name": "arcane_fury",
+            "type": "arcane",
+            "en_name": "",
+            "kr_name": "아케인 퓨리"
+        },
+        {
+            "name": "arcane_rage",
+            "type": "arcane",
+            "en_name": "",
+            "kr_name": "아케인 레이지"
+        },
+        {
+            "name": "arcane_barrier",
+            "type": "arcane",
+            "en_name": "",
+            "kr_name": "아케인 배리어"
+        },
+        {
+            "name": "arcane_energize",
+            "type": "arcane",
+            "en_name": "",
+            "kr_name": "아케인 에너자이즈"
+        },
+        {
+            "name": "arcane_grace",
+            "type": "arcane",
+            "en_name": "",
+            "kr_name": "아케인 그레이스"
+        },
+        {
+            "name": "arcane_blade_charger",
+            "type": "arcane",
+            "en_name": "",
+            "kr_name": "아케인 블레이드 차저"
+        },
+        {
+            "name": "arcane_bodyguard",
+            "type": "arcane",
+            "en_name": "",
+            "kr_name": "아케인 보디가드"
+        },
+        {
+            "name": "arcane_pistoleer",
+            "type": "arcane",
+            "en_name": "",
+            "kr_name": "아케인 피스톨리어"
+        },
+        {
+            "name": "arcane_primary_charger",
+            "type": "arcane",
+            "en_name": "",
+            "kr_name": "아케인 프라이머리차저"
+        },
+        {
+            "name": "arcane_tanker",
+            "type": "arcane",
+            "en_name": "",
+            "kr_name": "아케인 탱커"
+        },
+        {
+            "name": "magus_husk",
+            "type": "magus",
+            "en_name": "",
+            "kr_name": "마구스 허스크"
+        },
+        {
+            "name": "magus_vigor",
+            "type": "magus",
+            "en_name": "",
+            "kr_name": "마구스 비거"
+        },
+        {
+            "name": "magus_cadence",
+            "type": "magus",
+            "en_name": "",
+            "kr_name": "마구스 카덴스"
+        },
+        {
+            "name": "magus_cloud",
+            "type": "magus",
+            "en_name": "",
+            "kr_name": "마구스 클라우드"
+        },
+        {
+            "name": "magus_replenish",
+            "type": "magus",
+            "en_name": "",
+            "kr_name": "마구스 리플레니쉬"
+        },
+        {
+            "name": "magus_elevate",
+            "type": "magus",
+            "en_name": "",
+            "kr_name": "마구스 엘레베이트"
+        },
+        {
+            "name": "magus_nourish",
+            "type": "magus",
+            "en_name": "",
+            "kr_name": "마구스 노리쉬"
+        },
+        {
+            "name": "magus_overload",
+            "type": "magus",
+            "en_name": "",
+            "kr_name": "마구스 오버로드"
+        },
+        {
+            "name": "magus_glitch",
+            "type": "magus",
+            "en_name": "",
+            "kr_name": "마구스 글리치"
+        },
+        {
+            "name": "magus_revert",
+            "type": "magus",
+            "en_name": "",
+            "kr_name": "마구스 리버트"
+        },
+        {
+            "name": "magus_lockdown",
+            "type": "magus",
+            "en_name": "",
+            "kr_name": "마구스 락다운"
+        },
+        {
+            "name": "magus_destruct",
+            "type": "magus",
+            "en_name": "",
+            "kr_name": "마구스 디스트럭트"
+        },
+        {
+            "name": "magus_anomaly",
+            "type": "magus",
+            "en_name": "",
+            "kr_name": "마구스 어노말리"
+        },
+        {
+            "name": "magus_melt",
+            "type": "magus",
+            "en_name": "",
+            "kr_name": "마구스 멜트"
+        },
+        {
+            "name": "magus_accelerant",
+            "type": "magus",
+            "en_name": "",
+            "kr_name": "마구스 엑셀러런트"
+        },
+        {
+            "name": "magus_repair",
+            "type": "magus",
+            "en_name": "",
+            "kr_name": "마구스 리페어"
+        },
+        {
+            "name": "virtuos_null",
+            "type": "virtuos",
+            "en_name": "",
+            "kr_name": "버츄오스 널"
+        },
+        {
+            "name": "virtuos_tempo",
+            "type": "virtuos",
+            "en_name": "",
+            "kr_name": "버츄오스 템포"
+        },
+        {
+            "name": "virtuos_fury",
+            "type": "virtuos",
+            "en_name": "",
+            "kr_name": "버츄오스 퓨리"
+        },
+        {
+            "name": "virtuos_strike",
+            "type": "virtuos",
+            "en_name": "",
+            "kr_name": "버츄오스 스트라이크"
+        },
+        {
+            "name": "virtuos_ghost",
+            "type": "virtuos",
+            "en_name": "",
+            "kr_name": "버츄오스 고스트"
+        },
+        {
+            "name": "virtuos_shadow",
+            "type": "virtuos",
+            "en_name": "",
+            "kr_name": "버츄오스 섀도우"
+        },
+        {
+            "name": "virtuos_forge",
+            "type": "virtuos",
+            "en_name": "",
+            "kr_name": "버츄오스 포지"
+        },
+        {
+            "name": "virtuos_trojan",
+            "type": "virtuos",
+            "en_name": "",
+            "kr_name": "버츄오스_트로잔"
+        },
+        {
+            "name": "virtuos_spike",
+            "type": "virtuos",
+            "en_name": "",
+            "kr_name": "버츄오스 스파이크"
+        },
+        {
+            "name": "virtuos_surge",
+            "type": "virtuos",
+            "en_name": "",
+            "kr_name": "버츄오스 서지"
+        },
+        {
+            "name": "pax_bolt",
+            "type": "pax",
+            "en_name": "",
+            "kr_name": "팍스 볼트"
+        },
+        {
+            "name": "pax_charge",
+            "type": "pax",
+            "en_name": "",
+            "kr_name": "팍스 차지"
+        },
+        {
+            "name": "pax_seeker",
+            "type": "pax",
+            "en_name": "",
+            "kr_name": "팍스 시커"
+        },
+        {
+            "name": "pax_soar",
+            "type": "pax",
+            "en_name": "",
+            "kr_name": "팍스 소어"
+        },
+        {
+            "name": "exodia_triumph",
+            "type": "exodia",
+            "en_name": "",
+            "kr_name": "엑소디아 트라이엄프"
+        },
+        {
+            "name": "exodia_valor",
+            "type": "exodia",
+            "en_name": "",
+            "kr_name": "엑소디아 발러"
+        },
+        {
+            "name": "exodia_brave",
+            "type": "exodia",
+            "en_name": "",
+            "kr_name": "엑소디아 브레이브"
+        },
+        {
+            "name": "exodia_force",
+            "type": "exodia",
+            "en_name": "",
+            "kr_name": "엑소디아 포스"
+        },
+        {
+            "name": "exodia_hunt",
+            "type": "exodia",
+            "en_name": "",
+            "kr_name": "엑소디아 헌트"
+        },
+        {
+            "name": "exodia_might",
+            "type": "exodia",
+            "en_name": "",
+            "kr_name": "엑소디아 마이트"
+        },
+        {
+            "name": "exodia_contagion",
+            "type": "exodia",
+            "en_name": "",
+            "kr_name": "엑소디아 컨테이젼"
+        },
+        {
+            "name": "exodia_epidemic",
+            "type": "exodia",
+            "en_name": "",
+            "kr_name": "엑소디아 에피데믹"
+        }
+    ]
+}

@@ -1,0 +1,334 @@
+{
+    "items_etcs": [
+        {
+            "name": "blackout_pulse",
+            "type": "avionics",
+            "en_name": "",
+            "kr_name": ""
+        },
+        {
+            "name": "countermeasures",
+            "type": "avionics",
+            "en_name": "",
+            "kr_name": ""
+        },
+        {
+            "name": "munitions_vortex",
+            "type": "avionics",
+            "en_name": "",
+            "kr_name": ""
+        },
+        {
+            "name": "particle_ram",
+            "type": "avionics",
+            "en_name": "",
+            "kr_name": ""
+        },
+        {
+            "name": "shatter_burst",
+            "type": "avionics",
+            "en_name": "",
+            "kr_name": ""
+        },
+        {
+            "name": "tether",
+            "type": "avionics",
+            "en_name": "",
+            "kr_name": ""
+        },
+        {
+            "name": "fiery_phoenix",
+            "type": "avionics",
+            "en_name": "",
+            "kr_name": ""
+        },
+        {
+            "name": "seeker_volley",
+            "type": "avionics",
+            "en_name": "",
+            "kr_name": ""
+        },
+        {
+            "name": "void_hole",
+            "type": "avionics",
+            "en_name": "",
+            "kr_name": ""
+        },
+        {
+            "name": "battle_forge",
+            "type": "avionics",
+            "en_name": "",
+            "kr_name": ""
+        },
+        {
+            "name": "breach_quanta",
+            "type": "avionics",
+            "en_name": "",
+            "kr_name": ""
+        },
+        {
+            "name": "fire_suppression",
+            "type": "avionics",
+            "en_name": "",
+            "kr_name": ""
+        },
+        {
+            "name": "flow_burn",
+            "type": "avionics",
+            "en_name": "",
+            "kr_name": ""
+        },
+        {
+            "name": "void_cloak",
+            "type": "avionics",
+            "en_name": "",
+            "kr_name": ""
+        },
+        {
+            "name": "battle_stations",
+            "type": "avionics",
+            "en_name": "",
+            "kr_name": ""
+        },
+        {
+            "name": "death_blossom",
+            "type": "avionics",
+            "en_name": "",
+            "kr_name": ""
+        },
+        {
+            "name": "form_up",
+            "type": "avionics",
+            "en_name": "",
+            "kr_name": ""
+        },
+        {
+            "name": "squad_renew",
+            "type": "avionics",
+            "en_name": "",
+            "kr_name": ""
+        },
+        {
+            "name": "intruder_stasis",
+            "type": "avionics",
+            "en_name": "",
+            "kr_name": ""
+        },
+        {
+            "name": "bulkhead",
+            "type": "avionics",
+            "en_name": "",
+            "kr_name": ""
+        },
+        {
+            "name": "hull_weave",
+            "type": "avionics",
+            "en_name": "",
+            "kr_name": ""
+        },
+        {
+            "name": "hardened_casing",
+            "type": "avionics",
+            "en_name": "",
+            "kr_name": ""
+        },
+        {
+            "name": "anode_cell",
+            "type": "avionics",
+            "en_name": "",
+            "kr_name": ""
+        },
+        {
+            "name": "maxima",
+            "type": "avionics",
+            "en_name": "",
+            "kr_name": ""
+        },
+        {
+            "name": "sentient_fortitude",
+            "type": "avionics",
+            "en_name": "",
+            "kr_name": ""
+        },
+        {
+            "name": "breach_adrenaline",
+            "type": "avionics",
+            "en_name": "",
+            "kr_name": ""
+        },
+        {
+            "name": "ablative_shell",
+            "type": "avionics",
+            "en_name": "",
+            "kr_name": ""
+        },
+        {
+            "name": "heat_sink",
+            "type": "avionics",
+            "en_name": "",
+            "kr_name": ""
+        },
+        {
+            "name": "phasic_weave",
+            "type": "avionics",
+            "en_name": "",
+            "kr_name": ""
+        },
+        {
+            "name": "thermatic",
+            "type": "avionics",
+            "en_name": "",
+            "kr_name": ""
+        },
+        {
+            "name": "conic_nozzle",
+            "type": "avionics",
+            "en_name": "",
+            "kr_name": ""
+        },
+        {
+            "name": "cruising_speed",
+            "type": "avionics",
+            "en_name": "",
+            "kr_name": ""
+        },
+        {
+            "name": "ion_burn",
+            "type": "avionics",
+            "en_name": "",
+            "kr_name": ""
+        },
+        {
+            "name": "hyperstrike",
+            "type": "avionics",
+            "en_name": "",
+            "kr_name": ""
+        },
+        {
+            "name": "last_stand",
+            "type": "avionics",
+            "en_name": "",
+            "kr_name": ""
+        },
+        {
+            "name": "polar_coll",
+            "type": "avionics",
+            "en_name": "",
+            "kr_name": ""
+        },
+        {
+            "name": "predator",
+            "type": "avionics",
+            "en_name": "",
+            "kr_name": ""
+        },
+        {
+            "name": "section_density",
+            "type": "avionics",
+            "en_name": "",
+            "kr_name": ""
+        },
+        {
+            "name": "sentient_scalpel",
+            "type": "avionics",
+            "en_name": "",
+            "kr_name": ""
+        },
+        {
+            "name": "turret_velocity",
+            "type": "avionics",
+            "en_name": "",
+            "kr_name": ""
+        },
+        {
+            "name": "ordnance_cheap_shot",
+            "type": "avionics",
+            "en_name": "",
+            "kr_name": ""
+        },
+        {
+            "name": "ordnance_velocity",
+            "type": "avionics",
+            "en_name": "",
+            "kr_name": ""
+        },
+        {
+            "name": "overloader",
+            "type": "avionics",
+            "en_name": "",
+            "kr_name": ""
+        },
+        {
+            "name": "quicklock",
+            "type": "avionics",
+            "en_name": "",
+            "kr_name": ""
+        },
+        {
+            "name": "ripload",
+            "type": "avionics",
+            "en_name": "",
+            "kr_name": ""
+        },
+        {
+            "name": "warhead",
+            "type": "avionics",
+            "en_name": "",
+            "kr_name": ""
+        },
+        {
+            "name": "artillery_cheap_shot",
+            "type": "avionics",
+            "en_name": "",
+            "kr_name": ""
+        },
+        {
+            "name": "forward_artillery",
+            "type": "avionics",
+            "en_name": "",
+            "kr_name": ""
+        },
+        {
+            "name": "deep_hold",
+            "type": "avionics",
+            "en_name": "",
+            "kr_name": ""
+        },
+        {
+            "name": "hyperflux",
+            "type": "avionics",
+            "en_name": "",
+            "kr_name": ""
+        },
+        {
+            "name": "revo_reducer",
+            "type": "avionics",
+            "en_name": "",
+            "kr_name": ""
+        },
+        {
+            "name": "winged_cyclone",
+            "type": "avionics",
+            "en_name": "",
+            "kr_name": ""
+        },
+        {
+            "name": "winged_force",
+            "type": "avionics",
+            "en_name": "",
+            "kr_name": ""
+        },
+        {
+            "name": "winged_stell",
+            "type": "avionics",
+            "en_name": "",
+            "kr_name": ""
+        },
+        {
+            "name": "winged_storm",
+            "type": "avionics",
+            "en_name": "",
+            "kr_name": ""
+        }
+    ]
+}
