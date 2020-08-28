@@ -452,10 +452,17 @@ def get_visit():
         month = '0' + month
 
     visit_count = session.get('visit_count') != 1
+<<<<<<< HEAD
 
     with open('/workspace/crawling/data/json/visitant.json', "r") as json_visit:
         visit_data = json.load(json_visit)
 
+=======
+    
+    with open('/workspace/crawling/data/json/visitant.json', "r") as json_visit:
+        visit_data = json.load(json_visit)
+    
+>>>>>>> c53e624ab68a5393cbaf9a2b0f3a0eebd2436977
     if visit_count:
         session['visit_count'] = 1
 
@@ -469,12 +476,27 @@ def get_visit():
 
         with open('/workspace/crawling/data/json/visitant.json', 'w', encoding='utf-8') as update_visit:
             json.dump(query_1, update_visit, indent = 4)
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> c53e624ab68a5393cbaf9a2b0f3a0eebd2436977
     with open('/workspace/crawling/data/json/visitant.json', "r") as json_visits:
         visits_data = json.load(json_visits)
     result = visits_data["date"]["count"]
     return result
 
+<<<<<<< HEAD
+=======
+"""
+if os.path.isdir(get_path_0):
+    make_file(get_path)
+else:
+    #print('폴더가 없음으로 새로 만들었습니다.')
+    os.makedirs(get_path_0)
+    make_file(get_path)
+"""
+>>>>>>> c53e624ab68a5393cbaf9a2b0f3a0eebd2436977
 #=======================================================================#
 
 app = Flask(__name__)
@@ -1065,7 +1087,11 @@ def category():
                 type_etc_path_1.append(all_path_1[i])
                 type_etc_type.append(all_type[i])
                 type_etc_type_kr.append(all_type_kr[i])
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> c53e624ab68a5393cbaf9a2b0f3a0eebd2436977
     en_to_kr(all_item_kr);
 
     type_primary_len = len(type_primary_item)
@@ -1540,6 +1566,7 @@ def page_not_found(error):
     return render_template('error.html', **locals()), 404
 
 #=======================================================================#
+<<<<<<< HEAD
 
 @app.route('/info/')
 def info():
@@ -1585,8 +1612,14 @@ def info():
 
 #=======================================================================#
 
+=======
+>>>>>>> c53e624ab68a5393cbaf9a2b0f3a0eebd2436977
 if __name__ == '__main__':
     #ssl_context = ssl.SSLContext(ssl.PROTOCOL_TLS)
     #ssl_context.load_cert_chain(certfile='', keyfile='', password=random)
     app.static_folder = 'static'
+<<<<<<< HEAD
     app.run(host = '0.0.0.0', port = 5000, debug=False)
+=======
+    app.run(host = '0.0.0.0', port = 5001, debug=False)
+>>>>>>> c53e624ab68a5393cbaf9a2b0f3a0eebd2436977

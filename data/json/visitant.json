@@ -2,6 +2,10 @@
     "date": {
         "year_month": "202008",
         "day": "28",
+<<<<<<< HEAD
         "count": 2575
+=======
+        "count": 2546
+>>>>>>> c53e624ab68a5393cbaf9a2b0f3a0eebd2436977
     }
 }
