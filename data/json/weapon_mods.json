@@ -211,12 +211,6 @@
             "kr_name": "라임 라운즈"
         },
         {
-            "name": "serrated_rounds",
-            "type": "rifle_mod",
-            "en_name": "Serrated Rounds",
-            "kr_name": "서레이티드 라운즈"
-        },
-        {
             "name": "serration",
             "type": "rifle_mod",
             "en_name": "Serration",
