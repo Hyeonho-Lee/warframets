@@ -31311,3 +31311,28 @@ SyntaxError: invalid syntax
     <<<<<<< HEAD
      ^
 SyntaxError: invalid syntax
+ * Serving Flask app "flask_app" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://0.0.0.0:5001/ (Press CTRL+C to quit)
+172.17.0.1 - - [29/Aug/2020 04:17:02] "[37mGET / HTTP/1.1[0m" 200 -
+172.17.0.1 - - [29/Aug/2020 04:17:03] "[37mGET /static/js/jquery-ui.js HTTP/1.1[0m" 200 -
+172.17.0.1 - - [29/Aug/2020 04:17:03] "[37mGET /static/js/jquery-3.5.1.min.js HTTP/1.1[0m" 200 -
+172.17.0.1 - - [29/Aug/2020 04:17:03] "[37mGET /static/css/index.css?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [29/Aug/2020 04:17:03] "[37mGET /static/css/table.css?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [29/Aug/2020 04:17:03] "[37mGET /static/js/AutoComplete.min.js HTTP/1.1[0m" 200 -
+172.17.0.1 - - [29/Aug/2020 04:17:03] "[37mGET /static/image/item_image/warframe/Inaros_Prime/Inaros_Prime.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [29/Aug/2020 04:17:03] "[37mGET /static/image/item_image/mod/Primed_Continuity/Primed_Continuity.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [29/Aug/2020 04:17:03] "[37mGET /static/image/icon/logo.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [29/Aug/2020 04:17:03] "[37mGET /static/image/item_image/mod/Primed_Flow/Primed_Flow.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [29/Aug/2020 04:17:03] "[37mGET /static/image/item_image/mod/Jolt/Jolt.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [29/Aug/2020 04:17:03] "[37mGET /static/image/item_image/warframe/Ivara_Prime/Ivara_Prime.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [29/Aug/2020 04:17:03] "[37mGET /static/image/item_image/weapon/Tiberon_Prime/Tiberon_Prime.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [29/Aug/2020 04:17:03] "[37mGET /static/image/item_image/mod/Primed_Ravage/Primed_Ravage.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [29/Aug/2020 04:17:03] "[37mGET /static/image/item_image/mod/Health_Conversion/Health_Conversion.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [29/Aug/2020 04:17:03] "[37mGET /static/image/item_image/mod/Growing_Power/Growing_Power.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [29/Aug/2020 04:17:03] "[37mGET /static/image/item_image/warframe/Atlas_Prime/Atlas_Prime.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [29/Aug/2020 04:17:03] "[37mGET /static/image/item_image/weapon/Karyst_Prime/Karyst_Prime.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [29/Aug/2020 04:17:04] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
