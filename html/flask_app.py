@@ -1540,40 +1540,73 @@ def info():
     visit_count = get_visit()
     all_item, all_item_kr, all_path, all_path_0, all_path_1, all_type, all_type_kr = get_all_item()
 
-    path = '/workspace/crawling/data/json/info_data.json'
+    path = '/workspace/crawling/data/json/info/info_data_0.json'
     with open(path, "r", encoding="UTF-8") as json_file:
-        json_data = json.load(json_file, strict = False)
-        json_datas = json.dumps(json_data, ensure_ascii=False)
+        json_data_0 = json.load(json_file, strict = False)
 
-    index = []
-    image = []
-    write = []
-    subject = []
-    contents = []
-    contents_image = []
-    date = []
-    len_data = len(json_data["info"])
+    index_0 = []
+    image_0 = []
+    write_0 = []
+    subject_0 = []
+    contents_0 = []
+    contents_image_0 = []
+    shortcuts_0 = []
+    date_0 = []
+    len_data_0 = len(json_data_0["info"])
 
-    for i in json_data["info"]:
-        index.append(i["index"])
-        image.append(i["image"])
-        write.append(i["write"])
-        subject.append(i["subject"])
-        contents.append(i["contents"])
-        date.append(i["date"])
+    for i in json_data_0["info"]:
+        index_0.append(i["index"])
+        image_0.append(i["image"])
+        write_0.append(i["write"])
+        subject_0.append(i["subject"])
+        contents_0.append(i["contents"])
+        contents_image_0.append(i["contents_image"])
+        shortcuts_0.append(i["shortcuts"])
+        date_0.append(i["date"])
 
-    for i in json_data["info"][0]['contents_image']:
-        contents_image.append(i["path"])
+    path = '/workspace/crawling/data/json/info/info_data_1.json'
+    with open(path, "r", encoding="UTF-8") as json_file:
+        json_data_1 = json.load(json_file, strict = False)
 
-    print(contents_image)
+    index_1 = []
+    image_1 = []
+    write_1 = []
+    subject_1 = []
+    contents_1 = []
+    contents_image_1 = []
+    date_1 = []
+    len_data_1 = len(json_data_1["info"])
 
-    index.reverse()
-    image.reverse()
-    write.reverse()
-    subject.reverse()
-    contents.reverse()
-    contents_image.reverse()
-    date.reverse()
+    for i in json_data_1["info"]:
+        index_1.append(i["index"])
+        image_1.append(i["image"])
+        write_1.append(i["write"])
+        subject_1.append(i["subject"])
+        contents_1.append(i["contents"])
+        contents_image_1.append(i["contents_image"])
+        date_1.append(i["date"])
+
+    path = '/workspace/crawling/data/json/info/info_data_2.json'
+    with open(path, "r", encoding="UTF-8") as json_file:
+        json_data_2 = json.load(json_file, strict = False)
+
+    index_2 = []
+    image_2 = []
+    write_2 = []
+    subject_2 = []
+    contents_2 = []
+    contents_image_2 = []
+    date_2 = []
+    len_data_2 = len(json_data_2["info"])
+
+    for i in json_data_2["info"]:
+        index_2.append(i["index"])
+        image_2.append(i["image"])
+        write_2.append(i["write"])
+        subject_2.append(i["subject"])
+        contents_2.append(i["contents"])
+        contents_image_2.append(i["contents_image"])
+        date_2.append(i["date"])
 
     return render_template('info.html', **locals())
 
@@ -1582,4 +1615,4 @@ if __name__ == '__main__':
     #ssl_context = ssl.SSLContext(ssl.PROTOCOL_TLS)
     #ssl_context.load_cert_chain(certfile='', keyfile='', password=random)
     app.static_folder = 'static'
-    app.run(host = '0.0.0.0', port = 5000, debug=False)
+    app.run(host = '0.0.0.0', port = 5001, debug=False)

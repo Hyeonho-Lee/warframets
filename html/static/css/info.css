@@ -121,6 +121,21 @@ hr {
     margin: 8px 0px 1px 0px;
 }
 
+.info_img {
+    width: 100%;
+    height: 20%;
+    display: table;
+}
+
+.info_img img {
+    max-width: 1280px;
+    width: 60%;
+    display: table-cell;
+    float: left;
+    color: #323232;
+    margin: 1px;
+}
+
 .info_write {
     width: 90%;
     height: auto;
@@ -167,7 +182,7 @@ hr {
     width: 100%;
     height: auto;
     font-family: "Nanum Gothic", sans-serif;
-    font-size: 12px;
+    font-size: 16px;
     color: #808080;
     text-align: left;
     display: table-cell;
@@ -180,6 +195,10 @@ hr {
     .info_top_1 {
         width: 32.8%;
         margin: 1px;
+    }
+    
+    .info_img img {
+        width: 100%;
     }
 }
 
