@@ -31303,3 +31303,11 @@ pandas.errors.EmptyDataError: No columns to parse from file
 172.17.0.1 - - [29/Aug/2020 03:33:52] "[37mGET /static/image/item_image/weapon/Sancti_Magistar/Sancti_Magistar.png?v=0.1 HTTP/1.1[0m" 200 -
 172.17.0.1 - - [29/Aug/2020 03:33:52] "[37mGET /static/image/item_image/weapon/Akvasto_Prime/Akvasto_Prime.png?v=0.1 HTTP/1.1[0m" 200 -
 172.17.0.1 - - [29/Aug/2020 03:33:52] "[37mGET /static/image/item_image/weapon/Secura_Penta/Secura_Penta.png?v=0.1 HTTP/1.1[0m" 200 -
+  File "flask_app.py", line 455
+    <<<<<<< HEAD
+     ^
+SyntaxError: invalid syntax
+  File "flask_app.py", line 455
+    <<<<<<< HEAD
+     ^
+SyntaxError: invalid syntax

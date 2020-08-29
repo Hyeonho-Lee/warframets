@@ -452,17 +452,10 @@ def get_visit():
         month = '0' + month
 
     visit_count = session.get('visit_count') != 1
-<<<<<<< HEAD
 
     with open('/workspace/crawling/data/json/visitant.json', "r") as json_visit:
         visit_data = json.load(json_visit)
 
-=======
-    
-    with open('/workspace/crawling/data/json/visitant.json', "r") as json_visit:
-        visit_data = json.load(json_visit)
-    
->>>>>>> c53e624ab68a5393cbaf9a2b0f3a0eebd2436977
     if visit_count:
         session['visit_count'] = 1
 
@@ -476,27 +469,12 @@ def get_visit():
 
         with open('/workspace/crawling/data/json/visitant.json', 'w', encoding='utf-8') as update_visit:
             json.dump(query_1, update_visit, indent = 4)
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> c53e624ab68a5393cbaf9a2b0f3a0eebd2436977
     with open('/workspace/crawling/data/json/visitant.json', "r") as json_visits:
         visits_data = json.load(json_visits)
     result = visits_data["date"]["count"]
     return result
 
-<<<<<<< HEAD
-=======
-"""
-if os.path.isdir(get_path_0):
-    make_file(get_path)
-else:
-    #print('폴더가 없음으로 새로 만들었습니다.')
-    os.makedirs(get_path_0)
-    make_file(get_path)
-"""
->>>>>>> c53e624ab68a5393cbaf9a2b0f3a0eebd2436977
 #=======================================================================#
 
 app = Flask(__name__)
@@ -638,6 +616,7 @@ def index():
     t_all_volume = today_all['volume'].tolist()
     t_all_date = today_all['datetime'].tolist()
     t_all_percent = today_all['day_percent'].tolist()
+
     for i in t_all_name:
         result = find_path(i, 'path')
         result_0 = find_path(i, 'path_0')
@@ -645,13 +624,6 @@ def index():
         t_all_path.append(str(result))
         t_all_path_0.append(str(result_0))
         t_all_path_1.append(str(result_1))
-
-    label = '가장 많은 거래량'
-    xlabels = []
-    dataset = []
-    xlabel = today_volume['name'].tolist()
-    xlabels = change_to_kr('today_volume', 'in', '')
-    dataset = today_volume['volume'].tolist()
 
     return render_template('index.html', **locals())
 
@@ -664,7 +636,7 @@ def tests():
 def result(get_name):
     visit_count = get_visit()
     all_item, all_item_kr, all_path, all_path_0, all_path_1, all_type, all_type_kr = get_all_item()
-    
+
     def find_path(name, types):
         if types == 'path':
             for i, v in enumerate(all_item):
@@ -1087,12 +1059,8 @@ def category():
                 type_etc_path_1.append(all_path_1[i])
                 type_etc_type.append(all_type[i])
                 type_etc_type_kr.append(all_type_kr[i])
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> c53e624ab68a5393cbaf9a2b0f3a0eebd2436977
-    en_to_kr(all_item_kr);
+    en_to_kr(all_item_kr)
 
     type_primary_len = len(type_primary_item)
     type_secondary_len = len(type_secondary_item)
@@ -1566,7 +1534,6 @@ def page_not_found(error):
     return render_template('error.html', **locals()), 404
 
 #=======================================================================#
-<<<<<<< HEAD
 
 @app.route('/info/')
 def info():
@@ -1597,7 +1564,7 @@ def info():
 
     for i in json_data["info"][0]['contents_image']:
         contents_image.append(i["path"])
-    
+
     print(contents_image)
 
     index.reverse()
@@ -1611,15 +1578,8 @@ def info():
     return render_template('info.html', **locals())
 
 #=======================================================================#
-
-=======
->>>>>>> c53e624ab68a5393cbaf9a2b0f3a0eebd2436977
 if __name__ == '__main__':
     #ssl_context = ssl.SSLContext(ssl.PROTOCOL_TLS)
     #ssl_context.load_cert_chain(certfile='', keyfile='', password=random)
     app.static_folder = 'static'
-<<<<<<< HEAD
-    app.run(host = '0.0.0.0', port = 5000, debug=False)
-=======
     app.run(host = '0.0.0.0', port = 5001, debug=False)
->>>>>>> c53e624ab68a5393cbaf9a2b0f3a0eebd2436977

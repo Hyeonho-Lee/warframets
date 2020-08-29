@@ -457,12 +457,6 @@
             "kr_name": "레이저 사이트"
         },
         {
-            "name": "motus_setup",
-            "type": "shotgun_mod",
-            "en_name": "Motus Setup",
-            "kr_name": "모터스 셋업"
-        },
-        {
             "name": "narrow_barrel",
             "type": "shotgun_mod",
             "en_name": "Narrow Barrel",
@@ -1180,12 +1174,6 @@
             "type": "melee_mod",
             "en_name": "Heavy Trauma",
             "kr_name": "헤비 트라우마"
-        },
-        {
-            "name": "impenetrable_offense",
-            "type": "melee_mod",
-            "en_name": "Impenetrable Offense",
-            "kr_name": "임페네트러블 오펜스"
         },
         {
             "name": "jagged_edge",
