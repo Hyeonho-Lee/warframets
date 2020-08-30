@@ -1314,13 +1314,6 @@
             "kr_name": "리플렉스 코일"
         },
         {
-            "name": "relentless_assault",
-            "type": "melee_mod",
-            "en_name": "Relentless Assault",
-            "kr_name": "릴렌트리스 어설트"
-            
-        },
-        {
             "name": "relentless_combination",
             "type": "melee_mod",
             "en_name": "Relentless Combination",

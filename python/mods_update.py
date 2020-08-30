@@ -77,14 +77,14 @@ def warframe_crawling(item, path, path_0):
             value = pandas_value.pandas_value(get_item, 'mod')
             value.to_csv(get_path, mode = 'w')
             #print('새로운 데이터를 저장했습니다.') 
-    
+
     if os.path.isdir(get_path_0):
         make_file(get_item, get_path)
     else:
         #print('폴더가 없음으로 새로 만들었습니다.')
         os.makedirs(get_path_0)
         make_file(get_item, get_path)
-    
+
     print(str(get_item) + ' 업데이트를 하였습니다.')
 
 ######################################################
