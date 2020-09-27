@@ -197,7 +197,7 @@
         },
         {
             "index": 15,
-            "index_number": 502,
+            "index_number": 498,
             "image": "./image/item_image/mod/Primed_Fever_Strike/Primed_Fever_Strike.png",
             "subject": "프라임드 모드 모음집",
             "name": "primed_fever_strike",
@@ -210,7 +210,7 @@
         },
         {
             "index": 16,
-            "index_number": 503,
+            "index_number": 499,
             "image": "./image/item_image/mod/Primed_Heavy_Trauma/Primed_Heavy_Trauma.png",
             "subject": "프라임드 모드 모음집",
             "name": "primed_heavy_trauma",
@@ -223,7 +223,7 @@
         },
         {
             "index": 17,
-            "index_number": 504,
+            "index_number": 500,
             "image": "./image/item_image/mod/Primed_Pressure_Point/Primed_Pressure_Point.png",
             "subject": "프라임드 모드 모음집",
             "name": "primed_pressure_point",
@@ -236,7 +236,7 @@
         },
         {
             "index": 18,
-            "index_number": 505,
+            "index_number": 501,
             "image": "./image/item_image/mod/Primed_Reach/Primed_Reach.png",
             "subject": "프라임드 모드 모음집",
             "name": "primed_reach",

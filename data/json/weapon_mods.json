@@ -1062,12 +1062,6 @@
             "kr_name": "커럽트 차지"
         },
         {
-            "name": "counterweight",
-            "type": "melee_mod",
-            "en_name": "Counterweight",
-            "kr_name": "카운터웨이트"
-        },
-        {
             "name": "covert_lethality",
             "type": "melee_mod",
             "en_name": "Covert Lethality",
@@ -1102,12 +1096,6 @@
             "type": "melee_mod",
             "en_name": "Energy Channel",
             "kr_name": "에너지 채널"
-        },
-        {
-            "name": "explosive_demise",
-            "type": "melee_mod",
-            "en_name": "Explosive Demise",
-            "kr_name": "익스플로시브 디마이즈"
         },
         {
             "name": "fever_strike",
@@ -1164,12 +1152,6 @@
             "kr_name": "힐링 리턴"
         },
         {
-            "name": "heartseeker",
-            "type": "melee_mod",
-            "en_name": "Heartseeker",
-            "kr_name": "하트시커"
-        },
-        {
             "name": "heavy_trauma",
             "type": "melee_mod",
             "en_name": "Heavy Trauma",
@@ -1186,12 +1168,6 @@
             "type": "melee_mod",
             "en_name": "Killing Blow",
             "kr_name": "킬링 블로우"
-        },
-        {
-            "name": "lasting_sting",
-            "type": "melee_mod",
-            "en_name": "Lasting Sting",
-            "kr_name": "라스팅 스팅"
         },
         {
             "name": "life_strike",

@@ -1,0 +1,52 @@
+{
+    "items_etc_2": [
+        {
+            "name": "vengeful_shockwave_(kuva_lich_ephemera)",
+            "type": "ephemera",
+            "en_name": "Vengeful Shockwave",
+            "kr_name": "벤지풀 쇼크웨이브"
+        },
+        {
+            "name": "vengeful_flame_(kuva_lich_ephemera)",
+            "type": "ephemera",
+            "en_name": "Vengeful Flame",
+            "kr_name": "벤지풀 플레임"
+        },
+        {
+            "name": "vengeful_chill_(kuva_lich_ephemera)",
+            "type": "ephemera",
+            "en_name": "Vengeful Chill",
+            "kr_name": "벤지풀 칠"
+        },
+        {
+            "name": "vengeful_charge_(kuva_lich_ephemera)",
+            "type": "ephemera",
+            "en_name": "Vengeful Charge",
+            "kr_name": "벤지풀 차지"
+        },
+        {
+            "name": "vengeful_toxin_(kuva_lich_ephemera)",
+            "type": "ephemera",
+            "en_name": "Vengeful Toxin",
+            "kr_name": "벤지풀 톡신"
+        },
+        {
+            "name": "vengeful_pull_(kuva_lich_ephemera)",
+            "type": "ephemera",
+            "en_name": "Vengeful Pull",
+            "kr_name": "벤지풀 풀"
+        },
+        {
+            "name": "vengeful_trickster_(kuva_lich_ephemera)",
+            "type": "ephemera",
+            "en_name": "Vengeful Trickster",
+            "kr_name": "벤지풀 트릭스터"
+        },
+        {
+            "name": "legendary_fusion_core",
+            "type": "item_etc",
+            "en_name": "Legendary Fusion Core",
+            "kr_name": "레전더리 퓨전 코어"
+        }
+    ]
+}
