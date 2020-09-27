@@ -199,7 +199,7 @@
         width: 100% !important;
     }
     
-    .calculator_button, .market_button {
+    .calculator_button, .market_button, .csv_button {
         width: 175px;
     }
 }
@@ -214,7 +214,7 @@
         height: 450px !important;
     }
     
-    .calculator_button, .market_button {
-        width: 150px;
+    .calculator_button, .market_button, .csv_button {
+        width: 125px;
     }
 }
