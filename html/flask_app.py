@@ -7,7 +7,8 @@ import pandas as pd
 import numpy as np
 import random
 import ssl
-from flask import Flask, url_for, render_template, request, redirect, session
+from io import StringIO
+from flask import Flask, url_for, render_template, request, redirect, session, Response
 
 #https://www.chartjs.org/
 #https://datatables.net/
@@ -41,23 +42,18 @@ def read_csv(name, types):
     elif types == 'weapon_etc':
         name_csv = name + '.csv'
         path = '/workspace/crawling/data/csv/weapon/{names}/{name_csv}'.format(names = name, name_csv = name_csv)
-        print(path)
     elif types == 'aura_mods':
         name_csv = name + '.csv'
         path = '/workspace/crawling/data/csv/mod/{names}/{name_csv}'.format(names = name, name_csv = name_csv)
-        print(path)
     elif types == 'warframe_mods':
         name_csv = name + '.csv'
         path = '/workspace/crawling/data/csv/mod/{names}/{name_csv}'.format(names = name, name_csv = name_csv)
-        print(path)
     elif types == 'items_etc':
         name_csv = name + '.csv'
         path = '/workspace/crawling/data/csv/etc/{names}/{name_csv}'.format(names = name, name_csv = name_csv)
-        print(path)
     elif types == 'weapon_mods':
         name_csv = name + '.csv'
         path = '/workspace/crawling/data/csv/mod/{names}/{name_csv}'.format(names = name, name_csv = name_csv)
-        print(path)
     else:
         path = '/workspace/crawling/data/csv/{types}/{name}/{name_csv}'.format(types = types, name = names, name_csv = name_csv)
     get_path = path
@@ -795,7 +791,172 @@ def result(get_name):
                 return render_template('result.html', **locals())
             else:
                 return redirect('/error/')
+#####################################################################
+@app.route('/result/download/<get_name>/')
+def csv_file_download(get_name):
 
+    all_item, all_item_kr, all_path, all_path_0, all_path_1, all_type, all_type_kr = get_all_item()
+
+    def find_path(name, types):
+        if types == 'path':
+            for i, v in enumerate(all_item):
+                if str(v) == name:
+                    path = all_path[i]
+                    return path
+        elif types == 'path_0':
+            for i, v in enumerate(all_item):
+                if str(v) == name:
+                    path_0 = all_path_0[i]
+                    return path_0
+        elif types == 'path_1':
+            for i, v in enumerate(all_item):
+                if str(v) == name:
+                    path_1 = all_path_1[i]
+                    return path_1
+
+    if get_name not in all_item_kr:
+        return redirect('/error/')
+    else:
+
+        input_warframe = input_item('warframes')
+        input_weapon = input_item('weapons')
+        input_weapon_etc = input_item('weapons_etc')
+        input_aura_mods = input_item('aura_mods')
+        input_warframe_mods = input_item('warframe_mods')
+        input_items_etc = input_item('items_etc')
+        input_weapon_mods = input_item('weapon_mods')
+
+        result_name = '%s' % get_name
+        for i, v in enumerate(all_item_kr):
+            if str(v) == result_name:
+                result_name = all_item[i]
+        name = result_name.replace('_set', '')
+
+        name_set = name.replace(' ', '_')
+        name_sets = name_set + '_set'
+
+        for i, v in enumerate(all_item):
+            if str(v) == result_name:
+                kr_name = all_item_kr[i]
+
+        for i in input_weapon_etc:
+            if str(name) in i:
+                name_sets = name
+
+        for i in input_aura_mods:
+            if str(name) in i:
+                name_sets = name
+
+        for i in input_warframe_mods:
+            if str(name) in i:
+                name_sets = name
+
+        for i in input_items_etc:
+            if str(name) in i:
+                name_sets = name
+
+        for i in input_weapon_mods:
+            if str(name) in i:
+                name_sets = name
+
+        search_path = find_path(name_sets, 'path')
+        search_path_0 = find_path(name_sets, 'path_0')
+        search_path_1 = find_path(name_sets, 'path_1')
+
+        get_find = False
+        is_warframe = False
+        is_weapon = False
+        is_weapon_etc = False
+        is_aura_mods = False
+        is_warframe_mods = False
+        is_items_etc = False
+        is_weapon_mods = False
+
+        if get_find == False:
+            for finds in input_warframe:
+                if name in finds:
+                    result = read_csv(name, 'warframe')
+                    get_find = True
+                    is_warframe = True
+                    break
+
+        if get_find == False:
+            for finds in input_weapon:
+                if name in finds:
+                    result = read_csv(name, 'weapon')
+                    get_find = True
+                    is_weapon = True
+                    break
+
+        if get_find == False:
+            for finds in input_weapon_etc:
+                if name in finds:
+                    result = read_csv(name, 'weapon_etc')
+                    get_find = True
+                    is_weapon_etc = True
+                    break
+
+        if get_find == False:
+            for finds in input_aura_mods:
+                if name in finds:
+                    result = read_csv(name, 'aura_mods')
+                    get_find = True
+                    is_aura_mods = True
+                    break
+
+        if get_find == False:
+            for finds in input_warframe_mods:
+                if name in finds:
+                    result = read_csv(name, 'warframe_mods')
+                    get_find = True
+                    is_aura_mods = True
+                    break
+
+        if get_find == False:
+            for finds in input_items_etc:
+                if name in finds:
+                    result = read_csv(name, 'items_etc')
+                    get_find = True
+                    is_items_etc = True
+                    break
+
+        if get_find == False:
+            for finds in input_weapon_mods:
+                if name in finds:
+                    result = read_csv(name, 'weapon_mods')
+                    get_find = True
+                    is_items_etc = True
+                    break
+
+        if(is_warframe == False and is_weapon == False and is_weapon_etc == False and is_aura_mods == False and is_warframe_mods == False and is_items_etc == False and is_weapon_mods):
+            return redirect('/error/')
+
+        if get_find == True:
+            if(result.empty != True):
+
+                today_datetime = get_today_date()
+
+                result = result.reset_index()
+                del result['index']
+                del result['lank']
+                del result['level_0']
+                result = result[['datetime', 'avg_price', 'yn_before', 'day_before', 'day_percent', 'volume']]
+                result = result.rename(columns={'datetime': '날짜', 'avg_price': '가격', 'yn_before': '', 'day_before': '전일대비', 'day_percent': '퍼센트', 'volume': '거래량'})
+
+                export_file = StringIO()
+                result.to_csv(export_file)
+                response = Response(
+                    export_file.getvalue(), 
+                    mimetype='text/csv', 
+                    content_type='application/octet-stream',
+                )
+                file_name = str(name_sets) + "_" + str(today_datetime) + ".csv"
+                str_value = "attachment; filename=" + file_name
+                response.headers["Content-Disposition"] = str_value
+                return response
+            else:
+                return redirect('/error/')
+#####################################################################
 @app.route('/error/')
 def error():
     visit_count = get_visit()
@@ -1615,4 +1776,4 @@ if __name__ == '__main__':
     #ssl_context = ssl.SSLContext(ssl.PROTOCOL_TLS)
     #ssl_context.load_cert_chain(certfile='', keyfile='', password=random)
     app.static_folder = 'static'
-    app.run(host = '0.0.0.0', port = 5001, debug=False)
+    app.run(host = '0.0.0.0', port = 5000, debug=False)
