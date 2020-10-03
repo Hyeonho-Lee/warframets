@@ -355,12 +355,6 @@
             "kr_name": "버츄오스_트로잔"
         },
         {
-            "name": "virtuos_spike",
-            "type": "virtuos",
-            "en_name": "",
-            "kr_name": "버츄오스 스파이크"
-        },
-        {
             "name": "virtuos_surge",
             "type": "virtuos",
             "en_name": "",
@@ -371,12 +365,6 @@
             "type": "pax",
             "en_name": "",
             "kr_name": "팍스 볼트"
-        },
-        {
-            "name": "pax_charge",
-            "type": "pax",
-            "en_name": "",
-            "kr_name": "팍스 차지"
         },
         {
             "name": "pax_seeker",

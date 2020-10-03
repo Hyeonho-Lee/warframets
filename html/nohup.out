@@ -11516,3 +11516,168 @@ json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
 172.17.0.1 - - [03/Oct/2020 03:11:43] "[32mGET /result/아크자가라%20프라임 HTTP/1.1[0m" 308 -
 172.17.0.1 - - [03/Oct/2020 03:11:43] "[37mGET /result/아크자가라%20프라임/ HTTP/1.1[0m" 200 -
 172.17.0.1 - - [03/Oct/2020 03:15:19] "[37mGET /result/download/콜리전%20포스/ HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:18:53] "[37mGET / HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:19:42] "[37mGET / HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:19:42] "[37mGET /static/css/index.css?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:19:42] "[37mGET /static/js/AutoComplete.min.js HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:19:42] "[37mGET /static/js/jquery-3.5.1.min.js HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:19:42] "[37mGET /static/css/table.css?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:19:42] "[37mGET /static/js/jquery-ui.js HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:19:43] "[37mGET /static/image/icon/logo.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:19:43] "[37mGET /static/image/item_image/warframe/Ivara_Prime/Ivara_Prime.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:19:43] "[37mGET /static/image/item_image/mod/Primed_Continuity/Primed_Continuity.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:19:43] "[37mGET /static/image/item_image/weapon/Akjagara_Prime/Akjagara_Prime.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:19:43] "[37mGET /static/image/item_image/mod/Rejuvenation/Rejuvenation.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:19:43] "[37mGET /static/image/item_image/mod/Primed_Fever_Strike/Primed_Fever_Strike.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:19:43] "[37mGET /static/image/item_image/mod/Energy_Siphon/Energy_Siphon.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:19:43] "[37mGET /static/image/item_image/weapon/Sybaris_Prime/Sybaris_Prime.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:19:43] "[37mGET /static/image/item_image/weapon/Pyrana_Prime/Pyrana_Prime.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:19:43] "[37mGET /static/image/item_image/weapon/Rubico_Prime/Rubico_Prime.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:19:43] "[37mGET /static/image/item_image/mod/Blaze/Blaze.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:19:43] "[37mGET /static/image/item_image/weapon/Dakra_Prime/Dakra_Prime.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:19:43] "[37mGET /static/image/item_image/weapon/Tigris_Prime/Tigris_Prime.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:19:44] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+172.17.0.1 - - [03/Oct/2020 03:20:04] "[37mGET /static/image/item_image/weapon/Tipedo_Prime/Tipedo_Prime.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:20:04] "[37mGET /static/image/item_image/weapon/Reaper_Prime/Reaper_Prime.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:20:04] "[37mGET /static/image/item_image/weapon/Glaive_Prime/Glaive_Prime.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:20:04] "[37mGET /static/image/item_image/weapon/Sancti_Magistar/Sancti_Magistar.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:20:04] "[37mGET /static/image/item_image/weapon/Sicarus_Prime/Sicarus_Prime.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:20:04] "[37mGET /static/image/item_image/weapon/Akbolto_Prime/Akbolto_Prime.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:20:10] "[32mGET /result/버츄오스%20스파이크 HTTP/1.1[0m" 308 -
+172.17.0.1 - - [03/Oct/2020 03:20:10] "[37mGET /result/버츄오스%20스파이크/ HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:20:10] "[37mGET /static/image/item_image/etc/Virtuos_Spike/Virtuos_Spike.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:20:57] "[37mGET / HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:21:25] "[32mGET /result/팍스%20차지 HTTP/1.1[0m" 308 -
+[2020-10-03 03:21:26,102] ERROR in app: Exception on /result/팍스 차지/ [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "flask_app.py", line 773, in result
+    today_datetime = get_today_date()
+  File "flask_app.py", line 436, in get_today_date
+    result = read_csv('result', 'result')
+  File "flask_app.py", line 61, in read_csv
+    result = pd.read_csv(get_path, index_col = 0)
+  File "/usr/local/lib/python3.7/site-packages/pandas/io/parsers.py", line 685, in parser_f
+    return _read(filepath_or_buffer, kwds)
+  File "/usr/local/lib/python3.7/site-packages/pandas/io/parsers.py", line 457, in _read
+    parser = TextFileReader(fp_or_buf, **kwds)
+  File "/usr/local/lib/python3.7/site-packages/pandas/io/parsers.py", line 895, in __init__
+    self._make_engine(self.engine)
+  File "/usr/local/lib/python3.7/site-packages/pandas/io/parsers.py", line 1135, in _make_engine
+    self._engine = CParserWrapper(self.f, **self.options)
+  File "/usr/local/lib/python3.7/site-packages/pandas/io/parsers.py", line 1917, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+  File "pandas/_libs/parsers.pyx", line 545, in pandas._libs.parsers.TextReader.__cinit__
+pandas.errors.EmptyDataError: No columns to parse from file
+172.17.0.1 - - [03/Oct/2020 03:21:26] "[1m[35mGET /result/팍스%20차지/ HTTP/1.1[0m" 500 -
+[2020-10-03 03:21:28,975] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "flask_app.py", line 485, in index
+    today_datetime = get_today_date()
+  File "flask_app.py", line 436, in get_today_date
+    result = read_csv('result', 'result')
+  File "flask_app.py", line 61, in read_csv
+    result = pd.read_csv(get_path, index_col = 0)
+  File "/usr/local/lib/python3.7/site-packages/pandas/io/parsers.py", line 685, in parser_f
+    return _read(filepath_or_buffer, kwds)
+  File "/usr/local/lib/python3.7/site-packages/pandas/io/parsers.py", line 457, in _read
+    parser = TextFileReader(fp_or_buf, **kwds)
+  File "/usr/local/lib/python3.7/site-packages/pandas/io/parsers.py", line 895, in __init__
+    self._make_engine(self.engine)
+  File "/usr/local/lib/python3.7/site-packages/pandas/io/parsers.py", line 1135, in _make_engine
+    self._engine = CParserWrapper(self.f, **self.options)
+  File "/usr/local/lib/python3.7/site-packages/pandas/io/parsers.py", line 1917, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+  File "pandas/_libs/parsers.pyx", line 545, in pandas._libs.parsers.TextReader.__cinit__
+pandas.errors.EmptyDataError: No columns to parse from file
+172.17.0.1 - - [03/Oct/2020 03:21:28] "[1m[35mGET / HTTP/1.1[0m" 500 -
+172.17.0.1 - - [03/Oct/2020 03:21:39] "[37mGET / HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:21:40] "[37mGET / HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:21:41] "[37mGET /static/js/jquery-3.5.1.min.js HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:21:41] "[37mGET /static/css/index.css?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:21:41] "[37mGET /static/css/table.css?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:21:41] "[37mGET /static/js/AutoComplete.min.js HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:21:41] "[37mGET /static/js/jquery-ui.js HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:21:41] "[37mGET /static/image/icon/logo.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:21:41] "[37mGET /static/image/item_image/mod/Primed_Continuity/Primed_Continuity.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:21:41] "[37mGET /static/image/item_image/weapon/Akjagara_Prime/Akjagara_Prime.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:21:41] "[37mGET /static/image/item_image/warframe/Ivara_Prime/Ivara_Prime.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:21:41] "[37mGET /static/image/item_image/mod/Primed_Fever_Strike/Primed_Fever_Strike.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:21:41] "[37mGET /static/image/item_image/mod/Rejuvenation/Rejuvenation.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:21:41] "[37mGET /static/image/item_image/mod/Energy_Siphon/Energy_Siphon.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:21:41] "[37mGET /static/image/item_image/mod/Blaze/Blaze.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:21:41] "[37mGET /static/image/item_image/weapon/Sybaris_Prime/Sybaris_Prime.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:21:41] "[37mGET /static/image/item_image/weapon/Dakra_Prime/Dakra_Prime.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:21:41] "[37mGET /static/image/item_image/weapon/Pyrana_Prime/Pyrana_Prime.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:21:41] "[37mGET /static/image/item_image/weapon/Rubico_Prime/Rubico_Prime.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:21:41] "[37mGET /static/image/item_image/weapon/Tigris_Prime/Tigris_Prime.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:21:42] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+172.17.0.1 - - [03/Oct/2020 03:21:49] "[32mGET /result/샤프슈터 HTTP/1.1[0m" 308 -
+172.17.0.1 - - [03/Oct/2020 03:21:49] "[37mGET /result/샤프슈터/ HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:21:49] "[37mGET /static/image/item_image/mod/Sharpshooter/Sharpshooter.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:22:09] "[32mGET /result/아케인%20가디언 HTTP/1.1[0m" 308 -
+172.17.0.1 - - [03/Oct/2020 03:22:09] "[37mGET /result/아케인%20가디언/ HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:22:09] "[37mGET /static/image/item_image/etc/Arcane_Guardian/Arcane_Guardian.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:22:13] "[32mGET /result/퀴크닝 HTTP/1.1[0m" 308 -
+172.17.0.1 - - [03/Oct/2020 03:22:14] "[37mGET /result/퀴크닝/ HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:22:14] "[37mGET /static/image/item_image/mod/Quickening/Quickening.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:22:27] "[32mGET /result/프라임드%20프레셔%20포인트 HTTP/1.1[0m" 308 -
+172.17.0.1 - - [03/Oct/2020 03:22:27] "[37mGET /result/프라임드%20프레셔%20포인트/ HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:22:27] "[37mGET /static/image/item_image/mod/Primed_Pressure_Point/Primed_Pressure_Point.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:22:41] "[37mGET / HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:22:41] "[37mGET /static/css/index.css?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:22:41] "[37mGET /static/css/table.css?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:22:41] "[37mGET /static/js/AutoComplete.min.js HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:22:41] "[37mGET /static/js/jquery-3.5.1.min.js HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:22:41] "[37mGET /static/js/jquery-ui.js HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:22:41] "[37mGET /static/image/icon/logo.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:22:41] "[37mGET /static/image/item_image/warframe/Ivara_Prime/Ivara_Prime.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:22:41] "[37mGET /static/image/item_image/weapon/Akjagara_Prime/Akjagara_Prime.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:22:41] "[37mGET /static/image/item_image/mod/Primed_Continuity/Primed_Continuity.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:22:41] "[37mGET /static/image/item_image/mod/Rejuvenation/Rejuvenation.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:22:41] "[37mGET /static/image/item_image/mod/Primed_Fever_Strike/Primed_Fever_Strike.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:22:41] "[37mGET /static/image/item_image/mod/Energy_Siphon/Energy_Siphon.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:22:41] "[37mGET /static/image/item_image/mod/Blaze/Blaze.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:22:42] "[37mGET /static/image/item_image/weapon/Pyrana_Prime/Pyrana_Prime.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:22:42] "[37mGET /static/image/item_image/weapon/Sybaris_Prime/Sybaris_Prime.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:22:42] "[37mGET /static/image/item_image/weapon/Rubico_Prime/Rubico_Prime.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:22:42] "[37mGET /static/image/item_image/weapon/Tigris_Prime/Tigris_Prime.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:22:42] "[37mGET /static/image/item_image/weapon/Dakra_Prime/Dakra_Prime.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:22:42] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+172.17.0.1 - - [03/Oct/2020 03:22:45] "[32mGET /result/프라임드%20체임버 HTTP/1.1[0m" 308 -
+172.17.0.1 - - [03/Oct/2020 03:22:45] "[37mGET /result/프라임드%20체임버/ HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:22:45] "[37mGET /static/image/item_image/mod/Primed_Chamber/Primed_Chamber.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:22:48] "[37mGET / HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:22:53] "[32mGET /result/스프닝%20니들 HTTP/1.1[0m" 308 -
+172.17.0.1 - - [03/Oct/2020 03:22:53] "[37mGET /result/스프닝%20니들/ HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:22:54] "[37mGET /static/image/item_image/mod/Spinning_Needle/Spinning_Needle.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:22:58] "[32mGET /result/프라임드%20클렌즈%20그리니어 HTTP/1.1[0m" 308 -
+172.17.0.1 - - [03/Oct/2020 03:22:58] "[37mGET /result/프라임드%20클렌즈%20그리니어/ HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:22:59] "[37mGET /static/image/item_image/mod/Primed_Cleanse_Grineer/Primed_Cleanse_Grineer.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:23:07] "[37mGET /result/프라임드%20체임버/ HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:23:15] "[32mGET /result/리퍼%20프라임 HTTP/1.1[0m" 308 -
+172.17.0.1 - - [03/Oct/2020 03:23:15] "[37mGET /result/리퍼%20프라임/ HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 03:23:19] "[37mGET /result/이바라%20프라임/ HTTP/1.1[0m" 200 -
