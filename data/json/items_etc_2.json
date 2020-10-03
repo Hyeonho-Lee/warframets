@@ -47,6 +47,102 @@
             "type": "item_etc",
             "en_name": "Legendary Fusion Core",
             "kr_name": "레전더리 퓨전 코어"
+        },
+        {
+            "name": "necramech_blitz",
+            "type": "necramech_mod",
+            "en_name": "Necramech_Blitz",
+            "kr_name": "네크라메크 블리츠"
+        },
+        {
+            "name": "necramech_continuity",
+            "type": "necramech_mod",
+            "en_name": "Necramech_Continuity",
+            "kr_name": "네크라메크 컨티뉴어티"
+        },
+        {
+            "name": "necramech_fury",
+            "type": "necramech_mod",
+            "en_name": "Necramech_Fury",
+            "kr_name": "네크라메크 퓨리"
+        },
+        {
+            "name": "Necramech_Hydraulics",
+            "type": "necramech_mod",
+            "en_name": "Necramech_Hydraulics",
+            "kr_name": "네크라메크 하이드롤릭스"
+        },
+        {
+            "name": "necramech_intensify",
+            "type": "necramech_mod",
+            "en_name": "Necramech_Intensify",
+            "kr_name": "네크라메크 인텐시파이"
+        },
+        {
+            "name": "necramech_pressure_point",
+            "type": "necramech_mod",
+            "en_name": "Necramech_Pressure_Point",
+            "kr_name": "네크라메크 프레셔 포인트"
+        },
+        {
+            "name": "necramech_reach",
+            "type": "necramech_mod",
+            "en_name": "Necramech_Reach",
+            "kr_name": "네크라메크 리치"
+        },
+        {
+            "name": "necramech_redirection",
+            "type": "necramech_mod",
+            "en_name": "Necramech_Redirection",
+            "kr_name": "네크라메크 리다이렉션"
+        },
+        {
+            "name": "necramech_refuel",
+            "type": "necramech_mod",
+            "en_name": "Necramech_Refuel",
+            "kr_name": "네크라메크 리퓨얼"
+        },
+        {
+            "name": "necramech_seismic_wave",
+            "type": "necramech_mod",
+            "en_name": "Necramech_Seismic_Wave",
+            "kr_name": "네크라메크 사이즈믹 웨이브"
+        },
+        {
+            "name": "necramech_slipstream",
+            "type": "necramech_mod",
+            "en_name": "Necramech_Slipstream",
+            "kr_name": "네크라메크 슬립스트림"
+        },
+        {
+            "name": "necramech_steel_fiber",
+            "type": "necramech_mod",
+            "en_name": "Necramech_Steel_Fiber",
+            "kr_name": "네크라메크 스틸 파이버"
+        },
+        {
+            "name": "necramech_streamline",
+            "type": "necramech_mod",
+            "en_name": "Necramech_Streamline",
+            "kr_name": "네크라메크 스트림라인"
+        },
+        {
+            "name": "necramech_thrusters",
+            "type": "necramech_mod",
+            "en_name": "Necramech_Thrusters",
+            "kr_name": "네크라메크 쓰러스터"
+        },
+        {
+            "name": "necramech_vitality",
+            "type": "necramech_mod",
+            "en_name": "Necramech_Vitality",
+            "kr_name": "네크라메크 바이탈리티"
+        },
+        {
+            "name": "necramech_stretch",
+            "type": "necramech_mod",
+            "en_name": "Necramech_Stretch",
+            "kr_name": "네크라메크 스트레치"
         }
     ]
 }

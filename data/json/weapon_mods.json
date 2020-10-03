@@ -547,12 +547,6 @@
             "kr_name": "시킹 퓨리"
         },
         {
-            "name": "shell_compression",
-            "type": "shotgun_mod",
-            "en_name": "Shell Compression",
-            "kr_name": "쉘 컴프레션"
-        },
-        {
             "name": "shell_shock",
             "type": "shotgun_mod",
             "en_name": "Shell Shock",
