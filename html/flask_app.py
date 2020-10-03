@@ -1008,7 +1008,7 @@ def notice():
 def temp():
     visit_count = get_visit()
     all_item, all_item_kr, all_path, all_path_0, all_path_1, all_type, all_type_kr = get_all_item()
-    
+
     return render_template('temp.html', **locals())
 
 #=======================================================================#
@@ -1770,6 +1770,246 @@ def info():
         date_2.append(i["date"])
 
     return render_template('info.html', **locals())
+
+#=======================================================================#
+
+@app.route('/economy/')
+def economy():
+    visit_count = get_visit()
+
+    today_datetime = get_today_date()
+    all_top = read_csv('all_top', 'result')
+    all_bottom = read_csv('all_bottom', 'result')
+    today_top = read_csv('today_top', 'result')
+    today_bottom = read_csv('today_bottom', 'result')
+    today_volume = read_csv('today_volume', 'result')
+    today_all = read_csv('result', 'result')
+    recommend_item = read_csv('recommend_item', 'result')
+    recommend_top = read_csv('recommend_top', 'result')
+    recommend_bottom = read_csv('recommend_bottom', 'result')
+
+    all_item, all_item_kr, all_path, all_path_0, all_path_1, all_type, all_type_kr = get_all_item()
+    def find_path(name, types):
+        if types == 'path':
+            for i, v in enumerate(all_item):
+                if str(v) == name:
+                    path = all_path[i]
+                    return path
+        elif types == 'path_0':
+            for i, v in enumerate(all_item):
+                if str(v) == name:
+                    path_0 = all_path_0[i]
+                    return path_0
+        elif types == 'path_1':
+            for i, v in enumerate(all_item):
+                if str(v) == name:
+                    path_1 = all_path_1[i]
+                    return path_1
+
+    a_top_name = []
+    a_top_kr_name = []
+    a_top_price = []
+    a_top_before = []
+    a_top_percent = []
+    a_top_path = []
+    a_top_path_0 = []
+    a_top_path_1 = []
+    a_top_lank = []
+    a_top_name = all_top['name'].tolist()
+    a_top_kr_name = change_to_kr('all_top', 'in', '')
+    a_top_price = all_top['avg_price'].tolist()
+    a_top_before = all_top['day_before'].tolist()
+    a_top_percent = all_top['day_percent'].tolist()
+    a_top_lank = all_top['lank'].tolist()
+    for i in a_top_name:
+        result = find_path(i, 'path')
+        result_0 = find_path(i, 'path_0')
+        result_1 = find_path(i, 'path_1')
+        a_top_path.append(str(result))
+        a_top_path_0.append(str(result_0))
+        a_top_path_1.append(str(result_1))
+
+    a_bottom_name = []
+    a_bottom_kr_name = []
+    a_bottom_price = []
+    a_bottom_before = []
+    a_bottom_percent = []
+    a_bottom_path = []
+    a_bottom_path_0 = []
+    a_bottom_path_1 = []
+    a_bottom_lank = []
+    a_bottom_name = all_bottom['name'].tolist()
+    a_bottom_kr_name = change_to_kr('all_bottom', 'in', '')
+    a_bottom_price = all_bottom['avg_price'].tolist()
+    a_bottom_before = all_bottom['day_before'].tolist()
+    a_bottom_percent = all_bottom['day_percent'].tolist()
+    a_bottom_lank = all_bottom['lank'].tolist()
+    for i in a_bottom_name:
+        result = find_path(i, 'path')
+        result_0 = find_path(i, 'path_0')
+        result_1 = find_path(i, 'path_1')
+        a_bottom_path.append(str(result))
+        a_bottom_path_0.append(str(result_0))
+        a_bottom_path_1.append(str(result_1))
+
+    t_top_name = []
+    t_top_kr_name = []
+    t_top_price = []
+    t_top_before = []
+    t_top_percent = []
+    t_top_path = []
+    t_top_path_0 = []
+    t_top_path_1 = []
+    t_top_name = today_top['name'].tolist()
+    t_top_kr_name = change_to_kr('today_top', 'in', '')
+    t_top_price = today_top['avg_price'].tolist()
+    t_top_before = today_top['day_before'].tolist()
+    t_top_percent = today_top['day_percent'].tolist()
+    for i in t_top_name:
+        result = find_path(i, 'path')
+        result_0 = find_path(i, 'path_0')
+        result_1 = find_path(i, 'path_1')
+        t_top_path.append(str(result))
+        t_top_path_0.append(str(result_0))
+        t_top_path_1.append(str(result_1))
+
+    t_bottom_name = []
+    t_bottom_kr_name = []
+    t_bottom_price = []
+    t_bottom_before = []
+    t_bottom_percent = []
+    t_bottom_path = []
+    t_bottom_path_0 = []
+    t_bottom_path_1 = []
+    t_bottom_name = today_bottom['name'].tolist()
+    t_bottom_kr_name = change_to_kr('today_bottom', 'in', '')
+    t_bottom_price = today_bottom['avg_price'].tolist()
+    t_bottom_before = today_bottom['day_before'].tolist()
+    t_bottom_percent = today_bottom['day_percent'].tolist()
+    for i in t_bottom_name:
+        result = find_path(i, 'path')
+        result_0 = find_path(i, 'path_0')
+        result_1 = find_path(i, 'path_1')
+        t_bottom_path.append(str(result))
+        t_bottom_path_0.append(str(result_0))
+        t_bottom_path_1.append(str(result_1))
+
+    t_volume_name = []
+    t_volume_kr_name = []
+    t_volume_price = []
+    t_volume_before = []
+    t_volume_percent = []
+    t_volume_path = []
+    t_volume_path_0 = []
+    t_volume_path_1 = []
+    t_volume = []
+    t_volume_name = today_volume['name'].tolist()
+    t_volume_kr_name = change_to_kr('today_volume', 'in', '')
+    t_volume_price = today_volume['avg_price'].tolist()
+    t_volume_before = today_volume['day_before'].tolist()
+    t_volume_percent = today_volume['day_percent'].tolist()
+    t_volume = today_volume['volume'].tolist()
+    for i in t_volume_name:
+        result = find_path(i, 'path')
+        result_0 = find_path(i, 'path_0')
+        result_1 = find_path(i, 'path_1')
+        t_volume_path.append(str(result))
+        t_volume_path_0.append(str(result_0))
+        t_volume_path_1.append(str(result_1))
+
+    r_item_name = []
+    r_item_kr_name = []
+    r_item_price = []
+    r_item_before = []
+    r_item_percent = []
+    r_item_path = []
+    r_item_path_0 = []
+    r_item_path_1 = []
+    r_item_name = recommend_item['name'].tolist()
+    r_item_kr_name = change_to_kr('recommend_item', 'in', '')
+    r_item_price = recommend_item['avg_price'].tolist()
+    r_item_before = recommend_item['day_before'].tolist()
+    r_item_percent = recommend_item['day_percent'].tolist()
+    for i in r_item_name:
+        result = find_path(i, 'path')
+        result_0 = find_path(i, 'path_0')
+        result_1 = find_path(i, 'path_1')
+        r_item_path.append(str(result))
+        r_item_path_0.append(str(result_0))
+        r_item_path_1.append(str(result_1))
+
+    r_top_name = []
+    r_top_kr_name = []
+    r_top_price = []
+    r_top_before = []
+    r_top_percent = []
+    r_top_path = []
+    r_top_path_0 = []
+    r_top_path_1 = []
+    r_top_name = recommend_top['name'].tolist()
+    r_top_kr_name = change_to_kr('recommend_top', 'in', '')
+    r_top_price = recommend_top['avg_price'].tolist()
+    r_top_before = recommend_top['day_before'].tolist()
+    r_top_percent = recommend_top['day_percent'].tolist()
+    for i in r_top_name:
+        result = find_path(i, 'path')
+        result_0 = find_path(i, 'path_0')
+        result_1 = find_path(i, 'path_1')
+        r_top_path.append(str(result))
+        r_top_path_0.append(str(result_0))
+        r_top_path_1.append(str(result_1))
+
+    r_bottom_name = []
+    r_bottom_kr_name = []
+    r_bottom_price = []
+    r_bottom_before = []
+    r_bottom_percent = []
+    r_bottom_path = []
+    r_bottom_path_0 = []
+    r_bottom_path_1 = []
+    r_bottom_name = recommend_bottom['name'].tolist()
+    r_bottom_kr_name = change_to_kr('recommend_bottom', 'in', '')
+    r_bottom_price = recommend_bottom['avg_price'].tolist()
+    r_bottom_before = recommend_bottom['day_before'].tolist()
+    r_bottom_percent = recommend_bottom['day_percent'].tolist()
+    for i in r_bottom_name:
+        result = find_path(i, 'path')
+        result_0 = find_path(i, 'path_0')
+        result_1 = find_path(i, 'path_1')
+        r_bottom_path.append(str(result))
+        r_bottom_path_0.append(str(result_0))
+        r_bottom_path_1.append(str(result_1))
+
+    t_all_name = []
+    t_all_kr_name = []
+    t_all_price = []
+    t_all_before = []
+    t_all_befores = []
+    t_all_volume = []
+    t_all_date = []
+    t_all_percent = []
+    t_all_path = []
+    t_all_path_0 = []
+    t_all_path_1 = []
+    t_all_name = today_all['name'].tolist()
+    t_all_name_count = len(t_all_name)
+    t_all_kr_name = change_to_kr('result', 'in', '')
+    t_all_price = today_all['avg_price'].tolist()
+    t_all_before = today_all['day_before'].tolist()
+    t_all_befores = today_all['yn_before'].tolist()
+    t_all_volume = today_all['volume'].tolist()
+    t_all_date = today_all['datetime'].tolist()
+    t_all_percent = today_all['day_percent'].tolist()
+
+    for i in t_all_name:
+        result = find_path(i, 'path')
+        result_0 = find_path(i, 'path_0')
+        result_1 = find_path(i, 'path_1')
+        t_all_path.append(str(result))
+        t_all_path_0.append(str(result_0))
+        t_all_path_1.append(str(result_1))
+
+    return render_template('economy.html', **locals())
 
 #=======================================================================#
 if __name__ == '__main__':

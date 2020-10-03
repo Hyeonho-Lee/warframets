@@ -41,7 +41,7 @@ def get_all():
         all_item.append(item)
         all_path.append(path)
         all_path_0.append(path_0)
-        
+
     input_items_2 = input_warframe.input_item('weapons_etc')
 
     for i, v in enumerate(input_items_2):
@@ -51,7 +51,7 @@ def get_all():
         all_item.append(item)
         all_path.append(path)
         all_path_0.append(path_0)
-        
+
     input_items_3 = input_warframe.input_item('aura_mods')
 
     for i, v in enumerate(input_items_3):
@@ -81,7 +81,7 @@ def get_all():
         all_item.append(item)
         all_path.append(path)
         all_path_0.append(path_0)
-    
+
     input_items_6 = input_warframe.input_item('weapon_mods')
 
     for i, v in enumerate(input_items_6):
@@ -129,6 +129,9 @@ path_all_bottom = '/workspace/crawling/data/csv/result/all_bottom.csv'
 path_today_top = '/workspace/crawling/data/csv/result/today_top.csv'
 path_today_bottom = '/workspace/crawling/data/csv/result/today_bottom.csv'
 path_today_volume = '/workspace/crawling/data/csv/result/today_volume.csv'
+path_recommend_item = '/workspace/crawling/data/csv/result/recommend_item.csv'
+path_recommend_top = '/workspace/crawling/data/csv/result/recommend_top.csv'
+path_recommend_bottom = '/workspace/crawling/data/csv/result/recommend_bottom.csv'
 
 reset('result')
 
@@ -161,15 +164,28 @@ today_bottom = result.head(10)
 
 result = result_today.sort_values(by='volume', axis = 0, ascending = False)
 today_volume = result.head(10)
+result = result_today.sort_values(by='vol_lank', axis = 0, ascending = False)
+recommend_item = result.head(10)
+
+result = result_today.sort_values(by='vol_before', axis = 0, ascending = False)
+recommend_top = result.head(10)
+result = result_today.sort_values(by='vol_before', axis = 0)
+recommend_bottom = result.head(10)
 
 reset('all_top')
 reset('all_bottom')
 reset('today_top')
 reset('today_bottom')
 reset('today_volume')
+reset('recommend_item')
+reset('recommend_top')
+reset('recommend_bottom')
 
 all_top.to_csv(path_all_top, mode = 'w')
 all_bottom.to_csv(path_all_bottom, mode = 'w')
 today_top.to_csv(path_today_top, mode = 'w')
 today_bottom.to_csv(path_today_bottom, mode = 'w')
 today_volume.to_csv(path_today_volume, mode = 'w')
+recommend_item.to_csv(path_recommend_item, mode ='w')
+recommend_top.to_csv(path_recommend_top, mode ='w')
+recommend_bottom.to_csv(path_recommend_bottom, mode ='w')

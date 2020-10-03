@@ -24,6 +24,8 @@ def pandas_value(name, types):
     result['yn_before'] = np.nan
     result['lank'] = np.nan
     result['day_percent'] = np.nan
+    result['vol_before'] = np.nan
+    result['vol_lank'] = np.nan
     #result['min_price'] = np.nan
     #result['max_price'] = np.nan
     #result['open_price'] = np.nan
@@ -33,6 +35,8 @@ def pandas_value(name, types):
     result.loc[0, ['yn_before']] = '-'
     result.loc[0, ['lank']] = 0
     result.loc[0, ['day_percent']] = 0.0
+    result.loc[0, ['vol_before']] = 0
+    result.loc[0, ['vol_lank']] = 0
     #result.loc[0, ['min_price']] = 0.0
     #result.loc[0, ['max_price']] = 0.0
     #result.loc[0, ['open_price']] = 0.0
@@ -40,7 +44,10 @@ def pandas_value(name, types):
 
     for i in range(1, len(result)):
         value = result['avg_price'][i] - result['avg_price'][i-1]
+        vol_value = result['volume'][i] - result['volume'][i-1]
         result.loc[i, ['day_before']] = round(value, 1)
+        result.loc[i, ['vol_before']] = vol_value
+        result.loc[i, ['vol_lank']] = result['vol_lank'][i-1] + result['volume'][i]
 
         values = round(value, 1)
         before = result['avg_price'][i-1]
