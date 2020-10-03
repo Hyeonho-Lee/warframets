@@ -15,7 +15,7 @@
 }
 
 .market_button {
-    width: 150px;
+    width: 110px;
     height: 50px;
     background-color: #323232;
     position: absolute;
@@ -28,7 +28,7 @@
 .market_button a {
     width: 100%;
     font-family: "Nanum Gothic", sans-serif;
-    font-size: 20px;
+    font-size: 17px;
     color: #ffffff;
     position: absolute;
     top: 50%;
@@ -42,7 +42,7 @@
 }
 
 .calculator_button {
-    width: 150px;
+    width: 110px;
     height: 50px;
     background-color: #323232;
     position: absolute;
@@ -55,7 +55,7 @@
 .calculator_button a {
     width: 100%;
     font-family: "Nanum Gothic", sans-serif;
-    font-size: 20px;
+    font-size: 17px;
     color: #ffffff;
     position: absolute;
     top: 50%;
@@ -69,7 +69,7 @@
 }
 
 .csv_button {
-    width: 150px;
+    width: 110px;
     height: 50px;
     background-color: #323232;
     position: absolute;
@@ -82,7 +82,7 @@
 .csv_button a {
     width: 100%;
     font-family: "Nanum Gothic", sans-serif;
-    font-size: 20px;
+    font-size: 17px;
     color: #ffffff;
     position: absolute;
     top: 50%;
@@ -200,7 +200,11 @@
     }
     
     .calculator_button, .market_button, .csv_button {
-        width: 175px;
+        width: 120px;
+    }
+    
+    .calculator_button a, .market_button a, .csv_button a {
+        font-size: 20px;
     }
 }
 
