@@ -4,3 +4,21 @@
    Use a production WSGI server instead.
  * Debug mode: off
  * Running on http://0.0.0.0:5001/ (Press CTRL+C to quit)
+172.17.0.1 - - [03/Oct/2020 07:11:42] "[37mGET /notice/ HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 07:11:42] "[37mGET /static/js/AutoComplete.min.js HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 07:11:42] "[37mGET /static/css/result.css?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 07:11:42] "[37mGET /static/css/table.css?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 07:11:42] "[37mGET /static/css/index.css?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 07:11:42] "[37mGET /static/css/notice.css?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 07:11:42] "[37mGET /static/image/notice/rpc.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 07:11:42] "[37mGET /static/image/icon/logo.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 07:11:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+172.17.0.1 - - [03/Oct/2020 07:15:13] "[37mGET /notice/ HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 07:15:13] "[37mGET /static/css/result.css?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 07:15:13] "[37mGET /static/js/AutoComplete.min.js HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 07:15:13] "[37mGET /static/css/index.css?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 07:15:13] "[37mGET /static/css/table.css?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 07:15:13] "[37mGET /static/css/notice.css?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 07:15:13] "[37mGET /static/image/icon/logo.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 07:15:13] "[37mGET /static/image/notice/rpc.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [03/Oct/2020 07:15:13] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
