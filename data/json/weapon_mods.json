@@ -751,11 +751,30 @@
             "kr_name": "이젝트 매거진"
         },
         {
+            "name": "saxum_spittle",
+            "type": "pistol_mod",
+            "en_name": "Saxum Spittle",
+            "kr_name": "삭숨 스피틀"
+        },
+        {
+            "name": "carnis_stinger",
+            "type": "pistol_mod",
+            "en_name": "Carnis Stinger",
+            "kr_name": "카르니스 스팅어"
+        },
+        {
+            "name": "jugulus_spines",
+            "type": "pistol_mod",
+            "en_name": "Jugulus Spines",
+            "kr_name": "저귤러스 스파인즈"
+        },
+        {
             "name": "embedded_catalyzer",
             "type": "pistol_mod",
             "en_name": "Embedded Catalyzer",
             "kr_name": "임베디드 카탈라이저"
-        },{
+        },
+        {
             "name": "frostbite",
             "type": "pistol_mod",
             "en_name": "Frostbite",
@@ -1384,6 +1403,24 @@
             "type": "melee_mod",
             "en_name": "Whirlwind",
             "kr_name": "휠윈드"
+        },
+        {
+            "name": "saxum_thorax",
+            "type": "melee_mod",
+            "en_name": "Saxum Thorax",
+            "kr_name": "삭숨 쏘락스"
+        },
+        {
+            "name": "carnis_mandible",
+            "type": "melee_mod",
+            "en_name": "Carnis Mandible",
+            "kr_name": "카르니스 맨디블"
+        },
+        {
+            "name": "jugulus_barbs",
+            "type": "melee_mod",
+            "en_name": "Jugulus Barbs",
+            "kr_name": "저귤러스 밥스"
         },
         {
             "name": "astral_twilight",

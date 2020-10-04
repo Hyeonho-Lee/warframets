@@ -1,46 +1,60 @@
 {
     "items_etc_2": [
         {
-            "name": "vengeful_shockwave_(kuva_lich_ephemera)",
-            "type": "ephemera",
-            "en_name": "Vengeful Shockwave",
-            "kr_name": "벤지풀 쇼크웨이브"
+            "name": "saxum_spittle",
+            "type": "pistol_mod",
+            "en_name": "Saxum Spittle",
+            "kr_name": "삭숨 스피틀"
         },
         {
-            "name": "vengeful_flame_(kuva_lich_ephemera)",
-            "type": "ephemera",
-            "en_name": "Vengeful Flame",
-            "kr_name": "벤지풀 플레임"
+            "name": "carnis_stinger",
+            "type": "pistol_mod",
+            "en_name": "Carnis Stinger",
+            "kr_name": "카르니스 스팅어"
         },
         {
-            "name": "vengeful_chill_(kuva_lich_ephemera)",
-            "type": "ephemera",
-            "en_name": "Vengeful Chill",
-            "kr_name": "벤지풀 칠"
+            "name": "jugulus_spines",
+            "type": "pistol_mod",
+            "en_name": "Jugulus Spines",
+            "kr_name": "저귤러스 스파인즈"
+        },
+
+        {
+            "name": "saxum_carapace",
+            "type": "warframe_mod",
+            "en_name": "Saxum Carapace",
+            "kr_name": "삭숨 카라페이스"
         },
         {
-            "name": "vengeful_charge_(kuva_lich_ephemera)",
-            "type": "ephemera",
-            "en_name": "Vengeful Charge",
-            "kr_name": "벤지풀 차지"
+            "name": "carnis_carapace",
+            "type": "warframe_mod",
+            "en_name": "Carnis Carapace",
+            "kr_name": "카르니스 카라페이스"
         },
         {
-            "name": "vengeful_toxin_(kuva_lich_ephemera)",
-            "type": "ephemera",
-            "en_name": "Vengeful Toxin",
-            "kr_name": "벤지풀 톡신"
+            "name": "jugulus_carapace",
+            "type": "warframe_mod",
+            "en_name": "Jugulus Carapace",
+            "kr_name": "저귤러스 카라페이스"
+        },
+
+        {
+            "name": "saxum_thorax",
+            "type": "melee_mod",
+            "en_name": "Saxum Thorax",
+            "kr_name": "삭숨 쏘락스"
         },
         {
-            "name": "vengeful_pull_(kuva_lich_ephemera)",
-            "type": "ephemera",
-            "en_name": "Vengeful Pull",
-            "kr_name": "벤지풀 풀"
+            "name": "carnis_mandible",
+            "type": "melee_mod",
+            "en_name": "Carnis Mandible",
+            "kr_name": "카르니스 맨디블"
         },
         {
-            "name": "vengeful_trickster_(kuva_lich_ephemera)",
-            "type": "ephemera",
-            "en_name": "Vengeful Trickster",
-            "kr_name": "벤지풀 트릭스터"
+            "name": "jugulus_barbs",
+            "type": "melee_mod",
+            "en_name": "Jugulus Barbs",
+            "kr_name": "저귤러스 밥스"
         }
     ]
 }

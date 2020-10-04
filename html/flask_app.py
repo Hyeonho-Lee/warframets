@@ -1225,7 +1225,7 @@ def category():
                 type_etc_type.append(all_type[i])
                 type_etc_type_kr.append(all_type_kr[i])
             else:
-                return
+                continue
 
 
     en_to_kr(all_item_kr)
@@ -1413,9 +1413,9 @@ def category():
     type_etc_item_vo1, type_etc_item_kr_vo1, type_etc_volume_vo1, type_etc_path_1_vo1 = sort_array("거래량", "False", type_etc_item, type_etc_item_kr, type_etc_price, type_etc_percent, type_etc_volume, type_etc_path_1)
     type_etc_item_vo2, type_etc_item_kr_vo2, type_etc_volume_vo2, type_etc_path_1_vo2 = sort_array("거래량", "True", type_etc_item, type_etc_item_kr, type_etc_price, type_etc_percent, type_etc_volume, type_etc_path_1)
 
-    #test = {"name" : pd.Series(all_item), "price" : pd.Series(today_price)}
-    #test_data = pd.DataFrame(test)
-    #test_data.to_excel('test.xlsx')
+    test = {"name" : pd.Series(all_item), "price" : pd.Series(today_price)}
+    test_data = pd.DataFrame(test)
+    test_data.to_excel('test.xlsx')
 
     path = '/workspace/crawling/data/json/recommend_0.json'
     with open(path, "r", encoding="UTF-8") as json_file:

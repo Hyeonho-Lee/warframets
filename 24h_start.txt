@@ -1,0 +1,3 @@
+cd /workspace/crawling/html
+nohup python3 flask_app.py &
+service cron start

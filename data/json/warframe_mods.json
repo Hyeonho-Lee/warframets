@@ -7,6 +7,24 @@
             "kr_name": "어댑테이션"
         },
         {
+            "name": "saxum_carapace",
+            "type": "warframe_mod",
+            "en_name": "Saxum Carapace",
+            "kr_name": "삭숨 카라페이스"
+        },
+        {
+            "name": "carnis_carapace",
+            "type": "warframe_mod",
+            "en_name": "Carnis Carapace",
+            "kr_name": "카르니스 카라페이스"
+        },
+        {
+            "name": "jugulus_carapace",
+            "type": "warframe_mod",
+            "en_name": "Jugulus Carapace",
+            "kr_name": "저귤러스 카라페이스"
+        },
+        {
             "name": "necramech_blitz",
             "type": "necramech_mod",
             "en_name": "Necramech_Blitz",
@@ -335,12 +353,6 @@
             "type": "warframe_mod",
             "en_name": "Primed Flow",
             "kr_name": "프라임드 플로우"
-        },
-        {
-            "name": "rage",
-            "type": "warframe_mod",
-            "en_name": "Rage",
-            "kr_name": "레이지"
         },
         {
             "name": "reflection",
