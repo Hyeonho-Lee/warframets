@@ -7,6 +7,18 @@
             "kr_name": "바자 프라임"
         },
         {
+            "name": "pangolin_prime",
+            "type": "melee",
+            "en_name": "Pangolin Prime",
+            "kr_name": "팽골린 프라임"
+        },
+        {
+            "name": "corinth_prime",
+            "type": "primary",
+            "en_name": "Corinth Prime",
+            "kr_name": "코린트 프라임"
+        },
+        {
             "name": "boar_prime",
             "type": "primary",
             "en_name": "Boar Prime",
