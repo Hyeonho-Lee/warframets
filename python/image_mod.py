@@ -47,7 +47,7 @@ def image_crawling(item, path, path_0, etc):
 ######################################################
 
 startTime = time.time()
-"""
+
 input_items = input_warframe.input_item('aura_mods')
 
 for i, v in enumerate(input_items):
@@ -75,7 +75,7 @@ for i, v in enumerate(input_items):
     save_data = image_crawling(item, path, path_0, 'mod')
     endTime = time.time() - startTime
     print(str(round(i / len(input_items) * 100)) + "% 완료했습니다. 시간: " + str(round(endTime)) + "초")
-"""
+
 input_items = input_warframe.input_item('weapon_mods')
 
 for i, v in enumerate(input_items):

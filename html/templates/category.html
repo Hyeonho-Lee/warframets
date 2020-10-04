@@ -258,6 +258,10 @@
                             var value = "아케인";
                             document.getElementById("category_value").innerHTML = value;
                             document.getElementById("change_category").innerHTML = "{% for i in range(0, type_arcane_len) %}<div class='item_0'><p><img alt='{{ type_arcane_item_kr[i] }}' src='{{ url_for('static', filename = type_arcane_path_1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_arcane_item[i] }}'>{{ type_arcane_item_kr[i] }}</a><div class='item_0_text'>가격: {{ type_arcane_price[i] }}</div></div>{% endfor %}";
+                        }else if(button == 12) {
+                            var value = "업데이트";
+                            document.getElementById("category_value").innerHTML = value;
+                            document.getElementById("change_category").innerHTML = "{% for i in range(0, type_etc_len) %}<div class='item_0'><p><img alt='{{ type_etc_item_kr[i] }}' src='{{ url_for('static', filename = type_etc_path_1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_etc_item[i] }}'>{{ type_etc_item_kr[i] }}</a><div class='item_0_text'>가격: {{ type_etc_price[i] }}</div></div>{% endfor %}";
                         }else {
                             var value = "기타";
                             document.getElementById("category_value").innerHTML = value;
@@ -316,6 +320,9 @@
                     <ul class="etc" id="etc">
                         <li onclick="search_value(this)" value="11">
                             <a>아케인</a>
+                        </li>
+                        <li onclick="search_value(this)" value="12">
+                            <a>업데이트</a>
                         </li>
                     </ul>
                     <ul class="rec" id="rec">
@@ -556,6 +563,28 @@
                                 click_id.value = 6;
                             }else if(button == 6) {
                                 document.getElementById("change_category").innerHTML = "{% for i in range(0, rec_len_data_0) %}<div class='item_0'><p><img alt='{{ rec_kr_name_0_vo2[i] }}' src='{{ url_for('static', filename = rec_image_0_vo2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ rec_name_0_vo2[i] }}'>{{ rec_kr_name_0_vo2[i] }}</a><div class='item_0_text'>거래량: {{ rec_volume_0_vo2[i] }}</div></div>{% endfor %}";
+                                click_id.value = 5;
+                            }else {
+                                console.log("오류!");
+                            };
+                        }else if(menu_value == "업데이트") {
+                            if(button == 1) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_etc_len) %}<div class='item_0'><p><img alt='{{ type_etc_item_kr_pr1[i] }}' src='{{ url_for('static', filename = type_etc_path_1_pr1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_etc_item_pr1[i] }}'>{{ type_etc_item_kr_pr1[i] }}</a><div class='item_0_text'>가격: {{ type_etc_price_pr1[i] }}</div></div>{% endfor %}";
+                                click_id.value = 2;
+                            }else if(button == 2) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_etc_len) %}<div class='item_0'><p><img alt='{{ type_etc_item_kr_pr2[i] }}' src='{{ url_for('static', filename = type_etc_path_1_pr2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_etc_item_pr2[i] }}'>{{ type_etc_item_kr_pr2[i] }}</a><div class='item_0_text'>가격: {{ type_etc_price_pr2[i] }}</div></div>{% endfor %}";
+                                click_id.value = 1;
+                            }else if(button == 3) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_etc_len) %}<div class='item_0'><p><img alt='{{ type_etc_item_kr_pe1[i] }}' src='{{ url_for('static', filename = type_etc_path_1_pe1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_etc_item_pe1[i] }}'>{{ type_etc_item_kr_pe1[i] }}</a><div class='item_0_text'>퍼센트: {{ type_etc_percent_pe1[i] }}%</div></div>{% endfor %}";
+                                click_id.value = 4;
+                            }else if(button == 4) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_etc_len) %}<div class='item_0'><p><img alt='{{ type_etc_item_kr_pe2[i] }}' src='{{ url_for('static', filename = type_etc_path_1_pe2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_etc_item_pe2[i] }}'>{{ type_etc_item_kr_pe2[i] }}</a><div class='item_0_text'>퍼센트: {{ type_etc_percent_pe2[i] }}%</div></div>{% endfor %}";
+                                click_id.value = 3;
+                            }else if(button == 5) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_etc_len) %}<div class='item_0'><p><img alt='{{ type_etc_item_kr_vo1[i] }}' src='{{ url_for('static', filename = type_etc_path_1_vo1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_etc_item_vo1[i] }}'>{{ type_etc_item_kr_vo1[i] }}</a><div class='item_0_text'>거래량: {{ type_etc_volume_vo1[i] }}</div></div>{% endfor %}";
+                                click_id.value = 6;
+                            }else if(button == 6) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_etc_len) %}<div class='item_0'><p><img alt='{{ type_etc_item_kr_vo2[i] }}' src='{{ url_for('static', filename = type_etc_path_1_vo2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_etc_item_vo2[i] }}'>{{ type_etc_item_kr_vo2[i] }}</a><div class='item_0_text'>거래량: {{ type_etc_volume_vo2[i] }}</div></div>{% endfor %}";
                                 click_id.value = 5;
                             }else {
                                 console.log("오류!");

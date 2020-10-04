@@ -317,6 +317,10 @@ def get_all_item():
             all_type_kr.append("근접무기 모드")
         elif all_type[i] == "stance_mod":
             all_type_kr.append("근접무기 모드")
+        elif all_type[i] == "ephemera":
+            all_type_kr.append("업데이트")
+        elif all_type[i] == "necramech_mod":
+            all_type_kr.append("업데이트")
         else:
             all_type_kr.append("기타")
 
@@ -1212,7 +1216,7 @@ def category():
                 type_melee_mod_path_1.append(all_path_1[i])
                 type_melee_mod_type.append(all_type[i])
                 type_melee_mod_type_kr.append(all_type_kr[i])
-            else:
+            elif all_type_kr[i] == "업데이트":
                 type_etc_item.append(all_item[i])
                 type_etc_item_kr.append(all_item_kr[i])
                 type_etc_path.append(all_path[i])
@@ -1220,6 +1224,9 @@ def category():
                 type_etc_path_1.append(all_path_1[i])
                 type_etc_type.append(all_type[i])
                 type_etc_type_kr.append(all_type_kr[i])
+            else:
+                return
+
 
     en_to_kr(all_item_kr)
 
@@ -1398,6 +1405,13 @@ def category():
     type_melee_mod_item_pe2, type_melee_mod_item_kr_pe2, type_melee_mod_percent_pe2, type_melee_mod_path_1_pe2 = sort_array("퍼센트", "True", type_melee_mod_item, type_melee_mod_item_kr, type_melee_mod_price, type_melee_mod_percent, type_melee_mod_volume, type_melee_mod_path_1)
     type_melee_mod_item_vo1, type_melee_mod_item_kr_vo1, type_melee_mod_volume_vo1, type_melee_mod_path_1_vo1 = sort_array("거래량", "False", type_melee_mod_item, type_melee_mod_item_kr, type_melee_mod_price, type_melee_mod_percent, type_melee_mod_volume, type_melee_mod_path_1)
     type_melee_mod_item_vo2, type_melee_mod_item_kr_vo2, type_melee_mod_volume_vo2, type_melee_mod_path_1_vo2 = sort_array("거래량", "True", type_melee_mod_item, type_melee_mod_item_kr, type_melee_mod_price, type_melee_mod_percent, type_melee_mod_volume, type_melee_mod_path_1)
+
+    type_etc_item_pr1, type_etc_item_kr_pr1, type_etc_price_pr1, type_etc_path_1_pr1 = sort_array("가격", "False", type_etc_item, type_etc_item_kr, type_etc_price, type_etc_percent, type_etc_volume, type_etc_path_1)
+    type_etc_item_pr2, type_etc_item_kr_pr2, type_etc_price_pr2, type_etc_path_1_pr2 = sort_array("가격", "True", type_etc_item, type_etc_item_kr, type_etc_price, type_etc_percent, type_etc_volume, type_etc_path_1)
+    type_etc_item_pe1, type_etc_item_kr_pe1, type_etc_percent_pe1, type_etc_path_1_pe1 = sort_array("퍼센트", "False", type_etc_item, type_etc_item_kr, type_etc_price, type_etc_percent, type_etc_volume, type_etc_path_1)
+    type_etc_item_pe2, type_etc_item_kr_pe2, type_etc_percent_pe2, type_etc_path_1_pe2 = sort_array("퍼센트", "True", type_etc_item, type_etc_item_kr, type_etc_price, type_etc_percent, type_etc_volume, type_etc_path_1)
+    type_etc_item_vo1, type_etc_item_kr_vo1, type_etc_volume_vo1, type_etc_path_1_vo1 = sort_array("거래량", "False", type_etc_item, type_etc_item_kr, type_etc_price, type_etc_percent, type_etc_volume, type_etc_path_1)
+    type_etc_item_vo2, type_etc_item_kr_vo2, type_etc_volume_vo2, type_etc_path_1_vo2 = sort_array("거래량", "True", type_etc_item, type_etc_item_kr, type_etc_price, type_etc_percent, type_etc_volume, type_etc_path_1)
 
     #test = {"name" : pd.Series(all_item), "price" : pd.Series(today_price)}
     #test_data = pd.DataFrame(test)
