@@ -355,18 +355,6 @@
             "kr_name": "프라임드 플로우"
         },
         {
-            "name": "reflection",
-            "type": "warframe_mod",
-            "en_name": "Reflection",
-            "kr_name": "리플렉션"
-        },
-        {
-            "name": "reflex_guard",
-            "type": "warframe_mod",
-            "en_name": "Reflex Guard",
-            "kr_name": "리플렉스 가드"
-        },
-        {
             "name": "rolling_guard",
             "type": "warframe_mod",
             "en_name": "Rolling Guard",
