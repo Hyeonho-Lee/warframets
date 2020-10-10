@@ -12,7 +12,8 @@
         <link rel="stylesheet" type = "text/css" href = "{{ url_for('static', filename = 'css/result.css', v = 0.1) }}" />
         <link rel="stylesheet" type = "text/css" href = "{{ url_for('static', filename = 'css/index.css', v = 0.1) }}" />
         <link rel="stylesheet" type = "text/css" href = "{{ url_for('static', filename = 'css/table.css', v = 0.1) }}" />
-        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/v4-shims.css">
         <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&amp;" rel="stylesheet">
         <!---------------------------------------------------------------------->
         <script src="{{ url_for('static', filename = 'js/AutoComplete.min.js') }}" type="text/javascript"></script>
@@ -76,15 +77,19 @@
                             <a>메뉴</a>
                         </div>
                         <li>
+                            <span class="icon_10"><i class="far fa-flag fa-2x"></i></span>
                             <a class="text_menus_1" href="http://www.warframets.shop/notice/">공지사항</a>
                         </li>
                         <li>
+                            <span class="icon_10"><i class="fas fa-book fa-2x"></i></span>
                             <a class="text_menus_2" href="http://www.warframets.shop/info/">가이드북</a>
                         </li>
                         <li>
+                            <span class="icon_10"><i class="fas fa-filter fa-2x"></i></span>
                             <a class="text_menus_3" href="http://www.warframets.shop/category/">카테고리</a>
                         </li>
                         <li>
+                            <span class="icon_10"><i class="fas fa-search-dollar fa-2x"></i></span>
                             <a class="text_menus_4" href="http://www.warframets.shop/economy/">경제</a>
                         </li>
                     </ul>
@@ -99,7 +104,7 @@
                                 var links = 'result/' + String(msg);
                                 location.href = "http://www.warframets.shop/" + links;
                             }
-                        };  
+                        };                   
                     </script>
                     <div class="auto_search">
                         <div class="text_boxs"></div>
@@ -109,23 +114,24 @@
                 </li>
                 <li class="header_menu">
                     <div class="text_boxss"></div>
-                    <a class="text_menu">메뉴</a>
+                    <a class="text_menu"><span class="icon_11"><i class="fa fa-bars"></i></span>메뉴</a>
                     <ul class="header_menu_nav">
                         <li>
                             <div class="text_boxss_1"></div>
-                            <a class="text_menu_1" href="http://www.warframets.shop/notice/">공지사항</a>
+                            <a class="text_menu_1" href="http://www.warframets.shop/notice/">
+                                <span class="icon_11"><i class="far fa-flag"></i></span>공지사항</a>
                         </li>
                         <li>
                             <div class="text_boxss_2"></div>
-                            <a class="text_menu_2" href="http://www.warframets.shop/info/">가이드북</a>
+                            <a class="text_menu_2" href="http://www.warframets.shop/info/"><span class="icon_11"><i class="fas fa-book"></i></span>가이드북</a>
                         </li>
                         <li>
                             <div class="text_boxss_3"></div>
-                            <a class="text_menu_3" href="http://www.warframets.shop/category/">카테고리</a>
+                            <a class="text_menu_3" href="http://www.warframets.shop/category/"><span class="icon_11"><i class="fas fa-filter"></i></span>카테고리</a>
                         </li>
                         <li>
                             <div class="text_boxss_4"></div>
-                            <a class="text_menu_4" href="http://www.warframets.shop/economy/">경제</a>
+                            <a class="text_menu_4" href="http://www.warframets.shop/economy/"><span class="icon_11"><i class="fas fa-search-dollar"></i></span>경제</a>
                         </li>
                     </ul>
                 </li>
