@@ -39,3 +39,11 @@
 1. 파츠별 가격의 합 < 세트의 가격이다.
 마치 컴퓨터 부품을 따로 사는것과 업채에서 완성된걸 사는거랑의 차이?
 2. 
+
+Warframe Trade Status (All Popular Item Statistics)
+워프레임 거래 분석 (모든 인기 아이템 통계)
+Waframe 세트, 부품, 무기, Mods, Relics, Blueprints, Captura 장면, Rivens 및 Kuva liches와 
+함께 보관 및 보관되지 않은 항목을 사고 팔 수있는 tenno를위한 선도적 인 Warframe 거래 플랫폼입니다.
+
+워프레임 아이템들의 가격을 분석하여 거래 현황을 한눈에 보여주기 위한 워프레임 거래분석 사이트 입니다.
+This is a Warframe transaction analysis site to analyze the prices of Warframe items and show the transaction status at a glance.

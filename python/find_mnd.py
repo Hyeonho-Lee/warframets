@@ -43,7 +43,10 @@ def find_mmd(path):
     result_date = int((today_date - mnd_date).days)
     return result_date
 
-#test.to_excel('test.xlsx')
+path = '/workspace/crawling/data/csv/warframe/ash_prime_set/ash_prime_set.csv'
+result = find_mmd(path)
+
+#result.to_excel('test.xlsx')
 #plt.plot(list_r)
 #plt.axvline(value[0], c='r')
-#plt.savefig('test_result.png')
+#plt.savefig('result_result.png')

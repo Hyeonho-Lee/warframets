@@ -7,12 +7,21 @@
         <meta http-equiv="Cache-Control" content="no-cache">
         <meta http-equiv="Exprires" content="-1">
         <meta http-equiv="Pragma" content="no-cache">
-        <title>Warframe Trade Status</title>
+        <meta name="naver-site-verification" content="7087f2ce2ff5d8b0dd001a29d816856c7deb5807" />
+        <title>Warframe Trade Status (모든 인기 아이템 통계) | 공지사항</title>
+        <meta name="description" content="워프레임 아이템들의 가격을 분석하여 거래 현황을 한눈에 보여주기 위한 워프레임 거래분석 사이트 입니다.">
+        <!--<title>Warframe Trade Status (All Popular Item Statistics)</title>-->
+        <!--<meta name="description" content="This is a Warframe trade status site to analyze the prices of Warframe items and show the trade status at a glance.">-->
+        <meta name="keyword" content="warframe, weapon, mod, trade, platinum, price, status, market, shop, wts, set, statistics">
+        <link rel="canonical" href="http://www.warframets.shop/">
+        <link rel="alternate" href="http://www.warframets.shop/notice/">
+        <link rel="alternate" href="http://www.warframets.shop/category/">
+        <link rel="alternate" href="http://www.warframets.shop/economy/">
+        <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
         <!---------------------------------------------------------------------->
-        <link rel="stylesheet" type = "text/css" href = "{{ url_for('static', filename = 'css/result.css', v = 0.1) }}" />
+        <link rel="stylesheet" type = "text/css" href = "{{ url_for('static', filename = 'css/info.css', v = 0.1) }}" />
         <link rel="stylesheet" type = "text/css" href = "{{ url_for('static', filename = 'css/index.css', v = 0.1) }}" />
         <link rel="stylesheet" type = "text/css" href = "{{ url_for('static', filename = 'css/table.css', v = 0.1) }}" />
-        <link rel="stylesheet" type = "text/css" href = "{{ url_for('static', filename = 'css/notice.css', v = 0.1) }}" />
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/v4-shims.css">
         <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&amp;" rel="stylesheet">
@@ -77,20 +86,16 @@
                             <a>메뉴</a>
                         </div>
                         <li>
-                            <span class="icon_10"><i class="far fa-flag fa-2x"></i></span>
+                            <span class="icon_10"><i class="fas fa-book fa-2x"></i></span>
                             <a class="text_menus_1" href="http://www.warframets.shop/notice/">공지사항</a>
                         </li>
                         <li>
-                            <span class="icon_10"><i class="fas fa-book fa-2x"></i></span>
-                            <a class="text_menus_2" href="http://www.warframets.shop/info/">가이드북</a>
-                        </li>
-                        <li>
                             <span class="icon_10"><i class="fas fa-filter fa-2x"></i></span>
-                            <a class="text_menus_3" href="http://www.warframets.shop/category/">카테고리</a>
+                            <a class="text_menus_2" href="http://www.warframets.shop/category/">카테고리</a>
                         </li>
                         <li>
                             <span class="icon_10"><i class="fas fa-search-dollar fa-2x"></i></span>
-                            <a class="text_menus_4" href="http://www.warframets.shop/economy/">경제</a>
+                            <a class="text_menus_3" href="http://www.warframets.shop/economy/">경제</a>
                         </li>
                     </ul>
                 </li>
@@ -119,19 +124,15 @@
                         <li>
                             <div class="text_boxss_1"></div>
                             <a class="text_menu_1" href="http://www.warframets.shop/notice/">
-                                <span class="icon_11"><i class="far fa-flag"></i></span>공지사항</a>
+                                <span class="icon_11"><i class="fas fa-book"></i></span>공지사항</a>
                         </li>
                         <li>
                             <div class="text_boxss_2"></div>
-                            <a class="text_menu_2" href="http://www.warframets.shop/info/"><span class="icon_11"><i class="fas fa-book"></i></span>가이드북</a>
+                            <a class="text_menu_2" href="http://www.warframets.shop/category/"><span class="icon_11"><i class="fas fa-filter"></i></span>카테고리</a>
                         </li>
                         <li>
                             <div class="text_boxss_3"></div>
-                            <a class="text_menu_3" href="http://www.warframets.shop/category/"><span class="icon_11"><i class="fas fa-filter"></i></span>카테고리</a>
-                        </li>
-                        <li>
-                            <div class="text_boxss_4"></div>
-                            <a class="text_menu_4" href="http://www.warframets.shop/economy/"><span class="icon_11"><i class="fas fa-search-dollar"></i></span>경제</a>
+                            <a class="text_menu_3" href="http://www.warframets.shop/economy/"><span class="icon_11"><i class="fas fa-search-dollar"></i></span>경제</a>
                         </li>
                     </ul>
                 </li>
@@ -142,33 +143,88 @@
         </div>
         
         <div class="menu">
+            <div style="background-color: #ffffff; float: left; width: 100%; min-height: 50px; height: auto;">
+                <script>
+                    function find_menu_value(){
+                        var value = document.getElementById("info_value").innerHTML;
+                        return value;
+                    };
+                    
+                    function search_value_1(click_id){
+                        var menu_value = find_menu_value();
+                        var button = click_id.value;
+                        
+                        if(button == 1) {
+                            var value = "공지사항";
+                            document.getElementById("info_value").innerHTML = value;
+                            document.getElementById("change_info").innerHTML = "{% for i in range(0, len_data_0) %}<hr><div class='info_1'><div class='info_image'><img alt='R.PC' src='{{ url_for('static', filename = image_0[i], v = 0.1) }}'></div><div class='info_write'><a>{{ write_0[i] }}</a></div><div class='info_date'><a>{{ date_0[i] }}</a></div><div class='info_subject'><a>{{ subject_0[i] }}</a></div>{% if contents_image_0[i]|length %}<div class='info_img'><img alt='WTS_Image' src='{{ url_for('static', filename = contents_image_0[i], v = 0.1) }}'></div>{% endif %}<div class='info_contents'>{% autoescape false %}<a>{{ contents_0[i] | replace('#', '<br/>') }}</a>{% endautoescape %}</div></div><hr>{% endfor %}";
+                        }else if(button == 2) {
+                            var value = "WTS(Warframe Trade Status)";
+                            document.getElementById("info_value").innerHTML = value;
+                            document.getElementById("change_info").innerHTML = "{% for i in range(0, len_data_1) %}<hr><div class='info_1'><div class='info_image'><img alt='R.PC' src='{{ url_for('static', filename = image_1[i], v = 0.1) }}'></div><div class='info_write'><a>{{ write_1[i] }}</a></div><div class='info_date'><a>{{ date_1[i] }}</a></div><div class='info_subject'><a>{{ subject_1[i] }}</a></div>{% if contents_image_1[i]|length %}<div class='info_img'><img alt='WTS_Image' src='{{ url_for('static', filename = contents_image_1[i], v = 0.1) }}'></div>{% endif %}<div class='info_contents'>{% autoescape false %}<a>{{ contents_1[i] | replace('#', '<br/>') }}</a>{% endautoescape %}</div></div><hr>{% endfor %}";
+                        }else if(button == 3) {
+                            var value = "거래 방법";
+                            document.getElementById("info_value").innerHTML = value;
+                            document.getElementById("change_info").innerHTML = "{% for i in range(0, len_data_2) %}<hr><div class='info_1'><div class='info_image'><img alt='R.PC' src='{{ url_for('static', filename = image_2[i], v = 0.1) }}'></div><div class='info_write'><a>{{ write_2[i] }}</a></div><div class='info_date'><a>{{ date_2[i] }}</a></div><div class='info_subject'><a>{{ subject_2[i] }}</a></div>{% if contents_image_2[i]|length %}<div class='info_img'><img alt='WTS_Image' src='{{ url_for('static', filename = contents_image_2[i], v = 0.1) }}'></div>{% endif %}<div class='info_contents'>{% autoescape false %}<a>{{ contents_2[i] | replace('#', '<br/>') }}</a>{% endautoescape %}</div></div><hr>{% endfor %}";
+                        }else {
+                            console.log("오류!");
+                        };
+                    };
+                </script>
+                <div class="info_0">
+                    <a id="info_value_1">정보</a>
+                </div>
+                <div class="info_4">
+                    <ul>
+                        <li class="info_top_1" onclick="search_value_1(this)" value="1">
+                            <a>공지사항</a>
+                        </li>
+                        <li class="info_top_1" onclick="search_value_1(this)" value="2">
+                            <a>WTS</a>
+                        </li>
+                        <li class="info_top_1" onclick="search_value_1(this)" value="3">
+                            <a>거래 방법</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="menu_1">
             <div style="background-color: #ffffff; float: left; width: 100%; height: 750px; overflow-y: scroll;">
-                <div class="notice_0">
-                    <a>공지사항</a>
+                <div class="info_0">
+                    <a id="info_value">공지사항</a>
                 </div>
-                {% for i in range(0, len_data) %}
-                <hr>
-                <div class="notice_1">
-                    <div class="notice_image">
-                        <img alt="R.PC" src="{{ url_for('static', filename = image[i], v = 0.1) }}">
+                <div id="change_info">
+                    {% for i in range(0, len_data_0) %}
+                    <hr>
+                    <div class="info_1">
+                        <div class="info_image">
+                            <img alt="R.PC" src="{{ url_for('static', filename = image_0[i], v = 0.1) }}">
+                        </div>
+                        <div class="info_write">
+                            <a>{{ write_0[i] }}</a>
+                        </div>
+                        <div class="info_date">
+                            <a>{{ date_0[i] }}</a>
+                        </div>
+                        <div class="info_subject">
+                            <a>{{ subject_0[i] }}</a>
+                        </div>
+                        {% if contents_image_0[i]|length %}
+                        <div class="info_img">
+                            <img alt="WTS_Image" src="{{ url_for('static', filename = contents_image_0[i], v = 0.1) }}">
+                        </div>
+                        {% endif %}
+                        <div class="info_contents">
+                            {% autoescape false %}
+                            <a>{{ contents_0[i] | replace("#", "<br/>") }}</a>
+                            {% endautoescape %}
+                        </div>
                     </div>
-                    <div class="notice_write">
-                        <a>{{ write[i] }}</a>
-                    </div>
-                    <div class="notice_date">
-                        <a>{{ date[i] }}</a>
-                    </div>
-                    <div class="notice_subject">
-                        <a>{{ subject[i] }}</a>
-                    </div>
-                    <div class="notice_contents">
-                        {% autoescape false %}
-                        <a>{{ contents[i] | replace("#", "<br/>") }}</a>
-                        {% endautoescape %}
-                    </div>
+                    <hr>
+                    {% endfor %}
                 </div>
-                <hr>
-                {% endfor %}
             </div>
         </div>
             

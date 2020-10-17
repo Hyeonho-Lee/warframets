@@ -968,45 +968,6 @@ def error():
     return render_template('error.html', **locals())
 
 ######################################################################
-@app.route('/notice/')
-def notice():
-    visit_count = get_visit()
-    all_item, all_item_kr, all_path, all_path_0, all_path_1, all_type, all_type_kr = get_all_item()
-
-    path = '/workspace/crawling/data/json/notice_data.json'
-    with open(path, "r", encoding="UTF-8") as json_file:
-        json_data = json.load(json_file, strict = False)
-        json_datas = json.dumps(json_data, ensure_ascii=False)
-
-    index = []
-    image = []
-    write = []
-    subject = []
-    contents = []
-    contents_image = []
-    date = []
-    len_data = len(json_data["notice"])
-
-    for i in json_data["notice"]:
-        index.append(i["index"])
-        image.append(i["image"])
-        write.append(i["write"])
-        subject.append(i["subject"])
-        contents.append(i["contents"])
-        contents_image.append(i["contents_image"])
-        date.append(i["date"])
-
-    index.reverse()
-    image.reverse()
-    write.reverse()
-    subject.reverse()
-    contents.reverse()
-    contents_image.reverse()
-    date.reverse()
-
-    return render_template('notice.html', **locals())
-
-#=======================================================================#
 
 @app.route('/temp/')
 def temp():
@@ -1623,6 +1584,26 @@ def calculator(get_name):
                 cal_price_4 = 0 #최종 소지 플레티넘
                 cal_percent = 0 #이윤 퍼센트
 
+                all_datetime = result['datetime'].tolist()
+                all_price = result['avg_price'].tolist()
+                all_volume = result['volume'].tolist()
+                all_day_before = result['day_before'].tolist()
+                all_yn_before = result['yn_before'].tolist()
+                all_day_percent = result['day_percent'].tolist()
+                all_count = len(all_datetime)
+
+                label = 'market'
+                xlabels = []
+                dataset = []
+                xlabels = result['datetime'].tolist()
+                xlabels.reverse()
+                dataset = result['avg_price'].tolist()
+                dataset.reverse()
+
+                dataset_1 = []
+                for i in range (0, all_count):
+                    dataset_1.append(0)
+
                 if request.method == 'POST':
                     post_result = request.form
                     names = []
@@ -1631,7 +1612,7 @@ def calculator(get_name):
                         names.append(name)
                         values.append(value)
                     tf = values[2].isdigit()
-                    print(values)
+                    #print(values)
                     if tf == False or values[0] == '' or values[1] == '':
                         return redirect('/error/')
                     if int(values[3]) == 0:
@@ -1681,22 +1662,44 @@ def calculator(get_name):
                             cal_price_3 = round(cal_price_2 * input_count_0, 2)
                             cal_price_4 = cal_price_3 + input_cash
                             cal_percent = round(float(cal_price_3) / float(cal_price_0) * 100, 2)
-#https://developer.mozilla.org/ko/docs/Web/HTML/Element/Input
-                label = 'market'
-                xlabels = []
-                dataset = []
-                xlabels = result['datetime'].tolist()
-                xlabels.reverse()
-                dataset = result['avg_price'].tolist()
-                dataset.reverse()
 
-                all_datetime = result['datetime'].tolist()
-                all_price = result['avg_price'].tolist()
-                all_volume = result['volume'].tolist()
-                all_day_before = result['day_before'].tolist()
-                all_yn_before = result['yn_before'].tolist()
-                all_day_percent = result['day_percent'].tolist()
-                all_count = len(all_datetime)
+                            print(result['datetime'][0], input_first_date, input_second_date)
+                            #print(all_datetime)
+                            if input_first_date in all_datetime:
+                                first_index = all_datetime.index(input_first_date)
+                                second_index = all_datetime.index(input_second_date)
+                                print(second_index)
+                                for i in range(0, second_index):
+                                    del_date = all_datetime.pop(0)
+                                    del_price = all_price.pop(0)
+                                    del_volume = all_volume.pop(0)
+                                    del_day_before = all_day_before.pop(0)
+                                    del_yn_before =  all_yn_before.pop(0)
+                                    del_day_percent = all_day_percent.pop(0)
+                                j_index = all_count  - first_index
+                                for i in range(0, j_index - 1):
+                                    all_count = len(all_datetime) - 1
+                                    del_date_1 = all_datetime.pop(all_count)
+                                    del_price_1 = all_price.pop(all_count)
+                                    del_volume_1 = all_volume.pop(all_count)
+                                    del_day_before_1 = all_day_before.pop(all_count)
+                                    del_yn_before_1 =  all_yn_before.pop(all_count)
+                                    del_day_percent_1 = all_day_percent.pop(all_count)
+
+                                all_count = len(all_datetime)
+                                all_datetime.reverse()
+                                all_price.reverse()
+
+                                get_money = []
+                                for i in range(0, all_count):
+                                    price_0 = all_price[i]
+                                    price_1 = round(price_0 * input_count_0, 2)
+                                    price_2 = round(price_1 + cal_price_1, 2)
+                                    price_3 = round(price_2 / input_cash, 2)
+                                    get_money.append(price_3)
+                                xlabels = all_datetime
+                                dataset = all_price
+                                dataset_1 = get_money
 
                 return render_template('calculator.html', **locals())
             else:
@@ -1710,12 +1713,12 @@ def page_not_found(error):
 
 #=======================================================================#
 
-@app.route('/info/')
-def info():
+@app.route('/notice/')
+def notice():
     visit_count = get_visit()
     all_item, all_item_kr, all_path, all_path_0, all_path_1, all_type, all_type_kr = get_all_item()
 
-    path = '/workspace/crawling/data/json/info/info_data_0.json'
+    path = '/workspace/crawling/data/json/info/notice_data.json'
     with open(path, "r", encoding="UTF-8") as json_file:
         json_data_0 = json.load(json_file, strict = False)
 
@@ -1739,9 +1742,17 @@ def info():
         shortcuts_0.append(i["shortcuts"])
         date_0.append(i["date"])
 
-    path = '/workspace/crawling/data/json/info/info_data_1.json'
-    with open(path, "r", encoding="UTF-8") as json_file:
-        json_data_1 = json.load(json_file, strict = False)
+    index_0.reverse()
+    image_0.reverse()
+    write_0.reverse()
+    subject_0.reverse()
+    contents_0.reverse()
+    contents_image_0.reverse()
+    date_0.reverse()
+
+    path_1 = '/workspace/crawling/data/json/info/info_data_0.json'
+    with open(path_1, "r", encoding="UTF-8") as json_file_1:
+        json_data_1 = json.load(json_file_1, strict = False)
 
     index_1 = []
     image_1 = []
@@ -1783,7 +1794,7 @@ def info():
         contents_image_2.append(i["contents_image"])
         date_2.append(i["date"])
 
-    return render_template('info.html', **locals())
+    return render_template('notice.html', **locals())
 
 #=======================================================================#
 
@@ -2030,4 +2041,4 @@ if __name__ == '__main__':
     #ssl_context = ssl.SSLContext(ssl.PROTOCOL_TLS)
     #ssl_context.load_cert_chain(certfile='', keyfile='', password=random)
     app.static_folder = 'static'
-    app.run(host = '0.0.0.0', port = 5001, debug=False)
+    app.run(host = '0.0.0.0', port = 5000, debug=False)
