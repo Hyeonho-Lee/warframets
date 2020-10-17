@@ -21,13 +21,13 @@
             "name": "vigilante_fervor",
             "type": "primary_mod",
             "en_name": "Vigilante Fervor",
-            "kr_name": ""
+            "kr_name": "비질란티 퍼버"
         },
         {
             "name": "vigilante_offense",
             "type": "primary_mod",
             "en_name": "Vigilante Offense",
-            "kr_name": "비질란티 퍼버"
+            "kr_name": "비질란티 오펜스"
         },
         {
             "name": "vigilante_supplies",
@@ -51,13 +51,13 @@
             "name": "ammo_drum",
             "type": "rifle_mod",
             "en_name": "Ammo Drum",
-            "kr_name": ""
+            "kr_name": "에모 드럼"
         },
         {
             "name": "argon_scope",
             "type": "rifle_mod",
             "en_name": "Argon Scope",
-            "kr_name": "애모 드럼"
+            "kr_name": "아르곤 스코프"
         },
         {
             "name": "bladed_rounds",
@@ -192,12 +192,6 @@
             "kr_name": "프로톤 제트"
         },
         {
-            "name": "recover",
-            "type": "rifle_mod",
-            "en_name": "Recover",
-            "kr_name": "리커버"
-        },
-        {
             "name": "rifle_aptitude",
             "type": "rifle_mod",
             "en_name": "Rifle Aptitude",
@@ -208,12 +202,6 @@
             "type": "rifle_mod",
             "en_name": "Rime Rounds",
             "kr_name": "라임 라운즈"
-        },
-        {
-            "name": "serrated_rounds",
-            "type": "rifle_mod",
-            "en_name": "Serrated Rounds",
-            "kr_name": "서레이티드 라운즈"
         },
         {
             "name": "serration",
@@ -462,12 +450,6 @@
             "kr_name": "레이저 사이트"
         },
         {
-            "name": "motus_setup",
-            "type": "shotgun_mod",
-            "en_name": "Motus Setup",
-            "kr_name": "모터스 셋업"
-        },
-        {
             "name": "narrow_barrel",
             "type": "shotgun_mod",
             "en_name": "Narrow Barrel",
@@ -556,12 +538,6 @@
             "type": "shotgun_mod",
             "en_name": "Seeking Fury",
             "kr_name": "시킹 퓨리"
-        },
-        {
-            "name": "shell_compression",
-            "type": "shotgun_mod",
-            "en_name": "Shell Compression",
-            "kr_name": "쉘 컴프레션"
         },
         {
             "name": "shell_shock",
@@ -738,12 +714,6 @@
             "kr_name": "컨실드 익스플로시브"
         },
         {
-            "name": "concussion_rounds",
-            "type": "pistol_mod",
-            "en_name": "Concussion Rounds",
-            "kr_name": "콘커션 라운즈"
-        },
-        {
             "name": "convulsion",
             "type": "pistol_mod",
             "en_name": "Convulsion",
@@ -768,11 +738,30 @@
             "kr_name": "이젝트 매거진"
         },
         {
+            "name": "saxum_spittle",
+            "type": "pistol_mod",
+            "en_name": "Saxum Spittle",
+            "kr_name": "삭숨 스피틀"
+        },
+        {
+            "name": "carnis_stinger",
+            "type": "pistol_mod",
+            "en_name": "Carnis Stinger",
+            "kr_name": "카르니스 스팅어"
+        },
+        {
+            "name": "jugulus_spines",
+            "type": "pistol_mod",
+            "en_name": "Jugulus Spines",
+            "kr_name": "저귤러스 스파인즈"
+        },
+        {
             "name": "embedded_catalyzer",
             "type": "pistol_mod",
             "en_name": "Embedded Catalyzer",
             "kr_name": "임베디드 카탈라이저"
-        },{
+        },
+        {
             "name": "frostbite",
             "type": "pistol_mod",
             "en_name": "Frostbite",
@@ -1073,12 +1062,6 @@
             "kr_name": "커럽트 차지"
         },
         {
-            "name": "counterweight",
-            "type": "melee_mod",
-            "en_name": "Counterweight",
-            "kr_name": "카운터웨이트"
-        },
-        {
             "name": "covert_lethality",
             "type": "melee_mod",
             "en_name": "Covert Lethality",
@@ -1113,12 +1096,6 @@
             "type": "melee_mod",
             "en_name": "Energy Channel",
             "kr_name": "에너지 채널"
-        },
-        {
-            "name": "explosive_demise",
-            "type": "melee_mod",
-            "en_name": "Explosive Demise",
-            "kr_name": "익스플로시브 디마이즈"
         },
         {
             "name": "fever_strike",
@@ -1175,22 +1152,10 @@
             "kr_name": "힐링 리턴"
         },
         {
-            "name": "heartseeker",
-            "type": "melee_mod",
-            "en_name": "Heartseeker",
-            "kr_name": "하트시커"
-        },
-        {
             "name": "heavy_trauma",
             "type": "melee_mod",
             "en_name": "Heavy Trauma",
             "kr_name": "헤비 트라우마"
-        },
-        {
-            "name": "impenetrable_offense",
-            "type": "melee_mod",
-            "en_name": "Impenetrable Offense",
-            "kr_name": "임페네트러블 오펜스"
         },
         {
             "name": "jagged_edge",
@@ -1205,12 +1170,6 @@
             "kr_name": "킬링 블로우"
         },
         {
-            "name": "lasting_sting",
-            "type": "melee_mod",
-            "en_name": "Lasting Sting",
-            "kr_name": "라스팅 스팅"
-        },
-        {
             "name": "life_strike",
             "type": "melee_mod",
             "en_name": "Life Strike",
@@ -1221,4 +1180,10 @@
             "type": "melee_mod",
             "en_name": "Maiming Strike",
             "kr_name": "메이밍 스트라이크"
+        },
+        {
+            "name": "molten_impact",
+            "type": "melee_mod",
+            "en_name": "Molten Impact",
+            "kr_name": "몰튼 임팩트"
         },

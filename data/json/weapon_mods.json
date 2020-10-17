@@ -721,12 +721,6 @@
             "kr_name": "컨실드 익스플로시브"
         },
         {
-            "name": "concussion_rounds",
-            "type": "pistol_mod",
-            "en_name": "Concussion Rounds",
-            "kr_name": "콘커션 라운즈"
-        },
-        {
             "name": "convulsion",
             "type": "pistol_mod",
             "en_name": "Convulsion",
@@ -1199,12 +1193,6 @@
             "type": "melee_mod",
             "en_name": "Molten Impact",
             "kr_name": "몰튼 임팩트"
-        },
-        {
-            "name": "mortal_conduct",
-            "type": "melee_mod",
-            "en_name": "Mortal Conduct",
-            "kr_name": "모탈 컨덕트"
         },
         {
             "name": "motus_impact",
