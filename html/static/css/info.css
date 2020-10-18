@@ -216,3 +216,27 @@ hr {
         max-height: 35px;
     }
 }
+
+@media screen and (max-width: 400px) {
+    
+    .info_image img {
+        max-width: 30px;
+        max-height: 30px;
+    }
+    
+    .info_subject {
+        font-size: 14px;
+    }
+    
+    .info_contents {
+        font-size: 10px;
+    }
+    
+    .info_top_1 {
+        min-width: 50px;
+    }
+    
+    .info_top_1 a {
+        font-size: 16px;
+    }
+}

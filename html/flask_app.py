@@ -604,6 +604,7 @@ def index():
     t_all_volume = []
     t_all_date = []
     t_all_percent = []
+    t_all_lank = []
     t_all_path = []
     t_all_path_0 = []
     t_all_path_1 = []
@@ -616,6 +617,7 @@ def index():
     t_all_volume = today_all['volume'].tolist()
     t_all_date = today_all['datetime'].tolist()
     t_all_percent = today_all['day_percent'].tolist()
+    t_all_lank = today_all['lank'].tolist()
 
     for i in t_all_name:
         result = find_path(i, 'path')
@@ -791,6 +793,7 @@ def result(get_name):
                 all_yn_before = result['yn_before'].tolist()
                 all_day_percent = result['day_percent'].tolist()
                 all_count = len(all_datetime)
+                all_lank = result['lank'].tolist()
 
                 return render_template('result.html', **locals())
             else:
@@ -1374,9 +1377,9 @@ def category():
     type_etc_item_vo1, type_etc_item_kr_vo1, type_etc_volume_vo1, type_etc_path_1_vo1 = sort_array("거래량", "False", type_etc_item, type_etc_item_kr, type_etc_price, type_etc_percent, type_etc_volume, type_etc_path_1)
     type_etc_item_vo2, type_etc_item_kr_vo2, type_etc_volume_vo2, type_etc_path_1_vo2 = sort_array("거래량", "True", type_etc_item, type_etc_item_kr, type_etc_price, type_etc_percent, type_etc_volume, type_etc_path_1)
 
-    test = {"name" : pd.Series(all_item), "price" : pd.Series(today_price)}
-    test_data = pd.DataFrame(test)
-    test_data.to_excel('test.xlsx')
+    #test = {"name" : pd.Series(all_item), "price" : pd.Series(today_price)}
+    #test_data = pd.DataFrame(test)
+    #test_data.to_excel('test.xlsx')
 
     path = '/workspace/crawling/data/json/recommend_0.json'
     with open(path, "r", encoding="UTF-8") as json_file:
@@ -1728,7 +1731,7 @@ def notice():
     subject_0 = []
     contents_0 = []
     contents_image_0 = []
-    shortcuts_0 = []
+    youtube_0 = []
     date_0 = []
     len_data_0 = len(json_data_0["info"])
 
@@ -1739,7 +1742,7 @@ def notice():
         subject_0.append(i["subject"])
         contents_0.append(i["contents"])
         contents_image_0.append(i["contents_image"])
-        shortcuts_0.append(i["shortcuts"])
+        youtube_0.append(i["youtube"])
         date_0.append(i["date"])
 
     index_0.reverse()
@@ -1748,6 +1751,7 @@ def notice():
     subject_0.reverse()
     contents_0.reverse()
     contents_image_0.reverse()
+    youtube_0.reverse()
     date_0.reverse()
 
     path_1 = '/workspace/crawling/data/json/info/info_data_0.json'
@@ -1760,6 +1764,7 @@ def notice():
     subject_1 = []
     contents_1 = []
     contents_image_1 = []
+    youtube_1 = []
     date_1 = []
     len_data_1 = len(json_data_1["info"])
 
@@ -1770,6 +1775,7 @@ def notice():
         subject_1.append(i["subject"])
         contents_1.append(i["contents"])
         contents_image_1.append(i["contents_image"])
+        youtube_1.append(i["youtube"])
         date_1.append(i["date"])
 
     path = '/workspace/crawling/data/json/info/info_data_2.json'
@@ -1782,6 +1788,7 @@ def notice():
     subject_2 = []
     contents_2 = []
     contents_image_2 = []
+    youtube_2 = []
     date_2 = []
     len_data_2 = len(json_data_2["info"])
 
@@ -1792,6 +1799,7 @@ def notice():
         subject_2.append(i["subject"])
         contents_2.append(i["contents"])
         contents_image_2.append(i["contents_image"])
+        youtube_2.append(i["youtube"])
         date_2.append(i["date"])
 
     return render_template('notice.html', **locals())
@@ -2041,4 +2049,4 @@ if __name__ == '__main__':
     #ssl_context = ssl.SSLContext(ssl.PROTOCOL_TLS)
     #ssl_context.load_cert_chain(certfile='', keyfile='', password=random)
     app.static_folder = 'static'
-    app.run(host = '0.0.0.0', port = 5001, debug=False)
+    app.run(host = '0.0.0.0', port = 5000, debug=False)
