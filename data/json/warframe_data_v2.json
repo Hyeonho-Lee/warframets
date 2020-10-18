@@ -3,37 +3,6 @@
         "statistics_closed": {
             "48hours": [
                 {
-                    "datetime": "2020-10-16T04:00:00.000+00:00",
-                    "volume": 1,
-                    "min_price": 40.0,
-                    "max_price": 40.0,
-                    "open_price": 40.0,
-                    "closed_price": 40.0,
-                    "avg_price": 40.0,
-                    "wa_price": 40.0,
-                    "median": 40.0,
-                    "mod_rank": 3,
-                    "donch_top": 50.0,
-                    "donch_bot": 30.0,
-                    "id": "5f892903558c5e00231221b1"
-                },
-                {
-                    "datetime": "2020-10-16T05:00:00.000+00:00",
-                    "volume": 1,
-                    "min_price": 60.0,
-                    "max_price": 60.0,
-                    "open_price": 60.0,
-                    "closed_price": 60.0,
-                    "avg_price": 60.0,
-                    "wa_price": 60.0,
-                    "median": 60.0,
-                    "mod_rank": 3,
-                    "moving_avg": 44.0,
-                    "donch_top": 60.0,
-                    "donch_bot": 30.0,
-                    "id": "5f893727558c5e0025123397"
-                },
-                {
                     "datetime": "2020-10-16T07:00:00.000+00:00",
                     "volume": 1,
                     "min_price": 50.0,
@@ -285,6 +254,38 @@
                     "donch_top": 50.0,
                     "donch_bot": 35.0,
                     "id": "5f8bafe0558c5e002414286e"
+                },
+                {
+                    "datetime": "2020-10-18T04:00:00.000+00:00",
+                    "volume": 1,
+                    "min_price": 40.0,
+                    "max_price": 40.0,
+                    "open_price": 40.0,
+                    "closed_price": 40.0,
+                    "avg_price": 40.0,
+                    "wa_price": 40.0,
+                    "median": 40.0,
+                    "mod_rank": 3,
+                    "moving_avg": 43.3,
+                    "donch_top": 45.0,
+                    "donch_bot": 40.0,
+                    "id": "5f8bcc04558c5e002514016d"
+                },
+                {
+                    "datetime": "2020-10-18T05:00:00.000+00:00",
+                    "volume": 1,
+                    "min_price": 45.0,
+                    "max_price": 45.0,
+                    "open_price": 45.0,
+                    "closed_price": 45.0,
+                    "avg_price": 45.0,
+                    "wa_price": 45.0,
+                    "median": 45.0,
+                    "mod_rank": 3,
+                    "moving_avg": 43.8,
+                    "donch_top": 45.0,
+                    "donch_bot": 40.0,
+                    "id": "5f8bda11558c5e00231438c2"
                 }
             ],
             "90days": [
@@ -1442,54 +1443,6 @@
         "statistics_live": {
             "48hours": [
                 {
-                    "datetime": "2020-10-16T04:00:00.000+00:00",
-                    "volume": 5,
-                    "min_price": 50.0,
-                    "max_price": 199.0,
-                    "avg_price": 124.5,
-                    "wa_price": 101.4,
-                    "median": 98.0,
-                    "order_type": "sell",
-                    "mod_rank": 3,
-                    "id": "5f892903558c5e00231221b4"
-                },
-                {
-                    "datetime": "2020-10-16T04:00:00.000+00:00",
-                    "volume": 42,
-                    "min_price": 7.0,
-                    "max_price": 18.0,
-                    "avg_price": 12.5,
-                    "wa_price": 11.262,
-                    "median": 10.0,
-                    "order_type": "sell",
-                    "mod_rank": 0,
-                    "id": "5f892903558c5e00231221b2"
-                },
-                {
-                    "datetime": "2020-10-16T05:00:00.000+00:00",
-                    "volume": 8,
-                    "min_price": 50.0,
-                    "max_price": 200.0,
-                    "avg_price": 125.0,
-                    "wa_price": 113.375,
-                    "median": 99.5,
-                    "order_type": "sell",
-                    "mod_rank": 3,
-                    "id": "5f893727558c5e0025123399"
-                },
-                {
-                    "datetime": "2020-10-16T05:00:00.000+00:00",
-                    "volume": 31,
-                    "min_price": 7.0,
-                    "max_price": 40.0,
-                    "avg_price": 23.5,
-                    "wa_price": 16.226,
-                    "median": 18.0,
-                    "order_type": "sell",
-                    "mod_rank": 0,
-                    "id": "5f893727558c5e0025123398"
-                },
-                {
                     "datetime": "2020-10-16T06:00:00.000+00:00",
                     "volume": 6,
                     "min_price": 90.0,
@@ -2594,28 +2547,52 @@
                     "id": "5f8bbdf1558c5e002613fc91"
                 },
                 {
-                    "datetime": "2020-10-16T04:00:00.000+00:00",
-                    "volume": 8,
-                    "min_price": 4.0,
-                    "max_price": 4.0,
-                    "avg_price": 4.0,
-                    "wa_price": 4.0,
-                    "median": 4.0,
-                    "order_type": "buy",
-                    "mod_rank": 0,
-                    "id": "5f892903558c5e00231221b3"
+                    "datetime": "2020-10-18T04:00:00.000+00:00",
+                    "volume": 11,
+                    "min_price": 45.0,
+                    "max_price": 50.0,
+                    "avg_price": 47.5,
+                    "wa_price": 49.545,
+                    "median": 50.0,
+                    "order_type": "sell",
+                    "mod_rank": 3,
+                    "id": "5f8bcc04558c5e002514016f"
                 },
                 {
-                    "datetime": "2020-10-16T05:00:00.000+00:00",
-                    "volume": 100,
-                    "min_price": 40.0,
-                    "max_price": 41.0,
-                    "avg_price": 40.5,
-                    "wa_price": 40.99,
-                    "median": 40.5,
-                    "order_type": "buy",
+                    "datetime": "2020-10-18T04:00:00.000+00:00",
+                    "volume": 31,
+                    "min_price": 7.0,
+                    "max_price": 10.0,
+                    "avg_price": 8.5,
+                    "wa_price": 8.29,
+                    "median": 9.0,
+                    "order_type": "sell",
+                    "mod_rank": 0,
+                    "id": "5f8bcc04558c5e002514016e"
+                },
+                {
+                    "datetime": "2020-10-18T05:00:00.000+00:00",
+                    "volume": 18,
+                    "min_price": 45.0,
+                    "max_price": 200.0,
+                    "avg_price": 122.5,
+                    "wa_price": 92.167,
+                    "median": 90.0,
+                    "order_type": "sell",
                     "mod_rank": 3,
-                    "id": "5f893727558c5e002512339a"
+                    "id": "5f8bda11558c5e00231438c4"
+                },
+                {
+                    "datetime": "2020-10-18T05:00:00.000+00:00",
+                    "volume": 66,
+                    "min_price": 8.0,
+                    "max_price": 15.0,
+                    "avg_price": 11.5,
+                    "wa_price": 10.409,
+                    "median": 9.5,
+                    "order_type": "sell",
+                    "mod_rank": 0,
+                    "id": "5f8bda11558c5e00231438c3"
                 },
                 {
                     "datetime": "2020-10-16T06:00:00.000+00:00",
@@ -3060,6 +3037,18 @@
                     "order_type": "buy",
                     "mod_rank": 3,
                     "id": "5f8ba1d2558c5e002613ebf4"
+                },
+                {
+                    "datetime": "2020-10-18T05:00:00.000+00:00",
+                    "volume": 11,
+                    "min_price": 25.0,
+                    "max_price": 31.0,
+                    "avg_price": 28.0,
+                    "wa_price": 30.455,
+                    "median": 28.0,
+                    "order_type": "buy",
+                    "mod_rank": 3,
+                    "id": "5f8bda11558c5e00231438c5"
                 }
             ],
             "90days": [
