@@ -124,7 +124,7 @@
 }
 
 .table_button a{
-    color: #ffffff;
+    font-size: 18px;
 }
 
 .table_button td{
@@ -305,5 +305,11 @@
     
     .content_7 {
         height: 450px !important;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .table_button a{
+        font-size: 10px;
     }
 }

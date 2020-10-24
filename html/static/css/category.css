@@ -247,6 +247,7 @@
     margin: 0px;
     width: 100%;
     min-height: 725px;
+    height: 98%;
     float: left;
     border: 1px solid #000000;
     position: relative;
@@ -263,7 +264,8 @@
 
 .category_box {
     width: 100%;
-    height: 700px;
+    min-height: 700px;
+    height: 100%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -404,5 +406,22 @@
     .item_0_text {
         margin: -10px 0px 0px 0px;
         font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .item_0 {
+        margin: 15px 4%;
+        width: 130px;
+        height: 150px;
+    }
+    
+    .item_0 a{
+        margin: 5px 0px 0px 0px;
+        font-size: 12px;
+    }
+    
+    .category_top_1 {
+        min-width: 50px;
     }
 }

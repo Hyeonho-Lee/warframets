@@ -222,3 +222,14 @@
         width: 125px;
     }
 }
+
+@media screen and (max-width: 450px) {
+    
+    .calculator_button, .market_button, .csv_button {
+        width: 105px;
+    }
+    
+    .calculator_button a, .market_button a, .csv_button a {
+        font-size: 15px;
+    }
+}
