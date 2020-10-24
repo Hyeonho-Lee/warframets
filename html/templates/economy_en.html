@@ -8,10 +8,8 @@
         <meta http-equiv="Exprires" content="-1">
         <meta http-equiv="Pragma" content="no-cache">
         <meta name="naver-site-verification" content="7087f2ce2ff5d8b0dd001a29d816856c7deb5807" />
-        <title>Warframe Trade Status | 경제</title>
-        <meta name="description" content="워프레임 아이템들의 가격을 분석하여 거래 현황을 한눈에 보여주기 위한 워프레임 거래분석 사이트 입니다.">
-        <!--<title>Warframe Trade Status (All Popular Item Statistics)</title>-->
-        <!--<meta name="description" content="This is a Warframe trade status site to analyze the prices of Warframe items and show the trade status at a glance.">-->
+        <title>Warframe Trade Status | Economy</title>
+        <meta name="description" content="This is a Warframe trade status site to analyze the prices of Warframe items and show the trade status at a glance.">
         <meta name="keyword" content="warframe, weapon, mod, trade, platinum, price, status, market, shop, wts, set, statistics">
         <link rel="canonical" href="http://www.warframets.shop/">
         <link rel="alternate" href="http://www.warframets.shop/notice/">
@@ -87,25 +85,25 @@
                     <span class="icon_2" onclick="close_menu()" id="x_button"><i class="fa fa-times fa-2x"></i></span>
                     <ul class="mobile_menus" id="menubar">
                         <div class="text_menus_0">
-                            <a>메뉴</a>
+                            <a>Menu</a>
                         </div>
                         <li>
                             <span class="icon_10"><i class="fas fa-book fa-2x"></i></span>
-                            <a class="text_menus_1" href="http://www.warframets.shop/notice/">공지사항</a>
+                            <a class="text_menus_1" href="http://www.warframets.shop/notice/">Notice</a>
                         </li>
                         <li>
                             <span class="icon_10"><i class="fas fa-filter fa-2x"></i></span>
-                            <a class="text_menus_2" href="http://www.warframets.shop/category/">카테고리</a>
+                            <a class="text_menus_2" href="http://www.warframets.shop/category/">Category</a>
                         </li>
                         <li>
                             <span class="icon_10"><i class="fas fa-search-dollar fa-2x"></i></span>
-                            <a class="text_menus_3" href="http://www.warframets.shop/economy/">경제</a>
+                            <a class="text_menus_3" href="http://www.warframets.shop/economy/">Economy</a>
                         </li>
                     </ul>
                 </li>
                 <li class="header_language">
                     <i class="fas fa-globe"></i>
-                    <a>KO</a>
+                    <a>EN</a>
                     <div class="header_language_lists">
                         <a class="header_language_lists_1" href="/economy/">한국어</a>
                         <a class="header_language_lists_2"  href="/en/economy/">English</a>
@@ -116,7 +114,7 @@
                         function input_search(){
                             var msg = document.getElementById("item_name").value;
                             if (msg == ""){
-                                console.log("검색값 없음");
+                                console.log("Not Found Item");
                             }else {
                                 var links = 'result/' + String(msg);
                                 location.href = "http://www.warframets.shop/" + links;
@@ -125,33 +123,33 @@
                     </script>
                     <div class="auto_search">
                         <div class="text_boxs"></div>
-                        <input type="text" id="item_name" onkeypress="if(event.keyCode==13) {input_search(); return false;}" placeholder="검색" autocomplete="yes">
+                        <input type="text" id="item_name" onkeypress="if(event.keyCode==13) {input_search(); return false;}" placeholder="Search" autocomplete="yes">
                         <span class="icon" onclick="input_search()"><i class="fa fa-search"></i></span>
                     </div>
                 </li>
                 <li class="header_menu">
                     <div class="text_boxss"></div>
-                    <a class="text_menu"><span class="icon_11"><i class="fa fa-bars"></i></span>메뉴</a>
+                    <a class="text_menu"><span class="icon_11"><i class="fa fa-bars"></i></span>Menu</a>
                     <ul class="header_menu_nav">
                         <li>
                             <div class="text_boxss_1"></div>
                             <a class="text_menu_1" href="http://www.warframets.shop/notice/">
-                                <span class="icon_11"><i class="fas fa-book"></i></span>공지사항</a>
+                                <span class="icon_11"><i class="fas fa-book"></i></span>Notice</a>
                         </li>
                         <li>
                             <div class="text_boxss_2"></div>
-                            <a class="text_menu_2" href="http://www.warframets.shop/category/"><span class="icon_11"><i class="fas fa-filter"></i></span>카테고리</a>
+                            <a class="text_menu_2" href="http://www.warframets.shop/category/"><span class="icon_11"><i class="fas fa-filter"></i></span>Category</a>
                         </li>
                         <li>
                             <div class="text_boxss_3"></div>
-                            <a class="text_menu_3" href="http://www.warframets.shop/economy/"><span class="icon_11"><i class="fas fa-search-dollar"></i></span>경제</a>
+                            <a class="text_menu_3" href="http://www.warframets.shop/economy/"><span class="icon_11"><i class="fas fa-search-dollar"></i></span>Economy</a>
                         </li>
                     </ul>
                 </li>
                 <li class="header_info">
                     <div class="header_language_box">
                         <i class="fas fa-globe"></i>
-                        <p>KO</p>
+                        <p>EN</p>
                         <div class="header_language_list">
                             <a class="header_language_list_1"  href="/economy/">한국어</a>
                             <a class="header_language_list_2"  href="/en/economy/">English</a>
@@ -172,7 +170,7 @@
                             table_value.rows[{{i}}].cells[0].innerHTML = "<a>{{ a_top_lank[i - 1] }}점</a>";
                             table_value.rows[{{i}}].cells[2].innerHTML = "<a>▲</a>";
                             var result = table_value.rows[{{i}}].cells[1].innerText;
-                            table_value.rows[{{i}}].cells[1].innerHTML = "<div><div class='item_name'><a href='../result/{{ a_top_kr_name[i - 1] }}'>{{ a_top_kr_name[i - 1] }}</a></div><div class = 'item_box'><img alt='{{ a_top_kr_name[i - 1] }}'src='{{ url_for('static', filename = a_top_path_1[i - 1], v = 0.1) }}'></div></div>";
+                            table_value.rows[{{i}}].cells[1].innerHTML = "<div><div class='item_name'><a href='../result/{{ a_top_en_name[i - 1] }}'>{{ a_top_en_name[i - 1] }}</a></div><div class = 'item_box'><img alt='{{ a_top_en_name[i - 1] }}'src='{{ url_for('static', filename = a_top_path_1[i - 1], v = 0.1) }}'></div></div>";
                             {% endfor %}
                         }
 
@@ -184,7 +182,7 @@
                             table_value.rows[{{i}}].cells[0].innerHTML = "<a>{{ a_bottom_lank[i - 1] }}점</a>";
                             table_value.rows[{{i}}].cells[2].innerHTML = "<a style='color:blue;'>▼</a>";
                             var result = table_value.rows[{{i}}].cells[1].innerText;
-                            table_value.rows[{{i}}].cells[1].innerHTML = "<div><div class='item_name'><a href='../result/{{ a_bottom_kr_name[i - 1] }}'>{{ a_bottom_kr_name[i - 1] }}</a></div><div class = 'item_box'><img alt='{{ a_bottom_kr_name[i - 1] }}'src='{{ url_for('static', filename = a_bottom_path_1[i - 1], v = 0.1) }}'></div></div>";
+                            table_value.rows[{{i}}].cells[1].innerHTML = "<div><div class='item_name'><a href='../result/{{ a_bottom_en_name[i - 1] }}'>{{ a_bottom_en_name[i - 1] }}</a></div><div class = 'item_box'><img alt='{{ a_bottom_en_name[i - 1] }}'src='{{ url_for('static', filename = a_bottom_path_1[i - 1], v = 0.1) }}'></div></div>";
                             {% endfor %}
                         }
                     </script>
@@ -223,7 +221,7 @@
                                     <td class = "item_count"><a>{{ a_top_lank[i - 1] }}점</a></td>
                                     <td>
                                         <div>
-                                            <div class = "item_name"><a href='../result/{{ a_top_kr_name[i - 1] }}'>{{ a_top_kr_name[i - 1] }}</a></div>
+                                            <div class = "item_name"><a href='../result/{{ a_top_en_name[i - 1] }}'>{{ a_top_en_name[i - 1] }}</a></div>
                                             <div class = "item_box">
                                                 <img alt="{{ a_top_name[i - 1] }}" src="{{ url_for('static', filename = a_top_path_1[i - 1], v = 0.1) }}">
                                             </div>
@@ -248,7 +246,7 @@
                             table_value.rows[{{i}}].cells[0].innerHTML = "<a>{{ t_top_percent[i - 1] }}%</a>";
                             table_value.rows[{{i}}].cells[2].innerHTML = "<a>▲</a>";
                             var result = table_value.rows[{{i}}].cells[1].innerText;
-                            table_value.rows[{{i}}].cells[1].innerHTML = "<div><div class='item_name'><a href='../result/{{ t_top_kr_name[i - 1] }}'>{{ t_top_kr_name[i - 1] }}</a></div><div class = 'item_box'><img alt='{{ t_top_kr_name[i - 1] }}'src='{{ url_for('static', filename = t_top_path_1[i - 1], v = 0.1) }}'></div></div>";
+                            table_value.rows[{{i}}].cells[1].innerHTML = "<div><div class='item_name'><a href='../result/{{ t_top_en_name[i - 1] }}'>{{ t_top_en_name[i - 1] }}</a></div><div class = 'item_box'><img alt='{{ t_top_en_name[i - 1] }}'src='{{ url_for('static', filename = t_top_path_1[i - 1], v = 0.1) }}'></div></div>";
                             {% endfor %}
                         }
 
@@ -260,7 +258,7 @@
                             table_value.rows[{{i}}].cells[0].innerHTML = "<a>{{ t_bottom_percent[i - 1] }}%</a>";
                             table_value.rows[{{i}}].cells[2].innerHTML = "<a style='color:blue;'>▼</a>";
                             var result = table_value.rows[{{i}}].cells[1].innerText;
-                            table_value.rows[{{i}}].cells[1].innerHTML = "<div><div class='item_name'><a href='../result/{{ t_bottom_kr_name[i - 1] }}'>{{ t_bottom_kr_name[i - 1] }}</a></div><div class = 'item_box'><img alt='{{ t_bottom_kr_name[i - 1] }}'src='{{ url_for('static', filename = t_bottom_path_1[i - 1], v = 0.1) }}'></div></div>";
+                            table_value.rows[{{i}}].cells[1].innerHTML = "<div><div class='item_name'><a href='../result/{{ t_bottom_en_name[i - 1] }}'>{{ t_bottom_en_name[i - 1] }}</a></div><div class = 'item_box'><img alt='{{ t_bottom_en_name[i - 1] }}'src='{{ url_for('static', filename = t_bottom_path_1[i - 1], v = 0.1) }}'></div></div>";
                             {% endfor %}
                         }
 
@@ -272,7 +270,7 @@
                             table_value.rows[{{i}}].cells[0].innerHTML = "<a>{{ t_volume[i - 1] }}개</a>";
                             table_value.rows[{{i}}].cells[2].innerHTML = "<a>-</a>";
                             var result = table_value.rows[{{i}}].cells[1].innerText;
-                            table_value.rows[{{i}}].cells[1].innerHTML = "<div><div class='item_name'><a href='../result/{{ t_volume_kr_name[i - 1] }}'>{{ t_volume_kr_name[i - 1] }}</a></div><div class = 'item_box'><img alt='{{ t_volume_kr_name[i - 1] }}'src='{{ url_for('static', filename = t_volume_path_1[i - 1], v = 0.1) }}'></div></div>";
+                            table_value.rows[{{i}}].cells[1].innerHTML = "<div><div class='item_name'><a href='../result/{{ t_volume_en_name[i - 1] }}'>{{ t_volume_en_name[i - 1] }}</a></div><div class = 'item_box'><img alt='{{ t_volume_en_name[i - 1] }}'src='{{ url_for('static', filename = t_volume_path_1[i - 1], v = 0.1) }}'></div></div>";
                             {% endfor %}
                         }
                     </script>
@@ -314,7 +312,7 @@
                                     <td class = "item_count"><a>{{ t_top_percent[i - 1] }}%</a></td>
                                     <td>
                                         <div>
-                                            <div class = "item_name"><a href="../result/{{ t_top_kr_name[i - 1] }}">{{ t_top_kr_name[i - 1] }}</a></div>
+                                            <div class = "item_name"><a href="../result/{{ t_top_en_name[i - 1] }}">{{ t_top_en_name[i - 1] }}</a></div>
                                             <div class = "item_box">
                                                 <img alt="{{ t_top_name[i - 1] }}" src="{{ url_for('static', filename = t_top_path_1[i - 1], v = 0.1) }}">
                                             </div>
@@ -339,7 +337,7 @@
                             table_value.rows[{{i}}].cells[0].innerHTML = "<a>{{ r_item_price[i - 1] }}P</a>";
                             table_value.rows[{{i}}].cells[2].innerHTML = "<a>-</a>";
                             var result = table_value.rows[{{i}}].cells[1].innerText;
-                            table_value.rows[{{i}}].cells[1].innerHTML = "<div><div class='item_name'><a href='../result/{{ r_item_kr_name[i - 1] }}'>{{ r_item_kr_name[i - 1] }}</a></div><div class = 'item_box'><img alt='{{ r_item_kr_name[i - 1] }}'src='{{ url_for('static', filename = r_item_path_1[i - 1], v = 0.1) }}'></div></div>";
+                            table_value.rows[{{i}}].cells[1].innerHTML = "<div><div class='item_name'><a href='../result/{{ r_item_en_name[i - 1] }}'>{{ r_item_en_name[i - 1] }}</a></div><div class = 'item_box'><img alt='{{ r_item_en_name[i - 1] }}'src='{{ url_for('static', filename = r_item_path_1[i - 1], v = 0.1) }}'></div></div>";
                             {% endfor %}
                         }
 
@@ -351,7 +349,7 @@
                             table_value.rows[{{i}}].cells[0].innerHTML = "<a>{{ r_top_price[i - 1] }}P</a>";
                             table_value.rows[{{i}}].cells[2].innerHTML = "<a>▲</a>";
                             var result = table_value.rows[{{i}}].cells[1].innerText;
-                            table_value.rows[{{i}}].cells[1].innerHTML = "<div><div class='item_name'><a href='../result/{{ r_top_kr_name[i - 1] }}'>{{ r_top_kr_name[i - 1] }}</a></div><div class = 'item_box'><img alt='{{ r_top_kr_name[i - 1] }}'src='{{ url_for('static', filename = r_top_path_1[i - 1], v = 0.1) }}'></div></div>";
+                            table_value.rows[{{i}}].cells[1].innerHTML = "<div><div class='item_name'><a href='../result/{{ r_top_en_name[i - 1] }}'>{{ r_top_en_name[i - 1] }}</a></div><div class = 'item_box'><img alt='{{ r_top_en_name[i - 1] }}'src='{{ url_for('static', filename = r_top_path_1[i - 1], v = 0.1) }}'></div></div>";
                             {% endfor %}
                         }
 
@@ -363,7 +361,7 @@
                             table_value.rows[{{i}}].cells[0].innerHTML = "<a>{{ r_bottom_price[i - 1] }}P</a>";
                             table_value.rows[{{i}}].cells[2].innerHTML = "<a style='color:blue;'>▼</a>";
                             var result = table_value.rows[{{i}}].cells[1].innerText;
-                            table_value.rows[{{i}}].cells[1].innerHTML = "<div><div class='item_name'><a href='../result/{{ r_bottom_kr_name[i - 1] }}'>{{ r_bottom_kr_name[i - 1] }}</a></div><div class = 'item_box'><img alt='{{ r_bottom_kr_name[i - 1] }}'src='{{ url_for('static', filename = r_bottom_path_1[i - 1], v = 0.1) }}'></div></div>";
+                            table_value.rows[{{i}}].cells[1].innerHTML = "<div><div class='item_name'><a href='../result/{{ r_bottom_en_name[i - 1] }}'>{{ r_bottom_en_name[i - 1] }}</a></div><div class = 'item_box'><img alt='{{ r_bottom_en_name[i - 1] }}'src='{{ url_for('static', filename = r_bottom_path_1[i - 1], v = 0.1) }}'></div></div>";
                             {% endfor %}
                         }
                     </script>
@@ -405,7 +403,7 @@
                                     <td class = "item_count"><a>{{ r_item_price[i - 1] }}P</a></td>
                                     <td>
                                         <div>
-                                            <div class = "item_name"><a href="../result/{{ r_item_kr_name[i - 1] }}">{{ r_item_kr_name[i - 1] }}</a></div>
+                                            <div class = "item_name"><a href="../result/{{ r_item_en_name[i - 1] }}">{{ r_item_en_name[i - 1] }}</a></div>
                                             <div class = "item_box">
                                                 <img alt="{{ r_item_name[i - 1] }}" src="{{ url_for('static', filename = r_item_path_1[i - 1], v = 0.1) }}">
                                             </div>

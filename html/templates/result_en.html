@@ -8,10 +8,8 @@
         <meta http-equiv="Exprires" content="-1">
         <meta http-equiv="Pragma" content="no-cache">
         <meta name="naver-site-verification" content="7087f2ce2ff5d8b0dd001a29d816856c7deb5807" />
-        <title>Warframe Trade Status (모든 인기 아이템 통계)</title>
-        <meta name="description" content="워프레임 아이템들의 가격을 분석하여 거래 현황을 한눈에 보여주기 위한 워프레임 거래분석 사이트 입니다.">
-        <!--<title>Warframe Trade Status (All Popular Item Statistics)</title>-->
-        <!--<meta name="description" content="This is a Warframe trade status site to analyze the prices of Warframe items and show the trade status at a glance.">-->
+        <title>Warframe Trade Status (All Popular Item Statistics)</title>
+        <meta name="description" content="This is a Warframe trade status site to analyze the prices of Warframe items and show the trade status at a glance.">
         <meta name="keyword" content="warframe, weapon, mod, trade, platinum, price, status, market, shop, wts, set, statistics">
         <link rel="canonical" href="http://www.warframets.shop/">
         <link rel="alternate" href="http://www.warframets.shop/notice/">
@@ -83,27 +81,27 @@
                     <span class="icon_2" onclick="close_menu()" id="x_button"><i class="fa fa-times fa-2x"></i></span>
                     <ul class="mobile_menus" id="menubar">
                         <div class="text_menus_0">
-                            <a>메뉴</a>
+                            <a>Menu</a>
                         </div>
                         <li>
                             <span class="icon_10"><i class="fas fa-book fa-2x"></i></span>
-                            <a class="text_menus_1" href="http://www.warframets.shop/notice/">공지사항</a>
+                            <a class="text_menus_1" href="http://www.warframets.shop/notice/">Notice</a>
                         </li>
                         <li>
                             <span class="icon_10"><i class="fas fa-filter fa-2x"></i></span>
-                            <a class="text_menus_2" href="http://www.warframets.shop/category/">카테고리</a>
+                            <a class="text_menus_2" href="http://www.warframets.shop/category/">Category</a>
                         </li>
                         <li>
                             <span class="icon_10"><i class="fas fa-search-dollar fa-2x"></i></span>
-                            <a class="text_menus_3" href="http://www.warframets.shop/economy/">경제</a>
+                            <a class="text_menus_3" href="http://www.warframets.shop/economy/">Economy</a>
                         </li>
                     </ul>
                 </li>
                 <li class="header_language">
                     <i class="fas fa-globe"></i>
-                    <a>KO</a>
+                    <a>EN</a>
                     <div class="header_language_lists">
-                        <a class="header_language_lists_1" href="/ko/">한국어</a>
+                        <a class="header_language_lists_1" href="/">한국어</a>
                         <a class="header_language_lists_2"  href="/en/">English</a>
                     </div>
                 </li>
@@ -112,7 +110,7 @@
                         function input_search(){
                             var msg = document.getElementById("item_name").value;
                             if (msg == ""){
-                                console.log("검색값 없음");
+                                console.log("Not Found Item");
                             }else {
                                 var links = 'result/' + String(msg);
                                 location.href = "http://www.warframets.shop/" + links;
@@ -121,35 +119,35 @@
                     </script>
                     <div class="auto_search">
                         <div class="text_boxs"></div>
-                        <input type="text" id="item_name" onkeypress="if(event.keyCode==13) {input_search(); return false;}" placeholder="검색" autocomplete="yes">
+                        <input type="text" id="item_name" onkeypress="if(event.keyCode==13) {input_search(); return false;}" placeholder="Search" autocomplete="yes">
                         <span class="icon" onclick="input_search()"><i class="fa fa-search"></i></span>
                     </div>
                 </li>
                 <li class="header_menu">
                     <div class="text_boxss"></div>
-                    <a class="text_menu"><span class="icon_11"><i class="fa fa-bars"></i></span>메뉴</a>
+                    <a class="text_menu"><span class="icon_11"><i class="fa fa-bars"></i></span>Menu</a>
                     <ul class="header_menu_nav">
                         <li>
                             <div class="text_boxss_1"></div>
                             <a class="text_menu_1" href="http://www.warframets.shop/notice/">
-                                <span class="icon_11"><i class="fas fa-book"></i></span>공지사항</a>
+                                <span class="icon_11"><i class="fas fa-book"></i></span>Notice</a>
                         </li>
                         <li>
                             <div class="text_boxss_2"></div>
-                            <a class="text_menu_2" href="http://www.warframets.shop/category/"><span class="icon_11"><i class="fas fa-filter"></i></span>카테고리</a>
+                            <a class="text_menu_2" href="http://www.warframets.shop/category/"><span class="icon_11"><i class="fas fa-filter"></i></span>Category</a>
                         </li>
                         <li>
                             <div class="text_boxss_3"></div>
-                            <a class="text_menu_3" href="http://www.warframets.shop/economy/"><span class="icon_11"><i class="fas fa-search-dollar"></i></span>경제</a>
+                            <a class="text_menu_3" href="http://www.warframets.shop/economy/"><span class="icon_11"><i class="fas fa-search-dollar"></i></span>Economy</a>
                         </li>
                     </ul>
                 </li>
                 <li class="header_info">
                     <div class="header_language_box">
                         <i class="fas fa-globe"></i>
-                        <p>KO</p>
+                        <p>EN</p>
                         <div class="header_language_list">
-                            <a class="header_language_list_1"  href="/ko/">한국어</a>
+                            <a class="header_language_list_1"  href="/">한국어</a>
                             <a class="header_language_list_2"  href="/en/">English</a>
                         </div>
                     </div>
@@ -161,11 +159,11 @@
             
             <div class="content_1">
                 <div class="labels">
-                    <a>정보</a>
+                    <a>Info</a>
                 </div>
                 <div class="value_2">
                     <div class="name_button">
-                        <a>{{ kr_name }}</a>
+                        <a>{{ en_name }}</a>
                     </div>
                 </div>
                 <div class="value_1">
@@ -175,13 +173,13 @@
                 </div>
                 <div class="value_0">
                     <div class="market_button">
-                        <a href="https://warframe.market/items/{{ name_sets }}" target="_blank">마켓 거래하기</a>
+                        <a href="https://warframe.market/items/{{ name_sets }}" target="_blank">Market Trading</a>
                     </div>
                     <div class="calculator_button">
-                        <a href="http://www.warframets.shop/calculator/{{ kr_name }}">포트폴리오</a>
+                        <a href="http://www.warframets.shop/calculator/{{ en_name }}">Portfolio</a>
                     </div>
                     <div class="csv_button">
-                        <a href="/result/download/{{ kr_name }}/" download>CSV 다운로드</a>
+                        <a href="/result/download/{{ en_name }}/" download>CSV Download</a>
                     </div>
                 </div>
                 <div class="value_3">
@@ -189,28 +187,28 @@
                         <table>
                             <thead>
                                 <tr>
-                                    <th colspan="2"><a>오늘의 정보</a></th>
+                                    <th colspan="2"><a>Today Info</a></th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr class = "items" onclick="">
-                                    <td><a>날짜</a></td>
+                                    <td><a>Date</a></td>
                                     <td><a>{{ all_datetime[0] }}</a></td>
                                 </tr>
                                 <tr class = "items" onclick="">
-                                    <td><a>가격</a></td>
+                                    <td><a>Price</a></td>
                                     <td><a>{{ all_price[0] }}</a></td>
                                 </tr>
                                 <tr class = "items" onclick="">
-                                    <td><a>전일대비</a></td>
+                                    <td><a>Previous</a></td>
                                     <td><a>{{ all_day_before[0] }}</a></td>
                                 </tr>
                                 <tr class = "items" onclick="">
-                                    <td><a>퍼센트</a></td>
+                                    <td><a>Percent</a></td>
                                     <td><a>{{ all_day_percent[0] }}%</a></td>
                                 </tr>
                                 <tr class = "items" onclick="">
-                                    <td><a>거래량</a></td>
+                                    <td><a>Volume</a></td>
                                     <td><a>{{ all_volume[0] }}</a></td>
                                 </tr>
                             </tbody>
@@ -221,7 +219,7 @@
                 
             <div class = "content_0" style="display: table;">
                 <div class="labelss">
-                    <a>그래프</a>
+                    <a>Graph</a>
                 </div>
                 <div class="labelss_float">
                 <div class="labelss_floats">
@@ -282,20 +280,20 @@
                 
             <div class="content_2">
                 <div class="labels">
-                    <a>테이블</a>
+                    <a>Table</a>
                 </div>
                 <div class="center">
                     <div class="center">
                         <table id="table_2" class="display cell-border" border="0">
                             <thead>
                                 <tr>
-                                    <th>날짜</th>
-                                    <th>가격</th>
+                                    <th>Date</th>
+                                    <th>Price</th>
                                     <th></th>
-                                    <th>전일대비</th>
-                                    <th>퍼센트</th>
-                                    <th>거래량</th>
-                                    <th>점수</th>
+                                    <th>Previous</th>
+                                    <th>Percent</th>
+                                    <th>Volume</th>
+                                    <th>Point</th>
                                 </tr>
                             </thead>
 
@@ -318,24 +316,24 @@
                                 $("#table_2").DataTable({
                                     "displayLength": 10,
                                     "scrollX": true,
-                                    "order": [[0, "desc"]],
+                                    "order": [[3, "desc"]],
                                     "lengthChange": false,
                                     "pagingType": "full",
                                     "language": {
-                                        "emptyTable": "등록된 아이템이 없습니다.",
-                                        "lengthMenu": "페이지당 _MENU_ 개씩 보기",
-                                        "info": "업데이트: {{ today_datetime }} / _START_~_END_ / _TOTAL_개 아이템",
-                                        "infoEmpty": "데이터 없음",
-                                        "infoFiltered": "( _MAX_아이템중 _TOTAL_개 찾음 )",
-                                        "search": "검색: ",
-                                        "zeroRecords": "검색한 아이템이 없습니다.",
-                                        "loadingRecords": "로딩중...",
-                                        "processing": "잠시만 기다려 주세요...",
+                                        "emptyTable": "Not Found Items.",
+                                        "lengthMenu": "Page _MENU_ View",
+                                        "info": "Update: {{ today_datetime }} / _START_~_END_ / _TOTAL_ Items",
+                                        "infoEmpty": "No Data",
+                                        "infoFiltered": "( _MAX_ Items _TOTAL_ Found )",
+                                        "search": "Search: ",
+                                        "zeroRecords": "Not Found Search.",
+                                        "loadingRecords": "Loadings...",
+                                        "processing": "Just 1 Second Please...",
                                         "paginate": {
                                             "next": "▶",
                                             "previous": "◀",
-                                            "first": "처음",
-                                            "last": "마지막"
+                                            "first": "First",
+                                            "last": "Last"
                                         }
                                     },
                                 });
@@ -350,39 +348,37 @@
             <div class="footer_box_0">
                 <div class="footer_box_1">
                     <div class="footer_link">
-                        <h3>링크</h3>
-                        <a href="https://warframe.market/">워프레임 마켓</a>
+                        <h3>Link</h3>
+                        <a href="https://warframe.market/">Warframe Market</a>
                         <br>
-                        <a href="https://github.com/Hyeonho-Lee/warframets">깃허브</a>
+                        <a href="https://github.com/Hyeonho-Lee/warframets">Github</a>
                     </div>
                     <div class="footer_dev">
-                        <h3>제작</h3>
-                        <a>R.PC (개발)</a>
+                        <h3>Maker</h3>
+                        <a>R.PC (Developer)</a>
                         <br>
-                        <a>Tomatotomato<br>(디자인)</a>
+                        <a>Tomatotomato<br>(Design)</a>
                     </div>
                     <div class="footer_email">
-                        <h3>이메일</h3>
+                        <h3>Email</h3>
                         <a>prohenho7138@gmail.com</a>
                     </div>
                 </div>
-                
                 <div class="footer_info">
-                    <h3>정보</h3>
+                    <h3>Info</h3>
                     <a>
-                        WTS는 warframe 팬유저가 제작한 것으로 Digital Extremes와 관련없는 사이트 입니다.
+                        WarframeTS was created by Warframe fan user and is not related to Digital Extremes.
                     </a>
                     <br>
                     <a>
-                        이 사이트에 사용된 데이터는 https://warframe.market/ 에서 제공 받았습니다.
+                        The data used for this site was provided by https://warframe.market/.
                     </a>
                 </div>
             </div>
-
             <div class="footer_box_2">
                 <div class="footer_count">
                     <div class="footer_count_1">
-                        <h3>누적 접속자</h3>
+                        <h3>Cumulative Visitor</h3>
                         <a>{{ visit_count }}</a>
                     </div>
                 </div>
