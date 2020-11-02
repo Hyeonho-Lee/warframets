@@ -7,6 +7,12 @@
             "kr_name": "로키 프라임"
         },
         {
+            "name": "nezha_prime",
+            "type": "warframe",
+            "en_name": "Nezha Prime",
+            "kr_name": "나타 프라임"
+        },
+        {
             "name": "titania_prime",
             "type": "warframe",
             "en_name": "Titania Prime",

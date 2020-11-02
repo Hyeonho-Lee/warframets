@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang = "en">
+<html>
+    <head>
+        <meta charset = "UTF-8">
+        <meta name="viewport" content="user-scalable=0, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width" />
+        <meta http-equiv="Cache-Control" content="no-cache">
+        <meta http-equiv="Exprires" content="-1">
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta name="naver-site-verification" content="7087f2ce2ff5d8b0dd001a29d816856c7deb5807" />
+        <title>Warframe Trade Status | Portfolio</title>
+        <meta name="description" content="This is a Warframe trade status site to analyze the prices of Warframe items and show the trade status at a glance.">
+        <meta name="keyword" content="warframe, weapon, mod, trade, platinum, price, status, market, shop, wts, set, statistics">
+        <link rel="canonical" href="http://www.warframets.shop/">
+        <link rel="alternate" href="http://www.warframets.shop/notice/">
+        <link rel="alternate" href="http://www.warframets.shop/category/">
+        <link rel="alternate" href="http://www.warframets.shop/economy/">
+        <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+        <!---------------------------------------------------------------------->
+        <link rel="stylesheet" type = "text/css" href = "{{ url_for('static', filename = 'css/calculator.css', v = 0.1) }}" />
+        <link rel="stylesheet" type = "text/css" href = "{{ url_for('static', filename = 'css/result.css', v = 0.1) }}" />
+        <link rel="stylesheet" type = "text/css" href = "{{ url_for('static', filename = 'css/index.css', v = 0.1) }}" />
+        <link rel="stylesheet" type = "text/css" href = "{{ url_for('static', filename = 'css/table.css', v = 0.1) }}" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/v4-shims.css">
+        <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&amp;" rel="stylesheet">
+        <!---------------------------------------------------------------------->
+        <script src="{{ url_for('static', filename = 'js/AutoComplete.min.js') }}" type="text/javascript"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+        <script src="https://cdn.datatables.net/t/bs-3.3.6/jqc-1.12.0,dt-1.10.11/datatables.min.js"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176036085-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-176036085-1');
+        </script>
+    </head>
+    <body>
+        <script>
+            window.onload = function () {
+                var input = document.getElementById("item_name");
+                input.addEventListener('click', function(){
+                    var all_items = {{ all_item_kr | tojson }};
+                    new AutoComplete(document.querySelector('#item_name'), all_items);
+                });
+            };
+        </script>
+        <div>
+            <ul class="header">
+                <li class="header_logo">
+                    <a href="http://www.warframets.shop/en/">
+                        <img alt="WTS" src="{{ url_for('static', filename = './image/icon/logo.png', v = 0.1) }}">
+                    </a>
+                </li>
+                <li class="header_menubar">
+                    <script>
+                        function pop_menu(){
+                            var button = document.getElementById("x_button");
+                            var close = document.getElementById("menubar");
+                            button.style.display = "table";
+                            close.style.animationName = "movemenu_0";
+                            close.style.display = "block";
+                        };
+                        
+                        function delay() {
+                            var close = document.getElementById("menubar");
+                            close.style.display = "none";
+                            close.style.display = "none";
+                        };
+                        
+                        function close_menu(){
+                            var button = document.getElementById("x_button");
+                            var close = document.getElementById("menubar");
+                            button.style.display = "none";
+                            close.style.animationName = "movemenu_1";
+                            setTimeout("delay()", 500);
+                        };
+                    </script>
+                    <span class="icon_1" onclick="pop_menu()"><i class="fa fa-bars fa-2x"></i></span>
+                    <span class="icon_2" onclick="close_menu()" id="x_button"><i class="fa fa-times fa-2x"></i></span>
+                    <ul class="mobile_menus" id="menubar">
+                        <div class="text_menus_0">
+                            <a>Menu</a>
+                        </div>
+                        <li>
+                            <span class="icon_10"><i class="fas fa-book fa-2x"></i></span>
+                            <a class="text_menus_1" href="http://www.warframets.shop/en/notice/">Notice</a>
+                        </li>
+                        <li>
+                            <span class="icon_10"><i class="fas fa-filter fa-2x"></i></span>
+                            <a class="text_menus_2" href="http://www.warframets.shop/en/category/">Category</a>
+                        </li>
+                        <li>
+                            <span class="icon_10"><i class="fas fa-search-dollar fa-2x"></i></span>
+                            <a class="text_menus_3" href="http://www.warframets.shop/en/economy/">Economy</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="header_language">
+                    <i class="fas fa-globe"></i>
+                    <a>EN</a>
+                    <div class="header_language_lists">
+                        <a class="header_language_lists_1" href="/">한국어</a>
+                        <a class="header_language_lists_2"  href="/en/">English</a>
+                    </div>
+                </li>
+                <li class="header_search">
+                    <script>
+                        function input_search(){
+                            var msg = document.getElementById("item_name").value;
+                            if (msg == ""){
+                                console.log("Not Found Item");
+                            }else {
+                                var links = 'result/' + String(msg);
+                                location.href = "http://www.warframets.shop/en/" + links;
+                            }
+                        };                   
+                    </script>
+                    <div class="auto_search">
+                        <div class="text_boxs"></div>
+                        <input type="text" id="item_name" onkeypress="if(event.keyCode==13) {input_search(); return false;}" placeholder="Search" autocomplete="yes">
+                        <span class="icon" onclick="input_search()"><i class="fa fa-search"></i></span>
+                    </div>
+                </li>
+                <li class="header_menu">
+                    <div class="text_boxss"></div>
+                    <a class="text_menu"><span class="icon_11"><i class="fa fa-bars"></i></span>Menu</a>
+                    <ul class="header_menu_nav">
+                        <li>
+                            <div class="text_boxss_1"></div>
+                            <a class="text_menu_1" href="http://www.warframets.shop/en/notice/">
+                                <span class="icon_11"><i class="fas fa-book"></i></span>Notice</a>
+                        </li>
+                        <li>
+                            <div class="text_boxss_2"></div>
+                            <a class="text_menu_2" href="http://www.warframets.shop/en/category/"><span class="icon_11"><i class="fas fa-filter"></i></span>Category</a>
+                        </li>
+                        <li>
+                            <div class="text_boxss_3"></div>
+                            <a class="text_menu_3" href="http://www.warframets.shop/en/economy/"><span class="icon_11"><i class="fas fa-search-dollar"></i></span>Economy</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="header_info">
+                    <div class="header_language_box">
+                        <i class="fas fa-globe"></i>
+                        <p>EN</p>
+                        <div class="header_language_list">
+                            <a class="header_language_list_1"  href="/">한국어</a>
+                            <a class="header_language_list_2"  href="/en/">English</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+        <form method="POST">
+            <div class="menu">
+                <div class="content_4">
+                    <div class="labels">
+                        <a>Portfolio</a>
+                    </div>
+                    <div class="value_11">
+                        <div class="name_buttons">
+                            <a>{{ en_name }}</a>
+                        </div>
+                    </div>
+                    <div class="value_1">
+                        <div class="img_button">
+                            <img src="{{ url_for('static', filename = search_path_1, v = 0.1) }}">
+                        </div>
+                    </div>
+                    <div class="value_33">
+                        <div class="table_button">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th colspan="2"><a>기간 선택</a></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class = "items" onclick="">
+                                        <td><a>Start Day</a></td>
+                                        <td>
+                                            <input type="date" name="first_date" min="{{ min_date }}" max="{{ max_date }}" value="{{ input_first_date }}">
+                                        </td>
+                                    </tr>
+                                    <tr class = "items" onclick="">
+                                        <td><a>End Day</a></td>
+                                        <td>
+                                            <input type="date" name="second_date" min="{{ min_date }}" max="{{ max_date }}" value="{{ input_second_date }}">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="value_4">
+                        <div class="table_button">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th colspan="2"><a>Enter the Amount</a></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class = "items" onclick="">
+                                        <td><a>Holding Platinum</a></td>
+                                        <td>
+                                            <input type="text" name="my_price" value="{{ input_cash }}">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="value_8">
+                        <button class="market_buttons" type="submit">
+                            <a>1. Calculator</a>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="content_5">
+                    <div class="labels">
+                        <a>Enter Item Percentage</a>
+                    </div>
+                    <div class="value_6">
+                        <div class="table_button">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th colspan="2"><a>{{ input_first_date }} Status</a></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class = "items" onclick="">
+                                        <td><a>Holding platinum</a></td>
+                                        <td><a>{{ input_cash }}</a></td>
+                                    </tr>
+                                    <tr class = "items" onclick="">
+                                        <td><a>Start day item price</a></td>
+                                        <td><a>{{ min_price }}</a></td>
+                                    </tr>
+                                    <tr class = "items" onclick="">
+                                        <td><a>Maximum number of possessions</a></td>
+                                        <td><a>{{ input_count }}</a></td>
+                                    </tr>
+                                    <tr class = "items" onclick="">
+                                        <td><a>Number of sales</a></td>
+                                        <script>
+                                            function range(value) {
+                                                document.getElementById("result_range").value = value;
+                                            }
+                                        </script>
+                                        <td>
+                                            <input type="range" min="1" max="{{ input_count }}" value="0" step="1" onchange="range(this.value)">
+                                            <input type="text" name="ranges" id="result_range" value="1" readonly>
+                                        </td>
+                                    </tr>
+                                    <tr class = "items" onclick="">
+                                        <td><a>Total platinum sold</a></td>
+                                        <td><a>{{ cal_price_0 }}</a></td>
+                                    </tr>
+                                    <tr class = "items" onclick="">
+                                        <td><a>Platinum remaining</a></td>
+                                        <td><a>{{ cal_price_1 }}</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="value_10">
+                        <div class="table_button">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th colspan="2"><a>{{ input_second_date }} Overall Status</a></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class = "items" onclick="">
+                                        <td><a>Cumulative value platinum</a></td>
+                                        <td><a>{{ cal_price_4 }}</a></td>
+                                    </tr>
+                                    <tr class = "items" onclick="">
+                                        <td><a>End day item price</a></td>
+                                        <td><a>{{ max_price }}</a></td>
+                                    </tr>
+                                    <tr class = "items" onclick="">
+                                        <td><a>Profit per piece platinum</a></td>
+                                        <td><a>{{ cal_price_2 }}</a></td>
+                                    </tr>
+                                    <tr class = "items" onclick="">
+                                        <td><a>Number of possessions</a></td>
+                                        <td><a>{{ input_count_0 }}</a></td>
+                                    </tr>
+                                    <tr class = "items" onclick="">
+                                        <td><a>Total profit platinum</a></td>
+                                        <td><a>{{ cal_price_3 }}</a></td>
+                                    </tr>
+                                    <tr class = "items" onclick="">
+                                        <td><a>Profit percent</a></td>
+                                        <td><a>{{ cal_percent }}%</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="value_8">
+                        <button class="market_buttons" type="submit">
+                            <a>2. Calculator</a>
+                        </button>
+                    </div>
+                </div>
+            
+            <div class = "content_7" style="display: table;">
+                <div class="labelss">
+                    <a>Graph</a>
+                </div>
+                <div class="labelss_float">
+                <div class="labelss_floats">
+                    <div style="width:99%;">
+                        <canvas id="canvas" style="height: 68vh; width:100%;"></canvas>
+                    </div>
+                    <script>
+                        new Chart(document.getElementById("canvas"), {
+                            type: 'line',
+                            data: {
+                                labels: {{ xlabels | tojson }},
+                                datasets: [{
+                                    label: 'Price',
+                                    data: {{ dataset | tojson }},
+                                    backgroundColor: 'rgb(255, 99, 132)',
+                                    borderColor: 'rgb(255, 99, 132)',
+                                    fill: false,
+                                    lineTension: 0.3
+                                }, {
+                                    label: 'revenue',
+                                    data: {{ dataset_1 | tojson }},
+                                    backgroundColor: 'rgb(115, 171, 255)',
+                                    borderColor: 'rgb(51, 133, 255)',
+                                    fill: false,
+                                    lineTension: 0.3
+                                }]
+                            },
+                            options: {
+                                responsive: false,
+                                title: {
+                                    display: true,
+                                    text: ''
+                                },
+                                tooltips: {
+                                    mode: 'index',
+                                    intersect: false,
+                                },
+                                hover: {
+                                    mode: 'nearest',
+                                    intersect: true
+                                },
+                                scales: {
+                                    xAxes: [{
+                                        display: true,
+                                        scaleLabel: {
+                                            display: true,
+                                        }
+                                    }],
+                                    yAxes: [{
+                                        display: true,
+                                        ticks: {
+                                        },
+                                        scaleLabel: {
+                                            display: true,
+                                        }
+                                    }]
+                                }
+                            }
+                        });
+
+                    </script>
+                </div>
+                </div>
+            </div>
+            
+            <div class = "content_6" style="display: table;">
+                <div class="labelss">
+                    <a>Table</a>
+                </div>
+                <div class="">
+                    <div class="" style="width: 100%; height: 450px; margin: 30px 5px 0 5px;">
+                        <table id="table_2" class="display cell-border" border="0">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Price</th>
+                                    <th></th>
+                                    <th>Previous</th>
+                                    <th>Percent</th>
+                                    <th>Volume</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                {% for i in range(0, all_count) %}
+                                <tr class = "items" onclick="">
+                                    <td class="item2_name"><a>{{ all_datetime[i] }}</a></td>
+                                    <td class="item2_name"><a>{{ all_price[i] }}</a></td>
+                                    <td class="item2_name"><a>{{ all_yn_before[i] }}</a></td>
+                                    <td class="item2_name"><a>{{ all_day_before[i] }}</a></td>
+                                    <td class="item2_name"><a>{{ all_day_percent[i] }}%</a></td>
+                                    <td class="item2_name"><a>{{ all_volume[i] }}</a></td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                        <script>
+                            $(document).ready(function(){
+                                $("#table_2").DataTable({
+                                    "displayLength": 10,
+                                    "scrollX": true,
+                                    "order": [[0, "desc"]],
+                                    "lengthChange": false,
+                                    "pagingType": "full",
+                                    "searching": false,
+                                    "language": {
+                                        "emptyTable": "Not Found Items.",
+                                        "lengthMenu": "Page _MENU_ View",
+                                        "info": "Update: {{ today_datetime }} / _START_~_END_ / _TOTAL_ Items",
+                                        "infoEmpty": "No Data",
+                                        "infoFiltered": "( _MAX_ Items _TOTAL_ Found )",
+                                        "search": "Search: ",
+                                        "zeroRecords": "Not Found Search.",
+                                        "loadingRecords": "Loadings...",
+                                        "processing": "Just 1 Second Please...",
+                                        "paginate": {
+                                            "next": "▶",
+                                            "previous": "◀",
+                                            "first": "First",
+                                            "last": "Last"
+                                        }
+                                    },
+                                });
+                            })
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+            
+        <div class="footer">
+            <div class="footer_box_0">
+                <div class="footer_box_1">
+                    <div class="footer_link">
+                        <h3>Link</h3>
+                        <a href="https://warframe.market/">Warframe Market</a>
+                        <br>
+                        <a href="https://github.com/Hyeonho-Lee/warframets">Github</a>
+                    </div>
+                    <div class="footer_dev">
+                        <h3>Maker</h3>
+                        <a>R.PC (Developer)</a>
+                        <br>
+                        <a>Tomatotomato<br>(Design)</a>
+                    </div>
+                    <div class="footer_email">
+                        <h3>Email</h3>
+                        <a>prohenho7138@gmail.com</a>
+                    </div>
+                </div>
+                
+                <div class="footer_info">
+                    <h3>Info</h3>
+                    <a>
+                        WarframeTS was created by Warframe fan user and is not related to Digital Extremes.
+                    </a>
+                    <br>
+                    <a>
+                        The data used for this site was provided by https://warframe.market/.
+                    </a>
+                    </div>
+                </div>
+
+                <div class="footer_box_2">
+                    <div class="footer_count">
+                        <div class="footer_count_1">
+                            <h3>Cumulative Visitor</h3>
+                            <a>{{ visit_count }}</a>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+        </form>
+    </body>
+</html>

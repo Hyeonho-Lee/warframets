@@ -3,8 +3,20 @@
         {
             "name": "baza_prime",
             "type": "primary",
-            "en_name": "Baza_prime",
+            "en_name": "Baza prime",
             "kr_name": "바자 프라임"
+        },
+        {
+            "name": "guandao_prime",
+            "type": "melee",
+            "en_name": "Guandao Prime",
+            "kr_name": "관도 프라임"
+        },
+        {
+            "name": "zakti_prime",
+            "type": "secondary",
+            "en_name": "Zakti Prime",
+            "kr_name": "자크티 프라임"
         },
         {
             "name": "pangolin_prime",
