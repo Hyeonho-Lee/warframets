@@ -319,12 +319,6 @@
             "kr_name": "하이드롤릭 게이지"
         },
         {
-            "name": "loose_hatch",
-            "type": "assaultrifle_mod",
-            "en_name": "Loose Hatch",
-            "kr_name": "루즈 해치"
-        },
-        {
             "name": "maximum_capacity",
             "type": "assaultrifle_mod",
             "en_name": "Maximum Capacity",
