@@ -1,60 +1,385 @@
 {
     "items_etc_2": [
         {
-            "name": "saxum_spittle",
-            "type": "pistol_mod",
-            "en_name": "Saxum Spittle",
-            "kr_name": "삭숨 스피틀"
+            "name": "auxiliary_power",
+            "type": "archwing_mod",
+            "en_name": "Auxiliary Power",
+            "kr_name": "억실러리 파워"
         },
         {
-            "name": "carnis_stinger",
-            "type": "pistol_mod",
-            "en_name": "Carnis Stinger",
-            "kr_name": "카르니스 스팅어"
+            "name": "cold_snap",
+            "type": "archwing_mod",
+            "en_name": "Cold Snap",
+            "kr_name": "콜드 스냅"
         },
         {
-            "name": "jugulus_spines",
-            "type": "pistol_mod",
-            "en_name": "Jugulus Spines",
-            "kr_name": "저귤러스 스파인즈"
-        },
-
-        {
-            "name": "saxum_carapace",
-            "type": "warframe_mod",
-            "en_name": "Saxum Carapace",
-            "kr_name": "삭숨 카라페이스"
+            "name": "efficient_transferral",
+            "type": "archwing_mod",
+            "en_name": "Efficient Transferral",
+            "kr_name": "이피션트 트랜스퍼럴"
         },
         {
-            "name": "carnis_carapace",
-            "type": "warframe_mod",
-            "en_name": "Carnis Carapace",
-            "kr_name": "카르니스 카라페이스"
+            "name": "energy_amplifier",
+            "type": "archwing_mod",
+            "en_name": "Energy Amplifier",
+            "kr_name": "에너지 앰플리파이어"
         },
         {
-            "name": "jugulus_carapace",
-            "type": "warframe_mod",
-            "en_name": "Jugulus Carapace",
-            "kr_name": "저귤러스 카라페이스"
-        },
-
-        {
-            "name": "saxum_thorax",
-            "type": "melee_mod",
-            "en_name": "Saxum Thorax",
-            "kr_name": "삭숨 쏘락스"
+            "name": "hyperion_thrusters",
+            "type": "archwing_mod",
+            "en_name": "Hyperion Thrusters",
+            "kr_name": "하이페리온 쓰러스터"
         },
         {
-            "name": "carnis_mandible",
-            "type": "melee_mod",
-            "en_name": "Carnis Mandible",
-            "kr_name": "카르니스 맨디블"
+            "name": "kinetic_diversion",
+            "type": "archwing_mod",
+            "en_name": "Kinetic Diversion",
+            "kr_name": "키네틱 다이버전"
         },
         {
-            "name": "jugulus_barbs",
-            "type": "melee_mod",
-            "en_name": "Jugulus Barbs",
-            "kr_name": "저귤러스 밥스"
+            "name": "morphic_transformer",
+            "type": "archwing_mod",
+            "en_name": "Morphic Transformer",
+            "kr_name": "모르픽 트랜스포머"
+        },
+        {
+            "name": "primed_morphic_transformer",
+            "type": "archwing_mod",
+            "en_name": "Primed Morphic Transformer",
+            "kr_name": "프라임드 모르픽 트랜스포머"
+        },
+        {
+            "name": "system_reroute",
+            "type": "archwing_mod",
+            "en_name": "System Reroute",
+            "kr_name": "시스템 리루트"
+        },
+        {
+            "name": "ammo_chain",
+            "type": "archwing_mod",
+            "en_name": "Ammo Chain",
+            "kr_name": "애모 체인"
+        },
+        {
+            "name": "archgun_ace",
+            "type": "archwing_mod",
+            "en_name": "Archgun Ace",
+            "kr_name": "아크-건 에이스"
+        },
+        {
+            "name": "automatic_trigger",
+            "type": "archwing_mod",
+            "en_name": "Automatic Trigger",
+            "kr_name": "오토매틱 트리거"
+        },
+        {
+            "name": "charged_bullets",
+            "type": "archwing_mod",
+            "en_name": "Charged Bullets",
+            "kr_name": "차지드 불릿"
+        },
+        {
+            "name": "combustion_rounds",
+            "type": "archwing_mod",
+            "en_name": "Combustion Rounds",
+            "kr_name": "컴버스쳔 라운즈"
+        },
+        {
+            "name": "contamination_casing",
+            "type": "archwing_mod",
+            "en_name": "Contamination Casing",
+            "kr_name": "컨테미네이션 케이싱"
+        },
+        {
+            "name": "critical_focus",
+            "type": "archwing_mod",
+            "en_name": "Critical Focus",
+            "kr_name": "크리티컬 포커스"
+        },
+        {
+            "name": "deadly_efficiency",
+            "type": "archwing_mod",
+            "en_name": "Deadly Efficiency",
+            "kr_name": "데들리 에피션시"
+        },
+        {
+            "name": "dual_rounds",
+            "type": "archwing_mod",
+            "en_name": "Dual Rounds",
+            "kr_name": "듀얼 라운즈"
+        },
+        {
+            "name": "electrified_barrel",
+            "type": "archwing_mod",
+            "en_name": "Electrified Barrel",
+            "kr_name": "일렉트리파이드 배럴"
+        },
+        {
+            "name": "hollowed_bullets",
+            "type": "archwing_mod",
+            "en_name": "Hollowed Bullets",
+            "kr_name": "할로우드 불렛"
+        },
+        {
+            "name": "hypothermic_shell",
+            "type": "archwing_mod",
+            "en_name": "Hypothermic Shell",
+            "kr_name": "하이포써믹 쉘"
+        },
+        {
+            "name": "magma_chamber",
+            "type": "archwing_mod",
+            "en_name": "Magma Chamber",
+            "kr_name": "마그마 체임버"
+        },
+        {
+            "name": "marked_target",
+            "type": "archwing_mod",
+            "en_name": "Marked Target",
+            "kr_name": "마크드 타겟"
+        },
+        {
+            "name": "primed_rubedo_lined_barrel",
+            "type": "archwing_mod",
+            "en_name": "Primed Rubedo-Lined Barrel",
+            "kr_name": "프라임드 루비도-라인드 배럴"
+        },
+        {
+            "name": "quick_reload",
+            "type": "archwing_mod",
+            "en_name": "Quick Reload",
+            "kr_name": "퀵 리로드"
+        },
+        {
+            "name": "venomous_clip",
+            "type": "archwing_mod",
+            "en_name": "Venomous Clip",
+            "kr_name": "베노머스 클립"
+        },
+        {
+            "name": "zodiac_shred",
+            "type": "archwing_mod",
+            "en_name": "Zodiac Shred",
+            "kr_name": "조디악 슈레드"
+        },
+        {
+            "name": "astral_slash",
+            "type": "archwing_mod",
+            "en_name": "Astral Autopsy",
+            "kr_name": "아스트랄 슬래쉬"
+        },
+        {
+            "name": "blazing_steel",
+            "type": "archwing_mod",
+            "en_name": "Blazing Steel",
+            "kr_name": "블레이징 스틸"
+        },
+        {
+            "name": "cryo_coating",
+            "type": "archwing_mod",
+            "en_name": "Cryo Coating",
+            "kr_name": "크라이오 코팅"
+        },
+        {
+            "name": "infectious_injection",
+            "type": "archwing_mod",
+            "en_name": "Infectious Injection",
+            "kr_name": "인펙셔스 인젝션"
+        },
+        {
+            "name": "ion_infusion",
+            "type": "archwing_mod",
+            "en_name": "Ion Infusion",
+            "kr_name": "이온 인퓨전"
+        },
+        {
+            "name": "poisonous_sting",
+            "type": "archwing_mod",
+            "en_name": "Poisonous Sting",
+            "kr_name": "포이즈너스 스팅"
+        },
+        {
+            "name": "searing_steel",
+            "type": "archwing_mod",
+            "en_name": "Searing Steel",
+            "kr_name": "시어링 스틸"
+        },
+        
+        
+        
+        {
+            "name": "animal_instinct",
+            "type": "companion_mod",
+            "en_name": "Animal Instinct",
+            "kr_name": "애니멀 인스팅트"
+        },
+        {
+            "name": "link_armor",
+            "type": "companion_mod",
+            "en_name": "Link Armor",
+            "kr_name": "링크 아머"
+        },
+        {
+            "name": "link_health",
+            "type": "companion_mod",
+            "en_name": "Link Health",
+            "kr_name": "링크 헬스"
+        },
+        {
+            "name": "link_shields",
+            "type": "companion_mod",
+            "en_name": "Link Shields",
+            "kr_name": "링크 실드"
+        },
+        {
+            "name": "primed_animal_instinct",
+            "type": "companion_mod",
+            "en_name": "Primed Animal Instinct",
+            "kr_name": "프라임드 애니멀 인스팅트"
+        },
+        {
+            "name": "primed_pack_leader",
+            "type": "companion_mod",
+            "en_name": "Primed Pack Leader",
+            "kr_name": "프라임드 팩 리더"
+        },
+        {
+            "name": "coolant_leak",
+            "type": "companion_mod",
+            "en_name": "Coolant Leak",
+            "kr_name": "쿨런트 리크"
+        },
+        {
+            "name": "medi_ray",
+            "type": "companion_mod",
+            "en_name": "Medi-Ray",
+            "kr_name": "메디-레이"
+        },
+        {
+            "name": "sanctuary",
+            "type": "companion_mod",
+            "en_name": "Sanctuary",
+            "kr_name": "생츄어리"
+        },
+        {
+            "name": "odomedic",
+            "type": "companion_mod",
+            "en_name": "Odomedic",
+            "kr_name": "오도메딕"
+        },
+        {
+            "name": "primed_regen",
+            "type": "companion_mod",
+            "en_name": "Primed Regen",
+            "kr_name": "프라임드 리젠"
+        },
+        {
+            "name": "sacrifice",
+            "type": "companion_mod",
+            "en_name": "Sacrifice",
+            "kr_name": "새크리파이스"
+        },
+        {
+            "name": "sanctuary",
+            "type": "companion_mod",
+            "en_name": "Sanctuary",
+            "kr_name": "생츄어리"
+        },
+        {
+            "name": "synth_deconstruct",
+            "type": "companion_mod",
+            "en_name": "Synth Deconstruct",
+            "kr_name": "신스 디컨스트럭트"
+        },
+        {
+            "name": "synth_fiber",
+            "type": "companion_mod",
+            "en_name": "Synth Fiber",
+            "kr_name": "신스 파이버"
+        },
+        {
+            "name": "bite",
+            "type": "companion_mod",
+            "en_name": "Bite",
+            "kr_name": "바이트"
+        },
+        {
+            "name": "fetch",
+            "type": "companion_mod",
+            "en_name": "Fetch",
+            "kr_name": "페치"
+        },
+        {
+            "name": "flame_gland",
+            "type": "companion_mod",
+            "en_name": "Flame Gland",
+            "kr_name": "플레임 글랜드"
+        },
+        {
+            "name": "frost_jaw",
+            "type": "companion_mod",
+            "en_name": "Frost Jaw",
+            "kr_name": "프로스트 조우"
+        },
+        {
+            "name": "hunter_command",
+            "type": "companion_mod",
+            "en_name": "Hunter Command",
+            "kr_name": "헌터 커맨드"
+        },
+        {
+            "name": "hunter_recovery",
+            "type": "companion_mod",
+            "en_name": "Hunter Recovery",
+            "kr_name": "헌터 리커버리"
+        },
+        {
+            "name": "hunter_synergy",
+            "type": "companion_mod",
+            "en_name": "Hunter Synergy",
+            "kr_name": "헌터 시너지"
+        },
+        {
+            "name": "maul",
+            "type": "companion_mod",
+            "en_name": "Maul",
+            "kr_name": "머울"
+        },
+        {
+            "name": "shock_collar",
+            "type": "companion_mod",
+            "en_name": "Shock Collar",
+            "kr_name": "쇼크 칼라"
+        },
+        {
+            "name": "venom_teeth",
+            "type": "companion_mod",
+            "en_name": "Venom Teeth",
+            "kr_name": "베놈 티스"
+        },
+        {
+            "name": "mecha_overdrive",
+            "type": "companion_mod",
+            "en_name": "Mecha Overdrive",
+            "kr_name": "메카 오버드라이브"
+        },
+        {
+            "name": "mecha_recharge",
+            "type": "companion_mod",
+            "en_name": "Mecha Recharge",
+            "kr_name": "메카 리차지"
+        },
+        {
+            "name": "tek_assault",
+            "type": "companion_mod",
+            "en_name": "Tek Assault",
+            "kr_name": "텍 어썰트"
+        },
+        {
+            "name": "tek_enhance",
+            "type": "companion_mod",
+            "en_name": "Tek Enhance",
+            "kr_name": "텍 인핸스"
         }
     ]
 }
