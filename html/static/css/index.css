@@ -930,10 +930,10 @@ ul, ol, li {
 }
 
 .item_count a{
-    transform: translate(-50%, 135%);
+    transform: translate(-50%, 195%);
     
     font-family: "Nanum Gothic", sans-serif;
-    font-size: 12px;
+    font-size: 10px;
     color: #f2f2f2;
     
     position: absolute;
@@ -1264,7 +1264,7 @@ ul, ol, li {
     .item_name {
         margin: 0 0px;
 
-        width: 205px;
+        width: 235px;
         max-height: 0px;
         max-width: auto;
     }
