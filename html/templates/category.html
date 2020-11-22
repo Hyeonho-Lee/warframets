@@ -277,6 +277,18 @@
                             var value = "근접무기 모드";
                             document.getElementById("category_value").innerHTML = value;
                             document.getElementById("change_category").innerHTML = "{% for i in range(0, type_melee_mod_len) %}<div class='item_0'><p><img alt='{{ type_melee_mod_item_kr[i] }}' src='{{ url_for('static', filename = type_melee_mod_path_1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_melee_mod_item[i] }}'>{{ type_melee_mod_item_kr[i] }}</a><div class='item_0_text'>가격: {{ type_melee_mod_price[i] }}</div></div>{% endfor %}";
+                        }else if(button == 13) {
+                            var value = "동반자 모드";
+                            document.getElementById("category_value").innerHTML = value;
+                            document.getElementById("change_category").innerHTML = "{% for i in range(0, type_companion_mod_len) %}<div class='item_0'><p><img alt='{{ type_companion_mod_item_kr[i] }}' src='{{ url_for('static', filename = type_companion_mod_path_1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_companion_mod_item[i] }}'>{{ type_companion_mod_item_kr[i] }}</a><div class='item_0_text'>가격: {{ type_companion_mod_price[i] }}</div></div>{% endfor %}";
+                        }else if(button == 14) {
+                            var value = "아크윙 모드";
+                            document.getElementById("category_value").innerHTML = value;
+                            document.getElementById("change_category").innerHTML = "{% for i in range(0, type_archwing_mod_len) %}<div class='item_0'><p><img alt='{{ type_archwing_mod_item_kr[i] }}' src='{{ url_for('static', filename = type_archwing_mod_path_1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_archwing_mod_item[i] }}'>{{ type_archwing_mod_item_kr[i] }}</a><div class='item_0_text'>가격: {{ type_archwing_mod_price[i] }}</div></div>{% endfor %}";
+                        }else if(button == 15) {
+                            var value = "네크라메크 모드";
+                            document.getElementById("category_value").innerHTML = value;
+                            document.getElementById("change_category").innerHTML = "{% for i in range(0, type_necramech_mod_len) %}<div class='item_0'><p><img alt='{{ type_necramech_mod_item_kr[i] }}' src='{{ url_for('static', filename = type_necramech_mod_path_1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_necramech_mod_item[i] }}'>{{ type_necramech_mod_item_kr[i] }}</a><div class='item_0_text'>가격: {{ type_necramech_mod_price[i] }}</div></div>{% endfor %}";
                         }else if(button == 11) {
                             var value = "아케인";
                             document.getElementById("category_value").innerHTML = value;
@@ -338,6 +350,15 @@
                         </li>
                         <li onclick="search_value(this)" value="10">
                             <a>근접무기 모드</a>
+                        </li>
+                        <li onclick="search_value(this)" value="13">
+                            <a>동반자 모드</a>
+                        </li>
+                        <li onclick="search_value(this)" value="14">
+                            <a>아크윙 모드</a>
+                        </li>
+                        <li onclick="search_value(this)" value="15">
+                            <a>네크라메크 모드</a>
                         </li>
                     </ul>
                     <ul class="etc" id="etc">
@@ -542,6 +563,72 @@
                                 click_id.value = 6;
                             }else if(button == 6) {
                                 document.getElementById("change_category").innerHTML = "{% for i in range(0, type_melee_mod_len) %}<div class='item_0'><p><img alt='{{ type_melee_mod_item_kr_vo2[i] }}' src='{{ url_for('static', filename = type_melee_mod_path_1_vo2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_melee_mod_item_vo2[i] }}'>{{ type_melee_mod_item_kr_vo2[i] }}</a><div class='item_0_text'>거래량: {{ type_melee_mod_volume_vo2[i] }}</div></div>{% endfor %}";
+                                click_id.value = 5;
+                            }else {
+                                console.log("오류!");
+                            };
+                        }else if(menu_value == "동반자 모드") {
+                            if(button == 1) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_companion_mod_len) %}<div class='item_0'><p><img alt='{{ type_companion_mod_item_kr_pr1[i] }}' src='{{ url_for('static', filename = type_companion_mod_path_1_pr1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_companion_mod_item_pr1[i] }}'>{{ type_companion_mod_item_kr_pr1[i] }}</a><div class='item_0_text'>가격: {{ type_companion_mod_price_pr1[i] }}</div></div>{% endfor %}";
+                                click_id.value = 2;
+                            }else if(button == 2) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_companion_mod_len) %}<div class='item_0'><p><img alt='{{ type_companion_mod_item_kr_pr2[i] }}' src='{{ url_for('static', filename = type_companion_mod_path_1_pr2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_companion_mod_item_pr2[i] }}'>{{ type_companion_mod_item_kr_pr2[i] }}</a><div class='item_0_text'>가격: {{ type_companion_mod_price_pr2[i] }}</div></div>{% endfor %}";
+                                click_id.value = 1;
+                            }else if(button == 3) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_companion_mod_len) %}<div class='item_0'><p><img alt='{{ type_companion_mod_item_kr_pe1[i] }}' src='{{ url_for('static', filename = type_companion_mod_path_1_pe1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_companion_mod_item_pe1[i] }}'>{{ type_companion_mod_item_kr_pe1[i] }}</a><div class='item_0_text'>퍼센트: {{ type_companion_mod_percent_pe1[i] }}%</div></div>{% endfor %}";
+                                click_id.value = 4;
+                            }else if(button == 4) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_companion_mod_len) %}<div class='item_0'><p><img alt='{{ type_companion_mod_item_kr_pe2[i] }}' src='{{ url_for('static', filename = type_companion_mod_path_1_pe2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_companion_mod_item_pe2[i] }}'>{{ type_companion_mod_item_kr_pe2[i] }}</a><div class='item_0_text'>퍼센트: {{ type_companion_mod_percent_pe2[i] }}%</div></div>{% endfor %}";
+                                click_id.value = 3;
+                            }else if(button == 5) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_companion_mod_len) %}<div class='item_0'><p><img alt='{{ type_companion_mod_item_kr_vo1[i] }}' src='{{ url_for('static', filename = type_companion_mod_path_1_vo1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_companion_mod_item_vo1[i] }}'>{{ type_companion_mod_item_kr_vo1[i] }}</a><div class='item_0_text'>거래량: {{ type_companion_mod_volume_vo1[i] }}</div></div>{% endfor %}";
+                                click_id.value = 6;
+                            }else if(button == 6) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_companion_mod_len) %}<div class='item_0'><p><img alt='{{ type_companion_mod_item_kr_vo2[i] }}' src='{{ url_for('static', filename = type_companion_mod_path_1_vo2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_companion_mod_item_vo2[i] }}'>{{ type_companion_mod_item_kr_vo2[i] }}</a><div class='item_0_text'>거래량: {{ type_companion_mod_volume_vo2[i] }}</div></div>{% endfor %}";
+                                click_id.value = 5;
+                            }else {
+                                console.log("오류!");
+                            };
+                        }else if(menu_value == "아크윙 모드") {
+                            if(button == 1) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_archwing_mod_len) %}<div class='item_0'><p><img alt='{{ type_archwing_mod_item_kr_pr1[i] }}' src='{{ url_for('static', filename = type_archwing_mod_path_1_pr1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_archwing_mod_item_pr1[i] }}'>{{ type_archwing_mod_item_kr_pr1[i] }}</a><div class='item_0_text'>가격: {{ type_archwing_mod_price_pr1[i] }}</div></div>{% endfor %}";
+                                click_id.value = 2;
+                            }else if(button == 2) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_archwing_mod_len) %}<div class='item_0'><p><img alt='{{ type_archwing_mod_item_kr_pr2[i] }}' src='{{ url_for('static', filename = type_archwing_mod_path_1_pr2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_archwing_mod_item_pr2[i] }}'>{{ type_archwing_mod_item_kr_pr2[i] }}</a><div class='item_0_text'>가격: {{ type_archwing_mod_price_pr2[i] }}</div></div>{% endfor %}";
+                                click_id.value = 1;
+                            }else if(button == 3) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_archwing_mod_len) %}<div class='item_0'><p><img alt='{{ type_archwing_mod_item_kr_pe1[i] }}' src='{{ url_for('static', filename = type_archwing_mod_path_1_pe1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_archwing_mod_item_pe1[i] }}'>{{ type_archwing_mod_item_kr_pe1[i] }}</a><div class='item_0_text'>퍼센트: {{ type_archwing_mod_percent_pe1[i] }}%</div></div>{% endfor %}";
+                                click_id.value = 4;
+                            }else if(button == 4) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_archwing_mod_len) %}<div class='item_0'><p><img alt='{{ type_archwing_mod_item_kr_pe2[i] }}' src='{{ url_for('static', filename = type_archwing_mod_path_1_pe2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_archwing_mod_item_pe2[i] }}'>{{ type_archwing_mod_item_kr_pe2[i] }}</a><div class='item_0_text'>퍼센트: {{ type_archwing_mod_percent_pe2[i] }}%</div></div>{% endfor %}";
+                                click_id.value = 3;
+                            }else if(button == 5) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_archwing_mod_len) %}<div class='item_0'><p><img alt='{{ type_archwing_mod_item_kr_vo1[i] }}' src='{{ url_for('static', filename = type_archwing_mod_path_1_vo1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_archwing_mod_item_vo1[i] }}'>{{ type_archwing_mod_item_kr_vo1[i] }}</a><div class='item_0_text'>거래량: {{ type_archwing_mod_volume_vo1[i] }}</div></div>{% endfor %}";
+                                click_id.value = 6;
+                            }else if(button == 6) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_archwing_mod_len) %}<div class='item_0'><p><img alt='{{ type_archwing_mod_item_kr_vo2[i] }}' src='{{ url_for('static', filename = type_archwing_mod_path_1_vo2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_archwing_mod_item_vo2[i] }}'>{{ type_archwing_mod_item_kr_vo2[i] }}</a><div class='item_0_text'>거래량: {{ type_archwing_mod_volume_vo2[i] }}</div></div>{% endfor %}";
+                                click_id.value = 5;
+                            }else {
+                                console.log("오류!");
+                            };
+                        }else if(menu_value == "네크라메크 모드") {
+                            if(button == 1) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_necramech_mod_len) %}<div class='item_0'><p><img alt='{{ type_necramech_mod_item_kr_pr1[i] }}' src='{{ url_for('static', filename = type_necramech_mod_path_1_pr1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_necramech_mod_item_pr1[i] }}'>{{ type_necramech_mod_item_kr_pr1[i] }}</a><div class='item_0_text'>가격: {{ type_necramech_mod_price_pr1[i] }}</div></div>{% endfor %}";
+                                click_id.value = 2;
+                            }else if(button == 2) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_necramech_mod_len) %}<div class='item_0'><p><img alt='{{ type_necramech_mod_item_kr_pr2[i] }}' src='{{ url_for('static', filename = type_necramech_mod_path_1_pr2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_necramech_mod_item_pr2[i] }}'>{{ type_necramech_mod_item_kr_pr2[i] }}</a><div class='item_0_text'>가격: {{ type_necramech_mod_price_pr2[i] }}</div></div>{% endfor %}";
+                                click_id.value = 1;
+                            }else if(button == 3) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_necramech_mod_len) %}<div class='item_0'><p><img alt='{{ type_necramech_mod_item_kr_pe1[i] }}' src='{{ url_for('static', filename = type_necramech_mod_path_1_pe1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_necramech_mod_item_pe1[i] }}'>{{ type_necramech_mod_item_kr_pe1[i] }}</a><div class='item_0_text'>퍼센트: {{ type_necramech_mod_percent_pe1[i] }}%</div></div>{% endfor %}";
+                                click_id.value = 4;
+                            }else if(button == 4) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_necramech_mod_len) %}<div class='item_0'><p><img alt='{{ type_necramech_mod_item_kr_pe2[i] }}' src='{{ url_for('static', filename = type_necramech_mod_path_1_pe2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_necramech_mod_item_pe2[i] }}'>{{ type_necramech_mod_item_kr_pe2[i] }}</a><div class='item_0_text'>퍼센트: {{ type_necramech_mod_percent_pe2[i] }}%</div></div>{% endfor %}";
+                                click_id.value = 3;
+                            }else if(button == 5) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_necramech_mod_len) %}<div class='item_0'><p><img alt='{{ type_necramech_mod_item_kr_vo1[i] }}' src='{{ url_for('static', filename = type_necramech_mod_path_1_vo1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_necramech_mod_item_vo1[i] }}'>{{ type_necramech_mod_item_kr_vo1[i] }}</a><div class='item_0_text'>거래량: {{ type_necramech_mod_volume_vo1[i] }}</div></div>{% endfor %}";
+                                click_id.value = 6;
+                            }else if(button == 6) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_necramech_mod_len) %}<div class='item_0'><p><img alt='{{ type_necramech_mod_item_kr_vo2[i] }}' src='{{ url_for('static', filename = type_necramech_mod_path_1_vo2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_necramech_mod_item_vo2[i] }}'>{{ type_necramech_mod_item_kr_vo2[i] }}</a><div class='item_0_text'>거래량: {{ type_necramech_mod_volume_vo2[i] }}</div></div>{% endfor %}";
                                 click_id.value = 5;
                             }else {
                                 console.log("오류!");

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang = "ko">
-<html>
+<html class="html">
     <head>
         <meta charset = "UTF-8">
         <meta name="viewport" content="user-scalable=0, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width" />
@@ -103,6 +103,9 @@
                         </li>
                     </ul>
                 </li>
+                <div class="header_color">
+                    <i class="fas fa-palette"></i>
+                </div>
                 <li class="header_language">
                     <i class="fas fa-globe"></i>
                     <a>KO</a>
@@ -126,7 +129,7 @@
                     <div class="auto_search">
                         <div class="text_boxs"></div>
                         <input type="text" id="item_name" onkeypress="if(event.keyCode==13) {input_search(); return false;}" placeholder="검색" autocomplete="yes">
-                        <span class="icon" onclick="input_search()"><i class="fa fa-search"></i></span>
+                        <span class="icon" onclick="input_search()"><i class="fa fa-search auto_search_icon"></i></span>
                     </div>
                 </li>
                 <li class="header_menu">
@@ -148,7 +151,164 @@
                         </li>
                     </ul>
                 </li>
+                <script>
+                    function change_bg_1(color_code) {
+                        var color_value = color_code;
+                        var color_bg = [];
+                        var color_bg_1 = [];
+                        var color_bg_2 = [];
+                        var color_bg_3 = [];
+                        var color_bg_4 = [];
+                        
+                        color_bg.push(document.querySelectorAll(".item_count"));
+                        for(var i = 0; i < color_bg[0].length; i++) {
+                            color_bg[0][i].style.borderBottom = "50px solid " + String(color_value);
+                        }
+
+                        color_bg_1.push(document.querySelector(".header"));
+                        color_bg_1.push(document.querySelector(".header_logo"));
+                        color_bg_1.push(document.querySelector(".header_search"));
+                        color_bg_1.push(document.querySelector(".header_menu"));
+                        color_bg_1.push(document.querySelector(".header_info"));
+                        color_bg_1.push(document.querySelector(".footer"));
+                        color_bg_1.push(document.querySelector(".footer_box_0"));
+                        color_bg_1.push(document.querySelector(".footer_box_2"));
+                        color_bg_1.push(document.querySelector(".text_menus_0"));
+                        for(var i = 0; i < color_bg_1.length; i++) {
+                            color_bg_1[i].style.backgroundColor = String(color_value);
+                        }
+                        
+                        color_bg_2.push(document.querySelectorAll(".label"));
+                        for(var i = 0; i < color_bg_2[0].length; i++) {
+                            color_bg_2[0][i].style.backgroundColor = String(color_value);
+                        }
+                        
+                        color_bg_3.push(document.querySelector(".text_boxs"));
+                        color_bg_3.push(document.querySelector(".text_boxss"));
+                        for(var i = 0; i < color_bg_3.length; i++) {
+                            color_bg_3[i].style.border = "1px solid " + String(color_value);
+                        }
+                        
+                        color_bg_4.push(document.querySelectorAll(".content_1_title"));
+                        for(var i = 0; i < color_bg_4[0].length; i++) {
+                            color_bg_4[0][i].style.borderBottom = "60px solid " + String(color_value);
+                        }
+                        
+                        var color_bg_5 = document.querySelector(".auto_search_icon");
+                        color_bg_5.style.color = String(color_value);
+                    };
+                    
+                    function change_lb_1(color_code) {
+                        var color_value = color_code;
+                        var color_lb = [];
+                        var color_lb_1 = [];
+                            
+                        color_lb.push(document.querySelector(".menu"))
+                        color_lb.push(document.querySelector(".html"));
+                        for(var i = 0; i < color_lb.length; i++) {
+                            color_lb[i].style.backgroundColor = String(color_value);
+                        }
+                        
+                        color_lb_1.push(document.querySelector(".content_0"));
+                        color_lb_1.push(document.querySelector(".content_1"));
+                        color_lb_1.push(document.querySelector(".content_2"));
+                        for(var i = 0; i < color_lb_1.length; i++) {
+                            color_lb_1[i].style.border = "5px solid " + String(color_value);
+                        }
+                    };
+                    
+                    function change_ft_1(color_code) {
+                        var color_value = color_code;
+                        var color_ft = [];
+                        var color_ft_1 = [];
+                        var color_ft_2 = [];
+                        var color_ft_3 = [];
+                        
+                        color_ft.push(document.querySelector(".content_1_main0"));
+                        color_ft.push(document.querySelector(".content_1_main1"));
+                        for(var i = 0; i < color_ft.length; i++) {
+                            color_ft[i].style.backgroundColor = String(color_value);
+                        }
+                        
+                        color_ft_1.push(document.querySelectorAll(".footer_link > a"));
+                        color_ft_1.push(document.querySelectorAll(".footer_dev > a"));
+                        color_ft_1.push(document.querySelectorAll(".footer_info > a"));
+                        for(var i = 0; i < color_ft_1[0].length; i++) {
+                            color_ft_1[0][i].style.color = String(color_value);
+                            color_ft_1[1][i].style.color = String(color_value);
+                            color_ft_1[2][i].style.color = String(color_value);
+                        }
+                        
+                        color_ft_2.push(document.querySelector(".footer_email"));
+                        color_ft_2.push(document.querySelector(".footer_count"));
+                        color_ft_2.push(document.querySelector(".header_color_box > i"));
+                        color_ft_2.push(document.querySelector(".header_color_box > p"));
+                        color_ft_2.push(document.querySelector(".header_language_box > i"));
+                        color_ft_2.push(document.querySelector(".header_language_box > p"));
+                        color_ft_2.push(document.querySelector(".icon_11 > i"));
+                        color_ft_2.push(document.querySelector(".text_menu"));
+                        for(var i = 0; i < color_ft_2.length; i++) {
+                            color_ft_2[i].style.color = String(color_value);
+                        }
+                        
+                        color_ft_3.push(document.querySelectorAll(".label > a"));
+                        color_ft_3.push(document.querySelectorAll(".content_1_title > a"));
+                        for(var i = 0; i < color_ft_3[0].length; i++) {
+                            color_ft_3[0][i].style.color = String(color_value);
+                            color_ft_3[1][i].style.color = String(color_value);
+                        }
+                    };
+                    
+                    function change_mu_1(color_code) {
+                        var color_value = color_code;
+                        var color_mu = [];
+                        var color_mu_1 = [];
+                            
+                        color_mu.push(document.querySelector(".text_boxss"))
+                        color_mu.push(document.querySelector(".text_boxss_1"))
+                        color_mu.push(document.querySelector(".text_boxss_2"))
+                        color_mu.push(document.querySelector(".text_boxss_3"))
+                        color_mu.push(document.querySelector(".mobile_menus"))
+                        for(var i = 0; i < color_mu.length; i++) {
+                            color_mu[i].style.backgroundColor = String(color_value);
+                        }
+                    };
+                </script>
                 <li class="header_info">
+                    <div class="header_color_box">
+                        <i class="fas fa-palette"></i>
+                        <p>Color</p>
+                        <div class="header_color_list">
+                            <div class="header_color_list_1">
+                                <a onclick="change_bg_1('#2a2a2a'); change_lb_1('#dbdcd9'); change_ft_1('#ffffff'); change_mu_1('#ff7373');">기본</a>
+                                <input type="color" value="#2a2a2a" disabled>
+                                <input type="color" value="#dbdcd9" disabled>
+                                <input type="color" value="#ffffff" disabled>
+                                <input type="color" value="#ff7373" disabled>
+                            </div>
+                            <div class="header_color_list_2">
+                                <a onclick="change_bg_1('#909FA6'); change_lb_1('#D1DFE8'); change_ft_1('#EFEFF1'); change_mu_1('#EEB8B8');">팔레트</a>
+                                <input type="color" value="#909FA6" disabled>
+                                <input type="color" value="#EEB8B8" disabled>
+                                <input type="color" value="#EFEFF1" disabled>
+                                <input type="color" value="#EEB8B8" disabled>
+                            </div>
+                            <div class="header_color_list_3">
+                                <a>파스텔</a>
+                                <input type="color">
+                                <input type="color">
+                                <input type="color">
+                                <input type="color">
+                            </div>
+                            <div class="header_color_list_4">
+                                <a>커스텀</a>
+                                <input type="color">
+                                <input type="color">
+                                <input type="color">
+                                <input type="color">
+                            </div>
+                        </div>
+                    </div>
                     <div class="header_language_box">
                         <i class="fas fa-globe"></i>
                         <p>KO</p>
@@ -160,9 +320,9 @@
                 </li>
             </ul>
             
-            <div class = "menu">
+            <div class="menu">
             
-                <div class = "content_1">
+                <div class="content_1">
                     <div class="label">
                         <a>추천</a>
                     </div>
@@ -246,7 +406,7 @@
                             <tbody>
                                 {% for i in range(1,11) %}
                                 <tr class = "items">
-                                    <td class = "item_count"><a>{{ t_top_percent[i - 1] }}%</a></td>
+                                    <td class="item_count"><a>{{ t_top_percent[i - 1] }}%</a></td>
                                     <td>
                                         <div>
                                             <div class = "item_name"><a>{{ t_top_kr_name[i - 1] }}</a></div>
