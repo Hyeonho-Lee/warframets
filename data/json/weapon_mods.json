@@ -313,18 +313,6 @@
             "kr_name": "건 글라이드"
         },
         {
-            "name": "hydraulic_gauge",
-            "type": "assaultrifle_mod",
-            "en_name": "Hydraulic Gauge",
-            "kr_name": "하이드롤릭 게이지"
-        },
-        {
-            "name": "maximum_capacity",
-            "type": "assaultrifle_mod",
-            "en_name": "Maximum Capacity",
-            "kr_name": "맥시멈 커패시티"
-        },
-        {
             "name": "rifle_ammo_mutation",
             "type": "assaultrifle_mod",
             "en_name": "Rifle Ammo Mutation",
@@ -629,18 +617,6 @@
             "type": "sniper_mod",
             "en_name": "Depleted Reload",
             "kr_name": "디플리티드 리로드"
-        },
-        {
-            "name": "emergent_aftermath",
-            "type": "sniper_mod",
-            "en_name": "Emergent Aftermath",
-            "kr_name": "이머전트 애프터매스"
-        },
-        {
-            "name": "harkonar_scope",
-            "type": "sniper_mod",
-            "en_name": "Harkonar Scope",
-            "kr_name": "하르코나르 스코프"
         },
         {
             "name": "primed_chamber",
@@ -1469,12 +1445,6 @@
             "type": "stance_mod",
             "en_name": "Coiling Viper",
             "kr_name": "코일링 바이퍼"
-        },
-        {
-            "name": "crashing_havoc",
-            "type": "stance_mod",
-            "en_name": "Crashing Havoc",
-            "kr_name": "크래슁 하복"
         },
         {
             "name": "crimson_dervish",

@@ -1,23 +1,1441 @@
-else if(menu_value == "네크라메크 모드") {
-                            if(button == 1) {
-                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_necramech_mod_len) %}<div class='item_0'><p><img alt='{{ type_necramech_mod_item_kr_pr1[i] }}' src='{{ url_for('static', filename = type_necramech_mod_path_1_pr1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_necramech_mod_item_pr1[i] }}'>{{ type_necramech_mod_item_kr_pr1[i] }}</a><div class='item_0_text'>가격: {{ type_necramech_mod_price_pr1[i] }}</div></div>{% endfor %}";
-                                click_id.value = 2;
-                            }else if(button == 2) {
-                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_necramech_mod_len) %}<div class='item_0'><p><img alt='{{ type_necramech_mod_item_kr_pr2[i] }}' src='{{ url_for('static', filename = type_necramech_mod_path_1_pr2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_necramech_mod_item_pr2[i] }}'>{{ type_necramech_mod_item_kr_pr2[i] }}</a><div class='item_0_text'>가격: {{ type_necramech_mod_price_pr2[i] }}</div></div>{% endfor %}";
-                                click_id.value = 1;
-                            }else if(button == 3) {
-                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_necramech_mod_len) %}<div class='item_0'><p><img alt='{{ type_necramech_mod_item_kr_pe1[i] }}' src='{{ url_for('static', filename = type_necramech_mod_path_1_pe1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_necramech_mod_item_pe1[i] }}'>{{ type_necramech_mod_item_kr_pe1[i] }}</a><div class='item_0_text'>퍼센트: {{ type_necramech_mod_percent_pe1[i] }}%</div></div>{% endfor %}";
-                                click_id.value = 4;
-                            }else if(button == 4) {
-                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_necramech_mod_len) %}<div class='item_0'><p><img alt='{{ type_necramech_mod_item_kr_pe2[i] }}' src='{{ url_for('static', filename = type_necramech_mod_path_1_pe2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_necramech_mod_item_pe2[i] }}'>{{ type_necramech_mod_item_kr_pe2[i] }}</a><div class='item_0_text'>퍼센트: {{ type_necramech_mod_percent_pe2[i] }}%</div></div>{% endfor %}";
-                                click_id.value = 3;
-                            }else if(button == 5) {
-                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_necramech_mod_len) %}<div class='item_0'><p><img alt='{{ type_necramech_mod_item_kr_vo1[i] }}' src='{{ url_for('static', filename = type_necramech_mod_path_1_vo1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_necramech_mod_item_vo1[i] }}'>{{ type_necramech_mod_item_kr_vo1[i] }}</a><div class='item_0_text'>거래량: {{ type_necramech_mod_volume_vo1[i] }}</div></div>{% endfor %}";
-                                click_id.value = 6;
-                            }else if(button == 6) {
-                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_necramech_mod_len) %}<div class='item_0'><p><img alt='{{ type_necramech_mod_item_kr_vo2[i] }}' src='{{ url_for('static', filename = type_necramech_mod_path_1_vo2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_necramech_mod_item_vo2[i] }}'>{{ type_necramech_mod_item_kr_vo2[i] }}</a><div class='item_0_text'>거래량: {{ type_necramech_mod_volume_vo2[i] }}</div></div>{% endfor %}";
-                                click_id.value = 5;
-                            }else {
-                                console.log("오류!");
-                            };
-                        }
+,
+        {
+            "name": "hunter_munitions",
+            "type": "primary_mod",
+            "en_name": "Hunter Munitions",
+            "kr_name": "헌터 뮤니션즈"
+        },
+        {
+            "name": "hunter_track",
+            "type": "primary_mod",
+            "en_name": "Hunter Track",
+            "kr_name": "헌터 트랙"
+        },
+        {
+            "name": "vigilante_armaments",
+            "type": "primary_mod",
+            "en_name": "Vigilante Armaments",
+            "kr_name": "비질란티 아마먼츠"
+        },
+        {
+            "name": "vigilante_fervor",
+            "type": "primary_mod",
+            "en_name": "Vigilante Fervor",
+            "kr_name": "비질란티 퍼버"
+        },
+        {
+            "name": "vigilante_offense",
+            "type": "primary_mod",
+            "en_name": "Vigilante Offense",
+            "kr_name": "비질란티 오펜스"
+        },
+        {
+            "name": "vigilante_supplies",
+            "type": "primary_mod",
+            "en_name": "Vigilante Supplies",
+            "kr_name": "비질란티 서플라이즈"
+        },
+        {
+            "name": "adhesive_blast",
+            "type": "rifle_mod",
+            "en_name": "Adhesive Blast",
+            "kr_name": "애드히시브 블래스트"
+        },
+        {
+            "name": "agile_aim",
+            "type": "rifle_mod",
+            "en_name": "Agile Aim",
+            "kr_name": "애자일 에임 "
+        },
+        {
+            "name": "ammo_drum",
+            "type": "rifle_mod",
+            "en_name": "Ammo Drum",
+            "kr_name": "에모 드럼"
+        },
+        {
+            "name": "argon_scope",
+            "type": "rifle_mod",
+            "en_name": "Argon Scope",
+            "kr_name": "아르곤 스코프"
+        },
+        {
+            "name": "bladed_rounds",
+            "type": "rifle_mod",
+            "en_name": "Bladed Rounds",
+            "kr_name": "블레이디드 라운즈"
+        },
+        {
+            "name": "catalyzer_link",
+            "type": "rifle_mod",
+            "en_name": "Catalyzer Link",
+            "kr_name": "카탈라이저 링크"
+        },
+        {
+            "name": "cautious_shot",
+            "type": "rifle_mod",
+            "en_name": "Cautious Shot",
+            "kr_name": "커셔스 샷"
+        },
+        {
+            "name": "continuous_misery",
+            "type": "rifle_mod",
+            "en_name": "Continuous Misery",
+            "kr_name": "컨티뉴어스 미져리"
+        },
+        {
+            "name": "crash_course",
+            "type": "rifle_mod",
+            "en_name": "Crash Course",
+            "kr_name": "크래쉬 코스"
+        },
+        {
+            "name": "critical_delay",
+            "type": "rifle_mod",
+            "en_name": "Critical Delay",
+            "kr_name": "크리티컬 딜레이"
+        },
+        {
+            "name": "cryo_rounds",
+            "type": "rifle_mod",
+            "en_name": "Cryo Rounds",
+            "kr_name": "크라이오 라운즈"
+        },
+        {
+            "name": "fanged_fusillade",
+            "type": "rifle_mod",
+            "en_name": "Fanged Fusillade",
+            "kr_name": "팽드 퓨설레이드"
+        },
+        {
+            "name": "firestorm",
+            "type": "rifle_mod",
+            "en_name": "Firestorm",
+            "kr_name": "파이어스톰"
+        },
+        {
+            "name": "hammer_shot",
+            "type": "rifle_mod",
+            "en_name": "Hammer Shot",
+            "kr_name": "해머 샷"
+        },
+        {
+            "name": "heavy_caliber",
+            "type": "rifle_mod",
+            "en_name": "Heavy Caliber",
+            "kr_name": "헤비 칼리버"
+        },
+        {
+            "name": "hellfire",
+            "type": "rifle_mod",
+            "en_name": "Hellfire",
+            "kr_name": "헬파이어"
+        },
+        {
+            "name": "high_voltage",
+            "type": "rifle_mod",
+            "en_name": "High Voltage",
+            "kr_name": "하이 볼티지"
+        },
+        {
+            "name": "hush",
+            "type": "rifle_mod",
+            "en_name": "Hush",
+            "kr_name": "허쉬"
+        },
+        {
+            "name": "infected_clip",
+            "type": "rifle_mod",
+            "en_name": "Infected Clip",
+            "kr_name": "인펙티드 클립"
+        },
+        {
+            "name": "malignant_force",
+            "type": "rifle_mod",
+            "en_name": "Malignant Force",
+            "kr_name": "멀리그난트 포스"
+        },
+        {
+            "name": "metal_auger",
+            "type": "rifle_mod",
+            "en_name": "Metal Auger",
+            "kr_name": "메탈 어거"
+        },
+        {
+            "name": "piercing_caliber",
+            "type": "rifle_mod",
+            "en_name": "Piercing Caliber",
+            "kr_name": "피어싱 칼리버"
+        },
+        {
+            "name": "point_strike",
+            "type": "rifle_mod",
+            "en_name": "Point Strike",
+            "kr_name": "포인트 스트라이크"
+        },
+        {
+            "name": "primed_cryo_rounds",
+            "type": "rifle_mod",
+            "en_name": "Primed Cryo Rounds",
+            "kr_name": "프라임드 크라이오 라운즈"
+        },
+        {
+            "name": "primed_fast_hands",
+            "type": "rifle_mod",
+            "en_name": "Primed Fast Hands",
+            "kr_name": "프라임드 패스트 핸즈"
+        },
+        {
+            "name": "proton_jet",
+            "type": "rifle_mod",
+            "en_name": "Proton Jet",
+            "kr_name": "프로톤 제트"
+        },
+        {
+            "name": "rifle_aptitude",
+            "type": "rifle_mod",
+            "en_name": "Rifle Aptitude",
+            "kr_name": "라이플 앱티튜드"
+        },
+        {
+            "name": "rime_rounds",
+            "type": "rifle_mod",
+            "en_name": "Rime Rounds",
+            "kr_name": "라임 라운즈"
+        },
+        {
+            "name": "serration",
+            "type": "rifle_mod",
+            "en_name": "Serration",
+            "kr_name": "서레이션"
+        },
+        {
+            "name": "shred",
+            "type": "rifle_mod",
+            "en_name": "Shred",
+            "kr_name": "슈레드"
+        },
+        {
+            "name": "sinister_reach",
+            "type": "rifle_mod",
+            "en_name": "Sinister Reach",
+            "kr_name": "시니스터 리치"
+        },
+        {
+            "name": "speed_trigger",
+            "type": "rifle_mod",
+            "en_name": "Speed Trigger",
+            "kr_name": "스피드 트리거"
+        },
+        {
+            "name": "split_chamber",
+            "type": "rifle_mod",
+            "en_name": "Split Chamber",
+            "kr_name": "스플릿 체임버"
+        },
+        {
+            "name": "stabilizer",
+            "type": "rifle_mod",
+            "en_name": "Stabilizer",
+            "kr_name": "스테빌라이저"
+        },
+        {
+            "name": "stormbringer",
+            "type": "rifle_mod",
+            "en_name": "Stormbringer",
+            "kr_name": "스톰브링어"
+        },
+        {
+            "name": "terminal_velocity",
+            "type": "rifle_mod",
+            "en_name": "Terminal Velocity",
+            "kr_name": "터미널 벨로시티"
+        },
+        {
+            "name": "thermite_rounds",
+            "type": "rifle_mod",
+            "en_name": "Thermite Rounds",
+            "kr_name": "써마이트 라운즈"
+        },
+        {
+            "name": "twitch",
+            "type": "rifle_mod",
+            "en_name": "Twitch",
+            "kr_name": "트위치"
+        },
+        {
+            "name": "vile_acceleration",
+            "type": "rifle_mod",
+            "en_name": "Vile Acceleration",
+            "kr_name": "바일 액셀러레이션"
+        },
+        {
+            "name": "vile_precision",
+            "type": "rifle_mod",
+            "en_name": "Vile Precision",
+            "kr_name": "바일 프리시젼"
+        },
+        {
+            "name": "vital_sense",
+            "type": "rifle_mod",
+            "en_name": "Vital Sense",
+            "kr_name": "바이탈 센스"
+        },
+        {
+            "name": "wildfire",
+            "type": "rifle_mod",
+            "en_name": "Wildfire",
+            "kr_name": "와일드파이어"
+        },
+        {
+            "name": "deft_tempo",
+            "type": "assaultrifle_mod",
+            "en_name": "Deft Tempo",
+            "kr_name": "데프트 템포"
+        },
+        {
+            "name": "guided_ordnance",
+            "type": "assaultrifle_mod",
+            "en_name": "Guided Ordnance",
+            "kr_name": "가이디드 오드넌스"
+        },
+        {
+            "name": "gun_glide",
+            "type": "assaultrifle_mod",
+            "en_name": "Gun Glide",
+            "kr_name": "건 글라이드"
+        },
+        {
+            "name": "rifle_ammo_mutation",
+            "type": "assaultrifle_mod",
+            "en_name": "Rifle Ammo Mutation",
+            "kr_name": "라이플 애모 뮤테이션"
+        },
+        {
+            "name": "primed_rifle_ammo_mutation",
+            "type": "assaultrifle_mod",
+            "en_name": "Primed Rifle Ammo Mutation",
+            "kr_name": "프라임드 라이플 애모 뮤테이션"
+        },
+        {
+            "name": "tactical_reload",
+            "type": "assaultrifle_mod",
+            "en_name": "Tactical Reload",
+            "kr_name": "택티컬 리로드"
+        },
+        {
+            "name": "tainted_mag",
+            "type": "assaultrifle_mod",
+            "en_name": "Tainted Mag",
+            "kr_name": "테인티드 매그"
+        },
+        {
+            "name": "accelerated_blast",
+            "type": "shotgun_mod",
+            "en_name": "Accelerated Blast",
+            "kr_name": "액셀러레이티드 블래스트"
+        },
+        {
+            "name": "ammo_stock",
+            "type": "shotgun_mod",
+            "en_name": "Ammo Stock",
+            "kr_name": "애모 스톡"
+        },
+        {
+            "name": "blaze",
+            "type": "shotgun_mod",
+            "en_name": "Blaze",
+            "kr_name": "블레이즈"
+        },
+        {
+            "name": "blunderbuss",
+            "type": "shotgun_mod",
+            "en_name": "Blunderbuss",
+            "kr_name": "블런더버스"
+        },
+        {
+            "name": "breach_loader",
+            "type": "shotgun_mod",
+            "en_name": "Breach Loader",
+            "kr_name": "브리치 로더"
+        },
+        {
+            "name": "burdened_magazine",
+            "type": "shotgun_mod",
+            "en_name": "Burdened Magazine",
+            "kr_name": "버든드 매거진"
+        },
+        {
+            "name": "charged_shell",
+            "type": "shotgun_mod",
+            "en_name": "Charged Shell",
+            "kr_name": "차지드 쉘"
+        },
+        {
+            "name": "chilling_grasp",
+            "type": "shotgun_mod",
+            "en_name": "Chilling Grasp",
+            "kr_name": "칠링 그래스프"
+        },
+        {
+            "name": "chilling_reload",
+            "type": "shotgun_mod",
+            "en_name": "Chilling Reload",
+            "kr_name": "칠링 리로드"
+        },
+        {
+            "name": "contagious_spread",
+            "type": "shotgun_mod",
+            "en_name": "Contagious Spread",
+            "kr_name": "콘테이지어스 스프레드"
+        },
+        {
+            "name": "critical_deceleration",
+            "type": "shotgun_mod",
+            "en_name": "Critical Deceleration",
+            "kr_name": "크리티컬 디셀러레이션"
+        },
+        {
+            "name": "fatal_acceleration",
+            "type": "shotgun_mod",
+            "en_name": "Fatal Acceleration",
+            "kr_name": "페이탈 액셀러레이션"
+        },
+        {
+            "name": "frail_momentum",
+            "type": "shotgun_mod",
+            "en_name": "Frail Momentum",
+            "kr_name": "플랙 샷"
+        },
+        {
+            "name": "frigid_blast",
+            "type": "shotgun_mod",
+            "en_name": "Frigid Blast",
+            "kr_name": "프리지드 블래스트"
+        },
+        {
+            "name": "full_contact",
+            "type": "shotgun_mod",
+            "en_name": "Full Contact",
+            "kr_name": "풀 컨택트"
+        },
+        {
+            "name": "incendiary_coat",
+            "type": "shotgun_mod",
+            "en_name": "Incendiary Coat",
+            "kr_name": "인센디어리 코트"
+        },
+        {
+            "name": "laser_sight",
+            "type": "shotgun_mod",
+            "en_name": "Laser Sight",
+            "kr_name": "레이저 사이트"
+        },
+        {
+            "name": "narrow_barrel",
+            "type": "shotgun_mod",
+            "en_name": "Narrow Barrel",
+            "kr_name": "내로우 배럴"
+        },
+        {
+            "name": "point_blank",
+            "type": "shotgun_mod",
+            "en_name": "Point Blank",
+            "kr_name": "포인트 블랭크"
+        },
+        {
+            "name": "primed_cleanse_corpus",
+            "type": "shotgun_mod",
+            "en_name": "Primed Cleanse Corpus",
+            "kr_name": "프라임드 클렌즈 코퍼스"
+        },
+        {
+            "name": "primed_cleanse_corrupted",
+            "type": "shotgun_mod",
+            "en_name": "Primed Cleanse Corrupted",
+            "kr_name": "프라임드 클렌즈 코퍼스"
+        },
+        {
+            "name": "primed_cleanse_grineer",
+            "type": "shotgun_mod",
+            "en_name": "Primed Cleanse Grineer",
+            "kr_name": "프라임드 클렌즈 그리니어"
+        },
+        {
+            "name": "primed_cleanse_infested",
+            "type": "shotgun_mod",
+            "en_name": "Primed Cleanse Infested",
+            "kr_name": "프라임드 클렌즈 인페스티드"
+        },
+        {
+            "name": "primed_charged_shell",
+            "type": "shotgun_mod",
+            "en_name": "Primed Charged Shell",
+            "kr_name": "프라임드 차지드 쉘"
+        },
+        {
+            "name": "primed_point_blank",
+            "type": "shotgun_mod",
+            "en_name": "Primed Point Blank",
+            "kr_name": "프라임드 포인트 블랭크"
+        },
+        {
+            "name": "primed_ravage",
+            "type": "shotgun_mod",
+            "en_name": "Primed Ravage",
+            "kr_name": "프라임드 래비지"
+        },
+        {
+            "name": "primed_shotgun_ammo_mutation",
+            "type": "shotgun_mod",
+            "en_name": "Primed Shotgun Ammo Mutation",
+            "kr_name": "프라임드 샷건 애모 뮤테이션"
+        },
+        {
+            "name": "ravage",
+            "type": "shotgun_mod",
+            "en_name": "Ravage",
+            "kr_name": "래비지"
+        },
+        {
+            "name": "repeater_clip",
+            "type": "shotgun_mod",
+            "en_name": "Repeater Clip",
+            "kr_name": "리피터 클립"
+        },
+        {
+            "name": "scattering_inferno",
+            "type": "shotgun_mod",
+            "en_name": "Scattering Inferno",
+            "kr_name": "스캐터링 인페르노"
+        },
+        {
+            "name": "seeking_force",
+            "type": "shotgun_mod",
+            "en_name": "Seeking Force",
+            "kr_name": "시킹 포스"
+        },
+        {
+            "name": "seeking_fury",
+            "type": "shotgun_mod",
+            "en_name": "Seeking Fury",
+            "kr_name": "시킹 퓨리"
+        },
+        {
+            "name": "shell_shock",
+            "type": "shotgun_mod",
+            "en_name": "Shell Shock",
+            "kr_name": "쉘 쇼크"
+        },
+        {
+            "name": "shotgun_ammo_mutation",
+            "type": "shotgun_mod",
+            "en_name": "Shotgun Ammo Mutation",
+            "kr_name": "샷건 애모 뮤테이션"
+        },
+        {
+            "name": "shotgun_savvy",
+            "type": "shotgun_mod",
+            "en_name": "Shotgun Savvy",
+            "kr_name": "샷건 새비"
+        },
+        {
+            "name": "shotgun_spazz",
+            "type": "shotgun_mod",
+            "en_name": "Shotgun Spazz",
+            "kr_name": "샷건 스패즈"
+        },
+        {
+            "name": "shrapnel_shot",
+            "type": "shotgun_mod",
+            "en_name": "Shrapnel Shot",
+            "kr_name": "쉬래프널 샷"
+        },
+        {
+            "name": "silent_battery",
+            "type": "shotgun_mod",
+            "en_name": "Silent Battery",
+            "kr_name": "사일런트 배터리"
+        },
+        {
+            "name": "snap_shot",
+            "type": "shotgun_mod",
+            "en_name": "Snap Shot",
+            "kr_name": "스냡 샷"
+        },
+        {
+            "name": "soft_hands",
+            "type": "shotgun_mod",
+            "en_name": "Soft Hands",
+            "kr_name": "소프트 핸즈"
+        },
+        {
+            "name": "sweeping_serration",
+            "type": "shotgun_mod",
+            "en_name": "Sweeping Serration",
+            "kr_name": "스위핑 서레이션"
+        },
+        {
+            "name": "tainted_shell",
+            "type": "shotgun_mod",
+            "en_name": "Tainted Shell",
+            "kr_name": "택티컬 펌프"
+        },
+        {
+            "name": "toxic_barrage",
+            "type": "shotgun_mod",
+            "en_name": "Toxic Barrage",
+            "kr_name": "톡식 배러지"
+        },
+        {
+            "name": "vicious_spread",
+            "type": "shotgun_mod",
+            "en_name": "Vicious Spread",
+            "kr_name": "비셔스 스프레드"
+        },
+        {
+            "name": "aero_agility",
+            "type": "sniper_mod",
+            "en_name": "Aero Agility",
+            "kr_name": "에어로 어질리티"
+        },
+        {
+            "name": "charged_chamber",
+            "type": "sniper_mod",
+            "en_name": "Charged Chamber",
+            "kr_name": "차지드 체임버"
+        },
+        {
+            "name": "depleted_reload",
+            "type": "sniper_mod",
+            "en_name": "Depleted Reload",
+            "kr_name": "디플리티드 리로드"
+        },
+        {
+            "name": "primed_chamber",
+            "type": "sniper_mod",
+            "en_name": "Primed Chamber",
+            "kr_name": "프라임드 체임버"
+        },
+        {
+            "name": "sharpshooter",
+            "type": "sniper_mod",
+            "en_name": "Sharpshooter",
+            "kr_name": "샤프슈터"
+        },
+        {
+            "name": "sniper_ammo_mutation",
+            "type": "sniper_mod",
+            "en_name": "Sniper Ammo Mutation",
+            "kr_name": "스나이퍼 애모 뮤테이션"
+        },
+        {
+            "name": "target_acquired",
+            "type": "sniper_mod",
+            "en_name": "Target Acquired",
+            "kr_name": "타겟 어콰이어드"
+        },
+        {
+            "name": "arrow_mutation",
+            "type": "bow_mod",
+            "en_name": "Arrow Mutation",
+            "kr_name": "애로우 뮤테이션"
+        },
+        {
+            "name": "split_flights",
+            "type": "bow_mod",
+            "en_name": "Split Flights",
+            "kr_name": "스플릿 플라이츠"
+        },
+        {
+            "name": "anemic_agility",
+            "type": "pistol_mod",
+            "en_name": "Anemic Agility",
+            "kr_name": "아네믹 어질리티"
+        },
+        {
+            "name": "augur_pact",
+            "type": "pistol_mod",
+            "en_name": "Augur Pact",
+            "kr_name": "어거 팩트"
+        },
+        {
+            "name": "augur_seeker",
+            "type": "pistol_mod",
+            "en_name": "Augur Seeker",
+            "kr_name": "어거 시커"
+        },
+        {
+            "name": "barrel_diffusion",
+            "type": "pistol_mod",
+            "en_name": "Barrel Diffusion",
+            "kr_name": "배럴 디퓨전"
+        },
+        {
+            "name": "bore",
+            "type": "pistol_mod",
+            "en_name": "Bore",
+            "kr_name": "보어"
+        },
+        {
+            "name": "concealed_explosives",
+            "type": "pistol_mod",
+            "en_name": "Concealed Explosives",
+            "kr_name": "컨실드 익스플로시브"
+        },
+        {
+            "name": "convulsion",
+            "type": "pistol_mod",
+            "en_name": "Convulsion",
+            "kr_name": "컨벌션"
+        },
+        {
+            "name": "creeping_bullseye",
+            "type": "pistol_mod",
+            "en_name": "Creeping Bullseye",
+            "kr_name": "크리핑 불스아이"
+        },
+        {
+            "name": "deep_freeze",
+            "type": "pistol_mod",
+            "en_name": "Deep Freeze",
+            "kr_name": "딥 프리즈"
+        },
+        {
+            "name": "eject_magazine",
+            "type": "pistol_mod",
+            "en_name": "Eject Magazine",
+            "kr_name": "이젝트 매거진"
+        },
+        {
+            "name": "saxum_spittle",
+            "type": "pistol_mod",
+            "en_name": "Saxum Spittle",
+            "kr_name": "삭숨 스피틀"
+        },
+        {
+            "name": "carnis_stinger",
+            "type": "pistol_mod",
+            "en_name": "Carnis Stinger",
+            "kr_name": "카르니스 스팅어"
+        },
+        {
+            "name": "jugulus_spines",
+            "type": "pistol_mod",
+            "en_name": "Jugulus Spines",
+            "kr_name": "저귤러스 스파인즈"
+        },
+        {
+            "name": "embedded_catalyzer",
+            "type": "pistol_mod",
+            "en_name": "Embedded Catalyzer",
+            "kr_name": "임베디드 카탈라이저"
+        },
+        {
+            "name": "frostbite",
+            "type": "pistol_mod",
+            "en_name": "Frostbite",
+            "kr_name": "프로스트바이트"
+        },
+        {
+            "name": "fulmination",
+            "type": "pistol_mod",
+            "en_name": "Fulmination",
+            "kr_name": "풀 커패시티"
+        },
+        {
+            "name": "gunslinger",
+            "type": "pistol_mod",
+            "en_name": "Gunslinger",
+            "kr_name": "건슬링어"
+        },
+        {
+            "name": "heated_charge",
+            "type": "pistol_mod",
+            "en_name": "Heated Charge",
+            "kr_name": "히티드차지"
+        },
+        {
+            "name": "heavy_warhead",
+            "type": "pistol_mod",
+            "en_name": "Heavy Warhead",
+            "kr_name": "헤비 워헤드"
+        },
+        {
+            "name": "hollow_point",
+            "type": "pistol_mod",
+            "en_name": "Hollow Point",
+            "kr_name": "할로우 포인트"
+        },
+        {
+            "name": "hornet_strike",
+            "type": "pistol_mod",
+            "en_name": "Hornet Strike",
+            "kr_name": "호넷 스트라이크"
+        },
+        {
+            "name": "hydraulic_barrel",
+            "type": "pistol_mod",
+            "en_name": "Hydraulic Barrel",
+            "kr_name": "라이드롤릭 배럴"
+        },
+        {
+            "name": "hydraulic_crosshairs",
+            "type": "pistol_mod",
+            "en_name": "Hydraulic Crosshairs",
+            "kr_name": "라이드롤릭 크로스헤어즈"
+        },
+        {
+            "name": "ice_storm",
+            "type": "pistol_mod",
+            "en_name": "Ice Storm",
+            "kr_name": "아이스 스톰"
+        },
+        {
+            "name": "jolt",
+            "type": "pistol_mod",
+            "en_name": "Jolt",
+            "kr_name": "졸트"
+        },
+        {
+            "name": "lethal_torrent",
+            "type": "pistol_mod",
+            "en_name": "Lethal Torrent",
+            "kr_name": "리썰 토렌트"
+        },
+        {
+            "name": "magnum_force",
+            "type": "pistol_mod",
+            "en_name": "Magnum Force",
+            "kr_name": "매그넘 포스"
+        },
+        {
+            "name": "maim",
+            "type": "pistol_mod",
+            "en_name": "Maim",
+            "kr_name": "메임"
+        },
+        {
+            "name": "pathogen_rounds",
+            "type": "pistol_mod",
+            "en_name": "Pathogen Rounds",
+            "kr_name": "패서전 라운즈"
+        },
+        {
+            "name": "pistol_ammo_mutation",
+            "type": "pistol_mod",
+            "en_name": "Pistol Ammo Mutation",
+            "kr_name": "피스톨 애모 뮤테이션"
+        },
+        {
+            "name": "pistol_gambit",
+            "type": "pistol_mod",
+            "en_name": "Pistol Gambit",
+            "kr_name": "피스톨 갬빗"
+        },
+        {
+            "name": "pistol_pestilence",
+            "type": "pistol_mod",
+            "en_name": "Pistol Pestilence",
+            "kr_name": "피스톨 페스틸런스"
+        },
+        {
+            "name": "pressurized_magazine",
+            "type": "pistol_mod",
+            "en_name": "Pressurized Magazine",
+            "kr_name": "프레셔라이즈드 매거진"
+        },
+        {
+            "name": "primed_expel_corpus",
+            "type": "pistol_mod",
+            "en_name": "Primed Expel Corpus",
+            "kr_name": "프라임드 익스펠 코퍼스"
+        },
+        {
+            "name": "primed_expel_corrupted",
+            "type": "pistol_mod",
+            "en_name": "Primed Expel Corrupted",
+            "kr_name": "프라임드 익스펠 커럽티드"
+        },
+        {
+            "name": "primed_expel_grineer",
+            "type": "pistol_mod",
+            "en_name": "Primed Expel Grineer",
+            "kr_name": "프라임드 익스펠 그리니어"
+        },
+        {
+            "name": "primed_expel_infested",
+            "type": "pistol_mod",
+            "en_name": "Primed Expel Infested",
+            "kr_name": "프라임드 익스펠 인페스티드"
+        },
+        {
+            "name": "primed_heated_charge",
+            "type": "pistol_mod",
+            "en_name": "Primed Heated Charge",
+            "kr_name": "프라임드 히티드 차지"
+        },
+        {
+            "name": "primed_pistol_ammo_mutation",
+            "type": "pistol_mod",
+            "en_name": "Primed Pistol Ammo Mutation",
+            "kr_name": "프라임드 피스톨 애모 뮤테이션"
+        },
+        {
+            "name": "primed_pistol_gambit",
+            "type": "pistol_mod",
+            "en_name": "Primed Pistol Gambit",
+            "kr_name": "프라임드 피스톨 갬빗"
+        },
+        {
+            "name": "primed_quickdraw",
+            "type": "pistol_mod",
+            "en_name": "Primed Quickdraw",
+            "kr_name": "프라임드 퀵드로우"
+        },
+        {
+            "name": "primed_slip_magazine",
+            "type": "pistol_mod",
+            "en_name": "Primed Slip Magazine",
+            "kr_name": "프라임드 슬립 매거진"
+        },
+        {
+            "name": "primed_target_cracker",
+            "type": "pistol_mod",
+            "en_name": "Primed Target Cracker",
+            "kr_name": "프라임드 타겟 크랙커"
+        },
+        {
+            "name": "pummel",
+            "type": "pistol_mod",
+            "en_name": "Pummel",
+            "kr_name": "퍼멜"
+        },
+        {
+            "name": "reflex_draw",
+            "type": "pistol_mod",
+            "en_name": "Reflex Draw",
+            "kr_name": "리플렉스 드로우"
+        },
+        {
+            "name": "ruinous_extension",
+            "type": "pistol_mod",
+            "en_name": "Ruinous Extension",
+            "kr_name": "루이너스 익스텐션"
+        },
+        {
+            "name": "sharpened_bullets",
+            "type": "pistol_mod",
+            "en_name": "Sharpened Bullets",
+            "kr_name": "샤픈드 불릿"
+        },
+        {
+            "name": "spry_sights",
+            "type": "pistol_mod",
+            "en_name": "Spry Sights",
+            "kr_name": "스프라이 사이츠"
+        },
+        {
+            "name": "steady_hands",
+            "type": "pistol_mod",
+            "en_name": "Steady Hands",
+            "kr_name": "스테디 핸즈"
+        },
+        {
+            "name": "strafing_slide",
+            "type": "pistol_mod",
+            "en_name": "Strafing Slide",
+            "kr_name": "스트레이핑 슬라이드"
+        },
+        {
+            "name": "stunning_speed",
+            "type": "pistol_mod",
+            "en_name": "Stunning Speed",
+            "kr_name": "스터닝 스피드"
+        },
+        {
+            "name": "sure_shot",
+            "type": "pistol_mod",
+            "en_name": "Sure Shot",
+            "kr_name": "슈어 샷"
+        },
+        {
+            "name": "synth_charge",
+            "type": "pistol_mod",
+            "en_name": "Synth Charge",
+            "kr_name": "신스 차지"
+        },
+        {
+            "name": "tainted_clip",
+            "type": "pistol_mod",
+            "en_name": "Tainted Clip",
+            "kr_name": "테인티드 클립"
+        },
+        {
+            "name": "target_cracker",
+            "type": "pistol_mod",
+            "en_name": "Target Cracker",
+            "kr_name": "타겟 크랙커"
+        },
+        {
+            "name": "targeting_subsystem",
+            "type": "pistol_mod",
+            "en_name": "Targeting Subsystem",
+            "kr_name": "타게팅 서브시스템"
+        },
+        {
+            "name": "auger_strike",
+            "type": "melee_mod",
+            "en_name": "Auger Strike",
+            "kr_name": "어거 스트라이크"
+        },
+        {
+            "name": "berserker",
+            "type": "melee_mod",
+            "en_name": "Berserker",
+            "kr_name": "버서커"
+        },
+        {
+            "name": "blood_rush",
+            "type": "melee_mod",
+            "en_name": "Blood Rush",
+            "kr_name": "블러드 러쉬"
+        },
+        {
+            "name": "body_count",
+            "type": "melee_mod",
+            "en_name": "Body Count",
+            "kr_name": "바디 카운트"
+        },
+        {
+            "name": "buzz_kill",
+            "type": "melee_mod",
+            "en_name": "Buzz Kill",
+            "kr_name": "버즈 킬"
+        },
+        {
+            "name": "collision_force",
+            "type": "melee_mod",
+            "en_name": "Collision Force",
+            "kr_name": "콜리전 포스"
+        },
+        {
+            "name": "condition_overload",
+            "type": "melee_mod",
+            "en_name": "Condition Overload",
+            "kr_name": "컨디션 오버로드"
+        },
+        {
+            "name": "corrupt_charge",
+            "type": "melee_mod",
+            "en_name": "Corrupt Charge",
+            "kr_name": "커럽트 차지"
+        },
+        {
+            "name": "covert_lethality",
+            "type": "melee_mod",
+            "en_name": "Covert Lethality",
+            "kr_name": "코버트 리썰리티"
+        },
+        {
+            "name": "dispatch_overdrive",
+            "type": "melee_mod",
+            "en_name": "Dispatch Overdrive",
+            "kr_name": "디스패치 오버드라이브"
+        },
+        {
+            "name": "drifting_contact",
+            "type": "melee_mod",
+            "en_name": "Drifting Contact",
+            "kr_name": "드리프팅 컨택트"
+        },
+        {
+            "name": "enduring_affliction",
+            "type": "melee_mod",
+            "en_name": "Enduring Affliction",
+            "kr_name": "엔듀어링 어플릭션"
+        },
+        {
+            "name": "enduring_strike",
+            "type": "melee_mod",
+            "en_name": "Enduring Strike",
+            "kr_name": "엔듀어링 스트라이크"
+        },
+        {
+            "name": "energy_channel",
+            "type": "melee_mod",
+            "en_name": "Energy Channel",
+            "kr_name": "에너지 채널"
+        },
+        {
+            "name": "fever_strike",
+            "type": "melee_mod",
+            "en_name": "Fever Strike",
+            "kr_name": "피버 스트라이크"
+        },
+        {
+            "name": "finishing_touch",
+            "type": "melee_mod",
+            "en_name": "Finishing Touch",
+            "kr_name": "피니싱 터치"
+        },
+        {
+            "name": "focus_energy",
+            "type": "melee_mod",
+            "en_name": "Focus Energy",
+            "kr_name": "포커스 에너지"
+        },
+        {
+            "name": "fury",
+            "type": "melee_mod",
+            "en_name": "Fury",
+            "kr_name": "퓨리"
+        },
+        {
+            "name": "gladiator_might",
+            "type": "melee_mod",
+            "en_name": "Gladiator Might",
+            "kr_name": "글래디에이터 마이트"
+        },
+        {
+            "name": "gladiator_rush",
+            "type": "melee_mod",
+            "en_name": "Gladiator Rush",
+            "kr_name": "글래디에이터 러쉬"
+        },
+        {
+            "name": "gladiator_vice",
+            "type": "melee_mod",
+            "en_name": "Gladiator Vice",
+            "kr_name": "글래디에이터 바이스"
+        },
+        {
+            "name": "guardian_derision",
+            "type": "melee_mod",
+            "en_name": "Guardian Derision",
+            "kr_name": "가디언 디리젼"
+        },
+        {
+            "name": "healing_return",
+            "type": "melee_mod",
+            "en_name": "Healing Return",
+            "kr_name": "힐링 리턴"
+        },
+        {
+            "name": "heavy_trauma",
+            "type": "melee_mod",
+            "en_name": "Heavy Trauma",
+            "kr_name": "헤비 트라우마"
+        },
+        {
+            "name": "jagged_edge",
+            "type": "melee_mod",
+            "en_name": "Jagged Edge",
+            "kr_name": "재기드 엣지"
+        },
+        {
+            "name": "killing_blow",
+            "type": "melee_mod",
+            "en_name": "Killing Blow",
+            "kr_name": "킬링 블로우"
+        },
+        {
+            "name": "life_strike",
+            "type": "melee_mod",
+            "en_name": "Life Strike",
+            "kr_name": "라이프 스트라이크"
+        },
+        {
+            "name": "maiming_strike",
+            "type": "melee_mod",
+            "en_name": "Maiming Strike",
+            "kr_name": "메이밍 스트라이크"
+        },
+        {
+            "name": "molten_impact",
+            "type": "melee_mod",
+            "en_name": "Molten Impact",
+            "kr_name": "몰튼 임팩트"
+        },
+        {
+            "name": "motus_impact",
+            "type": "melee_mod",
+            "en_name": "Motus Impact",
+            "kr_name": "모터스 임팩트"
+        },
+        {
+            "name": "north_wind",
+            "type": "melee_mod",
+            "en_name": "North Wind",
+            "kr_name": "노스 윈드"
+        },
+        {
+            "name": "organ_shatter",
+            "type": "melee_mod",
+            "en_name": "Organ Shatter",
+            "kr_name": "오르건 섀터"
+        },
+        {
+            "name": "power_throw",
+            "type": "melee_mod",
+            "en_name": "Power Throw",
+            "kr_name": "파워 쓰로우"
+        },
+        {
+            "name": "pressure_point",
+            "type": "melee_mod",
+            "en_name": "Pressure Point",
+            "kr_name": "프레셔 포인트"
+        },
+        {
+            "name": "primed_fever_strike",
+            "type": "melee_mod",
+            "en_name": "Primed Fever Strike",
+            "kr_name": "프라임드 피버 스트라이크"
+        },
+        {
+            "name": "primed_heavy_trauma",
+            "type": "melee_mod",
+            "en_name": "Primed Heavy Trauma",
+            "kr_name": "프라임드 헤비 트라우마"
+        },
+        {
+            "name": "primed_pressure_point",
+            "type": "melee_mod",
+            "en_name": "Primed Pressure Point",
+            "kr_name": "프라임드 프레셔 포인트"
+        },
+        {
+            "name": "primed_reach",
+            "type": "melee_mod",
+            "en_name": "Primed Reach",
+            "kr_name": "프라임드 리치"
+        },
+        {
+            "name": "primed_smite_corpus",
+            "type": "melee_mod",
+            "en_name": "Primed Smite Corpus",
+            "kr_name": "프라임드 스마이트 코퍼스"
+        },
+        {
+            "name": "primed_smite_corrupted",
+            "type": "melee_mod",
+            "en_name": "Primed Smite Corrupted",
+            "kr_name": "프라임드 스마이트 커럽티드"
+        },
+        {
+            "name": "primed_smite_grineer",
+            "type": "melee_mod",
+            "en_name": "Primed Smite Grineer",
+            "kr_name": "프라임드 스마이트 그리니어"
+        },
+        {
+            "name": "primed_smite_infested",
+            "type": "melee_mod",
+            "en_name": "Primed Smite Infested",
+            "kr_name": "프라임드 스마이트 인페스티드"
+        },
+        {
+            "name": "proton_snap",
+            "type": "melee_mod",
+            "en_name": "Proton Snap",
+            "kr_name": "프론트 스냅"
+        },
+        {
+            "name": "quickening",
+            "type": "melee_mod",
+            "en_name": "Quickening",
+            "kr_name": "퀴크닝"
+        },
+        {
+            "name": "reflex_coil",
+            "type": "melee_mod",
+            "en_name": "Reflex Coil",
+            "kr_name": "리플렉스 코일"
+        },
+        {
+            "name": "relentless_combination",
+            "type": "melee_mod",
+            "en_name": "Relentless Combination",
+            "kr_name": "릴렌트리스 컴비네이션"
+        },
+        {
+            "name": "rending_strike",
+            "type": "melee_mod",
+            "en_name": "Rending Strike",
+            "kr_name": "렌딩 스트라이크"
+        },
+        {
+            "name": "seismic_wave",
+            "type": "melee_mod",
+            "en_name": "Seismic Wave",
+            "kr_name": "세이즈믹 웨이브"
+        },
+        {
+            "name": "shattering_impact",
+            "type": "melee_mod",
+            "en_name": "Shattering Impact",
+            "kr_name": "섀터링 임팩트"
+        },
+        {
+            "name": "shocking_touch",
+            "type": "melee_mod",
+            "en_name": "Shocking Touch",
+            "kr_name": "쇼킹 터치"
+        },
+        {
+            "name": "spoiled_strike",
+            "type": "melee_mod",
+            "en_name": "Spoiled Strike",
+            "kr_name": "스포일드 스트라이크"
+        },
+        {
+            "name": "strain_infection",
+            "type": "melee_mod",
+            "en_name": "Strain Infection",
+            "kr_name": "스트레인 인펙션"
+        },
+        {
+            "name": "sundering_strike",
+            "type": "melee_mod",
+            "en_name": "Sundering Strike",
+            "kr_name": "선더링 스트라이크"
+        },
+        {
+            "name": "tek_gravity",
+            "type": "melee_mod",
+            "en_name": "Tek Gravity",
+            "kr_name": "텍 그래비티"
+        },
+        {
+            "name": "true_punishment",
+            "type": "melee_mod",
+            "en_name": "True Punishment",
+            "kr_name": "트루 퍼니시먼트"
+        },
+        {
+            "name": "true_steel",
+            "type": "melee_mod",
+            "en_name": "True Steel",
+            "kr_name": "트루 스틸"
+        },
+        {
+            "name": "vicious_frost",
+            "type": "melee_mod",
+            "en_name": "Vicious Frost",
+            "kr_name": "비셔스 프로스트"
+        },
+        {
+            "name": "virulent_scourge",
+            "type": "melee_mod",
+            "en_name": "Virulent Scourge",
+            "kr_name": "비럴런트 스커지"
+        },
+        {
+            "name": "volcanic_edge",
+            "type": "melee_mod",
+            "en_name": "Volcanic Edge",
+            "kr_name": "볼캐닉 엣지"
+        },
+        {
+            "name": "voltaic_strike",
+            "type": "melee_mod",
+            "en_name": "Voltaic Strike",
+            "kr_name": "볼택 스트라이크"
+        },
+        {
+            "name": "weeping_wounds",
+            "type": "melee_mod",
+            "en_name": "Weeping Wounds",
+            "kr_name": "위핑 운즈"
+        },
+        {
+            "name": "whirlwind",
+            "type": "melee_mod",
+            "en_name": "Whirlwind",
+            "kr_name": "휠윈드"
+        },
+        {
+            "name": "saxum_thorax",
+            "type": "melee_mod",
+            "en_name": "Saxum Thorax",
+            "kr_name": "삭숨 쏘락스"
+        },
+        {
+            "name": "carnis_mandible",
+            "type": "melee_mod",
+            "en_name": "Carnis Mandible",
+            "kr_name": "카르니스 맨디블"
+        },
+        {
+            "name": "jugulus_barbs",
+            "type": "melee_mod",
+            "en_name": "Jugulus Barbs",
+            "kr_name": "저귤러스 밥스"
+        },
+        {
+            "name": "astral_twilight",
+            "type": "stance_mod",
+            "en_name": "Astral Twilight",
+            "kr_name": "아스트랄 트와일라잇"
+        },
+        {
+            "name": "atlantis_vulcan",
+            "type": "stance_mod",
+            "en_name": "Atlantis Vulcan",
+            "kr_name": "아틀란티스 불칸"
+        },
+        {
+            "name": "bleeding_willow",
+            "type": "stance_mod",
+            "en_name": "Bleeding Willow",
+            "kr_name": "불라당 윌로우"
+        },
+        {
+            "name": "blind_justice",
+            "type": "stance_mod",
+            "en_name": "Blind Justice",
+            "kr_name": "블라인드 저스티스"
+        },
+        {
+            "name": "brutal_tide",
+            "type": "stance_mod",
+            "en_name": "Brutal Tide",
+            "kr_name": "브루탈 타이드"
+        },
+        {
+            "name": "bullet_dance",
+            "type": "stance_mod",
+            "en_name": "Bullet Dance",
+            "kr_name": "불릿 댄스"
+        },
+        {
+            "name": "burning_wasp",
+            "type": "stance_mod",
+            "en_name": "Burning Wasp",
+            "kr_name": "버닝 와스프"
+        },
+        {
+            "name": "carving_mantis",
+            "type": "stance_mod",
+            "en_name": "Carving Mantis",
+            "kr_name": "카빙 맨티스"
+        },
+        {
+            "name": "clashing_forest",
+            "type": "stance_mod",
+            "en_name": "Clashing Forest",
+            "kr_name": "클래싱 포레스트"
+        },
+        {
+            "name": "cleaving_whirlwind",
+            "type": "stance_mod",
+            "en_name": "Cleaving Whirlwind",
+            "kr_name": "클리빙 휠윈드"
+        },
+        {
+            "name": "coiling_viper",
+            "type": "stance_mod",
+            "en_name": "Coiling Viper",
+            "kr_name": "코일링 바이퍼"
+        },
