@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang = "en">
+<html>
+    <head>
+        <meta charset = "UTF-8">
+        <meta name="viewport" content="user-scalable=0, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width" />
+        <meta http-equiv="Cache-Control" content="no-cache">
+        <meta http-equiv="Exprires" content="-1">
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta name="naver-site-verification" content="7087f2ce2ff5d8b0dd001a29d816856c7deb5807" />
+        <title>Warframe Trade Status | Notice</title>
+        <meta name="description" content="This is a Warframe trade status site to analyze the prices of Warframe items and show the trade status at a glance.">
+        <meta name="keyword" content="warframe, weapon, mod, trade, platinum, price, status, market, shop, wts, set, statistics">
+        <link rel="canonical" href="https://www.warframets.shop/">
+        <link rel="alternate" href="https://www.warframets.shop/notice/">
+        <link rel="alternate" href="https://www.warframets.shop/category/">
+        <link rel="alternate" href="https://www.warframets.shop/economy/">
+        <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+        <!---------------------------------------------------------------------->
+        <link rel="stylesheet" type = "text/css" href = "{{ url_for('static', filename = 'css/info.css', v = 0.1) }}" />
+        <link rel="stylesheet" type = "text/css" href = "{{ url_for('static', filename = 'css/index.css', v = 0.1) }}" />
+        <link rel="stylesheet" type = "text/css" href = "{{ url_for('static', filename = 'css/table.css', v = 0.1) }}" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/v4-shims.css">
+        <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&amp;" rel="stylesheet">
+        <!---------------------------------------------------------------------->
+        <!--<script src="{{ url_for('static', filename = 'js/color_change.js') }}" type="text/javascript"></script>-->
+        <script src="{{ url_for('static', filename = 'js/AutoComplete.min_en.js') }}" type="text/javascript"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+        <script src="https://cdn.datatables.net/t/bs-3.3.6/jqc-1.12.0,dt-1.10.11/datatables.min.js"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176036085-1"></script>
+        <script data-ad-client="ca-pub-1998661031679526" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-176036085-1');
+        </script>
+    </head>
+    <body>
+        <script>
+            window.onload = function () {
+                var input = document.getElementById("item_name");
+                input.addEventListener('click', function(){
+                    var all_items = {{ all_item_en | tojson }};
+                    new AutoComplete(document.querySelector('#item_name'), all_items);
+                });
+            };
+        </script>
+        <div>
+            <ul class="header">
+                <li class="header_logo">
+                    <a href="/en/">
+                        <img alt="WTS" src="{{ url_for('static', filename = './image/icon/logo.png', v = 0.1) }}">
+                    </a>
+                </li>
+                <li class="header_menubar">
+                    <script>
+                        function pop_menu(){
+                            var button = document.getElementById("x_button");
+                            var close = document.getElementById("menubar");
+                            button.style.display = "table";
+                            close.style.animationName = "movemenu_0";
+                            close.style.display = "block";
+                        };
+                        
+                        function delay() {
+                            var close = document.getElementById("menubar");
+                            close.style.display = "none";
+                            close.style.display = "none";
+                        };
+                        
+                        function close_menu(){
+                            var button = document.getElementById("x_button");
+                            var close = document.getElementById("menubar");
+                            button.style.display = "none";
+                            close.style.animationName = "movemenu_1";
+                            setTimeout("delay()", 500);
+                        };
+                    </script>
+                    <span class="icon_1" onclick="pop_menu()"><i class="fa fa-bars fa-2x"></i></span>
+                    <span class="icon_2" onclick="close_menu()" id="x_button"><i class="fa fa-times fa-2x"></i></span>
+                    <ul class="mobile_menus" id="menubar">
+                        <div class="text_menus_0">
+                            <a>Menu</a>
+                        </div>
+                        <li>
+                            <span class="icon_10"><i class="fas fa-book fa-2x"></i></span>
+                            <a class="text_menus_1" href="/en/notice/">Notice</a>
+                        </li>
+                        <li>
+                            <span class="icon_10"><i class="fas fa-filter fa-2x"></i></span>
+                            <a class="text_menus_2" href="/en/category/">Category</a>
+                        </li>
+                        <li>
+                            <span class="icon_10"><i class="fas fa-search-dollar fa-2x"></i></span>
+                            <a class="text_menus_3" href="/en/economy/">Economy</a>
+                        </li>
+                    </ul>
+                </li>
+                <!--<div class="header_color">
+                    <i class="fas fa-palette"></i>
+                </div>-->
+                <li class="header_language">
+                    <i class="fas fa-globe"></i>
+                    <a>KO</a>
+                    <div class="header_language_lists">
+                        <a class="header_language_lists_1" href="/">한국어</a>
+                        <a class="header_language_lists_2"  href="/en/">English</a>
+                    </div>
+                </li>
+                <li class="header_search">
+                    <script>
+                        function input_search(){
+                            var msg = document.getElementById("item_name").value;
+                            if (msg == ""){
+                                console.log("Not Found Item");
+                            }else {
+                                var links = 'result/' + String(msg);
+                                location.href = "/en/" + links;
+                            }
+                        };                   
+                    </script>
+                    <div class="auto_search">
+                        <div class="text_boxs"></div>
+                        <input type="text" id="item_name" onkeypress="if(event.keyCode==13) {input_search(); return false;}" placeholder="검색" autocomplete="yes">
+                        <span class="icon" onclick="input_search()"><i class="fa fa-search auto_search_icon"></i></span>
+                    </div>
+                </li>
+                <li class="header_menu">
+                    <div class="text_boxss"></div>
+                    <a class="text_menu"><span class="icon_11"><i class="fa fa-bars"></i></span>Menu</a>
+                    <ul class="header_menu_nav">
+                        <li>
+                            <div class="text_boxss_1"></div>
+                            <a class="text_menu_1" href="/en/notice/">
+                                <span class="icon_11"><i class="fas fa-book"></i></span>Notice</a>
+                        </li>
+                        <li>
+                            <div class="text_boxss_2"></div>
+                            <a class="text_menu_2" href="/en/category/"><span class="icon_11"><i class="fas fa-filter"></i></span>Category</a>
+                        </li>
+                        <li>
+                            <div class="text_boxss_3"></div>
+                            <a class="text_menu_3" href="/en/economy/"><span class="icon_11"><i class="fas fa-search-dollar"></i></span>Economy</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="header_info">
+                    <!--<div class="header_color_box">
+                        <i class="fas fa-palette"></i>
+                        <p>Color</p>
+                        <div class="header_color_list">
+                            <div class="header_color_list_1">
+                                <a onclick="change_bg_2('#2a2a2a'); change_lb_2('#dbdcd9'); change_ft_2('#ffffff'); change_mu_2('#ff7373'); change_wp_2('#ffffff');">기본</a>
+                                <input type="color" value="#2a2a2a" disabled>
+                                <input type="color" value="#dbdcd9" disabled>
+                                <input type="color" value="#ffffff" disabled>
+                                <input type="color" value="#ff7373" disabled>
+                                <input type="color" value="#ffffff" disabled>
+                            </div>
+                            <div class="header_color_list_2">
+                                <a onclick="change_bg_2('#27343F'); change_lb_2('#BECBD0'); change_ft_2('#FFFFFF'); change_mu_2('#DF3A3A'); change_wp_2('#E9EBF1');">톰브라운</a>
+                                <input type="color" value="#27343F" disabled>
+                                <input type="color" value="#BECBD0" disabled>
+                                <input type="color" value="#FFFFFF" disabled>
+                                <input type="color" value="#DF3A3A" disabled>
+                                <input type="color" value="#E9EBF1" disabled>
+                            </div>
+                            <div class="header_color_list_3">
+                                <a onclick="change_bg_2('#A2B59F'); change_lb_2('#E2D2D2'); change_ft_2('#E3E2B4'); change_mu_2('#BFC8D7'); change_wp_2('#ffffff');">파스텔</a>
+                                <input type="color" value="#A2B59F" disabled>
+                                <input type="color" value="#E2D2D2" disabled>
+                                <input type="color" value="#E3E2B4" disabled>
+                                <input type="color" value="#BFC8D7" disabled>
+                                <input type="color" value="#ffffff" disabled>
+                            </div>
+                            <div class="header_color_list_4">
+                                <a onclick="change_ct_2();">커스텀</a>
+                                <input type="color" value="#2a2a2a" id="custom_color_1">
+                                <input type="color" value="#dbdcd9" id="custom_color_2">
+                                <input type="color" value="#ffffff" id="custom_color_3">
+                                <input type="color" value="#ff7373" id="custom_color_4">
+                                <input type="color" value="#ffffff" id="custom_color_5">
+                            </div>
+                        </div>
+                    </div>-->
+                    <div class="header_language_box">
+                        <i class="fas fa-globe"></i>
+                        <p>EN</p>
+                        <div class="header_language_list">
+                            <a class="header_language_list_1"  href="/">한국어</a>
+                            <a class="header_language_list_2"  href="/en/">English</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="menu">
+            <div style="background-color: #ffffff; float: left; width: 100%; min-height: 50px; height: auto;">
+                <script>
+                    function find_menu_value(){
+                        var value = document.getElementById("info_value").innerHTML;
+                        return value;
+                    };
+                    
+                    function search_value_1(click_id){
+                        var menu_value = find_menu_value();
+                        var button = click_id.value;
+                        
+                        if(button == 1) {
+                            var value = "Notice";
+                            document.getElementById("info_value").innerHTML = value;
+                            document.getElementById("change_info").innerHTML = "{% for i in range(0, len_data_0) %}<hr><div class='info_1'><div class='info_image'><img alt='R.PC' src='{{ url_for('static', filename = image_0[i], v = 0.1) }}'></div><div class='info_write'><a>{{ write_0[i] }}</a></div><div class='info_date'><a>{{ date_0[i] }}</a></div><div class='info_subject'><a>{{ subject_0[i] }}</a></div>{% if contents_image_0[i]|length %}<div class='info_img'><img alt='WTS_Image' src='{{ url_for('static', filename = contents_image_0[i], v = 0.1) }}'></div>{% endif %}<div class='info_contents'>{% autoescape false %}<a>{{ contents_0[i] | replace('#', '<br/>') }}</a>{% endautoescape %}</div></div><hr>{% endfor %}";
+                        }else if(button == 2) {
+                            var value = "WarframeTS (Warframe Trade Status)";
+                            document.getElementById("info_value").innerHTML = value;
+                            document.getElementById("change_info").innerHTML = "{% for i in range(0, len_data_1) %}<hr><div class='info_1'><div class='info_image'><img alt='R.PC' src='{{ url_for('static', filename = image_1[i], v = 0.1) }}'></div><div class='info_write'><a>{{ write_1[i] }}</a></div><div class='info_date'><a>{{ date_1[i] }}</a></div><div class='info_subject'><a>{{ subject_1[i] }}</a></div>{% if contents_image_1[i]|length %}<div class='info_img'><img alt='WTS_Image' src='{{ url_for('static', filename = contents_image_1[i], v = 0.1) }}'></div>{% endif %}<div class='info_contents'>{% autoescape false %}<a>{{ contents_1[i] | replace('#', '<br/>') }}</a>{% endautoescape %}</div></div><hr>{% endfor %}";
+                        }else if(button == 3) {
+                            var value = "Q&A";
+                            document.getElementById("info_value").innerHTML = value;
+                            document.getElementById("change_info").innerHTML = "{% for i in range(0, len_data_2) %}<hr><div class='info_1'><div class='info_image'><img alt='R.PC' src='{{ url_for('static', filename = image_2[i], v = 0.1) }}'></div><div class='info_write'><a>{{ write_2[i] }}</a></div><div class='info_date'><a>{{ date_2[i] }}</a></div><div class='info_subject'><a>{{ subject_2[i] }}</a></div>{% if contents_image_2[i]|length %}<div class='info_img'><img alt='WTS_Image' src='{{ url_for('static', filename = contents_image_2[i], v = 0.1) }}'></div>{% endif %}{% if youtube_2[i]|length %}<div class='info_youtube'><iframe width='560' height='315' src='{{ youtube_2[i] }}' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe></div>{% endif %}<div class='info_contents'>{% autoescape false %}<a>{{ contents_2[i] | replace('#', '<br/>') }}</a>{% endautoescape %}</div></div><hr>{% endfor %}";
+                        }else {
+                            console.log("Error!");
+                        };
+                    };
+                </script>
+                <div class="info_0">
+                    <a id="info_value_1">Info</a>
+                </div>
+                <div class="info_4">
+                    <ul>
+                        <li class="info_top_1" onclick="search_value_1(this)" value="1">
+                            <a>Notice</a>
+                        </li>
+                        <li class="info_top_1" onclick="search_value_1(this)" value="2">
+                            <a>WarframeTS</a>
+                        </li>
+                        <li class="info_top_1" onclick="search_value_1(this)" value="3">
+                            <a>Q&#38;A</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="menu_1">
+            <div style="background-color: #ffffff; float: left; width: 100%; height: 1620px; overflow-y: scroll;">
+                <div class="info_0">
+                    <a id="info_value">Notice</a>
+                </div>
+                <div id="change_info" class="notice_bg">
+                    {% for i in range(0, len_data_0) %}
+                    <hr>
+                    <div class="info_1">
+                        <div class="info_image">
+                            <img alt="R.PC" src="{{ url_for('static', filename = image_0[i], v = 0.1) }}">
+                        </div>
+                        <div class="info_write">
+                            <a>{{ write_0[i] }}</a>
+                        </div>
+                        <div class="info_date">
+                            <a>{{ date_0[i] }}</a>
+                        </div>
+                        <div class="info_subject">
+                            <a>{{ subject_0[i] }}</a>
+                        </div>
+                        {% if contents_image_0[i]|length %}
+                        <div class="info_img">
+                            <img alt="WTS_Image" src="{{ url_for('static', filename = contents_image_0[i], v = 0.1) }}">
+                        </div>
+                        {% endif %}
+                        {% if youtube_0[i]|length %}
+                        <div class="info_youtube">
+                            <iframe width="560" height="315" src="{{ youtube_0[i] }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        {% endif %}
+                        <div class="info_contents">
+                            {% autoescape false %}
+                            <a>{{ contents_0[i] | replace("#", "<br/>") }}</a>
+                            {% endautoescape %}
+                        </div>
+                    </div>
+                    <hr>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+            
+        <div class="footer">
+            <div class="footer_box_0">
+                <div class="footer_box_1">
+                    <div class="footer_link">
+                        <h3>Link</h3>
+                        <a href="https://warframe.market/">Warframe Market</a>
+                        <br>
+                        <a href="https://github.com/Hyeonho-Lee/warframets">Github</a>
+                    </div>
+                    <div class="footer_dev">
+                        <h3>Maker</h3>
+                        <a>R.PC (Developer)</a>
+                        <br>
+                        <a>Tomatotomato<br>(Design)</a>
+                    </div>
+                    <div class="footer_email">
+                        <h3>Email</h3>
+                        <a>prohenho7138@gmail.com</a>
+                    </div>
+                </div>
+                
+                <div class="footer_info">
+                    <h3>Info</h3>
+                    <a>
+                        WarframeTS was created by Warframe fan user and is not related to Digital Extremes.
+                    </a>
+                    <br>
+                    <a>
+                        The data used for this site was provided by https://warframe.market/.
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer_box_2">
+                <div class="footer_count">
+                    <div class="footer_count_1">
+                        <h3>Cumulative Visitor</h3>
+                        <a>{{ visit_count }}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>

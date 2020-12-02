@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang = "en">
+<html>
+    <head>
+        <meta charset = "UTF-8">
+        <meta name="viewport" content="user-scalable=0, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width" />
+        <meta http-equiv="Cache-Control" content="no-cache">
+        <meta http-equiv="Exprires" content="-1">
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta name="naver-site-verification" content="7087f2ce2ff5d8b0dd001a29d816856c7deb5807" />
+        <title>Warframe Trade Status | Category</title>
+        <meta name="description" content="This is a Warframe trade status site to analyze the prices of Warframe items and show the trade status at a glance.">
+        <meta name="keyword" content="warframe, weapon, mod, trade, platinum, price, status, market, shop, wts, set, statistics">
+        <link rel="canonical" href="https://www.warframets.shop/">
+        <link rel="alternate" href="https://www.warframets.shop/notice/">
+        <link rel="alternate" href="https://www.warframets.shop/category/">
+        <link rel="alternate" href="https://www.warframets.shop/economy/">
+        <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+        <!---------------------------------------------------------------------->
+        <link rel="stylesheet" type = "text/css" href = "{{ url_for('static', filename = 'css/result.css', v = 0.1) }}" />
+        <link rel="stylesheet" type = "text/css" href = "{{ url_for('static', filename = 'css/index.css', v = 0.1) }}" />
+        <link rel="stylesheet" type = "text/css" href = "{{ url_for('static', filename = 'css/table.css', v = 0.1) }}" />
+        <link rel="stylesheet" type = "text/css" href = "{{ url_for('static', filename = 'css/category.css', v = 0.1) }}" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/v4-shims.css">
+        <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&amp;" rel="stylesheet">
+        <!---------------------------------------------------------------------->
+        <script src="{{ url_for('static', filename = 'js/AutoComplete.min_en.js') }}" type="text/javascript"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+        <script src="https://cdn.datatables.net/t/bs-3.3.6/jqc-1.12.0,dt-1.10.11/datatables.min.js"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176036085-1"></script>
+        <script data-ad-client="ca-pub-1998661031679526" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-176036085-1');
+        </script>
+    </head>
+    <body>
+        <script>
+            window.onload = function () {
+                var input = document.getElementById("item_name");
+                input.addEventListener('click', function(){
+                    var all_items = {{ all_item_en | tojson }};
+                    new AutoComplete(document.querySelector('#item_name'), all_items);
+                });
+            };
+        </script>
+        <div>
+            <ul class="header">
+                <li class="header_logo">
+                    <a href="/en/">
+                        <img alt="WTS" src="{{ url_for('static', filename = './image/icon/logo.png', v = 0.1) }}">
+                    </a>
+                </li>
+                <li class="header_menubar">
+                    <script>
+                        function pop_menu(){
+                            var button = document.getElementById("x_button");
+                            var close = document.getElementById("menubar");
+                            button.style.display = "table";
+                            close.style.animationName = "movemenu_0";
+                            close.style.display = "block";
+                        };
+                        
+                        function delay() {
+                            var close = document.getElementById("menubar");
+                            close.style.display = "none";
+                            close.style.display = "none";
+                        };
+                        
+                        function close_menu(){
+                            var button = document.getElementById("x_button");
+                            var close = document.getElementById("menubar");
+                            button.style.display = "none";
+                            close.style.animationName = "movemenu_1";
+                            setTimeout("delay()", 500);
+                        };
+                    </script>
+                    <span class="icon_1" onclick="pop_menu()"><i class="fa fa-bars fa-2x"></i></span>
+                    <span class="icon_2" onclick="close_menu()" id="x_button"><i class="fa fa-times fa-2x"></i></span>
+                    <ul class="mobile_menus" id="menubar">
+                        <div class="text_menus_0">
+                            <a>Menu</a>
+                        </div>
+                        <li>
+                            <span class="icon_10"><i class="fas fa-book fa-2x"></i></span>
+                            <a class="text_menus_1" href="/en/notice/">Notice</a>
+                        </li>
+                        <li>
+                            <span class="icon_10"><i class="fas fa-filter fa-2x"></i></span>
+                            <a class="text_menus_2" href="/en/category/">Category</a>
+                        </li>
+                        <li>
+                            <span class="icon_10"><i class="fas fa-search-dollar fa-2x"></i></span>
+                            <a class="text_menus_3" href="/en/economy/">Economy</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="header_language">
+                    <i class="fas fa-globe"></i>
+                    <a>EN</a>
+                    <div class="header_language_lists">
+                        <a class="header_language_lists_1" href="/">한국어</a>
+                        <a class="header_language_lists_2"  href="/en/">English</a>
+                    </div>
+                </li>
+                <li class="header_search">
+                    <script>
+                        function input_search(){
+                            var msg = document.getElementById("item_name").value;
+                            if (msg == ""){
+                                console.log("Not Found Item");
+                            }else {
+                                var links = 'result/' + String(msg);
+                                location.href = "/en/" + links;
+                            }
+                        };                   
+                    </script>
+                    <div class="auto_search">
+                        <div class="text_boxs"></div>
+                        <input type="text" id="item_name" onkeypress="if(event.keyCode==13) {input_search(); return false;}" placeholder="Search" autocomplete="yes">
+                        <span class="icon" onclick="input_search()"><i class="fa fa-search"></i></span>
+                    </div>
+                </li>
+                <li class="header_menu">
+                    <div class="text_boxss"></div>
+                    <a class="text_menu"><span class="icon_11"><i class="fa fa-bars"></i></span>Menu</a>
+                    <ul class="header_menu_nav">
+                        <li>
+                            <div class="text_boxss_1"></div>
+                            <a class="text_menu_1" href="/en/notice/">
+                                <span class="icon_11"><i class="fas fa-book"></i></span>Notice</a>
+                        </li>
+                        <li>
+                            <div class="text_boxss_2"></div>
+                            <a class="text_menu_2" href="/en/category/"><span class="icon_11"><i class="fas fa-filter"></i></span>Category</a>
+                        </li>
+                        <li>
+                            <div class="text_boxss_3"></div>
+                            <a class="text_menu_3" href="/en/economy/"><span class="icon_11"><i class="fas fa-search-dollar"></i></span>Economy</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="header_info">
+                    <div class="header_language_box">
+                        <i class="fas fa-globe"></i>
+                        <p>EN</p>
+                        <div class="header_language_list">
+                            <a class="header_language_list_1"  href="/">한국어</a>
+                            <a class="header_language_list_2"  href="/en/">English</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="menu">
+            <div style="background-color: #ffffff; float: left; width: 100%; min-height: 20px; height: auto;">
+                <script>
+                    function find_down(){
+                        var button = document.getElementById("c_0");
+                        button.style.display = "none";
+                    };
+
+                    function find_up_1(){
+                        var button = document.getElementById("c_0");
+                        if(button.style.display == "block") {
+                                button.style.display = "none";
+                        }else {
+                            button.style.display = "block";
+                            var item_0 = document.getElementById("weapon");
+                            item_0.style.display = "table";
+                            var item_1 = document.getElementById("mode");
+                            item_1.style.display = "none";
+                            var item_2 = document.getElementById("etc");
+                            item_2.style.display = "none";
+                            var item_3 = document.getElementById("rec");
+                            item_3.style.display = "none";
+                        }
+                    };
+
+                    function find_up_2(){
+                        var button = document.getElementById("c_0");
+                        if(button.style.display == "block") {
+                            button.style.display = "none";
+                        }else {
+                            button.style.display = "block";
+                            var item_0 = document.getElementById("weapon");
+                            item_0.style.display = "none";
+                            var item_1 = document.getElementById("mode");
+                            item_1.style.display = "table";
+                            var item_2 = document.getElementById("etc");
+                            item_2.style.display = "none";
+                            var item_3 = document.getElementById("rec");
+                            item_3.style.display = "none";
+                        }
+                    };
+                    
+                    function find_up_3(){
+                        var button = document.getElementById("c_0");
+                        if(button.style.display == "block") {
+                            button.style.display = "none";
+                        }else {
+                            button.style.display = "block";
+                            var item_0 = document.getElementById("weapon");
+                            item_0.style.display = "none";
+                            var item_1 = document.getElementById("mode");
+                            item_1.style.display = "none";
+                            var item_2 = document.getElementById("etc");
+                            item_2.style.display = "table";
+                            var item_3 = document.getElementById("rec");
+                            item_3.style.display = "none";
+                        }
+                    };
+                    
+                    function find_up_4(){
+                        var button = document.getElementById("c_0");
+                        if(button.style.display == "block") {
+                            button.style.display = "none";
+                        }else {
+                            button.style.display = "block";
+                            var item_0 = document.getElementById("weapon");
+                            item_0.style.display = "none";
+                            var item_1 = document.getElementById("mode");
+                            item_1.style.display = "none";
+                            var item_2 = document.getElementById("etc");
+                            item_2.style.display = "none";
+                            var item_3 = document.getElementById("rec");
+                            item_3.style.display = "table";
+                        }
+                    };
+                    
+                    function href_site(click_value){
+                        var input_item = click_value.innerText;
+                        location.href = "/result/" + input_item;
+                    };
+                    
+                    function search_value(click_id){
+                        var button = click_id.value;
+                        if(button == 1) {
+                            var value = "Primed mod Collection";
+                            document.getElementById("category_value").innerHTML = value;
+                            document.getElementById("change_category").innerHTML = "{% for i in range(0, rec_len_data_0) %}<div class='item_0'><p><img alt='{{ rec_en_name_0[i] }}' src='{{ url_for('static', filename = rec_image_0[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ rec_name_0[i] }}'>{{ rec_en_name_0[i] }}</a><div class='item_0_text'>Price: {{ rec_price_0[i] }}</div></div>{% endfor %}";
+                        }else if(button == 2) {
+                            var value = "Warframe";
+                            document.getElementById("category_value").innerHTML = value;
+                            document.getElementById("change_category").innerHTML = "{% for i in range(0, type_warframe_len) %}<div class='item_0'><p><img alt='{{ type_warframe_item_en[i] }}' src='{{ url_for('static', filename = type_warframe_path_1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_warframe_item[i] }}'>{{ type_warframe_item_en[i] }}</a><div class='item_0_text'>Price: {{ type_warframe_price[i] }}</div></div>{% endfor %}";
+                        }else if(button == 3) {
+                            var value = "Primary";
+                            document.getElementById("category_value").innerHTML = value;
+                            document.getElementById("change_category").innerHTML = "{% for i in range(0, type_primary_len) %}<div class='item_0'><p><img alt='{{ type_primary_item_en[i] }}' src='{{ url_for('static', filename = type_primary_path_1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_primary_item[i] }}'>{{ type_primary_item_en[i] }}</a><div class='item_0_text'>Price: {{ type_primary_price[i] }}</div></div>{% endfor %}";
+                        }else if(button == 4) {
+                            var value = "Secondary";
+                            document.getElementById("category_value").innerHTML = value;
+                            document.getElementById("change_category").innerHTML = "{% for i in range(0, type_secondary_len) %}<div class='item_0'><p><img alt='{{ type_secondary_item_en[i] }}' src='{{ url_for('static', filename = type_secondary_path_1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_secondary_item[i] }}'>{{ type_secondary_item_en[i] }}</a><div class='item_0_text'>Price: {{ type_secondary_price[i] }}</div></div>{% endfor %}";
+                        }else if(button == 5) {
+                            var value = "Melee";
+                            document.getElementById("category_value").innerHTML = value;
+                            document.getElementById("change_category").innerHTML = "{% for i in range(0, type_melee_len) %}<div class='item_0'><p><img alt='{{ type_melee_item_en[i] }}' src='{{ url_for('static', filename = type_melee_path_1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_melee_item[i] }}'>{{ type_melee_item_en[i] }}</a><div class='item_0_text'>Price: {{ type_melee_price[i] }}</div></div>{% endfor %}";
+                        }else if(button == 6) {
+                            var value = "Warframe mod";
+                            document.getElementById("category_value").innerHTML = value;
+                            document.getElementById("change_category").innerHTML = "{% for i in range(0, type_warframe_mod_len) %}<div class='item_0'><p><img alt='{{ type_warframe_mod_item_en[i] }}' src='{{ url_for('static', filename = type_warframe_mod_path_1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_warframe_mod_item[i] }}'>{{ type_warframe_mod_item_en[i] }}</a><div class='item_0_text'>Price: {{ type_warframe_mod_price[i] }}</div></div>{% endfor %}";
+                        }else if(button == 8) {
+                            var value = "Primary mod";
+                            document.getElementById("category_value").innerHTML = value;
+                            document.getElementById("change_category").innerHTML = "{% for i in range(0, type_primary_mod_len) %}<div class='item_0'><p><img alt='{{ type_primary_mod_item_en[i] }}' src='{{ url_for('static', filename = type_primary_mod_path_1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_primary_mod_item[i] }}'>{{ type_primary_mod_item_en[i] }}</a><div class='item_0_text'>Price: {{ type_primary_mod_price[i] }}</div></div>{% endfor %}";
+                        }else if(button == 9) {
+                            var value = "Secondary mod";
+                            document.getElementById("category_value").innerHTML = value;
+                            document.getElementById("change_category").innerHTML = "{% for i in range(0, type_secondary_mod_len) %}<div class='item_0'><p><img alt='{{ type_secondary_mod_item_en[i] }}' src='{{ url_for('static', filename = type_secondary_mod_path_1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_secondary_mod_item[i] }}'>{{ type_secondary_mod_item_en[i] }}</a><div class='item_0_text'>Price: {{ type_secondary_mod_price[i] }}</div></div>{% endfor %}";
+                        }else if(button == 10) {
+                            var value = "Melee mod";
+                            document.getElementById("category_value").innerHTML = value;
+                            document.getElementById("change_category").innerHTML = "{% for i in range(0, type_melee_mod_len) %}<div class='item_0'><p><img alt='{{ type_melee_mod_item_en[i] }}' src='{{ url_for('static', filename = type_melee_mod_path_1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_melee_mod_item[i] }}'>{{ type_melee_mod_item_en[i] }}</a><div class='item_0_text'>Price: {{ type_melee_mod_price[i] }}</div></div>{% endfor %}";
+                        }else if(button == 13) {
+                            var value = "Companion mod";
+                            document.getElementById("category_value").innerHTML = value;
+                            document.getElementById("change_category").innerHTML = "{% for i in range(0, type_companion_mod_len) %}<div class='item_0'><p><img alt='{{ type_companion_mod_item_en[i] }}' src='{{ url_for('static', filename = type_companion_mod_path_1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_companion_mod_item[i] }}'>{{ type_companion_mod_item_en[i] }}</a><div class='item_0_text'>Price: {{ type_companion_mod_price[i] }}</div></div>{% endfor %}";
+                        }else if(button == 14) {
+                            var value = "Archwing mod";
+                            document.getElementById("category_value").innerHTML = value;
+                            document.getElementById("change_category").innerHTML = "{% for i in range(0, type_archwing_mod_len) %}<div class='item_0'><p><img alt='{{ type_archwing_mod_item_en[i] }}' src='{{ url_for('static', filename = type_archwing_mod_path_1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_archwing_mod_item[i] }}'>{{ type_archwing_mod_item_en[i] }}</a><div class='item_0_text'>Price: {{ type_archwing_mod_price[i] }}</div></div>{% endfor %}";
+                        }else if(button == 15) {
+                            var value = "Necramech mod";
+                            document.getElementById("category_value").innerHTML = value;
+                            document.getElementById("change_category").innerHTML = "{% for i in range(0, type_necramech_mod_len) %}<div class='item_0'><p><img alt='{{ type_necramech_mod_item_en[i] }}' src='{{ url_for('static', filename = type_necramech_mod_path_1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_necramech_mod_item[i] }}'>{{ type_necramech_mod_item_en[i] }}</a><div class='item_0_text'>Price: {{ type_necramech_mod_price[i] }}</div></div>{% endfor %}";
+                        }else if(button == 11) {
+                            var value = "Arcane";
+                            document.getElementById("category_value").innerHTML = value;
+                            document.getElementById("change_category").innerHTML = "{% for i in range(0, type_arcane_len) %}<div class='item_0'><p><img alt='{{ type_arcane_item_en[i] }}' src='{{ url_for('static', filename = type_arcane_path_1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_arcane_item[i] }}'>{{ type_arcane_item_en[i] }}</a><div class='item_0_text'>Price: {{ type_arcane_price[i] }}</div></div>{% endfor %}";
+                        }else if(button == 12) {
+                            var value = "Update";
+                            document.getElementById("category_value").innerHTML = value;
+                            document.getElementById("change_category").innerHTML = "{% for i in range(0, type_etc_len) %}<div class='item_0'><p><img alt='{{ type_etc_item_en[i] }}' src='{{ url_for('static', filename = type_etc_path_1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_etc_item[i] }}'>{{ type_etc_item_en[i] }}</a><div class='item_0_text'>Price: {{ type_etc_price[i] }}</div></div>{% endfor %}";
+                        }else {
+                            var value = "ETC";
+                            document.getElementById("category_value").innerHTML = value;
+                            document.getElementById("change_category").innerHTML = "ETC";
+                        };
+                    };
+                </script>
+                <div class="category_0">
+                    <a>Category</a>
+                </div>
+                <div class="category_1">
+                    <ul>
+                        <li class="category_top" onclick="find_up_4()">
+                            <a>Recommend</a>
+                        </li>
+                        <li class="category_top" id="search_value" onclick="find_down(), search_value(this)" value="2">
+                            <a>Warframe</a>
+                        </li>
+                        <li class="category_top" onclick="find_up_1()">
+                            <a>Weapon</a>
+                        </li>
+                        <li class="category_top" onclick="find_up_2()">
+                            <a>Mod</a>
+                        </li>
+                        <li class="category_top" onclick="find_up_3()">
+                            <a>ETC</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="category_2" id="c_0">
+                    <ul class="weapon" id="weapon">
+                        <li onclick="search_value(this)" value="3">
+                            <a>Primary</a>
+                        </li>
+                        <li onclick="search_value(this)" value="4">
+                            <a>Secondary</a>
+                        </li>
+                        <li onclick="search_value(this)" value="5">
+                            <a>Melee</a>
+                        </li>
+                    </ul>
+                    <ul class="mode" id="mode">
+                        <li onclick="search_value(this)" value="6">
+                            <a>Warframe mod</a>
+                        </li>
+                        <li onclick="search_value(this)" value="8">
+                            <a>Primary mod</a>
+                        </li>
+                        <li onclick="search_value(this)" value="9">
+                            <a>Secondary mod</a>
+                        </li>
+                        <li onclick="search_value(this)" value="10">
+                            <a>Melee mod</a>
+                        </li>
+                        <li onclick="search_value(this)" value="13">
+                            <a>Companion mod</a>
+                        </li>
+                        <li onclick="search_value(this)" value="14">
+                            <a>Archwing mod</a>
+                        </li>
+                        <li onclick="search_value(this)" value="15">
+                            <a>Necramech mod</a>
+                        </li>
+                    </ul>
+                    <ul class="etc" id="etc">
+                        <li onclick="search_value(this)" value="11">
+                            <a>Arcane</a>
+                        </li>
+                        <li onclick="search_value(this)" value="12">
+                            <a>Update</a>
+                        </li>
+                    </ul>
+                    <ul class="rec" id="rec">
+                        <li onclick="search_value(this)" value="1">
+                            <a>Primed mod Collection</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        
+        <div class="menu_1">
+            <div style="background-color: #ffffff; float: left; width: 100%; min-height: 50px; height: auto;">
+                <script>
+                    function find_menu_value(){
+                        var value = document.getElementById("category_value").innerHTML;
+                        return value;
+                    };
+                    
+                    function search_value_1(click_id){
+                        var menu_value = find_menu_value();
+                        var button = click_id.value;
+                        
+                        if(menu_value == "Warframe") {
+                            if(button == 1) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_warframe_len) %}<div class='item_0'><p><img alt='{{ type_warframe_item_en_pr1[i] }}' src='{{ url_for('static', filename = type_warframe_path_1_pr1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_warframe_item_pr1[i] }}'>{{ type_warframe_item_en_pr1[i] }}</a><div class='item_0_text'>Price: {{ type_warframe_price_pr1[i] }}</div></div>{% endfor %}";
+                                click_id.value = 2;
+                            }else if(button == 2) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_warframe_len) %}<div class='item_0'><p><img alt='{{ type_warframe_item_en_pr2[i] }}' src='{{ url_for('static', filename = type_warframe_path_1_pr2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_warframe_item_pr2[i] }}'>{{ type_warframe_item_en_pr2[i] }}</a><div class='item_0_text'>Price: {{ type_warframe_price_pr2[i] }}</div></div>{% endfor %}";
+                                click_id.value = 1;
+                            }else if(button == 3) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_warframe_len) %}<div class='item_0'><p><img alt='{{ type_warframe_item_en_pe1[i] }}' src='{{ url_for('static', filename = type_warframe_path_1_pe1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_warframe_item_pe1[i] }}'>{{ type_warframe_item_en_pe1[i] }}</a><div class='item_0_text'>Percent: {{ type_warframe_percent_pe1[i] }}%</div></div>{% endfor %}";
+                                click_id.value = 4;
+                            }else if(button == 4) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_warframe_len) %}<div class='item_0'><p><img alt='{{ type_warframe_item_en_pe2[i] }}' src='{{ url_for('static', filename = type_warframe_path_1_pe2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_warframe_item_pe2[i] }}'>{{ type_warframe_item_en_pe2[i] }}</a><div class='item_0_text'>Percent: {{ type_warframe_percent_pe2[i] }}%</div></div>{% endfor %}";
+                                click_id.value = 3;
+                            }else if(button == 5) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_warframe_len) %}<div class='item_0'><p><img alt='{{ type_warframe_item_en_vo1[i] }}' src='{{ url_for('static', filename = type_warframe_path_1_vo1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_warframe_item_vo1[i] }}'>{{ type_warframe_item_en_vo1[i] }}</a><div class='item_0_text'>Volume: {{ type_warframe_volume_vo1[i] }}</div></div>{% endfor %}";
+                                click_id.value = 6;
+                            }else if(button == 6) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_warframe_len) %}<div class='item_0'><p><img alt='{{ type_warframe_item_en_vo2[i] }}' src='{{ url_for('static', filename = type_warframe_path_1_vo2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_warframe_item_vo2[i] }}'>{{ type_warframe_item_en_vo2[i] }}</a><div class='item_0_text'>Volume: {{ type_warframe_volume_vo2[i] }}</div></div>{% endfor %}";
+                                click_id.value = 5;
+                            }else {
+                                console.log("Error!");
+                            };
+                        }else if(menu_value == "Primary") {
+                            if(button == 1) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_primary_len) %}<div class='item_0'><p><img alt='{{ type_primary_item_en_pr1[i] }}' src='{{ url_for('static', filename = type_primary_path_1_pr1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_primary_item_pr1[i] }}'>{{ type_primary_item_en_pr1[i] }}</a><div class='item_0_text'>Price: {{ type_primary_price_pr1[i] }}</div></div>{% endfor %}";
+                                click_id.value = 2;
+                            }else if(button == 2) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_primary_len) %}<div class='item_0'><p><img alt='{{ type_primary_item_en_pr2[i] }}' src='{{ url_for('static', filename = type_primary_path_1_pr2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_primary_item_pr2[i] }}'>{{ type_primary_item_en_pr2[i] }}</a><div class='item_0_text'>Price: {{ type_primary_price_pr2[i] }}</div></div>{% endfor %}";
+                                click_id.value = 1;
+                            }else if(button == 3) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_primary_len) %}<div class='item_0'><p><img alt='{{ type_primary_item_en_pe1[i] }}' src='{{ url_for('static', filename = type_primary_path_1_pe1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_primary_item_pe1[i] }}'>{{ type_primary_item_en_pe1[i] }}</a><div class='item_0_text'>Percent: {{ type_primary_percent_pe1[i] }}%</div></div>{% endfor %}";
+                                click_id.value = 4;
+                            }else if(button == 4) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_primary_len) %}<div class='item_0'><p><img alt='{{ type_primary_item_en_pe2[i] }}' src='{{ url_for('static', filename = type_primary_path_1_pe2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_primary_item_pe2[i] }}'>{{ type_primary_item_en_pe2[i] }}</a><div class='item_0_text'>Percent: {{ type_primary_percent_pe2[i] }}%</div></div>{% endfor %}";
+                                click_id.value = 3;
+                            }else if(button == 5) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_primary_len) %}<div class='item_0'><p><img alt='{{ type_primary_item_en_vo1[i] }}' src='{{ url_for('static', filename = type_primary_path_1_vo1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_primary_item_vo1[i] }}'>{{ type_primary_item_en_vo1[i] }}</a><div class='item_0_text'>Volume: {{ type_primary_volume_vo1[i] }}</div></div>{% endfor %}";
+                                click_id.value = 6;
+                            }else if(button == 6) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_primary_len) %}<div class='item_0'><p><img alt='{{ type_primary_item_en_vo2[i] }}' src='{{ url_for('static', filename = type_primary_path_1_vo2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_primary_item_vo2[i] }}'>{{ type_primary_item_en_vo2[i] }}</a><div class='item_0_text'>Volume: {{ type_primary_volume_vo2[i] }}</div></div>{% endfor %}";
+                                click_id.value = 5;
+                            }else {
+                                console.log("Error!");
+                            };
+                        }else if(menu_value == "Secondary") {
+                            if(button == 1) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_secondary_len) %}<div class='item_0'><p><img alt='{{ type_secondary_item_en_pr1[i] }}' src='{{ url_for('static', filename = type_secondary_path_1_pr1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_secondary_item_pr1[i] }}'>{{ type_secondary_item_en_pr1[i] }}</a><div class='item_0_text'>Price: {{ type_secondary_price_pr1[i] }}</div></div>{% endfor %}";
+                                click_id.value = 2;
+                            }else if(button == 2) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_secondary_len) %}<div class='item_0'><p><img alt='{{ type_secondary_item_en_pr2[i] }}' src='{{ url_for('static', filename = type_secondary_path_1_pr2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_secondary_item_pr2[i] }}'>{{ type_secondary_item_en_pr2[i] }}</a><div class='item_0_text'>Price: {{ type_secondary_price_pr2[i] }}</div></div>{% endfor %}";
+                                click_id.value = 1;
+                            }else if(button == 3) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_secondary_len) %}<div class='item_0'><p><img alt='{{ type_secondary_item_en_pe1[i] }}' src='{{ url_for('static', filename = type_secondary_path_1_pe1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_secondary_item_pe1[i] }}'>{{ type_secondary_item_en_pe1[i] }}</a><div class='item_0_text'>Percent: {{ type_secondary_percent_pe1[i] }}%</div></div>{% endfor %}";
+                                click_id.value = 4;
+                            }else if(button == 4) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_secondary_len) %}<div class='item_0'><p><img alt='{{ type_secondary_item_en_pe2[i] }}' src='{{ url_for('static', filename = type_secondary_path_1_pe2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_secondary_item_pe2[i] }}'>{{ type_secondary_item_en_pe2[i] }}</a><div class='item_0_text'>Percent: {{ type_secondary_percent_pe2[i] }}%</div></div>{% endfor %}";
+                                click_id.value = 3;
+                            }else if(button == 5) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_secondary_len) %}<div class='item_0'><p><img alt='{{ type_secondary_item_en_vo1[i] }}' src='{{ url_for('static', filename = type_secondary_path_1_vo1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_secondary_item_vo1[i] }}'>{{ type_secondary_item_en_vo1[i] }}</a><div class='item_0_text'>Volume: {{ type_secondary_volume_vo1[i] }}</div></div>{% endfor %}";
+                                click_id.value = 6;
+                            }else if(button == 6) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_secondary_len) %}<div class='item_0'><p><img alt='{{ type_secondary_item_en_vo2[i] }}' src='{{ url_for('static', filename = type_secondary_path_1_vo2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_secondary_item_vo2[i] }}'>{{ type_secondary_item_en_vo2[i] }}</a><div class='item_0_text'>Volume: {{ type_secondary_volume_vo2[i] }}</div></div>{% endfor %}";
+                                click_id.value = 5;
+                            }else {
+                                console.log("Error!");
+                            };
+                        }else if(menu_value == "Melee") {
+                            if(button == 1) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_melee_len) %}<div class='item_0'><p><img alt='{{ type_melee_item_en_pr1[i] }}' src='{{ url_for('static', filename = type_melee_path_1_pr1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_melee_item_pr1[i] }}'>{{ type_melee_item_en_pr1[i] }}</a><div class='item_0_text'>Price: {{ type_melee_price_pr1[i] }}</div></div>{% endfor %}";
+                                click_id.value = 2;
+                            }else if(button == 2) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_melee_len) %}<div class='item_0'><p><img alt='{{ type_melee_item_en_pr2[i] }}' src='{{ url_for('static', filename = type_melee_path_1_pr2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_melee_item_pr2[i] }}'>{{ type_melee_item_en_pr2[i] }}</a><div class='item_0_text'>Price: {{ type_melee_price_pr2[i] }}</div></div>{% endfor %}";
+                                click_id.value = 1;
+                            }else if(button == 3) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_melee_len) %}<div class='item_0'><p><img alt='{{ type_melee_item_en_pe1[i] }}' src='{{ url_for('static', filename = type_melee_path_1_pe1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_melee_item_pe1[i] }}'>{{ type_melee_item_en_pe1[i] }}</a><div class='item_0_text'>Percent: {{ type_melee_percent_pe1[i] }}%</div></div>{% endfor %}";
+                                click_id.value = 4;
+                            }else if(button == 4) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_melee_len) %}<div class='item_0'><p><img alt='{{ type_melee_item_en_pe2[i] }}' src='{{ url_for('static', filename = type_melee_path_1_pe2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_melee_item_pe2[i] }}'>{{ type_melee_item_en_pe2[i] }}</a><div class='item_0_text'>Percent: {{ type_melee_percent_pe2[i] }}%</div></div>{% endfor %}";
+                                click_id.value = 3;
+                            }else if(button == 5) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_melee_len) %}<div class='item_0'><p><img alt='{{ type_melee_item_en_vo1[i] }}' src='{{ url_for('static', filename = type_melee_path_1_vo1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_melee_item_vo1[i] }}'>{{ type_melee_item_en_vo1[i] }}</a><div class='item_0_text'>Volume: {{ type_melee_volume_vo1[i] }}</div></div>{% endfor %}";
+                                click_id.value = 6;
+                            }else if(button == 6) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_melee_len) %}<div class='item_0'><p><img alt='{{ type_melee_item_en_vo2[i] }}' src='{{ url_for('static', filename = type_melee_path_1_vo2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_melee_item_vo2[i] }}'>{{ type_melee_item_en_vo2[i] }}</a><div class='item_0_text'>Volume: {{ type_melee_volume_vo2[i] }}</div></div>{% endfor %}";
+                                click_id.value = 5;
+                            }else {
+                                console.log("Error!");
+                            };
+                        }else if(menu_value == "Warframe mod") {
+                            if(button == 1) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_warframe_mod_len) %}<div class='item_0'><p><img alt='{{ type_warframe_mod_item_en_pr1[i] }}' src='{{ url_for('static', filename = type_warframe_mod_path_1_pr1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_warframe_mod_item_pr1[i] }}'>{{ type_warframe_mod_item_en_pr1[i] }}</a><div class='item_0_text'>Price: {{ type_warframe_mod_price_pr1[i] }}</div></div>{% endfor %}";
+                                click_id.value = 2;
+                            }else if(button == 2) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_warframe_mod_len) %}<div class='item_0'><p><img alt='{{ type_warframe_mod_item_en_pr2[i] }}' src='{{ url_for('static', filename = type_warframe_mod_path_1_pr2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_warframe_mod_item_pr2[i] }}'>{{ type_warframe_mod_item_en_pr2[i] }}</a><div class='item_0_text'>Price: {{ type_warframe_mod_price_pr2[i] }}</div></div>{% endfor %}";
+                                click_id.value = 1;
+                            }else if(button == 3) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_warframe_mod_len) %}<div class='item_0'><p><img alt='{{ type_warframe_mod_item_en_pe1[i] }}' src='{{ url_for('static', filename = type_warframe_mod_path_1_pe1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_warframe_mod_item_pe1[i] }}'>{{ type_warframe_mod_item_en_pe1[i] }}</a><div class='item_0_text'>Percent: {{ type_warframe_mod_percent_pe1[i] }}%</div></div>{% endfor %}";
+                                click_id.value = 4;
+                            }else if(button == 4) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_warframe_mod_len) %}<div class='item_0'><p><img alt='{{ type_warframe_mod_item_en_pe2[i] }}' src='{{ url_for('static', filename = type_warframe_mod_path_1_pe2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_warframe_mod_item_pe2[i] }}'>{{ type_warframe_mod_item_en_pe2[i] }}</a><div class='item_0_text'>Percent: {{ type_warframe_mod_percent_pe2[i] }}%</div></div>{% endfor %}";
+                                click_id.value = 3;
+                            }else if(button == 5) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_warframe_mod_len) %}<div class='item_0'><p><img alt='{{ type_warframe_mod_item_en_vo1[i] }}' src='{{ url_for('static', filename = type_warframe_mod_path_1_vo1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_warframe_mod_item_vo1[i] }}'>{{ type_warframe_mod_item_en_vo1[i] }}</a><div class='item_0_text'>Volume: {{ type_warframe_mod_volume_vo1[i] }}</div></div>{% endfor %}";
+                                click_id.value = 6;
+                            }else if(button == 6) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_warframe_mod_len) %}<div class='item_0'><p><img alt='{{ type_warframe_mod_item_en_vo2[i] }}' src='{{ url_for('static', filename = type_warframe_mod_path_1_vo2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_warframe_mod_item_vo2[i] }}'>{{ type_warframe_mod_item_en_vo2[i] }}</a><div class='item_0_text'>Volume: {{ type_warframe_mod_volume_vo2[i] }}</div></div>{% endfor %}";
+                                click_id.value = 5;
+                            }else {
+                                console.log("Error!");
+                            };
+                        }else if(menu_value == "Primary mod") {
+                            if(button == 1) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_primary_mod_len) %}<div class='item_0'><p><img alt='{{ type_primary_mod_item_en_pr1[i] }}' src='{{ url_for('static', filename = type_primary_mod_path_1_pr1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_primary_mod_item_pr1[i] }}'>{{ type_primary_mod_item_en_pr1[i] }}</a><div class='item_0_text'>Price: {{ type_primary_mod_price_pr1[i] }}</div></div>{% endfor %}";
+                                click_id.value = 2;
+                            }else if(button == 2) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_primary_mod_len) %}<div class='item_0'><p><img alt='{{ type_primary_mod_item_en_pr2[i] }}' src='{{ url_for('static', filename = type_primary_mod_path_1_pr2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_primary_mod_item_pr2[i] }}'>{{ type_primary_mod_item_en_pr2[i] }}</a><div class='item_0_text'>Price: {{ type_primary_mod_price_pr2[i] }}</div></div>{% endfor %}";
+                                click_id.value = 1;
+                            }else if(button == 3) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_primary_mod_len) %}<div class='item_0'><p><img alt='{{ type_primary_mod_item_en_pe1[i] }}' src='{{ url_for('static', filename = type_primary_mod_path_1_pe1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_primary_mod_item_pe1[i] }}'>{{ type_primary_mod_item_en_pe1[i] }}</a><div class='item_0_text'>Percent: {{ type_primary_mod_percent_pe1[i] }}%</div></div>{% endfor %}";
+                                click_id.value = 4;
+                            }else if(button == 4) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_primary_mod_len) %}<div class='item_0'><p><img alt='{{ type_primary_mod_item_en_pe2[i] }}' src='{{ url_for('static', filename = type_primary_mod_path_1_pe2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_primary_mod_item_pe2[i] }}'>{{ type_primary_mod_item_en_pe2[i] }}</a><div class='item_0_text'>Percent: {{ type_primary_mod_percent_pe2[i] }}%</div></div>{% endfor %}";
+                                click_id.value = 3;
+                            }else if(button == 5) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_primary_mod_len) %}<div class='item_0'><p><img alt='{{ type_primary_mod_item_en_vo1[i] }}' src='{{ url_for('static', filename = type_primary_mod_path_1_vo1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_primary_mod_item_vo1[i] }}'>{{ type_primary_mod_item_en_vo1[i] }}</a><div class='item_0_text'>Volume: {{ type_primary_mod_volume_vo1[i] }}</div></div>{% endfor %}";
+                                click_id.value = 6;
+                            }else if(button == 6) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_primary_mod_len) %}<div class='item_0'><p><img alt='{{ type_primary_mod_item_en_vo2[i] }}' src='{{ url_for('static', filename = type_primary_mod_path_1_vo2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_primary_mod_item_vo2[i] }}'>{{ type_primary_mod_item_en_vo2[i] }}</a><div class='item_0_text'>Volume: {{ type_primary_mod_volume_vo2[i] }}</div></div>{% endfor %}";
+                                click_id.value = 5;
+                            }else {
+                                console.log("Error!");
+                            };
+                        }else if(menu_value == "Secondary mod") {
+                            if(button == 1) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_secondary_mod_len) %}<div class='item_0'><p><img alt='{{ type_secondary_mod_item_en_pr1[i] }}' src='{{ url_for('static', filename = type_secondary_mod_path_1_pr1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_secondary_mod_item_pr1[i] }}'>{{ type_secondary_mod_item_en_pr1[i] }}</a><div class='item_0_text'>Price: {{ type_secondary_mod_price_pr1[i] }}</div></div>{% endfor %}";
+                                click_id.value = 2;
+                            }else if(button == 2) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_secondary_mod_len) %}<div class='item_0'><p><img alt='{{ type_secondary_mod_item_en_pr2[i] }}' src='{{ url_for('static', filename = type_secondary_mod_path_1_pr2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_secondary_mod_item_pr2[i] }}'>{{ type_secondary_mod_item_en_pr2[i] }}</a><div class='item_0_text'>Price: {{ type_secondary_mod_price_pr2[i] }}</div></div>{% endfor %}";
+                                click_id.value = 1;
+                            }else if(button == 3) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_secondary_mod_len) %}<div class='item_0'><p><img alt='{{ type_secondary_mod_item_en_pe1[i] }}' src='{{ url_for('static', filename = type_secondary_mod_path_1_pe1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_secondary_mod_item_pe1[i] }}'>{{ type_secondary_mod_item_en_pe1[i] }}</a><div class='item_0_text'>Percent: {{ type_secondary_mod_percent_pe1[i] }}%</div></div>{% endfor %}";
+                                click_id.value = 4;
+                            }else if(button == 4) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_secondary_mod_len) %}<div class='item_0'><p><img alt='{{ type_secondary_mod_item_en_pe2[i] }}' src='{{ url_for('static', filename = type_secondary_mod_path_1_pe2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_secondary_mod_item_pe2[i] }}'>{{ type_secondary_mod_item_en_pe2[i] }}</a><div class='item_0_text'>Percent: {{ type_secondary_mod_percent_pe2[i] }}%</div></div>{% endfor %}";
+                                click_id.value = 3;
+                            }else if(button == 5) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_secondary_mod_len) %}<div class='item_0'><p><img alt='{{ type_secondary_mod_item_en_vo1[i] }}' src='{{ url_for('static', filename = type_secondary_mod_path_1_vo1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_secondary_mod_item_vo1[i] }}'>{{ type_secondary_mod_item_en_vo1[i] }}</a><div class='item_0_text'>Volume: {{ type_secondary_mod_volume_vo1[i] }}</div></div>{% endfor %}";
+                                click_id.value = 6;
+                            }else if(button == 6) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_secondary_mod_len) %}<div class='item_0'><p><img alt='{{ type_secondary_mod_item_en_vo2[i] }}' src='{{ url_for('static', filename = type_secondary_mod_path_1_vo2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_secondary_mod_item_vo2[i] }}'>{{ type_secondary_mod_item_en_vo2[i] }}</a><div class='item_0_text'>Volume: {{ type_secondary_mod_volume_vo2[i] }}</div></div>{% endfor %}";
+                                click_id.value = 5;
+                            }else {
+                                console.log("Error!");
+                            };
+                        }else if(menu_value == "Melee mod") {
+                            if(button == 1) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_melee_mod_len) %}<div class='item_0'><p><img alt='{{ type_melee_mod_item_en_pr1[i] }}' src='{{ url_for('static', filename = type_melee_mod_path_1_pr1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_melee_mod_item_pr1[i] }}'>{{ type_melee_mod_item_en_pr1[i] }}</a><div class='item_0_text'>Price: {{ type_melee_mod_price_pr1[i] }}</div></div>{% endfor %}";
+                                click_id.value = 2;
+                            }else if(button == 2) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_melee_mod_len) %}<div class='item_0'><p><img alt='{{ type_melee_mod_item_en_pr2[i] }}' src='{{ url_for('static', filename = type_melee_mod_path_1_pr2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_melee_mod_item_pr2[i] }}'>{{ type_melee_mod_item_en_pr2[i] }}</a><div class='item_0_text'>Price: {{ type_melee_mod_price_pr2[i] }}</div></div>{% endfor %}";
+                                click_id.value = 1;
+                            }else if(button == 3) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_melee_mod_len) %}<div class='item_0'><p><img alt='{{ type_melee_mod_item_en_pe1[i] }}' src='{{ url_for('static', filename = type_melee_mod_path_1_pe1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_melee_mod_item_pe1[i] }}'>{{ type_melee_mod_item_en_pe1[i] }}</a><div class='item_0_text'>Percent: {{ type_melee_mod_percent_pe1[i] }}%</div></div>{% endfor %}";
+                                click_id.value = 4;
+                            }else if(button == 4) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_melee_mod_len) %}<div class='item_0'><p><img alt='{{ type_melee_mod_item_en_pe2[i] }}' src='{{ url_for('static', filename = type_melee_mod_path_1_pe2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_melee_mod_item_pe2[i] }}'>{{ type_melee_mod_item_en_pe2[i] }}</a><div class='item_0_text'>Percent: {{ type_melee_mod_percent_pe2[i] }}%</div></div>{% endfor %}";
+                                click_id.value = 3;
+                            }else if(button == 5) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_melee_mod_len) %}<div class='item_0'><p><img alt='{{ type_melee_mod_item_en_vo1[i] }}' src='{{ url_for('static', filename = type_melee_mod_path_1_vo1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_melee_mod_item_vo1[i] }}'>{{ type_melee_mod_item_en_vo1[i] }}</a><div class='item_0_text'>Volume: {{ type_melee_mod_volume_vo1[i] }}</div></div>{% endfor %}";
+                                click_id.value = 6;
+                            }else if(button == 6) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_melee_mod_len) %}<div class='item_0'><p><img alt='{{ type_melee_mod_item_en_vo2[i] }}' src='{{ url_for('static', filename = type_melee_mod_path_1_vo2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_melee_mod_item_vo2[i] }}'>{{ type_melee_mod_item_en_vo2[i] }}</a><div class='item_0_text'>Volume: {{ type_melee_mod_volume_vo2[i] }}</div></div>{% endfor %}";
+                                click_id.value = 5;
+                            }else {
+                                console.log("Error!");
+                            };
+                        }else if(menu_value == "Companion mod") {
+                            if(button == 1) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_companion_mod_len) %}<div class='item_0'><p><img alt='{{ type_companion_mod_item_en_pr1[i] }}' src='{{ url_for('static', filename = type_companion_mod_path_1_pr1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_companion_mod_item_pr1[i] }}'>{{ type_companion_mod_item_en_pr1[i] }}</a><div class='item_0_text'>Price: {{ type_companion_mod_price_pr1[i] }}</div></div>{% endfor %}";
+                                click_id.value = 2;
+                            }else if(button == 2) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_companion_mod_len) %}<div class='item_0'><p><img alt='{{ type_companion_mod_item_en_pr2[i] }}' src='{{ url_for('static', filename = type_companion_mod_path_1_pr2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_companion_mod_item_pr2[i] }}'>{{ type_companion_mod_item_en_pr2[i] }}</a><div class='item_0_text'>Price: {{ type_companion_mod_price_pr2[i] }}</div></div>{% endfor %}";
+                                click_id.value = 1;
+                            }else if(button == 3) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_companion_mod_len) %}<div class='item_0'><p><img alt='{{ type_companion_mod_item_en_pe1[i] }}' src='{{ url_for('static', filename = type_companion_mod_path_1_pe1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_companion_mod_item_pe1[i] }}'>{{ type_companion_mod_item_en_pe1[i] }}</a><div class='item_0_text'>Percent: {{ type_companion_mod_percent_pe1[i] }}%</div></div>{% endfor %}";
+                                click_id.value = 4;
+                            }else if(button == 4) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_companion_mod_len) %}<div class='item_0'><p><img alt='{{ type_companion_mod_item_en_pe2[i] }}' src='{{ url_for('static', filename = type_companion_mod_path_1_pe2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_companion_mod_item_pe2[i] }}'>{{ type_companion_mod_item_en_pe2[i] }}</a><div class='item_0_text'>Percent: {{ type_companion_mod_percent_pe2[i] }}%</div></div>{% endfor %}";
+                                click_id.value = 3;
+                            }else if(button == 5) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_companion_mod_len) %}<div class='item_0'><p><img alt='{{ type_companion_mod_item_en_vo1[i] }}' src='{{ url_for('static', filename = type_companion_mod_path_1_vo1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_companion_mod_item_vo1[i] }}'>{{ type_companion_mod_item_en_vo1[i] }}</a><div class='item_0_text'>Volume: {{ type_companion_mod_volume_vo1[i] }}</div></div>{% endfor %}";
+                                click_id.value = 6;
+                            }else if(button == 6) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_companion_mod_len) %}<div class='item_0'><p><img alt='{{ type_companion_mod_item_en_vo2[i] }}' src='{{ url_for('static', filename = type_companion_mod_path_1_vo2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_companion_mod_item_vo2[i] }}'>{{ type_companion_mod_item_en_vo2[i] }}</a><div class='item_0_text'>Volume: {{ type_companion_mod_volume_vo2[i] }}</div></div>{% endfor %}";
+                                click_id.value = 5;
+                            }else {
+                                console.log("Error!");
+                            };
+                        }else if(menu_value == "Archwing mod") {
+                            if(button == 1) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_archwing_mod_len) %}<div class='item_0'><p><img alt='{{ type_archwing_mod_item_en_pr1[i] }}' src='{{ url_for('static', filename = type_archwing_mod_path_1_pr1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_archwing_mod_item_pr1[i] }}'>{{ type_archwing_mod_item_en_pr1[i] }}</a><div class='item_0_text'>Price: {{ type_archwing_mod_price_pr1[i] }}</div></div>{% endfor %}";
+                                click_id.value = 2;
+                            }else if(button == 2) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_archwing_mod_len) %}<div class='item_0'><p><img alt='{{ type_archwing_mod_item_en_pr2[i] }}' src='{{ url_for('static', filename = type_archwing_mod_path_1_pr2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_archwing_mod_item_pr2[i] }}'>{{ type_archwing_mod_item_en_pr2[i] }}</a><div class='item_0_text'>Price: {{ type_archwing_mod_price_pr2[i] }}</div></div>{% endfor %}";
+                                click_id.value = 1;
+                            }else if(button == 3) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_archwing_mod_len) %}<div class='item_0'><p><img alt='{{ type_archwing_mod_item_en_pe1[i] }}' src='{{ url_for('static', filename = type_archwing_mod_path_1_pe1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_archwing_mod_item_pe1[i] }}'>{{ type_archwing_mod_item_en_pe1[i] }}</a><div class='item_0_text'>Percent: {{ type_archwing_mod_percent_pe1[i] }}%</div></div>{% endfor %}";
+                                click_id.value = 4;
+                            }else if(button == 4) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_archwing_mod_len) %}<div class='item_0'><p><img alt='{{ type_archwing_mod_item_en_pe2[i] }}' src='{{ url_for('static', filename = type_archwing_mod_path_1_pe2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_archwing_mod_item_pe2[i] }}'>{{ type_archwing_mod_item_en_pe2[i] }}</a><div class='item_0_text'>Percent: {{ type_archwing_mod_percent_pe2[i] }}%</div></div>{% endfor %}";
+                                click_id.value = 3;
+                            }else if(button == 5) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_archwing_mod_len) %}<div class='item_0'><p><img alt='{{ type_archwing_mod_item_en_vo1[i] }}' src='{{ url_for('static', filename = type_archwing_mod_path_1_vo1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_archwing_mod_item_vo1[i] }}'>{{ type_archwing_mod_item_en_vo1[i] }}</a><div class='item_0_text'>Volume: {{ type_archwing_mod_volume_vo1[i] }}</div></div>{% endfor %}";
+                                click_id.value = 6;
+                            }else if(button == 6) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_archwing_mod_len) %}<div class='item_0'><p><img alt='{{ type_archwing_mod_item_en_vo2[i] }}' src='{{ url_for('static', filename = type_archwing_mod_path_1_vo2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_archwing_mod_item_vo2[i] }}'>{{ type_archwing_mod_item_en_vo2[i] }}</a><div class='item_0_text'>Volume: {{ type_archwing_mod_volume_vo2[i] }}</div></div>{% endfor %}";
+                                click_id.value = 5;
+                            }else {
+                                console.log("Error!");
+                            };
+                        }else if(menu_value == "Necramech mod") {
+                            if(button == 1) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_necramech_mod_len) %}<div class='item_0'><p><img alt='{{ type_necramech_mod_item_en_pr1[i] }}' src='{{ url_for('static', filename = type_necramech_mod_path_1_pr1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_necramech_mod_item_pr1[i] }}'>{{ type_necramech_mod_item_en_pr1[i] }}</a><div class='item_0_text'>Price: {{ type_necramech_mod_price_pr1[i] }}</div></div>{% endfor %}";
+                                click_id.value = 2;
+                            }else if(button == 2) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_necramech_mod_len) %}<div class='item_0'><p><img alt='{{ type_necramech_mod_item_en_pr2[i] }}' src='{{ url_for('static', filename = type_necramech_mod_path_1_pr2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_necramech_mod_item_pr2[i] }}'>{{ type_necramech_mod_item_en_pr2[i] }}</a><div class='item_0_text'>Price: {{ type_necramech_mod_price_pr2[i] }}</div></div>{% endfor %}";
+                                click_id.value = 1;
+                            }else if(button == 3) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_necramech_mod_len) %}<div class='item_0'><p><img alt='{{ type_necramech_mod_item_en_pe1[i] }}' src='{{ url_for('static', filename = type_necramech_mod_path_1_pe1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_necramech_mod_item_pe1[i] }}'>{{ type_necramech_mod_item_en_pe1[i] }}</a><div class='item_0_text'>Percent: {{ type_necramech_mod_percent_pe1[i] }}%</div></div>{% endfor %}";
+                                click_id.value = 4;
+                            }else if(button == 4) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_necramech_mod_len) %}<div class='item_0'><p><img alt='{{ type_necramech_mod_item_en_pe2[i] }}' src='{{ url_for('static', filename = type_necramech_mod_path_1_pe2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_necramech_mod_item_pe2[i] }}'>{{ type_necramech_mod_item_en_pe2[i] }}</a><div class='item_0_text'>Percent: {{ type_necramech_mod_percent_pe2[i] }}%</div></div>{% endfor %}";
+                                click_id.value = 3;
+                            }else if(button == 5) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_necramech_mod_len) %}<div class='item_0'><p><img alt='{{ type_necramech_mod_item_en_vo1[i] }}' src='{{ url_for('static', filename = type_necramech_mod_path_1_vo1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_necramech_mod_item_vo1[i] }}'>{{ type_necramech_mod_item_en_vo1[i] }}</a><div class='item_0_text'>Volume: {{ type_necramech_mod_volume_vo1[i] }}</div></div>{% endfor %}";
+                                click_id.value = 6;
+                            }else if(button == 6) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_necramech_mod_len) %}<div class='item_0'><p><img alt='{{ type_necramech_mod_item_en_vo2[i] }}' src='{{ url_for('static', filename = type_necramech_mod_path_1_vo2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_necramech_mod_item_vo2[i] }}'>{{ type_necramech_mod_item_en_vo2[i] }}</a><div class='item_0_text'>Volume: {{ type_necramech_mod_volume_vo2[i] }}</div></div>{% endfor %}";
+                                click_id.value = 5;
+                            }else {
+                                console.log("Error!");
+                            };
+                        }else if(menu_value == "Arcane") {
+                            if(button == 1) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_arcane_len) %}<div class='item_0'><p><img alt='{{ type_arcane_item_en_pr1[i] }}' src='{{ url_for('static', filename = type_arcane_path_1_pr1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_arcane_item_pr1[i] }}'>{{ type_arcane_item_en_pr1[i] }}</a><div class='item_0_text'>Price: {{ type_arcane_price_pr1[i] }}</div></div>{% endfor %}";
+                                click_id.value = 2;
+                            }else if(button == 2) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_arcane_len) %}<div class='item_0'><p><img alt='{{ type_arcane_item_en_pr2[i] }}' src='{{ url_for('static', filename = type_arcane_path_1_pr2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_arcane_item_pr2[i] }}'>{{ type_arcane_item_en_pr2[i] }}</a><div class='item_0_text'>Price: {{ type_arcane_price_pr2[i] }}</div></div>{% endfor %}";
+                                click_id.value = 1;
+                            }else if(button == 3) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_arcane_len) %}<div class='item_0'><p><img alt='{{ type_arcane_item_en_pe1[i] }}' src='{{ url_for('static', filename = type_arcane_path_1_pe1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_arcane_item_pe1[i] }}'>{{ type_arcane_item_en_pe1[i] }}</a><div class='item_0_text'>Percent: {{ type_arcane_percent_pe1[i] }}%</div></div>{% endfor %}";
+                                click_id.value = 4;
+                            }else if(button == 4) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_arcane_len) %}<div class='item_0'><p><img alt='{{ type_arcane_item_en_pe2[i] }}' src='{{ url_for('static', filename = type_arcane_path_1_pe2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_arcane_item_pe2[i] }}'>{{ type_arcane_item_en_pe2[i] }}</a><div class='item_0_text'>Percent: {{ type_arcane_percent_pe2[i] }}%</div></div>{% endfor %}";
+                                click_id.value = 3;
+                            }else if(button == 5) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_arcane_len) %}<div class='item_0'><p><img alt='{{ type_arcane_item_en_vo1[i] }}' src='{{ url_for('static', filename = type_arcane_path_1_vo1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_arcane_item_vo1[i] }}'>{{ type_arcane_item_en_vo1[i] }}</a><div class='item_0_text'>Volume: {{ type_arcane_volume_vo1[i] }}</div></div>{% endfor %}";
+                                click_id.value = 6;
+                            }else if(button == 6) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_arcane_len) %}<div class='item_0'><p><img alt='{{ type_arcane_item_en_vo2[i] }}' src='{{ url_for('static', filename = type_arcane_path_1_vo2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_arcane_item_vo2[i] }}'>{{ type_arcane_item_en_vo2[i] }}</a><div class='item_0_text'>Volume: {{ type_arcane_volume_vo2[i] }}</div></div>{% endfor %}";
+                                click_id.value = 5;
+                            }else {
+                                console.log("Error!");
+                            };
+                        }else if(menu_value == "Primed mod Collection") {
+                            if(button == 1) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, rec_len_data_0) %}<div class='item_0'><p><img alt='{{ rec_en_name_0_pr1[i] }}' src='{{ url_for('static', filename = rec_image_0_pr1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ rec_name_0_pr1[i] }}'>{{ rec_en_name_0_pr1[i] }}</a><div class='item_0_text'>Price: {{ rec_price_0_pr1[i] }}</div></div>{% endfor %}";
+                                click_id.value = 2;            
+                            }else if(button == 2) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, rec_len_data_0) %}<div class='item_0'><p><img alt='{{ rec_en_name_0_pr2[i] }}' src='{{ url_for('static', filename = rec_image_0_pr2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ rec_name_0_pr2[i] }}'>{{ rec_en_name_0_pr2[i] }}</a><div class='item_0_text'>Price: {{ rec_price_0_pr2[i] }}</div></div>{% endfor %}";
+                                click_id.value = 1;
+                            }else if(button == 3) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, rec_len_data_0) %}<div class='item_0'><p><img alt='{{ rec_en_name_0_pe1[i] }}' src='{{ url_for('static', filename = rec_image_0_pe1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ rec_name_0_pe1[i] }}'>{{ rec_en_name_0_pe1[i] }}</a><div class='item_0_text'>Percent: {{ rec_percent_0_pe1[i] }}%</div></div>{% endfor %}";
+                                click_id.value = 4;
+                            }else if(button == 4) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, rec_len_data_0) %}<div class='item_0'><p><img alt='{{ rec_en_name_0_pe2[i] }}' src='{{ url_for('static', filename = rec_image_0_pe2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ rec_name_0_pe2[i] }}'>{{ rec_en_name_0_pe2[i] }}</a><div class='item_0_text'>Percent: {{ rec_percent_0_pe2[i] }}%</div></div>{% endfor %}";
+                                click_id.value = 3;
+                            }else if(button == 5) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, rec_len_data_0) %}<div class='item_0'><p><img alt='{{ rec_en_name_0_vo1[i] }}' src='{{ url_for('static', filename = rec_image_0_vo1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ rec_name_0_vo1[i] }}'>{{ rec_en_name_0_vo1[i] }}</a><div class='item_0_text'>Volume: {{ rec_volume_0_vo1[i] }}</div></div>{% endfor %}";
+                                click_id.value = 6;
+                            }else if(button == 6) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, rec_len_data_0) %}<div class='item_0'><p><img alt='{{ rec_en_name_0_vo2[i] }}' src='{{ url_for('static', filename = rec_image_0_vo2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ rec_name_0_vo2[i] }}'>{{ rec_en_name_0_vo2[i] }}</a><div class='item_0_text'>Volume: {{ rec_volume_0_vo2[i] }}</div></div>{% endfor %}";
+                                click_id.value = 5;
+                            }else {
+                                console.log("Error!");
+                            };
+                        }else if(menu_value == "Update") {
+                            if(button == 1) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_etc_len) %}<div class='item_0'><p><img alt='{{ type_etc_item_en_pr1[i] }}' src='{{ url_for('static', filename = type_etc_path_1_pr1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_etc_item_pr1[i] }}'>{{ type_etc_item_en_pr1[i] }}</a><div class='item_0_text'>Price: {{ type_etc_price_pr1[i] }}</div></div>{% endfor %}";
+                                click_id.value = 2;
+                            }else if(button == 2) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_etc_len) %}<div class='item_0'><p><img alt='{{ type_etc_item_en_pr2[i] }}' src='{{ url_for('static', filename = type_etc_path_1_pr2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_etc_item_pr2[i] }}'>{{ type_etc_item_en_pr2[i] }}</a><div class='item_0_text'>Price: {{ type_etc_price_pr2[i] }}</div></div>{% endfor %}";
+                                click_id.value = 1;
+                            }else if(button == 3) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_etc_len) %}<div class='item_0'><p><img alt='{{ type_etc_item_en_pe1[i] }}' src='{{ url_for('static', filename = type_etc_path_1_pe1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_etc_item_pe1[i] }}'>{{ type_etc_item_en_pe1[i] }}</a><div class='item_0_text'>Percent: {{ type_etc_percent_pe1[i] }}%</div></div>{% endfor %}";
+                                click_id.value = 4;
+                            }else if(button == 4) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_etc_len) %}<div class='item_0'><p><img alt='{{ type_etc_item_en_pe2[i] }}' src='{{ url_for('static', filename = type_etc_path_1_pe2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_etc_item_pe2[i] }}'>{{ type_etc_item_en_pe2[i] }}</a><div class='item_0_text'>Percent: {{ type_etc_percent_pe2[i] }}%</div></div>{% endfor %}";
+                                click_id.value = 3;
+                            }else if(button == 5) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_etc_len) %}<div class='item_0'><p><img alt='{{ type_etc_item_en_vo1[i] }}' src='{{ url_for('static', filename = type_etc_path_1_vo1[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_etc_item_vo1[i] }}'>{{ type_etc_item_en_vo1[i] }}</a><div class='item_0_text'>Volume: {{ type_etc_volume_vo1[i] }}</div></div>{% endfor %}";
+                                click_id.value = 6;
+                            }else if(button == 6) {
+                                document.getElementById("change_category").innerHTML = "{% for i in range(0, type_etc_len) %}<div class='item_0'><p><img alt='{{ type_etc_item_en_vo2[i] }}' src='{{ url_for('static', filename = type_etc_path_1_vo2[i], v = 0.1) }}'></p><a onclick='href_site(this);' value='{{ type_etc_item_vo2[i] }}'>{{ type_etc_item_en_vo2[i] }}</a><div class='item_0_text'>Volume: {{ type_etc_volume_vo2[i] }}</div></div>{% endfor %}";
+                                click_id.value = 5;
+                            }else {
+                                console.log("Error!");
+                            };
+                        }else {
+                            console.log("Error!");
+                        };
+                    };
+                </script>
+                <div class="category_0">
+                    <a id="category_value_1">Sort</a>
+                </div>
+                <div class="category_4">
+                    <ul>
+                        <li class="category_top_1" onclick="search_value_1(this)" value="1">
+                            <a>Price</a>
+                        </li>
+                        <li class="category_top_1" onclick="search_value_1(this)" value="3">
+                            <a>Percent</a>
+                        </li>
+                        <li class="category_top_1" onclick="search_value_1(this)" value="5">
+                            <a>Volume</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="menu_1">
+            <div style="background-color: #ffffff; float: left; width: 100%; min-height: 750px; height: 1620px;">
+                <script>
+                    
+                </script>
+                <div class="category_0">
+                    <a id="category_value">Warframe</a>
+                </div>
+                <div class="category_3">
+                    <div class="category_box" id="change_category">
+                        {% for i in range(0, type_warframe_len) %}
+                        <div class="item_0">
+                            <p>
+                                <img alt="{{ type_warframe_item_en[i] }}" src="{{ url_for('static', filename = type_warframe_path_1[i], v = 0.1) }}">
+                            </p>
+                            <a onclick="href_site(this);" value="{{ type_warframe_item[i] }}">{{ type_warframe_item_en[i] }}</a>
+                            <div class="item_0_text">Price: {{ type_warframe_price[i] }}</div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+            </div>
+        </div>
+            
+        <div class="footer">
+            <div class="footer_box_0">
+                <div class="footer_box_1">
+                    <div class="footer_link">
+                        <h3>Link</h3>
+                        <a href="https://warframe.market/">Warframe Market</a>
+                        <br>
+                        <a href="https://github.com/Hyeonho-Lee/warframets">Github</a>
+                    </div>
+                    <div class="footer_dev">
+                        <h3>Maker</h3>
+                        <a>R.PC (Developer)</a>
+                        <br>
+                        <a>Tomatotomato<br>(Design)</a>
+                    </div>
+                    <div class="footer_email">
+                        <h3>Email</h3>
+                        <a>prohenho7138@gmail.com</a>
+                    </div>
+                </div>
+                
+                <div class="footer_info">
+                    <h3>Info</h3>
+                    <a>
+                        WarframeTS was created by Warframe fan user and is not related to Digital Extremes.
+                    </a>
+                    <br>
+                    <a>
+                        The data used for this site was provided by https://warframe.market/.
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer_box_2">
+                <div class="footer_count">
+                    <div class="footer_count_1">
+                        <h3>Cumulative Visitor</h3>
+                        <a>{{ visit_count }}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>

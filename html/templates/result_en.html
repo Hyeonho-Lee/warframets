@@ -24,7 +24,7 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/v4-shims.css">
         <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&amp;" rel="stylesheet">
         <!---------------------------------------------------------------------->
-        <script src="{{ url_for('static', filename = 'js/AutoComplete.min.js') }}" type="text/javascript"></script>
+        <script src="{{ url_for('static', filename = 'js/AutoComplete.min_en.js') }}" type="text/javascript"></script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
         <script src="https://cdn.datatables.net/t/bs-3.3.6/jqc-1.12.0,dt-1.10.11/datatables.min.js"></script>
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176036085-1"></script>
@@ -42,7 +42,7 @@
             window.onload = function () {
                 var input = document.getElementById("item_name");
                 input.addEventListener('click', function(){
-                    var all_items = {{ all_item_kr | tojson }};
+                    var all_items = {{ all_item_en | tojson }};
                     new AutoComplete(document.querySelector('#item_name'), all_items);
                 });
             };

@@ -1181,7 +1181,7 @@ def result_en(get_name):
                     return path_1
 
     if get_name not in all_item_en:
-        return redirect('/error/')
+        return redirect('/en/error/')
     else:
 
         input_warframe = input_item('warframes')
@@ -1295,7 +1295,7 @@ def result_en(get_name):
                     break
 
         if(is_warframe == False and is_weapon == False and is_weapon_etc == False and is_aura_mods == False and is_warframe_mods == False and is_items_etc == False and is_weapon_mods):
-            return redirect('/error/')
+            return redirect('/en/error/')
 
         if get_find == True:
             if(result.empty != True):
@@ -1321,7 +1321,7 @@ def result_en(get_name):
 
                 return render_template('result_en.html', **locals())
             else:
-                return redirect('/error/')
+                return redirect('/en/error/')
 #####################################################################
 @app.route('/result/download/<get_name>/')
 def csv_file_download(get_name):
@@ -1487,12 +1487,185 @@ def csv_file_download(get_name):
                 return response
             else:
                 return redirect('/error/')
+
+#####################################################################
+@app.route('/en/result/download/<get_name>/')
+def csv_file_download_en(get_name):
+
+    all_item, all_item_kr, all_item_en, all_path, all_path_0, all_path_1, all_type, all_type_kr, all_type_en = get_all_item()
+
+    def find_path(name, types):
+        if types == 'path':
+            for i, v in enumerate(all_item):
+                if str(v) == name:
+                    path = all_path[i]
+                    return path
+        elif types == 'path_0':
+            for i, v in enumerate(all_item):
+                if str(v) == name:
+                    path_0 = all_path_0[i]
+                    return path_0
+        elif types == 'path_1':
+            for i, v in enumerate(all_item):
+                if str(v) == name:
+                    path_1 = all_path_1[i]
+                    return path_1
+
+    if get_name not in all_item_en:
+        return redirect('/en/error/')
+    else:
+
+        input_warframe = input_item('warframes')
+        input_weapon = input_item('weapons')
+        input_weapon_etc = input_item('weapons_etc')
+        input_aura_mods = input_item('aura_mods')
+        input_warframe_mods = input_item('warframe_mods')
+        input_items_etc = input_item('items_etc')
+        input_weapon_mods = input_item('weapon_mods')
+
+        result_name = '%s' % get_name
+        for i, v in enumerate(all_item_en):
+            if str(v) == result_name:
+                result_name = all_item[i]
+        name = result_name.replace('_set', '')
+
+        name_set = name.replace(' ', '_')
+        name_sets = name_set + '_set'
+
+        for i, v in enumerate(all_item):
+            if str(v) == result_name:
+                kr_name = all_item_en[i]
+
+        for i in input_weapon_etc:
+            if str(name) in i:
+                name_sets = name
+
+        for i in input_aura_mods:
+            if str(name) in i:
+                name_sets = name
+
+        for i in input_warframe_mods:
+            if str(name) in i:
+                name_sets = name
+
+        for i in input_items_etc:
+            if str(name) in i:
+                name_sets = name
+
+        for i in input_weapon_mods:
+            if str(name) in i:
+                name_sets = name
+
+        search_path = find_path(name_sets, 'path')
+        search_path_0 = find_path(name_sets, 'path_0')
+        search_path_1 = find_path(name_sets, 'path_1')
+
+        get_find = False
+        is_warframe = False
+        is_weapon = False
+        is_weapon_etc = False
+        is_aura_mods = False
+        is_warframe_mods = False
+        is_items_etc = False
+        is_weapon_mods = False
+
+        if get_find == False:
+            for finds in input_warframe:
+                if name in finds:
+                    result = read_csv(name, 'warframe')
+                    get_find = True
+                    is_warframe = True
+                    break
+
+        if get_find == False:
+            for finds in input_weapon:
+                if name in finds:
+                    result = read_csv(name, 'weapon')
+                    get_find = True
+                    is_weapon = True
+                    break
+
+        if get_find == False:
+            for finds in input_weapon_etc:
+                if name in finds:
+                    result = read_csv(name, 'weapon_etc')
+                    get_find = True
+                    is_weapon_etc = True
+                    break
+
+        if get_find == False:
+            for finds in input_aura_mods:
+                if name in finds:
+                    result = read_csv(name, 'aura_mods')
+                    get_find = True
+                    is_aura_mods = True
+                    break
+
+        if get_find == False:
+            for finds in input_warframe_mods:
+                if name in finds:
+                    result = read_csv(name, 'warframe_mods')
+                    get_find = True
+                    is_aura_mods = True
+                    break
+
+        if get_find == False:
+            for finds in input_items_etc:
+                if name in finds:
+                    result = read_csv(name, 'items_etc')
+                    get_find = True
+                    is_items_etc = True
+                    break
+
+        if get_find == False:
+            for finds in input_weapon_mods:
+                if name in finds:
+                    result = read_csv(name, 'weapon_mods')
+                    get_find = True
+                    is_items_etc = True
+                    break
+
+        if(is_warframe == False and is_weapon == False and is_weapon_etc == False and is_aura_mods == False and is_warframe_mods == False and is_items_etc == False and is_weapon_mods):
+            return redirect('/en/error/')
+
+        if get_find == True:
+            if(result.empty != True):
+
+                today_datetime = get_today_date()
+
+                result = result.reset_index()
+                del result['index']
+                del result['lank']
+                del result['level_0']
+                result = result[['datetime', 'avg_price', 'yn_before', 'day_before', 'day_percent', 'volume']]
+                result = result.rename(columns={'datetime': 'date', 'avg_price': 'price', 'yn_before': '', 'day_before': 'day_before', 'day_percent': 'percent', 'volume': 'volume'})
+
+                export_file = StringIO()
+                result.to_csv(export_file)
+                response = Response(
+                    export_file.getvalue(), 
+                    mimetype='text/csv', 
+                    content_type='application/octet-stream',
+                )
+                file_name = str(name_sets) + "_" + str(today_datetime) + ".csv"
+                str_value = "attachment; filename=" + file_name
+                response.headers["Content-Disposition"] = str_value
+                return response
+            else:
+                return redirect('/en/error/')
 #####################################################################
 @app.route('/error/')
 def error():
     visit_count = get_visit()
     all_item, all_item_kr, all_item_en, all_path, all_path_0, all_path_1, all_type, all_type_kr, all_type_en = get_all_item()
     return render_template('error.html', **locals())
+
+#####################################################################
+@app.route('/en/error/')
+def error_en():
+    visit_count = get_visit()
+    all_item, all_item_kr, all_item_en, all_path, all_path_0, all_path_1, all_type, all_type_kr, all_type_en = get_all_item()
+    return render_template('error_en.html', **locals())
 
 ######################################################################
 
@@ -2354,7 +2527,7 @@ def calculator_en(get_name):
                     return path_1
 
     if get_name not in all_item_en:
-        return redirect('/error/')
+        return redirect('/en/error/')
     else:
 
         input_warframe = input_item('warframes')
@@ -2468,7 +2641,7 @@ def calculator_en(get_name):
                     break
 
         if(is_warframe == False and is_weapon == False and is_weapon_etc == False and is_aura_mods == False and is_warframe_mods == False and is_items_etc == False and is_weapon_mods):
-            return redirect('/error/')
+            return redirect('/en/error/')
 
         if get_find == True:
             if(result.empty != True):
@@ -2609,7 +2782,7 @@ def calculator_en(get_name):
 
                 return render_template('calculator_en.html', **locals())
             else:
-                return redirect('/error/')
+                return redirect('/en/error/')
 
 @app.errorhandler(404)
 def page_not_found(error):
@@ -2706,6 +2879,96 @@ def notice():
         date_2.append(i["date"])
 
     return render_template('notice.html', **locals())
+
+#=======================================================================#
+
+@app.route('/en/notice/')
+def notice_en():
+    visit_count = get_visit()
+    all_item, all_item_kr, all_item_en, all_path, all_path_0, all_path_1, all_type, all_type_kr, all_type_en = get_all_item()
+
+    path = '/workspace/crawling/data/json/info/notice_data.json'
+    with open(path, "r", encoding="UTF-8") as json_file:
+        json_data_0 = json.load(json_file, strict = False)
+
+    index_0 = []
+    image_0 = []
+    write_0 = []
+    subject_0 = []
+    contents_0 = []
+    contents_image_0 = []
+    youtube_0 = []
+    date_0 = []
+    len_data_0 = len(json_data_0["info"])
+
+    for i in json_data_0["info"]:
+        index_0.append(i["index"])
+        image_0.append(i["image"])
+        write_0.append(i["write"])
+        subject_0.append(i["subject"])
+        contents_0.append(i["contents"])
+        contents_image_0.append(i["contents_image"])
+        youtube_0.append(i["youtube"])
+        date_0.append(i["date"])
+
+    index_0.reverse()
+    image_0.reverse()
+    write_0.reverse()
+    subject_0.reverse()
+    contents_0.reverse()
+    contents_image_0.reverse()
+    youtube_0.reverse()
+    date_0.reverse()
+
+    path_1 = '/workspace/crawling/data/json/info/info_data_0.json'
+    with open(path_1, "r", encoding="UTF-8") as json_file_1:
+        json_data_1 = json.load(json_file_1, strict = False)
+
+    index_1 = []
+    image_1 = []
+    write_1 = []
+    subject_1 = []
+    contents_1 = []
+    contents_image_1 = []
+    youtube_1 = []
+    date_1 = []
+    len_data_1 = len(json_data_1["info"])
+
+    for i in json_data_1["info"]:
+        index_1.append(i["index"])
+        image_1.append(i["image"])
+        write_1.append(i["write"])
+        subject_1.append(i["subject"])
+        contents_1.append(i["contents"])
+        contents_image_1.append(i["contents_image"])
+        youtube_1.append(i["youtube"])
+        date_1.append(i["date"])
+
+    path = '/workspace/crawling/data/json/info/info_data_2.json'
+    with open(path, "r", encoding="UTF-8") as json_file:
+        json_data_2 = json.load(json_file, strict = False)
+
+    index_2 = []
+    image_2 = []
+    write_2 = []
+    subject_2 = []
+    contents_2 = []
+    contents_image_2 = []
+    youtube_2 = []
+    date_2 = []
+    len_data_2 = len(json_data_2["info"])
+
+    for i in json_data_2["info"]:
+        index_2.append(i["index"])
+        image_2.append(i["image"])
+        write_2.append(i["write"])
+        subject_2.append(i["subject"])
+        contents_2.append(i["contents"])
+        contents_image_2.append(i["contents_image"])
+        youtube_2.append(i["youtube"])
+        date_2.append(i["date"])
+
+    return render_template('notice_en.html', **locals())
 
 #=======================================================================#
 
