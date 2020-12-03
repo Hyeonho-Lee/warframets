@@ -2218,6 +2218,548 @@ def category():
 
     return render_template('category.html', **locals())
 
+#=======================================================================#
+@app.route('/en/category/')
+def category_en():
+
+    visit_count = get_visit()
+    all_item, all_item_kr, all_item_en, all_path, all_path_0, all_path_1, all_type, all_type_kr, all_type_en = get_all_item()
+
+    type_primary_item = []
+    type_primary_item_en = []
+    type_primary_path = []
+    type_primary_path_0 = []
+    type_primary_path_1 = []
+    type_primary_type = []
+    type_primary_type_en = []
+    type_primary_price = []
+    type_primary_percent = []
+    type_primary_volume = []
+    type_primary_len = 0
+
+    type_secondary_item = []
+    type_secondary_item_en = []
+    type_secondary_path = []
+    type_secondary_path_0 = []
+    type_secondary_path_1 = []
+    type_secondary_type = []
+    type_secondary_type_en = []
+    type_secondary_price = []
+    type_secondary_percent = []
+    type_secondary_volume = []
+    type_secondary_len = 0
+
+    type_melee_item = []
+    type_melee_item_en = []
+    type_melee_path = []
+    type_melee_path_0 = []
+    type_melee_path_1 = []
+    type_melee_type = []
+    type_melee_type_en = []
+    type_melee_price = []
+    type_melee_percent = []
+    type_melee_volume = []
+    type_melee_len = 0
+
+    type_warframe_item = []
+    type_warframe_item_en = []
+    type_warframe_path = []
+    type_warframe_path_0 = []
+    type_warframe_path_1 = []
+    type_warframe_type = []
+    type_warframe_type_en = []
+    type_warframe_price = []
+    type_warframe_percent = []
+    type_warframe_volume = []
+    type_warframe_len = 0
+
+    type_warframe_mod_item = []
+    type_warframe_mod_item_en = []
+    type_warframe_mod_path = []
+    type_warframe_mod_path_0 = []
+    type_warframe_mod_path_1 = []
+    type_warframe_mod_type = []
+    type_warframe_mod_type_en = []
+    type_warframe_mod_price = []
+    type_warframe_mod_percent = []
+    type_warframe_mod_volume = []
+    type_warframe_mod_len = 0
+
+    type_arcane_item = []
+    type_arcane_item_en = []
+    type_arcane_path = []
+    type_arcane_path_0 = []
+    type_arcane_path_1 = []
+    type_arcane_type = []
+    type_arcane_type_en = []
+    type_arcane_price = []
+    type_arcane_percent = []
+    type_arcane_volume = []
+    type_arcane_len = 0
+
+    type_etc_item = []
+    type_etc_item_en = []
+    type_etc_path = []
+    type_etc_path_0 = []
+    type_etc_path_1 = []
+    type_etc_type = []
+    type_etc_type_en = []
+    type_etc_price = []
+    type_etc_percent = []
+    type_etc_volume = []
+    type_etc_len = 0
+
+    type_primary_mod_item = []
+    type_primary_mod_item_en = []
+    type_primary_mod_path = []
+    type_primary_mod_path_0 = []
+    type_primary_mod_path_1 = []
+    type_primary_mod_type = []
+    type_primary_mod_type_en = []
+    type_primary_mod_price = []
+    type_primary_mod_percent = []
+    type_primary_mod_volume = []
+    type_primary_mod_len = 0
+
+    type_secondary_mod_item = []
+    type_secondary_mod_item_en = []
+    type_secondary_mod_path = []
+    type_secondary_mod_path_0 = []
+    type_secondary_mod_path_1 = []
+    type_secondary_mod_type = []
+    type_secondary_mod_type_en = []
+    type_secondary_mod_price = []
+    type_secondary_mod_percent = []
+    type_secondary_mod_volume = []
+    type_secondary_mod_len = 0
+
+    type_melee_mod_item = []
+    type_melee_mod_item_en = []
+    type_melee_mod_path = []
+    type_melee_mod_path_0 = []
+    type_melee_mod_path_1 = []
+    type_melee_mod_type = []
+    type_melee_mod_type_en = []
+    type_melee_mod_price = []
+    type_melee_mod_percent = []
+    type_melee_mod_volume = []
+    type_melee_mod_len = 0
+
+    type_companion_mod_item = []
+    type_companion_mod_item_en = []
+    type_companion_mod_path = []
+    type_companion_mod_path_0 = []
+    type_companion_mod_path_1 = []
+    type_companion_mod_type = []
+    type_companion_mod_type_en = []
+    type_companion_mod_price = []
+    type_companion_mod_percent = []
+    type_companion_mod_volume = []
+    type_companion_mod_len = 0
+
+    type_archwing_mod_item = []
+    type_archwing_mod_item_en = []
+    type_archwing_mod_path = []
+    type_archwing_mod_path_0 = []
+    type_archwing_mod_path_1 = []
+    type_archwing_mod_type = []
+    type_archwing_mod_type_en = []
+    type_archwing_mod_price = []
+    type_archwing_mod_percent = []
+    type_archwing_mod_volume = []
+    type_archwing_mod_len = 0
+
+    type_necramech_mod_item = []
+    type_necramech_mod_item_en = []
+    type_necramech_mod_path = []
+    type_necramech_mod_path_0 = []
+    type_necramech_mod_path_1 = []
+    type_necramech_mod_type = []
+    type_necramech_mod_type_en = []
+    type_necramech_mod_price = []
+    type_necramech_mod_percent = []
+    type_necramech_mod_volume = []
+    type_necramech_mod_len = 0
+
+    def kr_to_en(item):
+        for i, v in enumerate(item):
+            if all_type_en[i] == "Primary":
+                type_primary_item.append(all_item[i])
+                type_primary_item_en.append(all_item_en[i])
+                type_primary_path.append(all_path[i])
+                type_primary_path_0.append(all_path_0[i])
+                type_primary_path_1.append(all_path_1[i])
+                type_primary_type.append(all_type[i])
+                type_primary_type_en.append(all_type_en[i])
+            elif all_type_en[i] == "Secondary":
+                type_secondary_item.append(all_item[i])
+                type_secondary_item_en.append(all_item_en[i])
+                type_secondary_path.append(all_path[i])
+                type_secondary_path_0.append(all_path_0[i])
+                type_secondary_path_1.append(all_path_1[i])
+                type_secondary_type.append(all_type[i])
+                type_secondary_type_en.append(all_type_en[i])
+            elif all_type_en[i] == "Melee":
+                type_melee_item.append(all_item[i])
+                type_melee_item_en.append(all_item_en[i])
+                type_melee_path.append(all_path[i])
+                type_melee_path_0.append(all_path_0[i])
+                type_melee_path_1.append(all_path_1[i])
+                type_melee_type.append(all_type[i])
+                type_melee_type_en.append(all_type_en[i])
+            elif all_type_en[i] == "Warframe":
+                type_warframe_item.append(all_item[i])
+                type_warframe_item_en.append(all_item_en[i])
+                type_warframe_path.append(all_path[i])
+                type_warframe_path_0.append(all_path_0[i])
+                type_warframe_path_1.append(all_path_1[i])
+                type_warframe_type.append(all_type[i])
+                type_warframe_type_en.append(all_type_en[i])
+            elif all_type_en[i] == "Warframe mod":
+                type_warframe_mod_item.append(all_item[i])
+                type_warframe_mod_item_en.append(all_item_en[i])
+                type_warframe_mod_path.append(all_path[i])
+                type_warframe_mod_path_0.append(all_path_0[i])
+                type_warframe_mod_path_1.append(all_path_1[i])
+                type_warframe_mod_type.append(all_type[i])
+                type_warframe_mod_type_en.append(all_type_en[i])
+            elif all_type_en[i] == "Arcane":
+                type_arcane_item.append(all_item[i])
+                type_arcane_item_en.append(all_item_en[i])
+                type_arcane_path.append(all_path[i])
+                type_arcane_path_0.append(all_path_0[i])
+                type_arcane_path_1.append(all_path_1[i])
+                type_arcane_type.append(all_type[i])
+                type_arcane_type_en.append(all_type_en[i])
+            elif all_type_en[i] == "Primary mod":
+                type_primary_mod_item.append(all_item[i])
+                type_primary_mod_item_en .append(all_item_en[i])
+                type_primary_mod_path.append(all_path[i])
+                type_primary_mod_path_0.append(all_path_0[i])
+                type_primary_mod_path_1.append(all_path_1[i])
+                type_primary_mod_type.append(all_type[i])
+                type_primary_mod_type_en.append(all_type_en[i])
+            elif all_type_en[i] == "Secondary mod":
+                type_secondary_mod_item.append(all_item[i])
+                type_secondary_mod_item_en.append(all_item_en[i])
+                type_secondary_mod_path.append(all_path[i])
+                type_secondary_mod_path_0.append(all_path_0[i])
+                type_secondary_mod_path_1.append(all_path_1[i])
+                type_secondary_mod_type.append(all_type[i])
+                type_secondary_mod_type_en.append(all_type_en[i])
+            elif all_type_en[i] == "Melee mod":
+                type_melee_mod_item.append(all_item[i])
+                type_melee_mod_item_en.append(all_item_en[i])
+                type_melee_mod_path.append(all_path[i])
+                type_melee_mod_path_0.append(all_path_0[i])
+                type_melee_mod_path_1.append(all_path_1[i])
+                type_melee_mod_type.append(all_type[i])
+                type_melee_mod_type_en.append(all_type_en[i])
+            elif all_type_en[i] == "Companion mod":
+                type_companion_mod_item.append(all_item[i])
+                type_companion_mod_item_en.append(all_item_en[i])
+                type_companion_mod_path.append(all_path[i])
+                type_companion_mod_path_0.append(all_path_0[i])
+                type_companion_mod_path_1.append(all_path_1[i])
+                type_companion_mod_type.append(all_type[i])
+                type_companion_mod_type_en.append(all_type_en[i])
+            elif all_type_en[i] == "Archwing":
+                type_archwing_mod_item.append(all_item[i])
+                type_archwing_mod_item_en.append(all_item_en[i])
+                type_archwing_mod_path.append(all_path[i])
+                type_archwing_mod_path_0.append(all_path_0[i])
+                type_archwing_mod_path_1.append(all_path_1[i])
+                type_archwing_mod_type.append(all_type[i])
+                type_archwing_mod_type_en.append(all_type_en[i])
+            elif all_type_en[i] == "Necramech mod":
+                type_necramech_mod_item.append(all_item[i])
+                type_necramech_mod_item_en.append(all_item_en[i])
+                type_necramech_mod_path.append(all_path[i])
+                type_necramech_mod_path_0.append(all_path_0[i])
+                type_necramech_mod_path_1.append(all_path_1[i])
+                type_necramech_mod_type.append(all_type[i])
+                type_necramech_mod_type_en.append(all_type_en[i])
+            elif all_type_en[i] == "Update":
+                type_etc_item.append(all_item[i])
+                type_etc_item_en.append(all_item_en[i])
+                type_etc_path.append(all_path[i])
+                type_etc_path_0.append(all_path_0[i])
+                type_etc_path_1.append(all_path_1[i])
+                type_etc_type.append(all_type[i])
+                type_etc_type_en.append(all_type_en[i])
+            else:
+                continue
+
+
+    kr_to_en(all_item_en)
+
+    type_primary_len = len(type_primary_item)
+    type_secondary_len = len(type_secondary_item)
+    type_melee_len = len(type_melee_item)
+    type_warframe_len = len(type_warframe_item)
+    type_warframe_mod_len = len(type_warframe_mod_item)
+    type_arcane_len = len(type_arcane_item)
+    type_etc_len = len(type_etc_item)
+    type_primary_mod_len = len(type_primary_mod_item)
+    type_secondary_mod_len = len(type_secondary_mod_item)
+    type_melee_mod_len = len(type_melee_mod_item)
+    type_companion_mod_len = len(type_companion_mod_item)
+    type_archwing_mod_len = len(type_archwing_mod_item)
+    type_necramech_mod_len = len(type_necramech_mod_item)
+
+    price_data = read_csv('result', 'result')
+    price_name = price_data["name"].tolist()
+    price_avg = price_data["avg_price"].tolist()
+    price_percent = price_data["day_percent"].tolist()
+    price_volume = price_data["volume"].tolist()
+
+    today_item = []
+    today_price = []
+    today_percent = []
+    today_volume = []
+
+    for i, v in enumerate(all_item):
+        if v in price_name:
+            today_item.append(str(v))
+        else:
+            today_item.append(str("none"))
+
+    for i, v in enumerate(today_item):
+        if v in price_name:
+            index = price_name.index(v)
+            today_price.append(price_avg[index])
+            today_percent.append(price_percent[index])
+            today_volume.append(price_volume[index])
+        elif v == "none":
+            today_price.append(0)
+            today_percent.append(0)
+            today_volume.append(0)
+
+    for i, v in enumerate(all_item):
+        if v in type_primary_item:
+            type_primary_price.append(today_price[i])
+            type_primary_percent.append(today_percent[i])
+            type_primary_volume.append(today_volume[i])
+        if v in type_secondary_item:
+            type_secondary_price.append(today_price[i])
+            type_secondary_percent.append(today_percent[i])
+            type_secondary_volume.append(today_volume[i])
+        if v in type_melee_item:
+            type_melee_price.append(today_price[i])
+            type_melee_percent.append(today_percent[i])
+            type_melee_volume.append(today_volume[i])
+        if v in type_warframe_item:
+            type_warframe_price.append(today_price[i])
+            type_warframe_percent.append(today_percent[i])
+            type_warframe_volume.append(today_volume[i])
+        if v in type_warframe_mod_item:
+            type_warframe_mod_price.append(today_price[i])
+            type_warframe_mod_percent.append(today_percent[i])
+            type_warframe_mod_volume.append(today_volume[i])
+        if v in type_arcane_item:
+            type_arcane_price.append(today_price[i])
+            type_arcane_percent.append(today_percent[i])
+            type_arcane_volume.append(today_volume[i])
+        if v in type_etc_item:
+            type_etc_price.append(today_price[i])
+            type_etc_percent.append(today_percent[i])
+            type_etc_volume.append(today_volume[i])
+        if v in type_primary_mod_item:
+            type_primary_mod_price.append(today_price[i])
+            type_primary_mod_percent.append(today_percent[i])
+            type_primary_mod_volume.append(today_volume[i])
+        if v in type_secondary_mod_item:
+            type_secondary_mod_price.append(today_price[i])
+            type_secondary_mod_percent.append(today_percent[i])
+            type_secondary_mod_volume.append(today_volume[i])
+        if v in type_melee_mod_item:
+            type_melee_mod_price.append(today_price[i])
+            type_melee_mod_percent.append(today_percent[i])
+            type_melee_mod_volume.append(today_volume[i])
+        if v in type_companion_mod_item:
+            type_companion_mod_price.append(today_price[i])
+            type_companion_mod_percent.append(today_percent[i])
+            type_companion_mod_volume.append(today_volume[i])
+        if v in type_archwing_mod_item:
+            type_archwing_mod_price.append(today_price[i])
+            type_archwing_mod_percent.append(today_percent[i])
+            type_archwing_mod_volume.append(today_volume[i])
+        if v in type_necramech_mod_item:
+            type_necramech_mod_price.append(today_price[i])
+            type_necramech_mod_percent.append(today_percent[i])
+            type_necramech_mod_volume.append(today_volume[i])
+
+    def sort_array(index, t_f, array_name, array_name_en, array_price, array_percent, array_volume, array_path_1):
+        value = {"name" : pd.Series(array_name), "en_name" : pd.Series(array_name_en), "price" : pd.Series(array_price), "percent" : pd.Series(array_percent), "volume" : pd.Series(array_volume), "path_1" : pd.Series(array_path_1)}
+        today_data = pd.DataFrame(value)
+
+        if t_f == "True":
+            tf = True
+
+        if t_f == "False":
+            tf = False
+
+        if index == "Price":
+            today_data_1 = today_data.sort_values(by = 'price', ascending = tf)
+            name1 = today_data_1['name'].tolist()
+            en_name1 = today_data_1['en_name'].tolist()
+            price1 = today_data_1['price'].tolist()
+            path1 = today_data_1['path_1'].tolist()
+            return name1, en_name1, price1, path1
+        if index == "Percent":
+            today_data_2 = today_data.sort_values(by = 'percent', ascending = tf)
+            name2 = today_data_2['name'].tolist()
+            en_name2 = today_data_2['en_name'].tolist()
+            percent2 = today_data_2['percent'].tolist()
+            path2 = today_data_2['path_1'].tolist()
+            return name2, en_name2, percent2, path2
+        if index == "Volume":
+            today_data_3 = today_data.sort_values(by = 'volume', ascending = tf)
+            name3 = today_data_3['name'].tolist()
+            en_name3 = today_data_3['en_name'].tolist()
+            volume3 = today_data_3['volume'].tolist()
+            path3 = today_data_3['path_1'].tolist()
+            return name3, en_name3, volume3, path3
+
+    type_primary_item_pr1, type_primary_item_en_pr1, type_primary_price_pr1, type_primary_path_1_pr1 = sort_array("Price", "False", type_primary_item, type_primary_item_en, type_primary_price, type_primary_percent, type_primary_volume, type_primary_path_1)
+    type_primary_item_pr2, type_primary_item_en_pr2, type_primary_price_pr2, type_primary_path_1_pr2 = sort_array("Price", "True", type_primary_item, type_primary_item_en, type_primary_price, type_primary_percent, type_primary_volume, type_primary_path_1)
+    type_primary_item_pe1, type_primary_item_en_pe1, type_primary_percent_pe1, type_primary_path_1_pe1 = sort_array("Percent", "False", type_primary_item, type_primary_item_en, type_primary_price, type_primary_percent, type_primary_volume, type_primary_path_1)
+    type_primary_item_pe2, type_primary_item_en_pe2, type_primary_percent_pe2, type_primary_path_1_pe2 = sort_array("Percent", "True", type_primary_item, type_primary_item_en, type_primary_price, type_primary_percent, type_primary_volume, type_primary_path_1)
+    type_primary_item_vo1, type_primary_item_en_vo1, type_primary_volume_vo1, type_primary_path_1_vo1 = sort_array("Volume", "False", type_primary_item, type_primary_item_en, type_primary_price, type_primary_percent, type_primary_volume, type_primary_path_1)
+    type_primary_item_vo2, type_primary_item_en_vo2, type_primary_volume_vo2, type_primary_path_1_vo2 = sort_array("Volume", "True", type_primary_item, type_primary_item_en, type_primary_price, type_primary_percent, type_primary_volume, type_primary_path_1)
+    
+    type_secondary_item_pr1, type_secondary_item_en_pr1, type_secondary_price_pr1, type_secondary_path_1_pr1 = sort_array("Price", "False", type_secondary_item, type_secondary_item_en, type_secondary_price, type_secondary_percent, type_secondary_volume, type_secondary_path_1)
+    type_secondary_item_pr2, type_secondary_item_en_pr2, type_secondary_price_pr2, type_secondary_path_1_pr2 = sort_array("Price", "True", type_secondary_item, type_secondary_item_en, type_secondary_price, type_secondary_percent, type_secondary_volume, type_secondary_path_1)
+    type_secondary_item_pe1, type_secondary_item_en_pe1, type_secondary_percent_pe1, type_secondary_path_1_pe1 = sort_array("Percent", "False", type_secondary_item, type_secondary_item_en, type_secondary_price, type_secondary_percent, type_secondary_volume, type_secondary_path_1)
+    type_secondary_item_pe2, type_secondary_item_en_pe2, type_secondary_percent_pe2, type_secondary_path_1_pe2 = sort_array("Percent", "True", type_secondary_item, type_secondary_item_en, type_secondary_price, type_secondary_percent, type_secondary_volume, type_secondary_path_1)
+    type_secondary_item_vo1, type_secondary_item_en_vo1, type_secondary_volume_vo1, type_secondary_path_1_vo1 = sort_array("Volume", "False", type_secondary_item, type_secondary_item_en, type_secondary_price, type_secondary_percent, type_secondary_volume, type_secondary_path_1)
+    type_secondary_item_vo2, type_secondary_item_en_vo2, type_secondary_volume_vo2, type_secondary_path_1_vo2 = sort_array("Volume", "True", type_secondary_item, type_secondary_item_en, type_secondary_price, type_secondary_percent, type_secondary_volume, type_secondary_path_1)
+    
+    type_melee_item_pr1, type_melee_item_en_pr1, type_melee_price_pr1, type_melee_path_1_pr1 = sort_array("Price", "False", type_melee_item, type_melee_item_en, type_melee_price, type_melee_percent, type_melee_volume, type_melee_path_1)
+    type_melee_item_pr2, type_melee_item_en_pr2, type_melee_price_pr2, type_melee_path_1_pr2 = sort_array("Price", "True", type_melee_item, type_melee_item_en, type_melee_price, type_melee_percent, type_melee_volume, type_melee_path_1)
+    type_melee_item_pe1, type_melee_item_en_pe1, type_melee_percent_pe1, type_melee_path_1_pe1 = sort_array("Percent", "False", type_melee_item, type_melee_item_en, type_melee_price, type_melee_percent, type_melee_volume, type_melee_path_1)
+    type_melee_item_pe2, type_melee_item_en_pe2, type_melee_percent_pe2, type_melee_path_1_pe2 = sort_array("Percent", "True", type_melee_item, type_melee_item_en, type_melee_price, type_melee_percent, type_melee_volume, type_melee_path_1)
+    type_melee_item_vo1, type_melee_item_en_vo1, type_melee_volume_vo1, type_melee_path_1_vo1 = sort_array("Volume", "False", type_melee_item, type_melee_item_en, type_melee_price, type_melee_percent, type_melee_volume, type_melee_path_1)
+    type_melee_item_vo2, type_melee_item_en_vo2, type_melee_volume_vo2, type_melee_path_1_vo2 = sort_array("Volume", "True", type_melee_item, type_melee_item_en, type_melee_price, type_melee_percent, type_melee_volume, type_melee_path_1)
+    
+    type_warframe_item_pr1, type_warframe_item_en_pr1, type_warframe_price_pr1, type_warframe_path_1_pr1 = sort_array("Price", "False", type_warframe_item, type_warframe_item_en, type_warframe_price, type_warframe_percent, type_warframe_volume, type_warframe_path_1)
+    type_warframe_item_pr2, type_warframe_item_en_pr2, type_warframe_price_pr2, type_warframe_path_1_pr2 = sort_array("Price", "True", type_warframe_item, type_warframe_item_en, type_warframe_price, type_warframe_percent, type_warframe_volume, type_warframe_path_1)
+    type_warframe_item_pe1, type_warframe_item_en_pe1, type_warframe_percent_pe1, type_warframe_path_1_pe1 = sort_array("Percent", "False", type_warframe_item, type_warframe_item_en, type_warframe_price, type_warframe_percent, type_warframe_volume, type_warframe_path_1)
+    type_warframe_item_pe2, type_warframe_item_en_pe2, type_warframe_percent_pe2, type_warframe_path_1_pe2 = sort_array("Percent", "True", type_warframe_item, type_warframe_item_en, type_warframe_price, type_warframe_percent, type_warframe_volume, type_warframe_path_1)
+    type_warframe_item_vo1, type_warframe_item_en_vo1, type_warframe_volume_vo1, type_warframe_path_1_vo1 = sort_array("Volume", "False", type_warframe_item, type_warframe_item_en, type_warframe_price, type_warframe_percent, type_warframe_volume, type_warframe_path_1)
+    type_warframe_item_vo2, type_warframe_item_en_vo2, type_warframe_volume_vo2, type_warframe_path_1_vo2 = sort_array("Volume", "True", type_warframe_item, type_warframe_item_en, type_warframe_price, type_warframe_percent, type_warframe_volume, type_warframe_path_1)
+    
+    type_warframe_mod_item_pr1, type_warframe_mod_item_en_pr1, type_warframe_mod_price_pr1, type_warframe_mod_path_1_pr1 = sort_array("Price", "False", type_warframe_mod_item, type_warframe_mod_item_en, type_warframe_mod_price, type_warframe_mod_percent, type_warframe_mod_volume, type_warframe_mod_path_1)
+    type_warframe_mod_item_pr2, type_warframe_mod_item_en_pr2, type_warframe_mod_price_pr2, type_warframe_mod_path_1_pr2 = sort_array("Price", "True", type_warframe_mod_item, type_warframe_mod_item_en, type_warframe_mod_price, type_warframe_mod_percent, type_warframe_mod_volume, type_warframe_mod_path_1)
+    type_warframe_mod_item_pe1, type_warframe_mod_item_en_pe1, type_warframe_mod_percent_pe1, type_warframe_mod_path_1_pe1 = sort_array("Percent", "False", type_warframe_mod_item, type_warframe_mod_item_en, type_warframe_mod_price, type_warframe_mod_percent, type_warframe_mod_volume, type_warframe_mod_path_1)
+    type_warframe_mod_item_pe2, type_warframe_mod_item_en_pe2, type_warframe_mod_percent_pe2, type_warframe_mod_path_1_pe2 = sort_array("Percent", "True", type_warframe_mod_item, type_warframe_mod_item_en, type_warframe_mod_price, type_warframe_mod_percent, type_warframe_mod_volume, type_warframe_mod_path_1)
+    type_warframe_mod_item_vo1, type_warframe_mod_item_en_vo1, type_warframe_mod_volume_vo1, type_warframe_mod_path_1_vo1 = sort_array("Volume", "False", type_warframe_mod_item, type_warframe_mod_item_en, type_warframe_mod_price, type_warframe_mod_percent, type_warframe_mod_volume, type_warframe_mod_path_1)
+    type_warframe_mod_item_vo2, type_warframe_mod_item_en_vo2, type_warframe_mod_volume_vo2, type_warframe_mod_path_1_vo2 = sort_array("Volume", "True", type_warframe_mod_item, type_warframe_mod_item_en, type_warframe_mod_price, type_warframe_mod_percent, type_warframe_mod_volume, type_warframe_mod_path_1)
+    
+    type_arcane_item_pr1, type_arcane_item_en_pr1, type_arcane_price_pr1, type_arcane_path_1_pr1 = sort_array("Price", "False", type_arcane_item, type_arcane_item_en, type_arcane_price, type_arcane_percent, type_arcane_volume, type_arcane_path_1)
+    type_arcane_item_pr2, type_arcane_item_en_pr2, type_arcane_price_pr2, type_arcane_path_1_pr2 = sort_array("Price", "True", type_arcane_item, type_arcane_item_en, type_arcane_price, type_arcane_percent, type_arcane_volume, type_arcane_path_1)
+    type_arcane_item_pe1, type_arcane_item_en_pe1, type_arcane_percent_pe1, type_arcane_path_1_pe1 = sort_array("Percent", "False", type_arcane_item, type_arcane_item_en, type_arcane_price, type_arcane_percent, type_arcane_volume, type_arcane_path_1)
+    type_arcane_item_pe2, type_arcane_item_en_pe2, type_arcane_percent_pe2, type_arcane_path_1_pe2 = sort_array("Percent", "True", type_arcane_item, type_arcane_item_en, type_arcane_price, type_arcane_percent, type_arcane_volume, type_arcane_path_1)
+    type_arcane_item_vo1, type_arcane_item_en_vo1, type_arcane_volume_vo1, type_arcane_path_1_vo1 = sort_array("Volume", "False", type_arcane_item, type_arcane_item_en, type_arcane_price, type_arcane_percent, type_arcane_volume, type_arcane_path_1)
+    type_arcane_item_vo2, type_arcane_item_en_vo2, type_arcane_volume_vo2, type_arcane_path_1_vo2 = sort_array("Volume", "True", type_arcane_item, type_arcane_item_en, type_arcane_price, type_arcane_percent, type_arcane_volume, type_arcane_path_1)
+    
+    type_primary_mod_item_pr1, type_primary_mod_item_en_pr1, type_primary_mod_price_pr1, type_primary_mod_path_1_pr1 = sort_array("Price", "False", type_primary_mod_item, type_primary_mod_item_en, type_primary_mod_price, type_primary_mod_percent, type_primary_mod_volume, type_primary_mod_path_1)
+    type_primary_mod_item_pr2, type_primary_mod_item_en_pr2, type_primary_mod_price_pr2, type_primary_mod_path_1_pr2 = sort_array("Price", "True", type_primary_mod_item, type_primary_mod_item_en, type_primary_mod_price, type_primary_mod_percent, type_primary_mod_volume, type_primary_mod_path_1)
+    type_primary_mod_item_pe1, type_primary_mod_item_en_pe1, type_primary_mod_percent_pe1, type_primary_mod_path_1_pe1 = sort_array("Percent", "False", type_primary_mod_item, type_primary_mod_item_en, type_primary_mod_price, type_primary_mod_percent, type_primary_mod_volume, type_primary_mod_path_1)
+    type_primary_mod_item_pe2, type_primary_mod_item_en_pe2, type_primary_mod_percent_pe2, type_primary_mod_path_1_pe2 = sort_array("Percent", "True", type_primary_mod_item, type_primary_mod_item_en, type_primary_mod_price, type_primary_mod_percent, type_primary_mod_volume, type_primary_mod_path_1)
+    type_primary_mod_item_vo1, type_primary_mod_item_en_vo1, type_primary_mod_volume_vo1, type_primary_mod_path_1_vo1 = sort_array("Volume", "False", type_primary_mod_item, type_primary_mod_item_en, type_primary_mod_price, type_primary_mod_percent, type_primary_mod_volume, type_primary_mod_path_1)
+    type_primary_mod_item_vo2, type_primary_mod_item_en_vo2, type_primary_mod_volume_vo2, type_primary_mod_path_1_vo2 = sort_array("Volume", "True", type_primary_mod_item, type_primary_mod_item_en, type_primary_mod_price, type_primary_mod_percent, type_primary_mod_volume, type_primary_mod_path_1)
+
+    type_secondary_mod_item_pr1, type_secondary_mod_item_en_pr1, type_secondary_mod_price_pr1, type_secondary_mod_path_1_pr1 = sort_array("Price", "False", type_secondary_mod_item, type_secondary_mod_item_en, type_secondary_mod_price, type_secondary_mod_percent, type_secondary_mod_volume, type_secondary_mod_path_1)
+    type_secondary_mod_item_pr2, type_secondary_mod_item_en_pr2, type_secondary_mod_price_pr2, type_secondary_mod_path_1_pr2 = sort_array("Price", "True", type_secondary_mod_item, type_secondary_mod_item_en, type_secondary_mod_price, type_secondary_mod_percent, type_secondary_mod_volume, type_secondary_mod_path_1)
+    type_secondary_mod_item_pe1, type_secondary_mod_item_en_pe1, type_secondary_mod_percent_pe1, type_secondary_mod_path_1_pe1 = sort_array("Percent", "False", type_secondary_mod_item, type_secondary_mod_item_en, type_secondary_mod_price, type_secondary_mod_percent, type_secondary_mod_volume, type_secondary_mod_path_1)
+    type_secondary_mod_item_pe2, type_secondary_mod_item_en_pe2, type_secondary_mod_percent_pe2, type_secondary_mod_path_1_pe2 = sort_array("Percent", "True", type_secondary_mod_item, type_secondary_mod_item_en, type_secondary_mod_price, type_secondary_mod_percent, type_secondary_mod_volume, type_secondary_mod_path_1)
+    type_secondary_mod_item_vo1, type_secondary_mod_item_en_vo1, type_secondary_mod_volume_vo1, type_secondary_mod_path_1_vo1 = sort_array("Volume", "False", type_secondary_mod_item, type_secondary_mod_item_en, type_secondary_mod_price, type_secondary_mod_percent, type_secondary_mod_volume, type_secondary_mod_path_1)
+    type_secondary_mod_item_vo2, type_secondary_mod_item_en_vo2, type_secondary_mod_volume_vo2, type_secondary_mod_path_1_vo2 = sort_array("Volume", "True", type_secondary_mod_item, type_secondary_mod_item_en, type_secondary_mod_price, type_secondary_mod_percent, type_secondary_mod_volume, type_secondary_mod_path_1)
+
+    type_melee_mod_item_pr1, type_melee_mod_item_en_pr1, type_melee_mod_price_pr1, type_melee_mod_path_1_pr1 = sort_array("Price", "False", type_melee_mod_item, type_melee_mod_item_en, type_melee_mod_price, type_melee_mod_percent, type_melee_mod_volume, type_melee_mod_path_1)
+    type_melee_mod_item_pr2, type_melee_mod_item_en_pr2, type_melee_mod_price_pr2, type_melee_mod_path_1_pr2 = sort_array("Price", "True", type_melee_mod_item, type_melee_mod_item_en, type_melee_mod_price, type_melee_mod_percent, type_melee_mod_volume, type_melee_mod_path_1)
+    type_melee_mod_item_pe1, type_melee_mod_item_en_pe1, type_melee_mod_percent_pe1, type_melee_mod_path_1_pe1 = sort_array("Percent", "False", type_melee_mod_item, type_melee_mod_item_en, type_melee_mod_price, type_melee_mod_percent, type_melee_mod_volume, type_melee_mod_path_1)
+    type_melee_mod_item_pe2, type_melee_mod_item_en_pe2, type_melee_mod_percent_pe2, type_melee_mod_path_1_pe2 = sort_array("Percent", "True", type_melee_mod_item, type_melee_mod_item_en, type_melee_mod_price, type_melee_mod_percent, type_melee_mod_volume, type_melee_mod_path_1)
+    type_melee_mod_item_vo1, type_melee_mod_item_en_vo1, type_melee_mod_volume_vo1, type_melee_mod_path_1_vo1 = sort_array("Volume", "False", type_melee_mod_item, type_melee_mod_item_en, type_melee_mod_price, type_melee_mod_percent, type_melee_mod_volume, type_melee_mod_path_1)
+    type_melee_mod_item_vo2, type_melee_mod_item_en_vo2, type_melee_mod_volume_vo2, type_melee_mod_path_1_vo2 = sort_array("Volume", "True", type_melee_mod_item, type_melee_mod_item_en, type_melee_mod_price, type_melee_mod_percent, type_melee_mod_volume, type_melee_mod_path_1)
+
+    type_etc_item_pr1, type_etc_item_en_pr1, type_etc_price_pr1, type_etc_path_1_pr1 = sort_array("Price", "False", type_etc_item, type_etc_item_en, type_etc_price, type_etc_percent, type_etc_volume, type_etc_path_1)
+    type_etc_item_pr2, type_etc_item_en_pr2, type_etc_price_pr2, type_etc_path_1_pr2 = sort_array("Price", "True", type_etc_item, type_etc_item_en, type_etc_price, type_etc_percent, type_etc_volume, type_etc_path_1)
+    type_etc_item_pe1, type_etc_item_en_pe1, type_etc_percent_pe1, type_etc_path_1_pe1 = sort_array("Percent", "False", type_etc_item, type_etc_item_en, type_etc_price, type_etc_percent, type_etc_volume, type_etc_path_1)
+    type_etc_item_pe2, type_etc_item_en_pe2, type_etc_percent_pe2, type_etc_path_1_pe2 = sort_array("Percent", "True", type_etc_item, type_etc_item_en, type_etc_price, type_etc_percent, type_etc_volume, type_etc_path_1)
+    type_etc_item_vo1, type_etc_item_en_vo1, type_etc_volume_vo1, type_etc_path_1_vo1 = sort_array("Volume", "False", type_etc_item, type_etc_item_en, type_etc_price, type_etc_percent, type_etc_volume, type_etc_path_1)
+    type_etc_item_vo2, type_etc_item_en_vo2, type_etc_volume_vo2, type_etc_path_1_vo2 = sort_array("Volume", "True", type_etc_item, type_etc_item_en, type_etc_price, type_etc_percent, type_etc_volume, type_etc_path_1)
+
+    type_companion_mod_item_pr1, type_companion_mod_item_en_pr1, type_companion_mod_price_pr1, type_companion_mod_path_1_pr1 = sort_array("Price", "False", type_companion_mod_item, type_companion_mod_item_en, type_companion_mod_price, type_companion_mod_percent, type_companion_mod_volume, type_companion_mod_path_1)
+    type_companion_mod_item_pr2, type_companion_mod_item_en_pr2, type_companion_mod_price_pr2, type_companion_mod_path_1_pr2 = sort_array("Price", "True", type_companion_mod_item, type_companion_mod_item_en, type_companion_mod_price, type_companion_mod_percent, type_companion_mod_volume, type_companion_mod_path_1)
+    type_companion_mod_item_pe1, type_companion_mod_item_en_pe1, type_companion_mod_percent_pe1, type_companion_mod_path_1_pe1 = sort_array("Percent", "False", type_companion_mod_item, type_companion_mod_item_en, type_companion_mod_price, type_companion_mod_percent, type_companion_mod_volume, type_companion_mod_path_1)
+    type_companion_mod_item_pe2, type_companion_mod_item_en_pe2, type_companion_mod_percent_pe2, type_companion_mod_path_1_pe2 = sort_array("Percent", "True", type_companion_mod_item, type_companion_mod_item_en, type_companion_mod_price, type_companion_mod_percent, type_companion_mod_volume, type_companion_mod_path_1)
+    type_companion_mod_item_vo1, type_companion_mod_item_en_vo1, type_companion_mod_volume_vo1, type_companion_mod_path_1_vo1 = sort_array("Volume", "False", type_companion_mod_item, type_companion_mod_item_en, type_companion_mod_price, type_companion_mod_percent, type_companion_mod_volume, type_companion_mod_path_1)
+    type_companion_mod_item_vo2, type_companion_mod_item_en_vo2, type_companion_mod_volume_vo2, type_companion_mod_path_1_vo2 = sort_array("Volume", "True", type_companion_mod_item, type_companion_mod_item_en, type_companion_mod_price, type_companion_mod_percent, type_companion_mod_volume, type_companion_mod_path_1)
+
+    type_archwing_mod_item_pr1, type_archwing_mod_item_en_pr1, type_archwing_mod_price_pr1, type_archwing_mod_path_1_pr1 = sort_array("Price", "False", type_archwing_mod_item, type_archwing_mod_item_en, type_archwing_mod_price, type_archwing_mod_percent, type_archwing_mod_volume, type_archwing_mod_path_1)
+    type_archwing_mod_item_pr2, type_archwing_mod_item_en_pr2, type_archwing_mod_price_pr2, type_archwing_mod_path_1_pr2 = sort_array("Price", "True", type_archwing_mod_item, type_archwing_mod_item_en, type_archwing_mod_price, type_archwing_mod_percent, type_archwing_mod_volume, type_archwing_mod_path_1)
+    type_archwing_mod_item_pe1, type_archwing_mod_item_en_pe1, type_archwing_mod_percent_pe1, type_archwing_mod_path_1_pe1 = sort_array("Percent", "False", type_archwing_mod_item, type_archwing_mod_item_en, type_archwing_mod_price, type_archwing_mod_percent, type_archwing_mod_volume, type_archwing_mod_path_1)
+    type_archwing_mod_item_pe2, type_archwing_mod_item_en_pe2, type_archwing_mod_percent_pe2, type_archwing_mod_path_1_pe2 = sort_array("Percent", "True", type_archwing_mod_item, type_archwing_mod_item_en, type_archwing_mod_price, type_archwing_mod_percent, type_archwing_mod_volume, type_archwing_mod_path_1)
+    type_archwing_mod_item_vo1, type_archwing_mod_item_en_vo1, type_archwing_mod_volume_vo1, type_archwing_mod_path_1_vo1 = sort_array("Volume", "False", type_archwing_mod_item, type_archwing_mod_item_en, type_archwing_mod_price, type_archwing_mod_percent, type_archwing_mod_volume, type_archwing_mod_path_1)
+    type_archwing_mod_item_vo2, type_archwing_mod_item_en_vo2, type_archwing_mod_volume_vo2, type_archwing_mod_path_1_vo2 = sort_array("Volume", "True", type_archwing_mod_item, type_archwing_mod_item_en, type_archwing_mod_price, type_archwing_mod_percent, type_archwing_mod_volume, type_archwing_mod_path_1)
+
+    type_necramech_mod_item_pr1, type_necramech_mod_item_en_pr1, type_necramech_mod_price_pr1, type_necramech_mod_path_1_pr1 = sort_array("Price", "False", type_necramech_mod_item, type_necramech_mod_item_en, type_necramech_mod_price, type_necramech_mod_percent, type_necramech_mod_volume, type_necramech_mod_path_1)
+    type_necramech_mod_item_pr2, type_necramech_mod_item_en_pr2, type_necramech_mod_price_pr2, type_necramech_mod_path_1_pr2 = sort_array("Price", "True", type_necramech_mod_item, type_necramech_mod_item_en, type_necramech_mod_price, type_necramech_mod_percent, type_necramech_mod_volume, type_necramech_mod_path_1)
+    type_necramech_mod_item_pe1, type_necramech_mod_item_en_pe1, type_necramech_mod_percent_pe1, type_necramech_mod_path_1_pe1 = sort_array("Percent", "False", type_necramech_mod_item, type_necramech_mod_item_en, type_necramech_mod_price, type_necramech_mod_percent, type_necramech_mod_volume, type_necramech_mod_path_1)
+    type_necramech_mod_item_pe2, type_necramech_mod_item_en_pe2, type_necramech_mod_percent_pe2, type_necramech_mod_path_1_pe2 = sort_array("Percent", "True", type_necramech_mod_item, type_necramech_mod_item_en, type_necramech_mod_price, type_necramech_mod_percent, type_necramech_mod_volume, type_necramech_mod_path_1)
+    type_necramech_mod_item_vo1, type_necramech_mod_item_en_vo1, type_necramech_mod_volume_vo1, type_necramech_mod_path_1_vo1 = sort_array("Volume", "False", type_necramech_mod_item, type_necramech_mod_item_en, type_necramech_mod_price, type_necramech_mod_percent, type_necramech_mod_volume, type_necramech_mod_path_1)
+    type_necramech_mod_item_vo2, type_necramech_mod_item_en_vo2, type_necramech_mod_volume_vo2, type_necramech_mod_path_1_vo2 = sort_array("Volume", "True", type_necramech_mod_item, type_necramech_mod_item_en, type_necramech_mod_price, type_necramech_mod_percent, type_necramech_mod_volume, type_necramech_mod_path_1)
+
+    #test = {"name" : pd.Series(all_item), "price" : pd.Series(today_price)}
+    #test_data = pd.DataFrame(test)
+    #test_data.to_excel('test.xlsx')
+
+    path = '/workspace/crawling/data/json/recommend_0.json'
+    with open(path, "r", encoding="UTF-8") as json_file:
+        json_data = json.load(json_file, strict = False)
+        json_datas = json.dumps(json_data, ensure_ascii=False)
+
+    rec_index_0 = []
+    rec_index_number_0 = []
+    rec_image_0 = []
+    rec_subject_0 = []
+    rec_name_0 = []
+    rec_type_0 = []
+    rec_en_name_0 = []
+    rec_kr_name_0 = []
+    rec_price_0 = []
+    rec_percent_0 = []
+    rec_volume_0 = []
+
+    rec_len_data_0 = len(json_data["recommend"])
+
+    for i in json_data["recommend"]:
+        rec_index_0.append(i["index"])
+        rec_index_number_0.append(i["index_number"])
+        rec_image_0.append(i["image"])
+        rec_subject_0.append(i["subject"])
+        rec_name_0.append(i["name"])
+        rec_type_0.append(i["type"])
+        rec_en_name_0.append(i["en_name"])
+        rec_kr_name_0.append(i["kr_name"])
+
+    for i in range(0, rec_len_data_0):
+        index = rec_index_number_0[i]
+        rec_price_0.append(today_price[index])
+        rec_percent_0.append(today_percent[index])
+        rec_volume_0.append(today_volume[index])
+
+    rec_name_0_pr1, rec_en_name_0_pr1, rec_price_0_pr1, rec_image_0_pr1 = sort_array("Price", "False", rec_name_0, rec_en_name_0, rec_price_0, rec_percent_0, rec_volume_0, rec_image_0)
+    rec_name_0_pr2, rec_en_name_0_pr2, rec_price_0_pr2, rec_image_0_pr2 = sort_array("Price", "True", rec_name_0, rec_en_name_0, rec_price_0, rec_percent_0, rec_volume_0, rec_image_0)
+    rec_name_0_pe1, rec_en_name_0_pe1, rec_percent_0_pe1, rec_image_0_pe1 = sort_array("Percent", "False", rec_name_0, rec_en_name_0, rec_price_0, rec_percent_0, rec_volume_0, rec_image_0)
+    rec_name_0_pe2, rec_en_name_0_pe2, rec_percent_0_pe2, rec_image_0_pe2 = sort_array("Percent", "True", rec_name_0, rec_en_name_0, rec_price_0, rec_percent_0, rec_volume_0, rec_image_0)
+    rec_name_0_vo1, rec_en_name_0_vo1, rec_volume_0_vo1, rec_image_0_vo1 = sort_array("Volume", "False", rec_name_0, rec_en_name_0, rec_price_0, rec_percent_0, rec_volume_0, rec_image_0)
+    rec_name_0_vo2, rec_en_name_0_vo2, rec_volume_0_vo2, rec_image_0_vo2 = sort_array("Volume", "True", rec_name_0, rec_en_name_0, rec_price_0, rec_percent_0, rec_volume_0, rec_image_0)
+
+    return render_template('category_en.html', **locals())
+
 ###########################################################################
 
 @app.route('/calculator/<get_name>/', methods=['GET', 'POST'])
@@ -3454,4 +3996,4 @@ if __name__ == '__main__':
     #ssl_context = ssl.SSLContext(ssl.PROTOCOL_TLS)
     #ssl_context.load_cert_chain(certfile='', keyfile='', password='')
     app.static_folder = 'static'
-    app.run(host = '0.0.0.0', port = 5001, debug = False)
+    app.run(host = '0.0.0.0', port = 5000, debug = False)
