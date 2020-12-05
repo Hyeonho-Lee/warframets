@@ -1272,7 +1272,7 @@ ul, ol, li {
 }
 
 .footer_info {
-    margin: 15px 0px;
+    margin: -12px 0px;
     float: left;
     width: 100%;
     height: auto;
