@@ -295,12 +295,6 @@
             "kr_name": "와일드파이어"
         },
         {
-            "name": "deft_tempo",
-            "type": "assaultrifle_mod",
-            "en_name": "Deft Tempo",
-            "kr_name": "데프트 템포"
-        },
-        {
             "name": "guided_ordnance",
             "type": "assaultrifle_mod",
             "en_name": "Guided Ordnance",

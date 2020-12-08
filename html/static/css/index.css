@@ -758,7 +758,7 @@ ul, ol, li {
 
 .menu {
     padding: 15px;
-    margin: 5px auto;
+    margin: -10px auto;
     
     float: left;
     width: 100%;
@@ -1048,6 +1048,26 @@ ul, ol, li {
     text-align: center;
     position: relative;
     border: 5px solid #dbdcd9;
+}
+
+.content_3 {
+    background-color: #dbdcd9;
+    margin: -10px auto;
+    padding: 0;
+    
+    float: left;
+    width: 100%;
+    height: auto;
+    
+    text-align: center;
+    position: relative;
+    border: 5px solid #dbdcd9;
+}
+
+.ad_display_1 {
+    display:inline-block;
+    width: 728px;
+    height: 90px;
 }
 
 .center .dataTables_wrapper {
@@ -1494,6 +1514,12 @@ ul, ol, li {
         top: 15%;
         left: 83%;
         display: block;
+    }
+    
+    .ad_display_1 {
+        display:inline-block;
+        width: 300px;
+        height: 250px;
     }
 }
 
