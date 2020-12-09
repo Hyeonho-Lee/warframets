@@ -758,7 +758,7 @@ ul, ol, li {
 
 .menu {
     padding: 15px;
-    margin: -10px auto;
+    margin: -15px auto;
     
     float: left;
     width: 100%;
@@ -1051,8 +1051,6 @@ ul, ol, li {
 }
 
 .content_3 {
-    background-color: #dbdcd9;
-    margin: -10px auto;
     padding: 0;
     
     float: left;
@@ -1061,7 +1059,19 @@ ul, ol, li {
     
     text-align: center;
     position: relative;
-    border: 5px solid #dbdcd9;
+    background-color: #dbdcd9;
+}
+
+.content_33 {
+    padding: 0;
+    
+    float: left;
+    width: 100%;
+    height: auto;
+    
+    text-align: center;
+    position: relative;
+    background-color: #dbdcd9;
 }
 
 .ad_display_1 {

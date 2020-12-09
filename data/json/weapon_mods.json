@@ -565,12 +565,6 @@
             "kr_name": "스냡 샷"
         },
         {
-            "name": "soft_hands",
-            "type": "shotgun_mod",
-            "en_name": "Soft Hands",
-            "kr_name": "소프트 핸즈"
-        },
-        {
             "name": "sweeping_serration",
             "type": "shotgun_mod",
             "en_name": "Sweeping Serration",
@@ -773,12 +767,6 @@
             "type": "pistol_mod",
             "en_name": "Hornet Strike",
             "kr_name": "호넷 스트라이크"
-        },
-        {
-            "name": "hydraulic_barrel",
-            "type": "pistol_mod",
-            "en_name": "Hydraulic Barrel",
-            "kr_name": "라이드롤릭 배럴"
         },
         {
             "name": "hydraulic_crosshairs",
