@@ -1667,6 +1667,11 @@ def error_en():
     all_item, all_item_kr, all_item_en, all_path, all_path_0, all_path_1, all_type, all_type_kr, all_type_en = get_all_item()
     return render_template('error_en.html', **locals())
 
+#####################################################################
+@app.route('/ads.txt')
+def ads():
+    return render_template('ads.txt', **locals())
+
 ######################################################################
 
 @app.route('/temp/')
