@@ -123,5 +123,5 @@ for i, v in enumerate(input_items):
     print(str(round(i / len(input_items) * 100)) + "% 완료했습니다. 시간: " + str(round(endTime)) + "초")
 
 print("업데이트가 모두 완료했습니다.")
-
+"""
 ######################################################

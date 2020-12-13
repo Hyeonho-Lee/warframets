@@ -13,6 +13,18 @@
             "kr_name": "관도 프라임"
         },
         {
+            "name": "stropha",
+            "type": "primary",
+            "en_name": "Stropha",
+            "kr_name": "스트로파"
+        },
+        {
+            "name": "stahlta",
+            "type": "primary",
+            "en_name": "Stahlta",
+            "kr_name": "스탈타"
+        },
+        {
             "name": "zakti_prime",
             "type": "secondary",
             "en_name": "Zakti Prime",

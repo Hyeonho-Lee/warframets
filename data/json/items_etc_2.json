@@ -7,6 +7,60 @@
             "kr_name": "억실러리 파워"
         },
         {
+            "name": "legendary_fusion_core",
+            "type": "etc",
+            "en_name": "Legendary Fusion Core",
+            "kr_name": "레전더리 퓨전 코어"
+        },
+        {
+            "name": "xata",
+            "type": "etc",
+            "en_name": "Xata",
+            "kr_name": "자타"
+        },
+        {
+            "name": "jahu",
+            "type": "etc",
+            "en_name": "Jahu",
+            "kr_name": "자후"
+        },
+        {
+            "name": "vome",
+            "type": "etc",
+            "en_name": "Vome",
+            "kr_name": "봄"
+        },
+        {
+            "name": "fass",
+            "type": "etc",
+            "en_name": "Fass",
+            "kr_name": "파스"
+        },
+        {
+            "name": "ris",
+            "type": "etc",
+            "en_name": "Ris",
+            "kr_name": "리즈"
+        },
+        {
+            "name": "khra",
+            "type": "etc",
+            "en_name": "Khra",
+            "kr_name": "크라"
+        },
+        {
+            "name": "netra",
+            "type": "etc",
+            "en_name": "Netra",
+            "kr_name": "네트라"
+        },
+        {
+            "name": "lohk",
+            "type": "etc",
+            "en_name": "Lohk",
+            "kr_name": "로크"
+        },
+        {
             "name": "cold_snap",
             "type": "archwing_mod",
             "en_name": "Cold Snap",

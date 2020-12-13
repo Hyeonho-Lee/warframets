@@ -3434,7 +3434,7 @@ def notice_en():
     visit_count = get_visit()
     all_item, all_item_kr, all_item_en, all_path, all_path_0, all_path_1, all_type, all_type_kr, all_type_en = get_all_item()
 
-    path = '/workspace/crawling/data/json/info/notice_data.json'
+    path = '/workspace/crawling/data/json/info/notice_data_en.json'
     with open(path, "r", encoding="UTF-8") as json_file:
         json_data_0 = json.load(json_file, strict = False)
 

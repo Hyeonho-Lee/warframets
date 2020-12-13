@@ -7,6 +7,18 @@
             "kr_name": "락타 세르노스"
         },
         {
+            "name": "prisma_shade",
+            "type": "warframe",
+            "en_name": "Prisma Shade",
+            "kr_name": "프리즈마 셰이드"
+        },
+        {
+            "name": "prisma_gorgon",
+            "type": "primary",
+            "en_name": "Prisma Gorgon",
+            "kr_name": "프리즈마 고르곤"
+        },
+        {
             "name": "vengeful_shockwave_(kuva_lich_ephemera)",
             "type": "ephemera",
             "en_name": "Vengeful Shockwave",

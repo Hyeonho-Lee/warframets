@@ -7,6 +7,18 @@
             "kr_name": "에어로 퍼리퍼리"
         },
         {
+            "name": "primed_firestorm",
+            "type": "primary_mod",
+            "en_name": "Primed Firestorm",
+            "kr_name": "프라임드 파이어스톰"
+        },
+        {
+            "name": "primed_fulmination",
+            "type": "pistol_mod",
+            "en_name": "Primed Fulmination",
+            "kr_name": "프라임드 펄미네이션"
+        },
+        {
             "name": "hunter_munitions",
             "type": "primary_mod",
             "en_name": "Hunter Munitions",

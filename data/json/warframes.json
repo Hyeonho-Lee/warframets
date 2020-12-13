@@ -7,6 +7,30 @@
             "kr_name": "로키 프라임"
         },
         {
+            "name": "dethcube_prime",
+            "type": "warframe",
+            "en_name": "Dethcube Prime",
+            "kr_name": "데스큐브 프라임"
+        },
+        {
+            "name": "wyrm_prime",
+            "type": "warframe",
+            "en_name": "Wyrm Prime",
+            "kr_name": "웜 프라임"
+        },
+        {
+            "name": "helios_prime",
+            "type": "warframe",
+            "en_name": "Helios Prime",
+            "kr_name": "헬리오스 프라임"
+        },
+        {
+            "name": "carrier_prime",
+            "type": "warframe",
+            "en_name": "Carrier Prime",
+            "kr_name": "캐리어 프라임"
+        },
+        {
             "name": "nezha_prime",
             "type": "warframe",
             "en_name": "Nezha Prime",
