@@ -152,3 +152,27 @@
 172.17.0.1 - - [19/Dec/2020 09:04:19] "[37mGET /static/image/item_image/weapon/Vengeful_Trickster_%28Kuva_Lich_Ephemera%29/Vengeful_Trickster_%28Kuva_Lich_Ephemera%29.png?v=0.1 HTTP/1.1[0m" 200 -
 172.17.0.1 - - [19/Dec/2020 09:04:19] "[37mGET /static/image/item_image/weapon/Vengeful_Pull_%28Kuva_Lich_Ephemera%29/Vengeful_Pull_%28Kuva_Lich_Ephemera%29.png?v=0.1 HTTP/1.1[0m" 200 -
 172.17.0.1 - - [19/Dec/2020 09:05:55] "[32mGET /result/아케인%20레이지 HTTP/1.1[0m" 308 -
+ * Serving Flask app "flask_app" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://0.0.0.0:5001/ (Press CTRL+C to quit)
+172.17.0.1 - - [19/Dec/2020 09:17:10] "[37mGET / HTTP/1.1[0m" 200 -
+172.17.0.1 - - [19/Dec/2020 09:23:40] "[37mGET /result/네크라메크%20인텐시파이/ HTTP/1.1[0m" 200 -
+172.17.0.1 - - [19/Dec/2020 09:23:40] "[37mGET /static/css/result.css?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [19/Dec/2020 09:23:40] "[37mGET /static/css/index.css?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [19/Dec/2020 09:23:40] "[37mGET /static/css/table.css?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [19/Dec/2020 09:23:40] "[37mGET /static/js/AutoComplete.min.js HTTP/1.1[0m" 200 -
+172.17.0.1 - - [19/Dec/2020 09:23:41] "[37mGET /static/image/icon/logo.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [19/Dec/2020 09:23:41] "[37mGET /static/image/item_image/mod/Necramech_Intensify/Necramech_Intensify.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [19/Dec/2020 09:23:43] "[32mGET /result/네크라메크+인텐시파이 HTTP/1.1[0m" 308 -
+172.17.0.1 - - [19/Dec/2020 09:23:43] "[32mGET /result/네크라메크+인텐시파이/ HTTP/1.1[0m" 302 -
+172.17.0.1 - - [19/Dec/2020 09:23:44] "[37mGET /error/ HTTP/1.1[0m" 200 -
+172.17.0.1 - - [19/Dec/2020 09:23:44] "[32mGET /calculator/네크라메크%20인텐시파이 HTTP/1.1[0m" 308 -
+172.17.0.1 - - [19/Dec/2020 09:23:44] "[37mGET /calculator/네크라메크%20인텐시파이/ HTTP/1.1[0m" 200 -
+172.17.0.1 - - [19/Dec/2020 09:23:44] "[37mGET /static/css/calculator.css?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [19/Dec/2020 09:23:46] "[32mGET /calculator/네크라메크+인텐시파이 HTTP/1.1[0m" 308 -
+172.17.0.1 - - [19/Dec/2020 09:23:47] "[32mGET /calculator/네크라메크+인텐시파이/ HTTP/1.1[0m" 302 -
+172.17.0.1 - - [19/Dec/2020 09:23:47] "[37mGET /error/ HTTP/1.1[0m" 200 -
+172.17.0.1 - - [19/Dec/2020 09:24:09] "[37mGET /calculator/네크라메크%20인텐시파이/ HTTP/1.1[0m" 200 -

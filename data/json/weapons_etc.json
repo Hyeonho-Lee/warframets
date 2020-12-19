@@ -7,6 +7,42 @@
             "kr_name": "락타 세르노스"
         },
         {
+            "name": "melee_riven_mod_(veiled)",
+            "type": "ephemera",
+            "en_name": "Melee Riven Mod",
+            "kr_name": "근접무기 리벤 모드"
+        },
+        {
+            "name": "pistol_riven_mod_(veiled)",
+            "type": "ephemera",
+            "en_name": "Melee Riven Mod",
+            "kr_name": "보조무기 리벤 모드"
+        },
+        {
+            "name": "rifle_riven_mod_(veiled)",
+            "type": "ephemera",
+            "en_name": "Rifle Riven Mod",
+            "kr_name": "소총 리벤 모드"
+        },
+        {
+            "name": "zaw_riven_mod_(veiled)",
+            "type": "ephemera",
+            "en_name": "Zaw Riven Mod",
+            "kr_name": "조우 리벤 모드"
+        },
+        {
+            "name": "shotgun_riven_mod_(veiled)",
+            "type": "ephemera",
+            "en_name": "Shotgun Riven Mod",
+            "kr_name": "산탄총 리벤 모드"
+        },
+        {
+            "name": "kitgun_riven_mod_(veiled)",
+            "type": "ephemera",
+            "en_name": "Kitgun Riven Mod",
+            "kr_name": "키트건 리벤 모드"
+        },
+        {
             "name": "xata",
             "type": "ephemera",
             "en_name": "Xata",
