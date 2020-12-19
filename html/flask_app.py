@@ -841,6 +841,7 @@ def index():
 
     return render_template('index.html', **locals())
 ######################################################################
+
 @app.route('/en/')
 def index_value_en():
 
@@ -3996,6 +3997,11 @@ def economy_en():
 
     return render_template('economy_en.html', **locals())
 
+#=======================================================================#
+
+@app.route('/test/')
+def new_index():
+    return render_template('/new_templates/new_index.html', **locals())
 #=======================================================================#
 if __name__ == '__main__':
     #ssl_context = ssl.SSLContext(ssl.PROTOCOL_TLS)
