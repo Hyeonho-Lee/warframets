@@ -7,6 +7,60 @@
             "kr_name": "락타 세르노스"
         },
         {
+            "name": "xata",
+            "type": "ephemera",
+            "en_name": "Xata",
+            "kr_name": "자타"
+        },
+        {
+            "name": "jahu",
+            "type": "ephemera",
+            "en_name": "Jahu",
+            "kr_name": "자후"
+        },
+        {
+            "name": "vome",
+            "type": "ephemera",
+            "en_name": "Vome",
+            "kr_name": "봄"
+        },
+        {
+            "name": "fass",
+            "type": "ephemera",
+            "en_name": "Fass",
+            "kr_name": "파스"
+        },
+        {
+            "name": "ris",
+            "type": "ephemera",
+            "en_name": "Ris",
+            "kr_name": "리즈"
+        },
+        {
+            "name": "khra",
+            "type": "ephemera",
+            "en_name": "Khra",
+            "kr_name": "크라"
+        },
+        {
+            "name": "netra",
+            "type": "ephemera",
+            "en_name": "Netra",
+            "kr_name": "네트라"
+        },
+        {
+            "name": "lohk",
+            "type": "ephemera",
+            "en_name": "Lohk",
+            "kr_name": "로크"
+        },
+        {
+            "name": "legendary_fusion_core",
+            "type": "ephemera",
+            "en_name": "Legendary Fusion Core",
+            "kr_name": "레전더리 퓨전 코어"
+        },
+        {
             "name": "prisma_shade",
             "type": "warframe",
             "en_name": "Prisma Shade",

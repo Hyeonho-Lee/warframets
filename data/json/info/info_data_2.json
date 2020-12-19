@@ -5,7 +5,7 @@
             "image": "./image/notice/rpc.png",
             "write": "R.PC",
             "subject": "[Q&A] 1. Digital Extremes과 어떤 관계인가요?",
-            "contents": "저희 WarframeTS는 평범한 Warframe의 개인 유저가 개발한 것으로 Digital Extremes와 아무런 관련없는 사이트입니다.#WarframeTS는 워프레임 아이템들의 가격을 분석하여 거래 현황을 한눈에 보여주기 위하여 제작되었습니다.#그렇기에 이 사이트에 관련된 문제는 저희 메일로 연락주시면 됩니다.(prohenho7138@gmail.com)",
+            "contents": "저희 WarframeTS는 평범한 Warframe의 개인 유저가 개발한 것으로 Digital Extremes와 아무런 관련없는 사이트입니다.#WarframeTS는 워프레임 아이템들의 가격을 분석하여 거래 현황을 한눈에 보여주기 위하여 제작되었습니다.#그렇기에 이 사이트에 관련된 문제는 저희 메일로 연락주시면 됩니다.(rpc@warframets.shop)",
             "contents_image": "",
             "youtube": "",
             "date": "2020.10.18"
@@ -16,16 +16,6 @@
             "write": "R.PC",
             "subject": "[Q&A] 2. Warframe Market과 어떤 관계인가요?",
             "contents": "WarframeTS는 Warframe Market에서 제공되는 API 데이터를 활용하여 만들어진 사이트입니다.#Warframe Market의 이용약관 (https://warframe.market/tos)을 기반으로 데이터를 사용하고 있습니다.##III API#1. 데이터 사용량(Data usage)##ㄴ   데이터 스크랩 및 API 사용은 합리적인 규모로 허용됩니다.#(Scraping data and using our API is allowed at a reasonable scale.)##ㄴ   제한은 초당 요청 3개 입니다.#(The limit is 3 requests per second.)##ㄴ   당사는 데이터 사용을 시도하는 모든 앱 / 서비스에 대한 엑세스를 차단할 권리가 있습니다.#(We reserve the right to block access for any app/service that attempt to use our data.)##데이터 스크랩은 인기아이템(거래량이 있는 아이템들)한정으로 진행됩니다.#5~7초에 1번 스크랩을 시도합니다.#사이트 운용간 Warframe Market의 권리를 인정하며 문제가 발생시 언제든지 사이트 운영이 차단될수 있습니다.",
-            "contents_image": "",
-            "youtube": "",
-            "date": "2020.10.18"
-        },
-        {
-            "index": 2,
-            "image": "./image/notice/rpc.png",
-            "write": "R.PC",
-            "subject": "[Q&A] 3. 거래는 어떻게 하는건가요?",
-            "contents": "Warframe Market의 거래방법입니다.",
             "contents_image": "",
             "youtube": "",
             "date": "2020.10.18"
