@@ -28,29 +28,46 @@
             <div class="content">
                 <div class="date_bar">
                     <div class="day_input">
-                        <p>Day</p>
-                        <img>
-                        <a>19</a>
+                        <div class="day_menu">
+                            <p>Day</p>
+                            <img alt="" src="{{ url_for('static', filename = '/new_image/index/menu_bar_1.png', v = 0.1) }}">
+                        </div>
+                        <div class="day_value">
+                            <a>20</a>
+                        </div>
                     </div>
                     <div class="week_input">
-                        <p>Week</p>
-                        <img>
-                        <a>3rd</a>
+                        <div class="week_menu">
+                            <p>Week</p>
+                            <img alt="" src="{{ url_for('static', filename = '/new_image/index/menu_bar_2.png', v = 0.1) }}">
+                        </div>
+                        <div class="week_value">
+                            <a>3</a>
+                            <p>rd</p>
+                        </div>
                     </div>
                     <div class="month_input">
-                        <p>Month</p>
-                        <p>Dec.</p>
-                        <img>
-                        <a>12th</a>
+                        <div class="month_menu">
+                            <p>Month Dec.</p>
+                            <img alt="" src="{{ url_for('static', filename = '/new_image/index/menu_bar_2.png', v = 0.1) }}">
+                        </div>
+                        <div class="month_value">
+                            <a>12</a>
+                            <p>th</p>
+                        </div>
                     </div>
                 </div>
                 <div class="search_bar">
                     <div class="control_button">
-                        
+                        <img alt="" src="{{ url_for('static', filename = '/new_image/index/search_bar.png', v = 0.1) }}">
                     </div>
                     <div class="search">
-                        
+                        <input type="text" placeholder="검색">
+                        <img alt="" src="{{ url_for('static', filename = '/new_image/index/search.png', v = 0.1) }}">
                     </div>
+                </div>
+                <div class="calender">
+                    
                 </div>
             </div>
         </div>
@@ -63,9 +80,9 @@
                     <a>기여</a>
                 </div>
                 <div class="icon">
-                    <a>Discord</a>
-                    <a>Patreon</a>
-                    <a>Twitter</a>
+                    <a><img alt="" src="{{ url_for('static', filename = '/new_image/index/discord.png', v = 0.1) }}">Discord</a>
+                    <a><img alt="" src="{{ url_for('static', filename = '/new_image/index/patreon.png', v = 0.1) }}">Patreon</a>
+                    <a><img alt="" src="{{ url_for('static', filename = '/new_image/index/twitter.png', v = 0.1) }}">Twitter</a>
                 </div>
                 <div class="ad">
                     광고

@@ -74,6 +74,7 @@
 .info a {
     font-family: "Nanum Gothic", sans-serif;
     font-size: 13px;
+    font-weight: bold;
     margin: 2px 0;
     color: #ffffff;
     float: left;
@@ -87,9 +88,17 @@
     margin: 0 15px;
 }
 
+.icon img {
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin: 1px 8px 1px 1px;
+}
+
 .icon a {
     font-family: "Nanum Gothic", sans-serif;
     font-size: 15px;
+    font-weight: bold;
     margin: 4px 0;
     color: #ffffff;
     float: left;
@@ -114,6 +123,7 @@
 .tos p {
     font-family: "Nanum Gothic", sans-serif;
     font-size: 15px;
+    font-weight: bold;
     margin: 4px 0;
     color: #ffffff;
     float: left;
@@ -145,6 +155,42 @@
     border-radius: 10%;
 }
 
+.day_menu {
+    width: 78%;
+    height: 12%;
+    padding: 10% 1% 1% 15%;
+    float: left;
+}
+
+.day_menu p {
+    font-family: "Nanum Gothic", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: #ffffff;
+    float: left;
+}
+
+.day_value {
+    width: 55%;
+    height: 55%;
+    padding: 1% 1% 1% 41%;
+    float: left;
+}
+
+.day_value a {
+    font-family: "Nanum Gothic", sans-serif;
+    font-weight: bold;
+    font-size: 165px;
+    color: #ffffff;
+    float: left;
+}
+
+.day_menu img {
+    width: 28px;
+    height: 28px;
+    float: right;
+}
+
 .week_input {
     width: 31%;
     height: 100%;
@@ -155,6 +201,52 @@
     border-radius: 10%;
 }
 
+.week_menu {
+    width: 78%;
+    height: 12%;
+    padding: 10% 1% 1% 15%;
+    float: left;
+}
+
+.week_menu p {
+    font-family: "Nanum Gothic", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: #3e3f41;
+    float: left;
+}
+
+.week_value {
+    width: 55%;
+    height: 55%;
+    padding: 1% 1% 1% 55%;
+    float: left;
+}
+
+.week_value a {
+    font-family: "Nanum Gothic", sans-serif;
+    font-weight: bold;
+    font-size: 165px;
+    color: #3e3f41;
+    float: left;
+}
+
+.week_value p {
+    width: 30px;
+    margin: 72% 0 0 0;
+    font-family: "Nanum Gothic", sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+    color: #3e3f41;
+    float: left;
+}
+
+.week_menu img {
+    width: 28px;
+    height: 28px;
+    float: right;
+}
+
 .month_input {
     width: 31%;
     height: 100%;
@@ -163,6 +255,54 @@
     margin: 0 10px;
     box-shadow: 3px 5px 15px #888;
     border-radius: 10%;
+}
+
+.month_menu {
+    width: 78%;
+    height: 12%;
+    padding: 10% 1% 1% 15%;
+    float: left;
+}
+
+.month_menu p {
+    font-family: "Nanum Gothic", sans-serif;
+    width: 65px;
+    height: 45px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #3e3f41;
+    float: left;
+}
+
+.month_value {
+    width: 70%;
+    height: 55%;
+    padding: 1% 1% 1% 25%;
+    float: left;
+}
+
+.month_value a {
+    font-family: "Nanum Gothic", sans-serif;
+    font-weight: bold;
+    font-size: 165px;
+    color: #3e3f41;
+    float: left;
+}
+
+.month_value p {
+    width: 30px;
+    margin: 56% 0 0 0;
+    font-family: "Nanum Gothic", sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+    color: #3e3f41;
+    float: left;
+}
+
+.month_menu img {
+    width: 28px;
+    height: 28px;
+    float: right;
 }
 
 .search_bar {
@@ -181,6 +321,13 @@
     border-radius: 35%;
 }
 
+.control_button img {
+    width: 55px;
+    height: 55px;
+    float: left;
+    padding: 12% 0 0 15%;
+}
+
 .search {
     width: 87%;
     height: 100%;
@@ -189,4 +336,45 @@
     margin: 0 10px;
     box-shadow: 3px 5px 15px #888;
     border-radius: 25px;
+}
+
+.search input {
+    width: 75%;
+    height: 60%;
+    float: left;
+    margin: 1.5% 0 0 7%;
+    border-radius: 5px;
+    background-color: #e5eaee;
+    font-family: "Nanum Gothic", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: #3e3f41;
+    border: none;
+}
+
+.search input::placeholder {
+    font-family: "Nanum Gothic", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: #bdbdbd;
+}
+
+.search input:focus {
+    outline: none;
+}
+
+.search img {
+    width: 55px;
+    height: 55px;
+    float: right;
+    padding: 1% 5% 1% 1%;
+}
+
+.calender {
+    position: relative;
+    top: -130%;
+    width: 100%;
+    height: 120%;
+    background-color: #000000;
+    display: none;
 }
