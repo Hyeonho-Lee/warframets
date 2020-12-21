@@ -173,8 +173,8 @@
 .day_value {
     width: 55%;
     height: 55%;
-    padding: 1% 1% 1% 41%;
-    float: left;
+    padding: 1% 1% 1% 1%;
+    float: right;
 }
 
 .day_value a {
@@ -182,7 +182,7 @@
     font-weight: bold;
     font-size: 165px;
     color: #ffffff;
-    float: left;
+    float: right;
 }
 
 .day_menu img {
@@ -219,8 +219,8 @@
 .week_value {
     width: 55%;
     height: 55%;
-    padding: 1% 1% 1% 55%;
-    float: left;
+    padding: 1% 15% 1% 1%;
+    float: right;
 }
 
 .week_value a {
@@ -228,7 +228,7 @@
     font-weight: bold;
     font-size: 165px;
     color: #3e3f41;
-    float: left;
+    float: right;
 }
 
 .week_value p {
@@ -238,7 +238,7 @@
     font-weight: bold;
     font-size: 50px;
     color: #3e3f41;
-    float: left;
+    float: right;
 }
 
 .week_menu img {
@@ -277,8 +277,8 @@
 .month_value {
     width: 70%;
     height: 55%;
-    padding: 1% 1% 1% 25%;
-    float: left;
+    padding: 1% 15% 1% 1%;
+    float: right;
 }
 
 .month_value a {
@@ -286,7 +286,7 @@
     font-weight: bold;
     font-size: 165px;
     color: #3e3f41;
-    float: left;
+    float: right;
 }
 
 .month_value p {
@@ -296,7 +296,7 @@
     font-weight: bold;
     font-size: 50px;
     color: #3e3f41;
-    float: left;
+    float: right;
 }
 
 .month_menu img {
@@ -377,4 +377,37 @@
     height: 120%;
     background-color: #000000;
     display: none;
+}
+
+.ul_count {
+    width: 100%;
+    height: 100%;
+    max-height: 300px;
+    overflow: auto;
+}
+
+.search ul {
+    background-color: #e5eaee;
+    width: 100%;
+    height: auto;
+    max-height: 180px;
+    margin: 15px 0;
+    float: left;
+    box-shadow: 3px 5px 15px #888;
+    border-radius: 25px
+}
+
+.search ul li:hover {
+    cursor: pointer;
+}
+
+.search ul li{
+    padding: 6px 65px;
+    color: #3e3f41;
+}
+
+.li_count{
+    font-family: "Nanum Gothic", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
 }

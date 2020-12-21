@@ -4001,10 +4001,12 @@ def economy_en():
 
 @app.route('/test/')
 def new_index():
+    all_item, all_item_kr, all_item_en, all_path, all_path_0, all_path_1, all_type, all_type_kr, all_type_en = get_all_item()
+    
     return render_template('/new_templates/new_index.html', **locals())
 #=======================================================================#
 if __name__ == '__main__':
     #ssl_context = ssl.SSLContext(ssl.PROTOCOL_TLS)
     #ssl_context.load_cert_chain(certfile='', keyfile='', password='')
     app.static_folder = 'static'
-    app.run(host = '0.0.0.0', port = 5001, debug = False)
+    app.run(host = '0.0.0.0', port = 5000, debug = True)
