@@ -7,6 +7,18 @@
             "kr_name": "락타 세르노스"
         },
         {
+            "name": "basmu_blueprint",
+            "type": "primary",
+            "en_name": "Basmu",
+            "kr_name": "바스무"
+        },
+        {
+            "name": "ceti_lacera_blueprint",
+            "type": "melee",
+            "en_name": "Ceti Lacera",
+            "kr_name": "세티 라세라"
+        },
+        {
             "name": "melee_riven_mod_(veiled)",
             "type": "ephemera",
             "en_name": "Melee Riven Mod",
