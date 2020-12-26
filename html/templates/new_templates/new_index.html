@@ -40,7 +40,7 @@
             </div>
             <div class="content">
                 <div class="date_bar">
-                    <div class="day_input">
+                    <div class="day_input" onclick="today_value_open()">
                         <div class="day_menu">
                             <p>Day</p>
                             <img alt="" src="{{ url_for('static', filename = '/new_image/index/menu_bar_1.png', v = 0.1) }}">
@@ -81,6 +81,54 @@
                 </div>
                 <div class="calender">
                     
+                </div>
+                <div class="main_bar">
+                    <div class="first_menu">
+                        <div class="main_top">
+                            <div class="main_daily">
+                                <a>Daily Search</a>
+                                <p>2020-12-28</p>
+                            </div>
+                            <div class="main_menu">
+                                <ul>
+                                    <li>Most Fluctuation Item</li>
+                                    <li>Daily Top 10</li>
+                                    <li>Update</li>
+                                </ul>
+                            </div>
+                            <div class="exit_button">
+                                <img alt="" src="{{ url_for('static', filename = '/new_image/index/exit.png', v = 0.1) }}" onclick="today_value_exit()">
+                            </div>
+                        </div>
+                        <div class="main_bottom">
+                            <div class="main_recommend">
+                                <div class="up">
+                                    <a>프라임드 컨티뉴어티</a>
+                                    <span class="up_bottom">
+                                        <p>▲</p>
+                                        <a>81.6(-0.1%)</a>
+                                        <div>More></div>
+                                    </span>
+                                </div>
+                                <div class="down">
+                                    <a>바자 프라임</a>
+                                    <span class="down_bottom">
+                                        <p>▼</p>
+                                        <a>32.6(-10.1%)</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="main_graph">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="second_menu">
+                        
+                    </div>
+                    <div class="third_menu">
+                        
+                    </div>
                 </div>
             </div>
         </div>

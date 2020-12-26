@@ -53,4 +53,36 @@ function input_search(){
         var links = 'result/' + String(msg);
         location.href = "/" + links;
     }
-};
+}
+
+function today_value_open(){
+    var date_bar = document.querySelector('.date_bar');
+    var search_bar = document.querySelector('.search_bar');
+    var main_bar = document.querySelector('.main_bar');
+    var content = document.querySelector('.content');
+    var first_menu = document.querySelector('.first_menu');
+    
+    date_bar.style.display = "none";
+    search_bar.style.display = "none";
+    main_bar.style.display = "block";
+    content.style.width = "70%";
+    content.style.height = "60%";
+    content.style.padding = "3% 15% 7% 15%";
+    first_menu.style.display = "block";
+}
+
+function today_value_exit(){
+    var date_bar = document.querySelector('.date_bar');
+    var search_bar = document.querySelector('.search_bar');
+    var main_bar = document.querySelector('.main_bar');
+    var content = document.querySelector('.content');
+    var first_menu = document.querySelector('.first_menu');
+    
+    date_bar.style.display = "block";
+    search_bar.style.display = "block";
+    main_bar.style.display = "none";
+    content.style.width = "60%";
+    content.style.height = "55%";
+    content.style.padding = "5% 20% 7% 20%";
+    first_menu.style.display = "none";
+}
