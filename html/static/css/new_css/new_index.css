@@ -219,7 +219,7 @@
 .week_value {
     width: 55%;
     height: 55%;
-    padding: 1% 15% 1% 1%;
+    padding: 1% 10% 1% 1%;
     float: right;
 }
 
@@ -277,7 +277,7 @@
 .month_value {
     width: 70%;
     height: 55%;
-    padding: 1% 15% 1% 1%;
+    padding: 1% 10% 1% 1%;
     float: right;
 }
 

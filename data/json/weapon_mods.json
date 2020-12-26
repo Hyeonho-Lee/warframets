@@ -763,12 +763,6 @@
             "kr_name": "히티드차지"
         },
         {
-            "name": "heavy_warhead",
-            "type": "pistol_mod",
-            "en_name": "Heavy Warhead",
-            "kr_name": "헤비 워헤드"
-        },
-        {
             "name": "hollow_point",
             "type": "pistol_mod",
             "en_name": "Hollow Point",
