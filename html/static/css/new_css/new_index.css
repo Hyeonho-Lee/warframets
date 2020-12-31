@@ -72,7 +72,6 @@
 }
 
 .info a {
-    font-family: "Nanum Gothic", sans-serif;
     font-size: 13px;
     font-weight: bold;
     margin: 2px 0;
@@ -96,7 +95,6 @@
 }
 
 .icon a {
-    font-family: "Nanum Gothic", sans-serif;
     font-size: 15px;
     font-weight: bold;
     margin: 4px 0;
@@ -121,7 +119,6 @@
 }
 
 .tos p {
-    font-family: "Nanum Gothic", sans-serif;
     font-size: 15px;
     font-weight: bold;
     margin: 4px 0;
@@ -131,7 +128,6 @@
 }
 
 .tos a {
-    font-family: "Nanum Gothic", sans-serif;
     font-size: 10px;
     margin: 4px 0;
     color: #ffffff;
@@ -164,7 +160,6 @@
 }
 
 .day_menu p {
-    font-family: "Nanum Gothic", sans-serif;
     font-weight: bold;
     font-size: 18px;
     color: #ffffff;
@@ -172,16 +167,26 @@
 }
 
 .day_value {
-    width: 55%;
+    width: 60%;
     height: 55%;
     padding: 1% 1% 1% 1%;
     float: right;
 }
 
-.day_value a {
-    font-family: "Nanum Gothic", sans-serif;
+.day_value_1 {
     font-weight: bold;
     font-size: 165px;
+    padding: 0;
+    margin: 5px 0px 0px 0px;
+    color: #ffffff;
+    float: right;
+}
+
+.day_value_2 {
+    font-weight: bold;
+    font-size: 165px;
+    padding: 0;
+    margin: 5px -15px 0px 0px;
     color: #ffffff;
     float: right;
 }
@@ -210,7 +215,6 @@
 }
 
 .week_menu p {
-    font-family: "Nanum Gothic", sans-serif;
     font-weight: bold;
     font-size: 18px;
     color: #3e3f41;
@@ -218,16 +222,26 @@
 }
 
 .week_value {
-    width: 55%;
+    width: 60%;
     height: 55%;
     padding: 1% 10% 1% 1%;
     float: right;
 }
 
-.week_value a {
-    font-family: "Nanum Gothic", sans-serif;
+.week_value_1 {
     font-weight: bold;
     font-size: 165px;
+    padding: 0;
+    margin: 10px 0px 0px 0px;
+    color: #3e3f41;
+    float: right;
+}
+
+.week_value_2 {
+    font-weight: bold;
+    font-size: 165px;
+    padding: 0;
+    margin: 10px -15px 0px 0px;
     color: #3e3f41;
     float: right;
 }
@@ -235,7 +249,6 @@
 .week_value p {
     width: 30px;
     margin: 72% 0 0 0;
-    font-family: "Nanum Gothic", sans-serif;
     font-weight: bold;
     font-size: 50px;
     color: #3e3f41;
@@ -266,7 +279,6 @@
 }
 
 .month_menu p {
-    font-family: "Nanum Gothic", sans-serif;
     width: 65px;
     height: 45px;
     font-weight: bold;
@@ -282,18 +294,27 @@
     float: right;
 }
 
-.month_value a {
-    font-family: "Nanum Gothic", sans-serif;
+.month_value_1 {
     font-weight: bold;
     font-size: 165px;
+    padding: 0;
+    margin: 15px 0px 0px 0px;
+    color: #3e3f41;
+    float: right;
+}
+
+.month_value_2 {
+    font-weight: bold;
+    font-size: 165px;
+    padding: 0;
+    margin: 15px -22px 0px 0px;
     color: #3e3f41;
     float: right;
 }
 
 .month_value p {
     width: 30px;
-    margin: 56% 0 0 0;
-    font-family: "Nanum Gothic", sans-serif;
+    margin: 63% 0 0 0;
     font-weight: bold;
     font-size: 50px;
     color: #3e3f41;
@@ -347,7 +368,6 @@
     margin: 1.5% 0 0 7%;
     border-radius: 5px;
     background-color: #e5eaee;
-    font-family: "Nanum Gothic", sans-serif;
     font-weight: bold;
     font-size: 18px;
     color: #3e3f41;
@@ -355,7 +375,6 @@
 }
 
 .search input::placeholder {
-    font-family: "Nanum Gothic", sans-serif;
     font-weight: bold;
     font-size: 18px;
     color: #bdbdbd;
@@ -410,7 +429,6 @@
 }
 
 .li_count{
-    font-family: "Nanum Gothic", sans-serif;
     font-weight: bold;
     font-size: 23px;
 }
@@ -432,7 +450,7 @@
 .main_top {
     width: 95%;
     height: 60px;
-    margin: 30px 25px 25px 35px;
+    margin: 30px 25px 10px 35px;
     float: left;
 }
 
@@ -444,14 +462,12 @@
 }
 
 .main_daily a {
-    font-family: "Nanum Gothic", sans-serif;
     font-weight: bold;
     font-size: 23px;
     color: #3e3f41;
 }
 
 .main_daily p {
-    font-family: "Nanum Gothic", sans-serif;
     font-size: 18px;
     color: #3e3f41;
 }
@@ -469,10 +485,13 @@
     padding: 5px;
     margin: 0 6%;
     float: left;
-    font-family: "Nanum Gothic", sans-serif;
     font-weight: bold;
     font-size: 18px;
     color: #3e3f41;
+}
+
+.main_menu li:hover {
+    box-shadow: 0px 5px 0px -2px #3e3f41;
 }
 
 .exit_button img {
@@ -510,7 +529,6 @@
     height: 30%;
     margin: 0 10%;
     padding: 3% 1% 1% 1%;
-    font-family: "Nanum Gothic", sans-serif;
     font-weight: bold;
     font-size: 32px;
     color: #3e3f41;
@@ -528,7 +546,6 @@
     width: 5%;
     height: 40%;
     margin: 3% 1%;
-    font-family: "Nanum Gothic", sans-serif;
     font-weight: bold;
     font-size: 18px;
     color: red;
@@ -539,7 +556,6 @@
     width: auto;
     height: 40%;
     margin: 0 3%;
-    font-family: "Nanum Gothic", sans-serif;
     font-weight: bold;
     font-size: 18px;
     color: #3e3f41;
@@ -550,7 +566,6 @@
     width: auto;
     height: 40%;
     margin: 5% 3%;
-    font-family: "Nanum Gothic", sans-serif;
     font-weight: bold;
     font-size: 13px;
     color: #3e3f41;
@@ -574,7 +589,6 @@
     height: 28%;
     margin: 1% 10% 0 10%;
     padding: 3% 1% 1% 1%;
-    font-family: "Nanum Gothic", sans-serif;
     font-weight: bold;
     font-size: 32px;
     color: #3e3f41;
@@ -592,7 +606,6 @@
     width: 5%;
     height: 40%;
     margin: 3% 2%;
-    font-family: "Nanum Gothic", sans-serif;
     font-weight: bold;
     font-size: 13px;
     color: blue;
@@ -603,7 +616,6 @@
     width: auto;
     height: 40%;
     margin: 0 1%;
-    font-family: "Nanum Gothic", sans-serif;
     font-weight: bold;
     font-size: 15px;
     color: #3e3f41;
@@ -614,7 +626,6 @@
     width: auto;
     height: 40%;
     margin: 5% 3%;
-    font-family: "Nanum Gothic", sans-serif;
     font-weight: bold;
     font-size: 13px;
     color: #3e3f41;
@@ -625,4 +636,115 @@
     width: 60%;
     height: 100%;
     float: left;
+    margin: -45px 0 0 0;
+}
+
+.top_menubar {
+    width: 100%;
+    height: 40px;
+    float: left;
+    margin: 5px 0 15px 35px;
+}
+
+.up_menu {
+    width: 30%;
+    height: 100%;
+    float: left;
+}
+
+.up_menu a {
+    width: 100%;
+    height: auto;
+    margin: 10px 0 0 0;
+    float: left;
+    color: #3e3f41;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+.down_menu {
+    width: 30%;
+    height: 100%;
+    float: left;
+    color: #ffffff;
+}
+
+.down_menu a {
+    width: 100%;
+    height: auto;
+    margin: 10px 0 0 0;
+    float: left;
+    color: #3e3f41;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+.down_menubar {
+    width: 85%;
+    height: 90%;
+    float: left;
+    margin: 0 0 0 40px;
+}
+
+.down_menubar ul li {
+    width: 100%;
+    height: 30px;
+    float: left;
+    list-style: none;
+    margin: 5px 0;
+}
+
+.rank_value {
+    width: 15%;
+    height: 100%;
+    float: left;
+    background-color: #dfdfdf;
+    border-radius: 50px;
+}
+
+.rank_value a {
+    width: 100%;
+    height: auto;
+    float: left;
+    color: #3e3f41;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    margin: 1px 0 0 0;
+}
+
+.name_value {
+    width: 60%;
+    height: 100%;
+    float: left;
+}
+
+.name_value a {
+    width: 100%;
+    height: auto;
+    float: left;
+    color: #3e3f41;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: left;
+    margin: 5px 0 0 18px;
+}
+
+.more_value {
+    width: 15%;
+    height: 100%;
+    float: left;
+}
+
+.more_value a {
+    width: 100%;
+    height: auto;
+    float: left;
+    color: #3e3f41;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+    margin: 7px 0 0 0;
 }

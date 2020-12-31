@@ -6,13 +6,42 @@ function get_today() {
     var date = today.getDate();
     var week = Math.ceil(date / 7);
     
-    var html_date = document.getElementById("day_value");
-    var html_week = document.getElementById("week_value");
-    var html_month = document.getElementById("month_value");
+    var str_date = String(date);
+    var str_week = String(week);
+    var str_month = String(month);
 
-    html_date.innerHTML = date;
-    html_week.innerHTML = week;
-    html_month.innerHTML = month;
+    function find_one_two(str_value) {
+        if(str_value.length == 2) {
+            var first = str_value.charAt(0);
+            var second = str_value.charAt(1);
+            return [first, second];
+        }else {
+            var first = "";
+            var second = str_value;
+            return [first, second];
+        };
+    }
+
+    var str_result = find_one_two(str_date);
+    var html_date_1 = document.getElementById("day_value_1");
+    var html_date_2 = document.getElementById("day_value_2");
+    
+    html_date_1.innerHTML = str_result[0];
+    html_date_2.innerHTML = str_result[1];
+    
+    var str_result = find_one_two(str_week);
+    var html_week_1 = document.getElementById("week_value_1");
+    var html_week_2 = document.getElementById("week_value_2");
+    
+    html_week_1.innerHTML = str_result[0];
+    html_week_2.innerHTML = str_result[1];
+    
+    var str_result = find_one_two(str_month);
+    var html_month_1 = document.getElementById("month_value_1");
+    var html_month_2 = document.getElementById("month_value_2");
+    
+    html_month_1.innerHTML = str_result[0];
+    html_month_2.innerHTML = str_result[1];
     
     var month_char = document.getElementById("month_char");
 
@@ -69,6 +98,22 @@ function today_value_open(){
     content.style.height = "60%";
     content.style.padding = "3% 15% 7% 15%";
     first_menu.style.display = "block";
+}
+
+function today_value_exit(){
+    var date_bar = document.querySelector('.date_bar');
+    var search_bar = document.querySelector('.search_bar');
+    var main_bar = document.querySelector('.main_bar');
+    var content = document.querySelector('.content');
+    var first_menu = document.querySelector('.first_menu');
+    
+    date_bar.style.display = "block";
+    search_bar.style.display = "block";
+    main_bar.style.display = "none";
+    content.style.width = "60%";
+    content.style.height = "55%";
+    content.style.padding = "5% 20% 7% 20%";
+    first_menu.style.display = "none";
 }
 
 function today_value_exit(){
