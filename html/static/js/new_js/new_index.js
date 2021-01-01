@@ -9,6 +9,7 @@ function get_today() {
     var str_date = String(date);
     var str_week = String(week);
     var str_month = String(month);
+    var str_year = String(year);
 
     function find_one_two(str_value) {
         if(str_value.length == 2) {
@@ -42,6 +43,9 @@ function get_today() {
     
     html_month_1.innerHTML = str_result[0];
     html_month_2.innerHTML = str_result[1];
+    
+    var main_daily = document.getElementById("main_daily");
+    main_daily.innerHTML = str_year + "-" + str_month + "-" + str_date;
     
     var month_char = document.getElementById("month_char");
 

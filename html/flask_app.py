@@ -4144,8 +4144,10 @@ def new_index():
                 result = read_csv_file(search_path)
                 return result
 
-    top_data = get_items(a_top_name[0]);
-    bottom_data = get_items(a_bottom_name[0]);
+    top_data = get_items(a_top_name[0])
+    bottom_data = get_items(a_bottom_name[0])
+    t_data_1 = get_items(t_top_name[0])
+    print(t_data_1)
 
     t_xlabels = []
     t_dataset = []
@@ -4157,10 +4159,24 @@ def new_index():
     b_xlabels = bottom_data['datetime'].tolist()
     b_dataset = bottom_data['avg_price'].tolist()
 
+    up_xlabels = []
+    up_dataset = []
+    for i in t_top_kr_name:
+        up_xlabels.append(i)
+    for i in t_top_percent:
+        up_dataset.append(i)
+
+    down_xlabels = []
+    down_dataset = []
+    for i in t_bottom_kr_name:
+        down_xlabels.append(i)
+    for i in t_bottom_percent:
+        down_dataset.append(i)
+
     return render_template('/new_templates/new_index.html', **locals())
 #=======================================================================#
 if __name__ == '__main__':
     #ssl_context = ssl.SSLContext(ssl.PROTOCOL_TLS)
     #ssl_context.load_cert_chain(certfile='', keyfile='', password='')
     app.static_folder = 'static'
-    app.run(host = '0.0.0.0', port = 5001, debug = False)
+    app.run(host = '0.0.0.0', port = 5000, debug = False)
