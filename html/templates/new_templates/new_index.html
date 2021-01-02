@@ -17,7 +17,7 @@
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     </head>
     <body>
-        <script type="text/javascript">
+        <script>
             window.onload = function () {
                 get_today();
                 
@@ -43,20 +43,19 @@
             </div>
             <div class="content">
                 <div class="date_bar">
-                    <div class="day_input" onclick="today_value_open()">
+                    <div class="day_input" onclick="today_value_open();">
                         <div class="day_menu">
                             <p>Day</p>
-                            <img alt="" src="{{ url_for('static', filename = '/new_image/index/menu_bar_1.png', v = 0.1) }}">
+                            <img alt="" src="{{ url_for('static', filename = '/new_image/index/menu_bar_1.png', v = 0.1) }}" onclick="calender_open(); calender();">
                         </div>
                         <div class="day_value">
                             <a class="day_value_1" id="day_value_2"></a>
                             <a class="day_value_2" id="day_value_1"></a>
                         </div>
                     </div>
-                    <div class="week_input">
+                    <div class="week_input" onclick="today_value_open();">
                         <div class="week_menu">
                             <p>Week</p>
-                            <img alt="" src="{{ url_for('static', filename = '/new_image/index/menu_bar_2.png', v = 0.1) }}">
                         </div>
                         <div class="week_value">
                             <p>rd</p>
@@ -64,10 +63,9 @@
                             <a class="week_value_2" id="week_value_1"></a>
                         </div>
                     </div>
-                    <div class="month_input">
+                    <div class="month_input" onclick="today_value_open();">
                         <div class="month_menu">
                             <p id="month_char">Month</p>
-                            <img alt="" src="{{ url_for('static', filename = '/new_image/index/menu_bar_2.png', v = 0.1) }}">
                         </div>
                         <div class="month_value">
                             <p>th</p>
@@ -85,9 +83,6 @@
                         <img alt="" src="{{ url_for('static', filename = '/new_image/index/search.png', v = 0.1) }}" onclick="input_search()">
                     </div>
                 </div>
-                <div class="calender">
-                    
-                </div>
                 <div class="main_bar">
                     <div class="first_menu">
                         <div class="main_top">
@@ -103,7 +98,7 @@
                                 </ul>
                             </div>
                             <div class="exit_button">
-                                <img alt="" src="{{ url_for('static', filename = '/new_image/index/exit.png', v = 0.1) }}" onclick="today_value_exit()">
+                                <img alt="" src="{{ url_for('static', filename = '/new_image/index/exit.png', v = 0.1) }}" onclick="today_value_exit();">
                             </div>
                         </div>
                         <div class="main_bottom" id="change_menu">
@@ -127,16 +122,35 @@
                             </div>
                             <div class="main_graph">
                                 <div style="width:99%;">
-                                    <canvas id="canvas" style="height: 48vh; width: 40vw;"></canvas>
+                                    <canvas id="canvas" style="height: 48vh; width: 43vw;"></canvas>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="second_menu">
-                        
+                </div>
+                <div class="calender">
+                    <div class="cal_exit_button">
+                        <img alt="" src="{{ url_for('static', filename = '/new_image/index/exit.png', v = 0.1) }}" onclick="calender_exit();">
                     </div>
-                    <div class="third_menu">
-                        
+                    <div class="cal_header">
+                        <div class="cal_head"><a>Daily Search</a></div>
+                        <div class="cal_nav">
+                            <div class="prev">&lt;</div>
+                            <div class="today">Today</div>
+                            <div class="next">&gt;</div>
+                        </div>
+                    </div>
+                    <div class="cal_main">
+                        <div class="cal_days">
+                            <div class="day">Sun</div>
+                            <div class="day">Mon</div>
+                            <div class="day">Tue</div>
+                            <div class="day">Wed</div>
+                            <div class="day">Thu</div>
+                            <div class="day">Fri</div>
+                            <div class="day">Sat</div>
+                        </div>
+                        <div class="dates"></div>
                     </div>
                 </div>
             </div>
@@ -194,7 +208,7 @@
                 var change_menu = document.getElementById("change_menu");
 
                 if (value == 1) {
-                    change_menu.innerHTML = "<div class='main_recommend'><div class='up' onclick='href_site(this);' value='{{ a_top_kr_name[0] }}'><div class='up_img'><img alt='{{ a_top_kr_name[0] }}'' src='{{ url_for('static', filename = a_top_path_1[0], v = 0.1) }}'></div><a>{{ a_top_kr_name[0] }}</a><span class='up_bottom'><p>▲</p><a>{{ a_top_price[0] }} ({{ a_top_percent[0] }}%)</a></span></div><div class='down' onclick='href_site(this);' value='{{ a_bottom_kr_name[0] }}'><div class='down_img'><img alt='{{ a_bottom_kr_name[0] }}' src='{{ url_for('static', filename = a_bottom_path_1[0], v = 0.1) }}'></div><a>{{ a_bottom_kr_name[0] }}</a><span class='down_bottom'><p>▼</p><a>{{ a_bottom_price[0] }} ({{ a_bottom_percent[0] }}%)</a></span></div></div><div class='main_graph'><div style='width:99%;'><canvas id='canvas' style='height: 48vh; width: 40vw;'></canvas></div></div>";
+                    change_menu.innerHTML = "<div class='main_recommend'><div class='up' onclick='href_site(this);' value='{{ a_top_kr_name[0] }}'><div class='up_img'><img alt='{{ a_top_kr_name[0] }}'' src='{{ url_for('static', filename = a_top_path_1[0], v = 0.1) }}'></div><a>{{ a_top_kr_name[0] }}</a><span class='up_bottom'><p>▲</p><a>{{ a_top_price[0] }} ({{ a_top_percent[0] }}%)</a></span></div><div class='down' onclick='href_site(this);' value='{{ a_bottom_kr_name[0] }}'><div class='down_img'><img alt='{{ a_bottom_kr_name[0] }}' src='{{ url_for('static', filename = a_bottom_path_1[0], v = 0.1) }}'></div><a>{{ a_bottom_kr_name[0] }}</a><span class='down_bottom'><p>▼</p><a>{{ a_bottom_price[0] }} ({{ a_bottom_percent[0] }}%)</a></span></div></div><div class='main_graph'><div style='width:99%;'><canvas id='canvas' style='height: 48vh; width: 43vw;'></canvas></div></div>";
                     var canvas = new Chart(document.getElementById("canvas"), {
                         type: 'line',
                         data:{
@@ -217,30 +231,13 @@
                         },
                         options: {
                             responsive: false,
-                            title: {
-                                display: true,
-                                text: ''
-                            },
-                            scales: {
-                                xAxes: [{
-                                    display: true,
-                                    scaleLabel: {
-                                        display: true,
-                                    }
-                                }],
-                                yAxes: [{
-                                    display: true,
-                                    ticks: {
-                                    },
-                                    scaleLabel: {
-                                        display: true,
-                                    }
-                                }]
+                            title: {display: true, text: ''},
+                            scales: {xAxes: [{display: true, scaleLabel: {display: true}}], yAxes: [{display: true, scaleLabel: {display: true}}]
                             }
                         }
                     });
                 }else if (value == 2) {
-                    change_menu.innerHTML = "<div class='main_recommend'><div class='top_menubar'><div class='up_menu' onclick='menu_increase();'><a>Increase</a></div><div class='down_menu' onclick='menu_decrease();'><a>Decrease</a></div></div><div class='down_menubar'><ul id='menu_in_de'>{% for i in range(1,11) %}<li onclick='href_site(this);' value='{{ t_top_kr_name[i - 1] }}'><div class='rank_value'><a>{{ i }}st</a></div><div class='img_box'><img alt='{{ t_top_kr_name[i - 1] }}'src='{{ url_for('static', filename = t_top_path_1[i - 1], v = 0.1) }}'></div><div class='name_value'><a>{{ t_top_kr_name[i -1] }} ({{ t_top_percent[i -1] }}%)</a></div></li>{% endfor %}</ul></div></div><div class='main_graph' id='graph_change'><div style='width:99%;'><canvas id='canvas' style='height: 525px; width: 40vw;'></canvas></div></div>";
+                    change_menu.innerHTML = "<div class='main_recommend'><div class='top_menubar'><div class='up_menu' onclick='menu_increase();'><a>Increase</a></div><div class='down_menu' onclick='menu_decrease();'><a>Decrease</a></div></div><div class='down_menubar'><ul id='menu_in_de'>{% for i in range(1,11) %}<li onclick='href_site(this);' value='{{ t_top_kr_name[i - 1] }}'><div class='rank_value'><a>{{ i }}st</a></div><div class='img_box'><img alt='{{ t_top_kr_name[i - 1] }}'src='{{ url_for('static', filename = t_top_path_1[i - 1], v = 0.1) }}'></div><div class='name_value'><a>{{ t_top_kr_name[i -1] }} ({{ t_top_percent[i -1] }}%)</a></div></li>{% endfor %}</ul></div></div><div class='main_graph' id='graph_change'><div style='width:99%;'><canvas id='canvas' style='height: 500px; width: 43vw;'></canvas></div></div>";
                     var canvas = new Chart(document.getElementById("canvas"), {
                         type: 'horizontalBar',
                         data:{
@@ -271,7 +268,7 @@
                 var change_menu = document.getElementById("menu_in_de");
                 var change_graph = document.getElementById("graph_change");
                 change_menu.innerHTML = "<ul id='menu_in_de'>{% for i in range(1,11) %}<li onclick='href_site(this);' value='{{ t_top_kr_name[i - 1] }}'><div class='rank_value'><a>{{ i }}st</a></div><div class='img_box'><img alt='{{ t_top_kr_name[i - 1] }}'src='{{ url_for('static', filename = t_top_path_1[i - 1], v = 0.1) }}'></div><div class='name_value'><a>{{ t_top_kr_name[i-1] }} ({{ t_top_percent[i-1] }}%)</a></div></li>{% endfor %}";
-                change_graph.innerHTML = "<div style='width:99%;'><canvas id='canvas' style='height: 525px; width: 40vw;'></canvas></div>";
+                change_graph.innerHTML = "<div style='width:99%;'><canvas id='canvas' style='height: 500px; width: 43vw;'></canvas></div>";
                 var canvas = new Chart(document.getElementById("canvas"), {
                     type: 'horizontalBar',
                     data:{
@@ -297,7 +294,7 @@
                 var change_menu = document.getElementById("menu_in_de");
                 var change_graph = document.getElementById("graph_change");
                 change_menu.innerHTML = "<ul id='menu_in_de'>{% for i in range(1,11) %}<li onclick='href_site(this);' value='{{ t_bottom_kr_name[i - 1] }}'><div class='rank_value'><a>{{ i }}st</a></div><div class='img_box'><img alt='{{ t_bottom_kr_name[i - 1] }}'src='{{ url_for('static', filename = t_bottom_path_1[i - 1], v = 0.1) }}'></div><div class='name_value'><a>{{ t_bottom_kr_name[i-1] }} ({{ t_bottom_percent[i-1] }}%)</a></div></li>{% endfor %}";
-                change_graph.innerHTML = "<div style='width:99%;'><canvas id='canvas' style='height: 525px;; width: 40vw;'></canvas></div>";
+                change_graph.innerHTML = "<div style='width:99%;'><canvas id='canvas' style='height: 500px;; width: 43vw;'></canvas></div>";
                 var canvas = new Chart(document.getElementById("canvas"), {
                     type: 'horizontalBar',
                     data:{

@@ -54,7 +54,7 @@
 .content {
     width: 60%;
     height: 55%;
-    padding: 5% 20% 7% 20%;
+    padding: 7% 20% 7% 20%;
     float: left;
 }
 
@@ -68,7 +68,7 @@
     width: 10%;
     height: 100%;
     float: left;
-    margin: 0 15px;
+    margin: 5px 15px 0 15px;
 }
 
 .info a {
@@ -84,7 +84,7 @@
     width: 10%;
     height: 100%;
     float: left;
-    margin: 0 15px;
+    margin: 2px 15px 0 15px;
 }
 
 .icon img {
@@ -115,11 +115,11 @@
     width: 35%;
     height: 100%;
     float: left;
-    margin: 0 15px;
+    margin: 4px 15px 0 15px;
 }
 
 .tos p {
-    font-size: 15px;
+    font-size: 13px;
     font-weight: bold;
     margin: 4px 0;
     color: #ffffff;
@@ -152,6 +152,10 @@
     border-radius: 10%;
 }
 
+.day_input:hover {
+    transform: scale( 1.025 );
+}
+
 .day_menu {
     width: 78%;
     height: 12%;
@@ -173,6 +177,10 @@
     float: right;
 }
 
+.day_value:hover {
+    cursor: pointer;
+}
+
 .day_value_1 {
     font-weight: bold;
     font-size: 165px;
@@ -192,9 +200,17 @@
 }
 
 .day_menu img {
+    padding: 1%;
     width: 28px;
     height: 28px;
     float: right;
+}
+
+.day_menu img:hover {
+    cursor: pointer;
+    border-radius: 10px;
+    transform: scale( 1.025 );
+    box-shadow: 3px 5px 15px #888;
 }
 
 .week_input {
@@ -365,7 +381,7 @@
     width: 75%;
     height: 60%;
     float: left;
-    margin: 1.5% 0 0 7%;
+    margin: 1.75% 0 0 7%;
     border-radius: 5px;
     background-color: #e5eaee;
     font-weight: bold;
@@ -393,12 +409,57 @@
 
 .calender {
     position: relative;
-    top: -114%;
+    top: -115%;
     left: 35.5%;
-    width: 57.5%;
+    width: 58%;
     height: 95%;
-    background-color: #000000;
+    background-color: #e5eaee;
+    box-shadow: 3px 5px 15px #888;
+    border-radius: 25px;
     display: none;
+    
+    animation: zoomIn 0.1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.cal_exit_button {
+    width: 98%;
+    height: 40px;
+    padding: 15px 0 0 0;
+    float: left;
+}
+
+.cal_exit_button img {
+    width: 40px;
+    height: 40px;
+    float: right;
+}
+
+.cal_header {
+    width: 100%;
+    height: 60px;
+    float: left;
+}
+
+.cal_head {
+    width: 40%;
+    height: 60px;
+    float: left;
+}
+
+.cal_head a {
+    width: 100%;
+    height: auto;
+    font-size: 18px;
+    text-align: center;
+    margin: 10px 0 0 0;
+    float: left;
+}
+
+.cal_nav {
+    width: 60%;
+    height: 60px;
+    background-color: #ffffff;
+    float: left;
 }
 
 .ul_count {
@@ -416,7 +477,7 @@
     margin: 15px 0;
     float: left;
     box-shadow: 3px 5px 15px #888;
-    border-radius: 25px
+    border-radius: 25px;
 }
 
 .search ul li:hover {
@@ -441,6 +502,8 @@
     background-color: #e5eaee;
     box-shadow: 3px 5px 15px #888;
     border-radius: 30px;
+    
+    animation: zoomIn 0.1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
 .first_menu {
@@ -448,7 +511,7 @@
 }
 
 .main_top {
-    width: 95%;
+    width: 93.5%;
     height: 60px;
     margin: 30px 25px 10px 35px;
     float: left;
@@ -458,7 +521,7 @@
     width: 150px;
     height: 50px;
     float: left;
-    margin: 0 5% 0 0;
+    margin: 0 5% 0 2%;
 }
 
 .main_daily a {
@@ -496,8 +559,8 @@
 }
 
 .exit_button img {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     float: right;
 }
 
@@ -508,7 +571,7 @@
 }
 
 .main_recommend {
-    width: 40%;
+    width: 35%;
     height: 100%;
     float: left;
 }
@@ -516,7 +579,7 @@
 .up {
     position: relative;
     top: 25%;
-    left: 8%;
+    left: 12%;
     width: 75%;
     height: 25%;
     background-color: #e5eaee;
@@ -532,12 +595,12 @@
 }
 
 .up a {
-    width: 70%;
+    width: 65%;
     height: 30%;
     margin: 0 1%;
-    padding: 4% 1% 1% 1%;
+    padding: 6% 1% 0% 1%;
     font-weight: bold;
-    font-size: 28px;
+    font-size: 24px;
     color: #3e3f41;
     float: left;
 }
@@ -552,7 +615,7 @@
 .up_bottom p {
     width: 5%;
     height: 40%;
-    margin: 3% 1%;
+    margin: 5% 1%;
     font-weight: bold;
     font-size: 18px;
     color: red;
@@ -572,7 +635,7 @@
 .down {
     position: relative;
     top: 22%;
-    left: 15%;
+    left: 20%;
     width: 72%;
     height: 22%;
     background-color: #e5eaee;
@@ -585,9 +648,9 @@
     width: 60%;
     height: 28%;
     margin: 1% 1% 0 1%;
-    padding: 4% 1% 1% 1%;
+    padding: 5% 1% 0% 1%;
     font-weight: bold;
-    font-size: 28px;
+    font-size: 24px;
     color: #3e3f41;
     float: left;
 }
@@ -608,7 +671,7 @@
 .down_bottom p {
     width: 5%;
     height: 40%;
-    margin: 3% 2%;
+    margin: 5% 2%;
     font-weight: bold;
     font-size: 13px;
     color: blue;
@@ -626,17 +689,17 @@
 }
 
 .main_graph {
-    width: 60%;
+    width: 65%;
     height: 100%;
     float: left;
-    margin: -20px 0 0 0;
+    margin: -30px 0 0 0;
 }
 
 .top_menubar {
     width: 100%;
     height: 40px;
     float: left;
-    margin: 5px 0 15px 35px;
+    margin: 5px 0 15px 55px;
 }
 
 .up_menu {
@@ -696,17 +759,10 @@
 
 .down_menubar ul li {
     width: 100%;
-    height: 30px;
+    height: 25px;
     float: left;
     list-style: none;
     margin: 5px 0;
-}
-
-.down_menubar ul li:hover {
-    cursor: pointer;
-    background-color: #dfdfdf;
-    border-radius: 20px;
-    transform: scale( 1.025 );
 }
 
 .rank_value {
@@ -715,6 +771,7 @@
     float: left;
     background-color: #dfdfdf;
     border-radius: 50px;
+    margin: 0 0 0 10px;
 }
 
 .rank_value a {
@@ -729,13 +786,13 @@
 }
 
 .name_value {
-    width: 65%;
+    width: 60%;
     height: 100%;
     float: left;
 }
 
 .name_value a {
-    width: 100%;
+    width: 240px;
     height: auto;
     float: left;
     color: #3e3f41;
@@ -799,7 +856,7 @@
 }
 
 .img_box {
-    width: 80px;
+    width: 60px;
     max-height: 30px;
     max-width: auto;
     margin: 0 0 0 10px;
@@ -808,9 +865,27 @@
 }
 
 .img_box img{
-    margin: -13% 0 0 0;
+    margin: -15% 0 0 -15%;
     width: auto;
     height: auto;
     max-width: 80px;
     max-height: 120px;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scaleX(0.4);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes zoomOut {
+  0% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(0);
+  }
 }

@@ -94,14 +94,16 @@ function today_value_open(){
     var main_bar = document.querySelector('.main_bar');
     var content = document.querySelector('.content');
     var first_menu = document.querySelector('.first_menu');
+    var calender = document.querySelector('.calender');
     
     date_bar.style.display = "none";
     search_bar.style.display = "none";
     main_bar.style.display = "block";
     content.style.width = "70%";
     content.style.height = "60%";
-    content.style.padding = "3% 15% 7% 15%";
+    content.style.padding = "4% 15% 7% 15%";
     first_menu.style.display = "block";
+    calender.style.display = "none";
 }
 
 function today_value_exit(){
@@ -110,28 +112,63 @@ function today_value_exit(){
     var main_bar = document.querySelector('.main_bar');
     var content = document.querySelector('.content');
     var first_menu = document.querySelector('.first_menu');
+    var calender = document.querySelector('.calender');
     
     date_bar.style.display = "block";
     search_bar.style.display = "block";
     main_bar.style.display = "none";
     content.style.width = "60%";
     content.style.height = "55%";
-    content.style.padding = "5% 20% 7% 20%";
+    content.style.padding = "7% 20% 7% 20%";
     first_menu.style.display = "none";
+    calender.style.display = "none";
 }
 
-function today_value_exit(){
-    var date_bar = document.querySelector('.date_bar');
-    var search_bar = document.querySelector('.search_bar');
-    var main_bar = document.querySelector('.main_bar');
-    var content = document.querySelector('.content');
-    var first_menu = document.querySelector('.first_menu');
+function calender_open(){
+    var calender = document.querySelector('.calender');
+    calender.style.display = "block";
+}
+
+function calender_exit(){
+    var calender = document.querySelector('.calender');
+    calender.style.display = "none";
+}
+
+function calender() {
+    var today = new Date();
+
+    var year = today.getFullYear();
+    var month = today.getMonth() + 1;
+    var date = today.getDate();
     
-    date_bar.style.display = "block";
-    search_bar.style.display = "block";
-    main_bar.style.display = "none";
-    content.style.width = "60%";
-    content.style.height = "55%";
-    content.style.padding = "5% 20% 7% 20%";
-    first_menu.style.display = "none";
+    var prevLast = new Date(year, month - 1, 0);
+    var thisLast = new Date(year, month, 0);
+    
+    var PLDate = prevLast.getDate();
+    var PLDay = prevLast.getDay();
+
+    var TLDate = thisLast.getDate();
+    var TLDay = thisLast.getDay();
+    
+    var prevDates = [];
+    var thisDates = [...Array(TLDate + 1).keys()].slice(1);
+    var nextDates = [];
+    
+    if (PLDay !== 6) {
+      for (let i = 0; i < PLDay + 1; i++) {
+        prevDates.unshift(PLDate - i);
+      }
+    }
+
+    for (let i = 1; i < 7 - TLDay; i++) {
+      nextDates.push(i);
+    }
+    
+    const dates = prevDates.concat(thisDates, nextDates);
+
+    dates.forEach((date, i) => {
+        dates[i] = "<div class='date'>" + String(date) + "</div>";
+    })
+
+    document.querySelector('.dates').innerHTML = dates.join('');
 }
