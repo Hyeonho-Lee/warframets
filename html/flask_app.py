@@ -4147,7 +4147,6 @@ def new_index():
     top_data = get_items(a_top_name[0])
     bottom_data = get_items(a_bottom_name[0])
     t_data_1 = get_items(t_top_name[0])
-    print(t_data_1)
 
     t_xlabels = []
     t_dataset = []
@@ -4179,4 +4178,4 @@ if __name__ == '__main__':
     #ssl_context = ssl.SSLContext(ssl.PROTOCOL_TLS)
     #ssl_context.load_cert_chain(certfile='', keyfile='', password='')
     app.static_folder = 'static'
-    app.run(host = '0.0.0.0', port = 5000, debug = True)
+    app.run(host = '0.0.0.0', port = 5000, debug = False)
