@@ -473,7 +473,7 @@
     background-color: #e5eaee;
     width: 100%;
     height: auto;
-    max-height: 220px;
+    max-height: 200px;
     margin: 15px 0;
     float: left;
     box-shadow: 3px 5px 15px #888;
@@ -485,7 +485,7 @@
 }
 
 .search ul li{
-    padding: 6px 65px;
+    padding: 4px 65px;
     color: #3e3f41;
 }
 

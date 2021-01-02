@@ -10335,3 +10335,43 @@ flask_app.py:2599: DeprecationWarning: The default dtype for empty Series will b
 172.17.0.1 - - [02/Jan/2021 08:01:01] "[37mGET / HTTP/1.1[0m" 200 -
 172.17.0.1 - - [02/Jan/2021 08:15:26] "[32mGET /en/result/Aklex%20Prime HTTP/1.1[0m" 308 -
 172.17.0.1 - - [02/Jan/2021 08:15:27] "[37mGET /en/result/Aklex%20Prime/ HTTP/1.1[0m" 200 -
+ * Serving Flask app "flask_app" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://0.0.0.0:5001/ (Press CTRL+C to quit)
+172.17.0.1 - - [02/Jan/2021 13:49:04] "[37mGET / HTTP/1.1[0m" 200 -
+172.17.0.1 - - [02/Jan/2021 13:49:07] "[37mGET / HTTP/1.1[0m" 200 -
+172.17.0.1 - - [02/Jan/2021 13:49:08] "[37mGET /static/css/index.css?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [02/Jan/2021 13:49:08] "[37mGET /static/css/table.css?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [02/Jan/2021 13:49:08] "[37mGET /static/js/jquery-ui.js HTTP/1.1[0m" 200 -
+172.17.0.1 - - [02/Jan/2021 13:49:08] "[37mGET /static/js/jquery-3.5.1.min.js HTTP/1.1[0m" 200 -
+172.17.0.1 - - [02/Jan/2021 13:49:08] "[37mGET /static/js/AutoComplete.min.js HTTP/1.1[0m" 200 -
+172.17.0.1 - - [02/Jan/2021 13:49:08] "[37mGET /static/image/icon/logo.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [02/Jan/2021 13:49:08] "[37mGET /static/image/item_image/mod/Shell_Shock/Shell_Shock.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [02/Jan/2021 13:49:08] "[37mGET /static/image/item_image/warframe/Ivara_Prime/Ivara_Prime.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [02/Jan/2021 13:49:08] "[37mGET /static/image/item_image/weapon/Tiberon_Prime/Tiberon_Prime.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [02/Jan/2021 13:49:08] "[37mGET /static/image/item_image/mod/Primed_Continuity/Primed_Continuity.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [02/Jan/2021 13:49:08] "[37mGET /static/image/item_image/weapon/Tigris_Prime/Tigris_Prime.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [02/Jan/2021 13:49:08] "[37mGET /static/image/item_image/weapon/Silva_And_Aegis_Prime/Silva_And_Aegis_Prime.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [02/Jan/2021 13:49:08] "[37mGET /static/image/item_image/weapon/Fragor_Prime/Fragor_Prime.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [02/Jan/2021 13:49:08] "[37mGET /static/image/item_image/weapon/Secura_Lecta/Secura_Lecta.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [02/Jan/2021 13:49:08] "[37mGET /static/image/item_image/weapon/Legendary_Fusion_Core/Legendary_Fusion_Core.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [02/Jan/2021 13:49:08] "[37mGET /static/image/item_image/weapon/Dakra_Prime/Dakra_Prime.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [02/Jan/2021 13:49:08] "[37mGET /static/image/item_image/weapon/Imperator_Vandal/Imperator_Vandal.png?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [02/Jan/2021 13:49:10] "[37mGET /test/ HTTP/1.1[0m" 200 -
+172.17.0.1 - - [02/Jan/2021 13:49:10] "[36mGET /static/new_image/index/en.png?v=0.1 HTTP/1.1[0m" 304 -
+172.17.0.1 - - [02/Jan/2021 13:49:10] "[36mGET /static/new_image/index/new_logo.png?v=0.1 HTTP/1.1[0m" 304 -
+172.17.0.1 - - [02/Jan/2021 13:49:10] "[36mGET /static/new_image/index/menu_bar.png?v=0.1 HTTP/1.1[0m" 304 -
+172.17.0.1 - - [02/Jan/2021 13:49:10] "[36mGET /static/new_image/index/kr.png?v=0.1 HTTP/1.1[0m" 304 -
+172.17.0.1 - - [02/Jan/2021 13:49:10] "[37mGET /static/css/new_css/new_index.css?v=0.1 HTTP/1.1[0m" 200 -
+172.17.0.1 - - [02/Jan/2021 13:49:10] "[37mGET /static/js/new_js/new_index.js HTTP/1.1[0m" 200 -
+172.17.0.1 - - [02/Jan/2021 13:49:10] "[36mGET /static/new_image/index/menu_bar_1.png?v=0.1 HTTP/1.1[0m" 304 -
+172.17.0.1 - - [02/Jan/2021 13:49:10] "[36mGET /static/new_image/index/search.png?v=0.1 HTTP/1.1[0m" 304 -
+172.17.0.1 - - [02/Jan/2021 13:49:10] "[36mGET /static/new_image/index/search_bar.png?v=0.1 HTTP/1.1[0m" 304 -
+172.17.0.1 - - [02/Jan/2021 13:49:10] "[36mGET /static/new_image/index/twitter.png?v=0.1 HTTP/1.1[0m" 304 -
+172.17.0.1 - - [02/Jan/2021 13:49:10] "[36mGET /static/new_image/index/discord.png?v=0.1 HTTP/1.1[0m" 304 -
+172.17.0.1 - - [02/Jan/2021 13:49:10] "[36mGET /static/new_image/index/patreon.png?v=0.1 HTTP/1.1[0m" 304 -
+172.17.0.1 - - [02/Jan/2021 13:49:10] "[36mGET /static/new_image/index/exit.png?v=0.1 HTTP/1.1[0m" 304 -
+172.17.0.1 - - [02/Jan/2021 13:49:10] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
