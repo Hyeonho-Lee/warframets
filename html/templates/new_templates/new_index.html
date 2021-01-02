@@ -17,7 +17,7 @@
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     </head>
     <body>
-        <script>
+        <script type="text/javascript">
             window.onload = function () {
                 get_today();
                 
@@ -27,221 +27,6 @@
                     new AutoComplete(document.querySelector('#item_name'), all_items);
                 });
             };
-            
-            function href_site(click_value){
-                var input_item = click_value.getAttribute('value');
-                location.href = "/result/" + input_item;
-            };
-            
-            function change_menu_button(button_value){
-                var value = button_value;
-
-                var menu_button_1 = document.getElementById("menu_button_1");
-                var menu_button_2 = document.getElementById("menu_button_2");
-                var menu_button_3 = document.getElementById("menu_button_3");
-                var change_menu = document.getElementById("change_menu");
-
-                if (value == 1) {
-                    change_menu.innerHTML = "<div class='main_recommend'><div class='up' onclick='href_site(this);' value='{{ a_top_kr_name[0] }}'><div class='up_img'><img alt='{{ a_top_kr_name[0] }}'' src='{{ url_for('static', filename = a_top_path_1[0], v = 0.1) }}'></div><a>{{ a_top_kr_name[0] }}</a><span class='up_bottom'><p>▲</p><a>{{ a_top_price[0] }} ({{ a_top_percent[0] }}%)</a></span></div><div class='down' onclick='href_site(this);' value='{{ a_bottom_kr_name[0] }}'><div class='down_img'><img alt='{{ a_bottom_kr_name[0] }}' src='{{ url_for('static', filename = a_bottom_path_1[0], v = 0.1) }}'></div><a>{{ a_bottom_kr_name[0] }}</a><span class='down_bottom'><p>▼</p><a>{{ a_bottom_price[0] }} ({{ a_bottom_percent[0] }}%)</a></span></div></div><div class='main_graph'><div style='width:99%;'><canvas id='canvas' style='height: 48vh; width: 40vw;'></canvas></div></div>";
-                    var canvas = new Chart(document.getElementById("canvas"), {
-                        type: 'line',
-                        data:{
-                                labels: {{ t_xlabels | tojson }},
-                                datasets: [{
-                                        label: '{{ a_top_kr_name[0] }}',
-                                        data: {{ t_dataset | tojson }},
-                                        backgroundColor: 'rgb(255, 99, 132)',
-                                        borderColor: 'rgb(255, 99, 132)',
-                                        fill: false,
-                                        lineTension: 0.3
-                                    },{
-                                        label: '{{ a_bottom_kr_name[0] }}',
-                                        data: {{ b_dataset | tojson }},
-                                        backgroundColor: 'rgb(115, 171, 255)',
-                                        borderColor: 'rgb(51, 133, 255)',
-                                        fill: false,
-                                        lineTension: 0.3
-                                    }]
-                        },
-                        options: {
-                            responsive: false,
-                            title: {
-                                display: true,
-                                text: ''
-                            },
-                            tooltips: {
-                                mode: 'index',
-                                intersect: false,
-                            },
-                            hover: {
-                                mode: 'nearest',
-                                intersect: true
-                            },
-                            scales: {
-                                xAxes: [{
-                                    display: true,
-                                    scaleLabel: {
-                                        display: true,
-                                    }
-                                }],
-                                yAxes: [{
-                                    display: true,
-                                    ticks: {
-                                    },
-                                    scaleLabel: {
-                                        display: true,
-                                    }
-                                }]
-                            }
-                        }
-                    });
-                }else if (value == 2) {
-                    change_menu.innerHTML = "<div class='main_recommend'><div class='top_menubar'><div class='up_menu' onclick='menu_increase();'><a>Increase</a></div><div class='down_menu' onclick='menu_decrease();'><a>Decrease</a></div></div><div class='down_menubar'><ul id='menu_in_de'>{% for i in range(1,11) %}<li onclick='href_site(this);' value='{{ t_top_kr_name[i - 1] }}'><div class='rank_value'><a>{{ i }}st</a></div><div class='img_box'><img alt='{{ t_top_kr_name[i - 1] }}'src='{{ url_for('static', filename = t_top_path_1[i - 1], v = 0.1) }}'></div><div class='name_value'><a>{{ t_top_kr_name[i -1] }} ({{ t_top_percent[i -1] }}%)</a></div></li>{% endfor %}</ul></div></div><div class='main_graph'><div style='width:99%;'><canvas id='canvas' style='height: 48vh; width: 40vw;'></canvas></div></div>";
-                    var canvas = new Chart(document.getElementById("canvas"), {
-                        type: 'horizontalBar',
-                        data:{
-                                labels: {{ up_xlabels | tojson }},
-                                datasets: [{
-                                        label: 'Increase',
-                                        data: {{ up_dataset | tojson }},
-                                        backgroundColor: 'rgb(255, 99, 132)',
-                                        borderColor: 'rgb(255, 99, 132)',
-                                        borderWidth: 1
-                                    }]
-                        },
-                        options: {
-                            title: {
-                                display: true,
-                                text: ''
-                            },
-                            tooltips: {
-                                mode: 'index',
-                                intersect: false,
-                            },
-                            hover: {
-                                mode: 'nearest',
-                                intersect: true
-                            },
-                            scales: {
-                                xAxes: [{
-                                    display: true,
-                                    scaleLabel: {
-                                        display: true,
-                                    }
-                                }],
-                                yAxes: [{
-                                    display: true,
-                                    ticks: {
-                                    },
-                                    scaleLabel: {
-                                        display: true,
-                                    }
-                                }]
-                            }
-                        }
-                    });
-                }else if (value == 3) {
-                    console.log("3번임");
-                }else {
-                    console.log("error!");
-                };
-            }
-            
-            function menu_increase() {
-                var change_menu = document.getElementById("menu_in_de");
-                change_menu.innerHTML = "<ul id='menu_in_de'>{% for i in range(1,11) %}<li onclick='href_site(this);' value='{{ t_top_kr_name[i - 1] }}'><div class='rank_value'><a>{{ i }}st</a></div><div class='img_box'><img alt='{{ t_top_kr_name[i - 1] }}'src='{{ url_for('static', filename = t_top_path_1[i - 1], v = 0.1) }}'></div><div class='name_value'><a>{{ t_top_kr_name[i-1] }} ({{ t_top_percent[i-1] }}%)</a></div></li>{% endfor %}";
-                var canvas = new Chart(document.getElementById("canvas"), {
-                    type: 'horizontalBar',
-                    data:{
-                            labels: {{ up_xlabels | tojson }},
-                            datasets: [{
-                                    label: 'Increase',
-                                    data: {{ up_dataset | tojson }},
-                                    backgroundColor: 'rgb(255, 99, 132)',
-                                    borderColor: 'rgb(255, 99, 132)',
-                                    borderWidth: 1
-                                }]
-                    },
-                    options: {
-                        title: {
-                            display: true,
-                            text: ''
-                        },
-                        tooltips: {
-                            mode: 'index',
-                            intersect: false,
-                        },
-                        hover: {
-                            mode: 'nearest',
-                            intersect: true
-                        },
-                        scales: {
-                            xAxes: [{
-                                display: true,
-                                scaleLabel: {
-                                    display: true,
-                                }
-                            }],
-                            yAxes: [{
-                                display: true,
-                                ticks: {
-                                },
-                                scaleLabel: {
-                                    display: true,
-                                }
-                            }]
-                        }
-                    }
-                });
-            }
-            
-            function menu_decrease() {
-                var change_menu = document.getElementById("menu_in_de");
-                change_menu.innerHTML = "<ul id='menu_in_de'>{% for i in range(1,11) %}<li onclick='href_site(this);' value='{{ t_bottom_kr_name[i - 1] }}'><div class='rank_value'><a>{{ i }}st</a></div><div class='img_box'><img alt='{{ t_bottom_kr_name[i - 1] }}'src='{{ url_for('static', filename = t_bottom_path_1[i - 1], v = 0.1) }}'></div><div class='name_value'><a>{{ t_bottom_kr_name[i-1] }} ({{ t_bottom_percent[i-1] }}%)</a></div></li>{% endfor %}";
-                var canvas = new Chart(document.getElementById("canvas"), {
-                    type: 'horizontalBar',
-                    data:{
-                            labels: {{ down_xlabels | tojson }},
-                            datasets: [{
-                                    label: 'Decrease',
-                                    data: {{ down_dataset | tojson }},
-                                    backgroundColor: 'rgb(115, 171, 255)',
-                                    borderColor: 'rgb(51, 133, 255)',
-                                    borderWidth: 1
-                                }]
-                    },
-                    options: {
-                        title: {
-                            display: true,
-                            text: ''
-                        },
-                        tooltips: {
-                            mode: 'index',
-                            intersect: false,
-                        },
-                        hover: {
-                            mode: 'nearest',
-                            intersect: true
-                        },
-                        scales: {
-                            xAxes: [{
-                                display: true,
-                                scaleLabel: {
-                                    display: true,
-                                }
-                            }],
-                            yAxes: [{
-                                display: true,
-                                ticks: {
-                                },
-                                scaleLabel: {
-                                    display: true,
-                                }
-                            }]
-                        }
-                    }
-                });
-            }
         </script>
         <div class="main">
             <div class="menu">
@@ -357,7 +142,9 @@
             </div>
         </div>
         <script>
-            var canvas = new Chart(document.getElementById("canvas"), {
+            var ctx = document.getElementById("canvas")
+            var canvas = 'global';
+            canvas = new Chart(ctx, {
                 type: 'line',
                 data:{
                         labels: {{ t_xlabels | tojson }},
@@ -379,36 +166,158 @@
                 },
                 options: {
                     responsive: false,
-                    title: {
-                        display: true,
-                        text: ''
-                    },
-                    tooltips: {
-                        mode: 'index',
-                        intersect: false,
-                    },
-                    hover: {
-                        mode: 'nearest',
-                        intersect: true
-                    },
-                    scales: {
-                        xAxes: [{
-                            display: true,
-                            scaleLabel: {
-                                display: true,
-                            }
-                        }],
-                        yAxes: [{
-                            display: true,
-                            ticks: {
-                            },
-                            scaleLabel: {
-                                display: true,
-                            }
-                        }]
-                    }
-                }
+                    title: {display: true, text: ''},
+                    tooltips: {mode: 'index', intersect: false},
+                    hover: {mode: 'nearest', intersect: true},
+                    scales: {xAxes: [{display: true, scaleLabel: {display: true}}], yAxes: [{display: true, scaleLabel: {display: true}}]}}
             });
+            
+            function href_site(click_value){
+                var input_item = click_value.getAttribute('value');
+                location.href = "/result/" + input_item;
+            };
+            
+            function removeData(chart) {
+                chart.data.labels.pop();
+                chart.data.datasets.forEach((dataset) => {
+                    dataset.data.pop();
+                });
+                chart.update();
+            }
+            
+            function change_menu_button(button_value){
+                var value = button_value;
+
+                var menu_button_1 = document.getElementById("menu_button_1");
+                var menu_button_2 = document.getElementById("menu_button_2");
+                var menu_button_3 = document.getElementById("menu_button_3");
+                var change_menu = document.getElementById("change_menu");
+
+                if (value == 1) {
+                    change_menu.innerHTML = "<div class='main_recommend'><div class='up' onclick='href_site(this);' value='{{ a_top_kr_name[0] }}'><div class='up_img'><img alt='{{ a_top_kr_name[0] }}'' src='{{ url_for('static', filename = a_top_path_1[0], v = 0.1) }}'></div><a>{{ a_top_kr_name[0] }}</a><span class='up_bottom'><p>▲</p><a>{{ a_top_price[0] }} ({{ a_top_percent[0] }}%)</a></span></div><div class='down' onclick='href_site(this);' value='{{ a_bottom_kr_name[0] }}'><div class='down_img'><img alt='{{ a_bottom_kr_name[0] }}' src='{{ url_for('static', filename = a_bottom_path_1[0], v = 0.1) }}'></div><a>{{ a_bottom_kr_name[0] }}</a><span class='down_bottom'><p>▼</p><a>{{ a_bottom_price[0] }} ({{ a_bottom_percent[0] }}%)</a></span></div></div><div class='main_graph'><div style='width:99%;'><canvas id='canvas' style='height: 48vh; width: 40vw;'></canvas></div></div>";
+                    var canvas = new Chart(document.getElementById("canvas"), {
+                        type: 'line',
+                        data:{
+                                labels: {{ t_xlabels | tojson }},
+                                datasets: [{
+                                        label: '{{ a_top_kr_name[0] }}',
+                                        data: {{ t_dataset | tojson }},
+                                        backgroundColor: 'rgb(255, 99, 132)',
+                                        borderColor: 'rgb(255, 99, 132)',
+                                        fill: false,
+                                        lineTension: 0.3
+                                    },{
+                                        label: '{{ a_bottom_kr_name[0] }}',
+                                        data: {{ b_dataset | tojson }},
+                                        backgroundColor: 'rgb(115, 171, 255)',
+                                        borderColor: 'rgb(51, 133, 255)',
+                                        fill: false,
+                                        lineTension: 0.3
+                                    }]
+                        },
+                        options: {
+                            responsive: false,
+                            title: {
+                                display: true,
+                                text: ''
+                            },
+                            scales: {
+                                xAxes: [{
+                                    display: true,
+                                    scaleLabel: {
+                                        display: true,
+                                    }
+                                }],
+                                yAxes: [{
+                                    display: true,
+                                    ticks: {
+                                    },
+                                    scaleLabel: {
+                                        display: true,
+                                    }
+                                }]
+                            }
+                        }
+                    });
+                }else if (value == 2) {
+                    change_menu.innerHTML = "<div class='main_recommend'><div class='top_menubar'><div class='up_menu' onclick='menu_increase();'><a>Increase</a></div><div class='down_menu' onclick='menu_decrease();'><a>Decrease</a></div></div><div class='down_menubar'><ul id='menu_in_de'>{% for i in range(1,11) %}<li onclick='href_site(this);' value='{{ t_top_kr_name[i - 1] }}'><div class='rank_value'><a>{{ i }}st</a></div><div class='img_box'><img alt='{{ t_top_kr_name[i - 1] }}'src='{{ url_for('static', filename = t_top_path_1[i - 1], v = 0.1) }}'></div><div class='name_value'><a>{{ t_top_kr_name[i -1] }} ({{ t_top_percent[i -1] }}%)</a></div></li>{% endfor %}</ul></div></div><div class='main_graph' id='graph_change'><div style='width:99%;'><canvas id='canvas' style='height: 525px; width: 40vw;'></canvas></div></div>";
+                    var canvas = new Chart(document.getElementById("canvas"), {
+                        type: 'horizontalBar',
+                        data:{
+                                labels: {{ up_xlabels | tojson }},
+                                datasets: [{
+                                        label: 'Increase',
+                                        data: {{ up_dataset | tojson }},
+                                        backgroundColor: 'rgb(255, 99, 132)',
+                                        borderColor: 'rgb(255, 99, 132)',
+                                        borderWidth: 1
+                                    }]
+                        },
+                        options: {
+                            responsive: false,
+                            title: {display: true, text: ''},
+                            tooltips: {mode: 'index', intersect: false},
+                            hover: {mode: 'nearest', intersect: true},
+                            scales: {xAxes: [{display: true, scaleLabel: {display: true}}], yAxes: [{display: true, scaleLabel: {display: true}}]}}
+                    });
+                }else if (value == 3) {
+                    console.log("3번임");
+                }else {
+                    console.log("error!");
+                };
+            }
+            
+            function menu_increase() {
+                var change_menu = document.getElementById("menu_in_de");
+                var change_graph = document.getElementById("graph_change");
+                change_menu.innerHTML = "<ul id='menu_in_de'>{% for i in range(1,11) %}<li onclick='href_site(this);' value='{{ t_top_kr_name[i - 1] }}'><div class='rank_value'><a>{{ i }}st</a></div><div class='img_box'><img alt='{{ t_top_kr_name[i - 1] }}'src='{{ url_for('static', filename = t_top_path_1[i - 1], v = 0.1) }}'></div><div class='name_value'><a>{{ t_top_kr_name[i-1] }} ({{ t_top_percent[i-1] }}%)</a></div></li>{% endfor %}";
+                change_graph.innerHTML = "<div style='width:99%;'><canvas id='canvas' style='height: 525px; width: 40vw;'></canvas></div>";
+                var canvas = new Chart(document.getElementById("canvas"), {
+                    type: 'horizontalBar',
+                    data:{
+                            labels: {{ up_xlabels | tojson }},
+                            datasets: [{
+                                    label: 'Increase',
+                                    data: {{ up_dataset | tojson }},
+                                    backgroundColor: 'rgb(255, 99, 132)',
+                                    borderColor: 'rgb(255, 99, 132)',
+                                    borderWidth: 1
+                                }]
+                    },
+                    options: {
+                        responsive: false,
+                        title: {display: true, text: ''},
+                        tooltips: {mode: 'index', intersect: false},
+                        hover: {mode: 'nearest', intersect: true},
+                        scales: {xAxes: [{display: true, scaleLabel: {display: true}}], yAxes: [{display: true, scaleLabel: {display: true}}]}}
+                });
+            }
+            
+            function menu_decrease() {
+                var change_menu = document.getElementById("menu_in_de");
+                var change_graph = document.getElementById("graph_change");
+                change_menu.innerHTML = "<ul id='menu_in_de'>{% for i in range(1,11) %}<li onclick='href_site(this);' value='{{ t_bottom_kr_name[i - 1] }}'><div class='rank_value'><a>{{ i }}st</a></div><div class='img_box'><img alt='{{ t_bottom_kr_name[i - 1] }}'src='{{ url_for('static', filename = t_bottom_path_1[i - 1], v = 0.1) }}'></div><div class='name_value'><a>{{ t_bottom_kr_name[i-1] }} ({{ t_bottom_percent[i-1] }}%)</a></div></li>{% endfor %}";
+                change_graph.innerHTML = "<div style='width:99%;'><canvas id='canvas' style='height: 525px;; width: 40vw;'></canvas></div>";
+                var canvas = new Chart(document.getElementById("canvas"), {
+                    type: 'horizontalBar',
+                    data:{
+                            labels: {{ down_xlabels | tojson }},
+                            datasets: [{
+                                    label: 'Decrease',
+                                    data: {{ down_dataset | tojson }},
+                                    backgroundColor: 'rgb(115, 171, 255)',
+                                    borderColor: 'rgb(51, 133, 255)',
+                                    borderWidth: 1
+                                }]
+                    },
+                    options: {
+                        responsive: false,
+                        title: {display: true, text: ''},
+                        tooltips: {mode: 'index', intersect: false},
+                        hover: {mode: 'nearest', intersect: true},
+                        scales: {xAxes: [{display: true, scaleLabel: {display: true}}], yAxes: [{display: true, scaleLabel: {display: true}}]}}
+                });
+            }
         </script>
         <div class="footer">
             <div class="footer_content">
