@@ -46,7 +46,7 @@
                     <div class="day_input" onclick="today_value_open();">
                         <div class="day_menu">
                             <p>Day</p>
-                            <img alt="" src="{{ url_for('static', filename = '/new_image/index/menu_bar_1.png', v = 0.1) }}" onclick="calender_open(); calender();">
+                            <img alt="" src="{{ url_for('static', filename = '/new_image/index/menu_bar_1.png', v = 0.1) }}">
                         </div>
                         <div class="day_value">
                             <a class="day_value_1" id="day_value_2"></a>
@@ -56,6 +56,7 @@
                     <div class="week_input" onclick="today_value_open();">
                         <div class="week_menu">
                             <p>Week</p>
+                            <img alt="" src="{{ url_for('static', filename = '/new_image/index/menu_bar_2.png', v = 0.1) }}">
                         </div>
                         <div class="week_value">
                             <p>rd</p>
@@ -66,6 +67,7 @@
                     <div class="month_input" onclick="today_value_open();">
                         <div class="month_menu">
                             <p id="month_char">Month</p>
+                            <img alt="" src="{{ url_for('static', filename = '/new_image/index/menu_bar_2.png', v = 0.1) }}">
                         </div>
                         <div class="month_value">
                             <p>th</p>
@@ -75,7 +77,7 @@
                     </div>
                 </div>
                 <div class="search_bar">
-                    <div class="control_button">
+                    <div class="control_button" onclick="calender_open(); calender();">
                         <img alt="" src="{{ url_for('static', filename = '/new_image/index/search_bar.png', v = 0.1) }}">
                     </div>
                     <div class="search">
