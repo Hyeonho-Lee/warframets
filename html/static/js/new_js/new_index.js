@@ -76,6 +76,8 @@ function get_today() {
     }else{
         console.log("error");
     };
+    
+    var today = new Date();
 }
 
 function input_search(){
@@ -127,6 +129,7 @@ function today_value_exit(){
 function calender_open(){
     var calender = document.querySelector('.calender');
     calender.style.display = "block";
+    goToday();
 }
 
 function calender_exit(){
@@ -134,12 +137,12 @@ function calender_exit(){
     calender.style.display = "none";
 }
 
-function calender() {
+function calender(date_datas) {
     var today = new Date();
+    var date_data = date_datas;
 
-    var year = today.getFullYear();
-    var month = today.getMonth() + 1;
-    var date = today.getDate();
+    var year = date_datas.getFullYear();
+    var month = date_datas.getMonth();
     
     var prevLast = new Date(year, month - 1, 0);
     var thisLast = new Date(year, month, 0);
@@ -164,11 +167,82 @@ function calender() {
       nextDates.push(i);
     }
     
-    const dates = prevDates.concat(thisDates, nextDates);
-
+    var dates = prevDates.concat(thisDates, nextDates);
+    var firstDateIndex = dates.indexOf(1);
+    var lastDateIndex = dates.lastIndexOf(TLDate);
+    
     dates.forEach((date, i) => {
-        dates[i] = "<div class='date'>" + String(date) + "</div>";
-    })
+    const condition = i >= firstDateIndex && i < lastDateIndex + 1
+                      ? 'thiss'
+                      : 'other';
+
+    dates[i] = "<div class='date'><span class='" + String(condition) + "'>" + String(date) + "</span></div>";
+    });
+    
+    var first = [];
+    var second = [];
+    var third = [];
+    
+    date_datas.setMonth(date_datas.getMonth() - 2);
+    var bedore_year = date_datas.getFullYear();
+    var before_month = date_datas.getMonth() + 1;
+    for(var i = 0; i < firstDateIndex; i++) {
+        first.push(String(dates[i]).substring(38, String(dates[i]).length-13));
+        dates[i] = "<div class='date' value='" + bedore_year + "-" + before_month + "-" + first[i] + "'onclick='search_result_date(this);'><span class='other'>" + first[i] + "</span></div>";
+    };
+    
+    date_datas.setMonth(date_datas.getMonth() + 1);
+    var today_year = date_datas.getFullYear();
+    var today_month = date_datas.getMonth() + 1;
+    for(var i = firstDateIndex; i < lastDateIndex + 1; i++) {
+        second.push(String(dates[i]).substring(38, String(dates[i]).length-13));
+        dates[i] = "<div class='date' value='" + today_year + "-" + today_month + "-" + second[i - first.length] + "'onclick='search_result_date(this);'><span class='thiss'>" + second[i - first.length] + "</span></div>";
+    };
+    
+    date_datas.setMonth(date_datas.getMonth() + 1);
+    var next_year = date_datas.getFullYear();
+    var next_month = date_datas.getMonth() + 1;
+    for(var i = lastDateIndex + 1; i < dates.length; i++) {
+        third.push(String(dates[i]).substring(38, String(dates[i]).length-13));
+        dates[i] = "<div class='date' value='" + next_year + "-" + next_month + "-" + third[i - first.length - second.length] + "'onclick='search_result_date(this);'><span class='other'>" + third[i - first.length - second.length] + "</span></div>";
+    };
 
     document.querySelector('.dates').innerHTML = dates.join('');
+}
+
+function prevMonth() {
+    var date = new Date();
+    date.setMonth(date.getMonth());
+    calender(date);
+}
+
+function nextMonth() {
+    var date = new Date();
+    date.setMonth(date.getMonth() + 2);
+    calender(date);
+}
+
+function goToday() {
+    var date = new Date();
+    date.setMonth(date.getMonth() + 1);
+    calender(date);
+    
+    /*var test = new Date();
+    var year = test.getFullYear();
+    var month = test.getMonth() + 1;
+    var date = test.getDate();
+    var str_date = year + "-" + month;
+    
+    test.setMonth(test.getMonth() - 1);
+    
+    var year = test.getFullYear();
+    var month = test.getMonth() + 1;
+    var date = test.getDate();
+    var str_date = year + "-" + month;
+    console.log(str_date);*/
+}
+
+function search_result_date(value) {
+    var search = value.getAttribute('value');
+    console.log(search);
 }
