@@ -4133,7 +4133,7 @@ def new_index():
         get_item.append(v)
         get_path.append(path_name)
     for i, v in enumerate(os.listdir(weapon_path)):
-        path_name = '/workspace/crawling/data/csv/weapon' + str(v) + '/' + str(v) + '.csv'
+        path_name = '/workspace/crawling/data/csv/weapon/' + str(v) + '/' + str(v) + '.csv'
         get_item.append(v)
         get_path.append(path_name)
 
