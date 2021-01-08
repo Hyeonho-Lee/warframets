@@ -50,15 +50,15 @@
                         </div>
                         <div class="result_menu">
                             <ul>
-                                <li class="result_active">About</li>
-                                <li>Graph</li>
+                                <li id="about_active" class="result_active" onclick="page_about();">About</li>
+                                <li id="graph_active" class="" onclick="page_graph()">Graph</li>
                             </ul>
                         </div>
                         <div class="result_exit_button">
                             <img alt="" src="{{ url_for('static', filename = '/new_image/index/exit.png', v = 0.1) }}" onclick="result_exit();">
                         </div>
                     </div>
-                    <div class="result_middle">
+                    <div class="result_middle" id="result_middle">
                         <div class="result_first">
                             <div class="item_name">
                                 <a>{{ kr_name }}</a>
@@ -112,7 +112,7 @@
                                 <a>업데이트</a>
                             </div>
                             <div class="all_table">
-                                <table id="table_2" class="display cell-border" border="1">
+                                <table id="table_2" class="display cell-border" border="0">
                                     <thead>
                                         <tr>
                                             <th>날짜</th>
@@ -129,9 +129,9 @@
                                         {% for i in range(1, all_count + 1 ) %}
                                         <tr>
                                             <td><a>{{ all_datetime[i - 1] }}</a></td>
-                                            <td><a>{{ all_price[i - 1] }}</a></td>
+                                            <td><a>{{ all_price[i - 1] }}P</a></td>
                                             <td><a>{{ all_yn_before[i - 1] }}</a></td>
-                                            <td><a>{{ all_day_before[i - 1] }}</a></td>
+                                            <td><a>{{ all_day_before[i - 1] }}P</a></td>
                                             <td><a>{{ all_day_percent[i - 1] }}%</a></td>
                                             <td><a>{{ all_volume[i - 1] }}</a></td>
                                             <td><a>{{ all_lank[i - 1] }}</a></td>
@@ -142,6 +142,7 @@
                             </div>
                         </div>
                     </div>
+                    
                 </div>
             </div>
         </div>
@@ -172,6 +173,73 @@
                     },
                 });
             })
+            
+            function page_about() {
+                var result_middle = document.getElementById("result_middle");
+                var about_active = document.getElementById("about_active");
+                var graph_active = document.getElementById("graph_active");
+                about_active.className = "result_active";
+                graph_active.className = "";
+                result_middle.innerHTML = "<div class='result_first'><div class='item_name'><a>{{ kr_name }}</a></div><div class='item_img'><img alt='' src='{{ url_for('static', filename = search_path_1, v = 0.1) }}'></div><div class='item_button'><div class='to_market'><a>Market</a></div><div class='to_portfolio'><a>Portfolio</a></div><div class='to_csv'><a>CSV</a></div></div></div><div class='result_second'><div class='item_name'><a>요약 정보</a></div><div class='item_table'><table border='0'><tr class='items'><td><a>날짜</a></td><td><a>{{ all_datetime[0] }}</a></td></tr><tr class='items'><td><a>가격</a></td><td><a>{{ all_price[0] }}P</a></td></tr><tr class='items'><td><a>전일대비</a></td><td><a>{{ all_day_before[0] }}P</a></td></tr><tr class='items'><td><a>퍼센트</a></td><td><a>{{ all_day_percent[0] }}%</a></td></tr><tr class='items'><td><a>거래량</a></td><td><a>{{ all_volume[0] }}</a></td></tr></table></div></div><div class='result_third'><div class='item_name'><a>업데이트</a></div><div class='all_table'><table id='table_2' class='display cell-border' border='0'><thead><tr><th>날짜</th><th>가격</th><th></th><th>전일대비</th><th>퍼센트</th><th>거래량</th><th>점수</th></tr></thead><tbody>{% for i in range(1, all_count + 1 ) %}<tr><td><a>{{ all_datetime[i - 1] }}</a></td><td><a>{{ all_price[i - 1] }}P</a></td><td><a>{{ all_yn_before[i - 1] }}</a></td><td><a>{{ all_day_before[i - 1] }}P</a></td><td><a>{{ all_day_percent[i - 1] }}%</a></td><td><a>{{ all_volume[i - 1] }}</a></td><td><a>{{ all_lank[i - 1] }}</a></td></tr>{% endfor %}</tbody></table></div></div>";
+                
+                $(document).ready(function(){
+                    $("#table_2").DataTable({
+                        "displayLength": 10,
+                        "scrollX": true,
+                        "order": [[0, "desc"]],
+                        "lengthChange": false,
+                        "pagingType": "full",
+                        "language": {
+                            "emptyTable": "등록된 아이템이 없습니다.",
+                            "lengthMenu": "페이지당 _MENU_ 개씩 보기",
+                            "info": "업데이트: {{ today_datetime }} / _START_~_END_ / _TOTAL_개 아이템",
+                            "infoEmpty": "데이터 없음",
+                            "infoFiltered": "( _MAX_아이템중 _TOTAL_개 찾음 )",
+                            "search": "검색: ",
+                            "zeroRecords": "검색한 아이템이 없습니다.",
+                            "loadingRecords": "로딩중...",
+                            "processing": "잠시만 기다려 주세요...",
+                            "paginate": {
+                                "next": "▶",
+                                "previous": "◀",
+                                "first": "처음",
+                                "last": "마지막"
+                            }
+                        },
+                    });
+                })
+            }
+            
+            function page_graph() {
+                var result_middle = document.getElementById("result_middle");
+                var about_active = document.getElementById("about_active");
+                var graph_active = document.getElementById("graph_active");
+                about_active.className = "";
+                graph_active.className = "result_active";
+                result_middle.innerHTML = "<div class='result_graph'><div style='width:99%;'><canvas id='canvas' style='height: 500px; width: 65vw;'></canvas></div></div>";
+                new Chart(document.getElementById("canvas"), {
+                            type: 'line',
+                            data: {
+                                labels: {{ xlabels | tojson }},
+                                datasets: [{
+                                    label: '{{ kr_name }}',
+                                    data: {{ dataset | tojson }},
+                                    backgroundColor: 'rgba(255, 99, 132, 0.5)',
+                                    borderColor: 'rgba(255, 99, 132, 0.5)',
+                                    fill: 'start',
+                                    lineTension: 0.3,
+                                }]
+                            },
+                            options: {
+                                display: true,
+                                responsive: false,
+                                title: {display: true, text: ''},
+                                tooltips: {mode: 'index', intersect: false},
+                                hover: {mode: 'nearest', intersect: true},
+                                scales: {xAxes: [{display: true,scaleLabel: {display: true,}}],yAxes: [{display: true, ticks: {}, scaleLabel: {display: true,}}]}
+                            }
+                        });
+            }
         </script>
         <div class="footer">
             <div class="footer_content">

@@ -110,7 +110,7 @@
                                     <a>{{ a_top_kr_name[0] }}</a>
                                     <span class="up_bottom">
                                         <p>▲</p>
-                                        <a>{{ a_top_price[0] }} ({{ a_top_percent[0] }}%)</a>
+                                        <a>{{ a_top_price[0] }} ({{ a_top_before[0] }}P/{{ a_top_percent[0] }}%)</a>
                                     </span>
                                 </div>
                                 <div class="down" onclick="main_graph_change_2();">
@@ -118,7 +118,7 @@
                                     <a>{{ a_bottom_kr_name[0] }}</a>
                                     <span class="down_bottom">
                                         <p>▼</p>
-                                        <a>{{ a_bottom_price[0] }} ({{ a_bottom_percent[0] }}%)</a>
+                                        <a>{{ a_bottom_price[0] }} ({{ a_bottom_before[0] }}P/{{ a_bottom_percent[0] }}%)</a>
                                     </span>
                                 </div>
                             </div>
@@ -139,7 +139,7 @@
                         <div class="cal_nav">
                             <div class="prev" onclick="prevMonth();"><a>&lt;</a></div>
                             <div class="today" onclick="goToday();"><a>Today</a></div>
-                            <div class="next" onclick="nextMonth();"><a>&gt;</a></div>
+                            <div class="c_next" onclick="nextMonth();"><a>&gt;</a></div>
                         </div>
                     </div>
                     <div class="cal_main">
@@ -167,9 +167,9 @@
                         datasets: [{
                                 label: '{{ a_top_kr_name[0] }}',
                                 data: {{ t_dataset | tojson }},
-                                backgroundColor: 'rgb(255, 99, 132)',
-                                borderColor: 'rgb(255, 99, 132)',
-                                fill: false,
+                                backgroundColor: 'rgba(255, 99, 132, 0.5)',
+                                borderColor: 'rgba(255, 99, 132, 0.5)',
+                                fill: 'start',
                                 lineTension: 0.3
                             }]
                 },
@@ -203,7 +203,7 @@
                 var change_menu = document.getElementById("change_menu");
 
                 if (value == 1) {
-                    change_menu.innerHTML = "<div class='main_recommend'><div class='up' onclick='main_graph_change_1();'><div class='up_img'><img alt='{{ a_top_kr_name[0] }}'' src='{{ url_for('static', filename = a_top_path_1[0], v = 0.1) }}'></div><a>{{ a_top_kr_name[0] }}</a><span class='up_bottom'><p>▲</p><a>{{ a_top_price[0] }} ({{ a_top_percent[0] }}%)</a></span></div><div class='down' onclick='main_graph_change_2();'><div class='down_img'><img alt='{{ a_bottom_kr_name[0] }}' src='{{ url_for('static', filename = a_bottom_path_1[0], v = 0.1) }}'></div><a>{{ a_bottom_kr_name[0] }}</a><span class='down_bottom'><p>▼</p><a>{{ a_bottom_price[0] }} ({{ a_bottom_percent[0] }}%)</a></span></div></div><div class='main_graph' id='main_graph'><div style='width:99%;'><canvas id='canvas' style='height: 48vh; width: 43vw;'></canvas></div></div>";
+                    change_menu.innerHTML = "<div class='main_recommend'><div class='up' onclick='main_graph_change_1();'><div class='up_img'><img alt='{{ a_top_kr_name[0] }}'' src='{{ url_for('static', filename = a_top_path_1[0], v = 0.1) }}'></div><a>{{ a_top_kr_name[0] }}</a><span class='up_bottom'><p>▲</p><a>{{ a_top_price[0] }} ({{ a_top_before[0] }}P/{{ a_top_percent[0] }}%)</a></span></div><div class='down' onclick='main_graph_change_2();'><div class='down_img'><img alt='{{ a_bottom_kr_name[0] }}' src='{{ url_for('static', filename = a_bottom_path_1[0], v = 0.1) }}'></div><a>{{ a_bottom_kr_name[0] }}</a><span class='down_bottom'><p>▼</p><a>{{ a_bottom_price[0] }} ({{ a_bottom_before[0] }}P/{{ a_bottom_percent[0] }}%)</a></span></div></div><div class='main_graph' id='main_graph'><div style='width:99%;'><canvas id='canvas' style='height: 48vh; width: 43vw;'></canvas></div></div>";
                     var canvas = new Chart(document.getElementById("canvas"), {
                         type: 'line',
                         data:{
@@ -211,9 +211,9 @@
                                 datasets: [{
                                         label: '{{ a_top_kr_name[0] }}',
                                         data: {{ t_dataset | tojson }},
-                                        backgroundColor: 'rgb(255, 99, 132)',
-                                        borderColor: 'rgb(255, 99, 132)',
-                                        fill: false,
+                                        backgroundColor: 'rgba(255, 99, 132, 0.5)',
+                                        borderColor: 'rgba(255, 99, 132, 0.5)',
+                                        fill: 'start',
                                         lineTension: 0.3
                                     }]
                         },
@@ -229,7 +229,7 @@
                     menu_button_2.className = "";
                     menu_button_3.className = "";
                 }else if (value == 2) {
-                    change_menu.innerHTML = "<div class='main_recommend'><div class='top_menubar'><div class='up_menu' onclick='menu_increase();'><a class='up_increase' id='up_increase'>Increase</a></div><div class='down_menu' onclick='menu_decrease();'><a id='down_decrease'>Decrease</a></div></div><div class='down_menubar'><ul id='menu_in_de'>{% for i in range(1,11) %}<li onclick='href_site(this);' value='{{ t_top_kr_name[i - 1] }}'><div class='rank_value'><a>{{ i }}st</a></div><div class='img_box'><img alt='{{ t_top_kr_name[i - 1] }}'src='{{ url_for('static', filename = t_top_path_1[i - 1], v = 0.1) }}'></div><div class='name_value'><a>{{ t_top_kr_name[i -1] }} ({{ t_top_percent[i -1] }}%)</a></div></li>{% endfor %}</ul></div></div><div class='main_graph' id='graph_change'><div style='width:99%;'><canvas id='canvas' style='height: 500px; width: 43vw;'></canvas></div></div>";
+                    change_menu.innerHTML = "<div class='main_recommend'><div class='top_menubar'><div class='up_menu' onclick='menu_increase();'><a class='up_increase' id='up_increase'>Increase</a></div><div class='down_menu' onclick='menu_decrease();'><a id='down_decrease'>Decrease</a></div></div><div class='down_menubar'><ul id='menu_in_de'>{% for i in range(1,11) %}<li onclick='href_site(this);' value='{{ t_top_kr_name[i - 1] }}'><div class='rank_value'><a>{{ i }}st</a></div><div class='img_box'><img alt='{{ t_top_kr_name[i - 1] }}'src='{{ url_for('static', filename = t_top_path_1[i - 1], v = 0.1) }}'></div><div class='name_value'><a>{{ t_top_kr_name[i -1] }} ({{ t_top_before[i -1] }}P/{{ t_top_percent[i -1] }}%)</a></div></li>{% endfor %}</ul></div></div><div class='main_graph' id='graph_change'><div style='width:99%;'><canvas id='canvas' style='height: 500px; width: 43vw;'></canvas></div></div>";
                     var canvas = new Chart(document.getElementById("canvas"), {
                         type: 'horizontalBar',
                         data:{
@@ -237,8 +237,8 @@
                                 datasets: [{
                                         label: 'Increase',
                                         data: {{ up_dataset | tojson }},
-                                        backgroundColor: 'rgb(255, 99, 132)',
-                                        borderColor: 'rgb(255, 99, 132)',
+                                        backgroundColor: 'rgba(255, 99, 132, 0.5)',
+                                        borderColor: 'rgba(255, 99, 132, 0.5)',
                                         borderWidth: 1
                                     }]
                         },
@@ -267,7 +267,7 @@
                 var change_graph = document.getElementById("graph_change");
                 var up_increase = document.getElementById("up_increase");
                 var down_decrease = document.getElementById("down_decrease");
-                change_menu.innerHTML = "<ul id='menu_in_de'>{% for i in range(1,11) %}<li onclick='href_site(this);' value='{{ t_top_kr_name[i - 1] }}'><div class='rank_value'><a>{{ i }}st</a></div><div class='img_box'><img alt='{{ t_top_kr_name[i - 1] }}'src='{{ url_for('static', filename = t_top_path_1[i - 1], v = 0.1) }}'></div><div class='name_value'><a>{{ t_top_kr_name[i-1] }} ({{ t_top_percent[i-1] }}%)</a></div></li>{% endfor %}";
+                change_menu.innerHTML = "<ul id='menu_in_de'>{% for i in range(1,11) %}<li onclick='href_site(this);' value='{{ t_top_kr_name[i - 1] }}'><div class='rank_value'><a>{{ i }}st</a></div><div class='img_box'><img alt='{{ t_top_kr_name[i - 1] }}'src='{{ url_for('static', filename = t_top_path_1[i - 1], v = 0.1) }}'></div><div class='name_value'><a>{{ t_top_kr_name[i-1] }} ({{ t_top_before[i -1] }}P/{{ t_top_percent[i-1] }}%)</a></div></li>{% endfor %}";
                 change_graph.innerHTML = "<div style='width:99%;'><canvas id='canvas' style='height: 500px; width: 43vw;'></canvas></div>";
                 up_increase.className = "up_increase";
                 down_decrease.className = "down_menu";
@@ -278,8 +278,8 @@
                             datasets: [{
                                     label: 'Increase',
                                     data: {{ up_dataset | tojson }},
-                                    backgroundColor: 'rgb(255, 99, 132)',
-                                    borderColor: 'rgb(255, 99, 132)',
+                                    backgroundColor: 'rgba(255, 99, 132, 0.5)',
+                                    borderColor: 'rgba(255, 99, 132, 0.5)',
                                     borderWidth: 1
                                 }]
                     },
@@ -297,7 +297,7 @@
                 var change_graph = document.getElementById("graph_change");
                 var up_increase = document.getElementById("up_increase");
                 var down_decrease = document.getElementById("down_decrease");
-                change_menu.innerHTML = "<ul id='menu_in_de'>{% for i in range(1,11) %}<li onclick='href_site(this);' value='{{ t_bottom_kr_name[i - 1] }}'><div class='rank_value'><a>{{ i }}st</a></div><div class='img_box'><img alt='{{ t_bottom_kr_name[i - 1] }}'src='{{ url_for('static', filename = t_bottom_path_1[i - 1], v = 0.1) }}'></div><div class='name_value'><a>{{ t_bottom_kr_name[i-1] }} ({{ t_bottom_percent[i-1] }}%)</a></div></li>{% endfor %}";
+                change_menu.innerHTML = "<ul id='menu_in_de'>{% for i in range(1,11) %}<li onclick='href_site(this);' value='{{ t_bottom_kr_name[i - 1] }}'><div class='rank_value'><a>{{ i }}st</a></div><div class='img_box'><img alt='{{ t_bottom_kr_name[i - 1] }}'src='{{ url_for('static', filename = t_bottom_path_1[i - 1], v = 0.1) }}'></div><div class='name_value'><a>{{ t_bottom_kr_name[i-1] }} ({{ t_bottom_before[i -1] }}P/{{ t_bottom_percent[i-1] }}%)</a></div></li>{% endfor %}";
                 change_graph.innerHTML = "<div style='width:99%;'><canvas id='canvas' style='height: 500px;; width: 43vw;'></canvas></div>";
                 up_increase.className = "up_menu";
                 down_decrease.className = "down_decrease";
@@ -308,8 +308,8 @@
                             datasets: [{
                                     label: 'Decrease',
                                     data: {{ down_dataset | tojson }},
-                                    backgroundColor: 'rgb(115, 171, 255)',
-                                    borderColor: 'rgb(51, 133, 255)',
+                                    backgroundColor: 'rgba(115, 171, 255, 0.5)',
+                                    borderColor: 'rgba(51, 133, 255, 0.5)',
                                     borderWidth: 1
                                 }]
                     },
@@ -332,9 +332,9 @@
                                 datasets: [{
                                         label: '{{ a_top_kr_name[0] }}',
                                         data: {{ t_dataset | tojson }},
-                                        backgroundColor: 'rgb(255, 99, 132)',
-                                        borderColor: 'rgb(255, 99, 132)',
-                                        fill: false,
+                                        backgroundColor: 'rgba(255, 99, 132, 0.5)',
+                                        borderColor: 'rgba(255, 99, 132, 0.5)',
+                                        fill: 'start',
                                         lineTension: 0.3
                                     }]
                         },
@@ -357,9 +357,9 @@
                                 datasets: [{
                                         label: '{{ a_bottom_kr_name[0] }}',
                                         data: {{ b_dataset | tojson }},
-                                        backgroundColor: 'rgb(115, 171, 255)',
-                                        borderColor: 'rgb(51, 133, 255)',
-                                        fill: false,
+                                        backgroundColor: 'rgba(115, 171, 255, 0.5)',
+                                        borderColor: 'rgba(51, 133, 255, 0.5)',
+                                        fill: 'start',
                                         lineTension: 0.3
                                     }]
                         },
