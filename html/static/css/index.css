@@ -601,9 +601,6 @@ ul, ol, li {
     position: absolute;
     z-index: 2;
     display: none;
-    animation-name: movemenu_0;
-    animation-duration: 0.5s;
-    animation-direction: normal;
 }
 
 .mobile_menus li{

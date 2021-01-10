@@ -246,3 +246,28 @@ function search_result_date(value) {
     var search = value.getAttribute('value');
     console.log(search);
 }
+
+function result_exit() {
+    location.href = "/";
+}
+
+function delay() {
+    var menu = document.querySelector('.open_menu');
+    menu.style.display = "none";
+}
+
+function open_menu(){
+    var menu = document.querySelector('.open_menu');
+    menu.style.display = "block";
+    menu.style.animationName = "movemenu_0";
+    menu.style.animationDuration = "0.5s";
+    menu.style.animationDirection = "normal";
+}
+
+function close_menu(){
+    var menu = document.querySelector('.open_menu');
+    menu.style.animationName = "movemenu_1";
+    menu.style.animationDuration = "0.5s";
+    menu.style.animationDirection = "normal";
+    setTimeout("delay()", 450);
+}

@@ -28,10 +28,41 @@
                 });
             };
         </script>
+        <div class="open_menu" id="open_menu">
+            <div class="menu_place">
+                <div class="menu_up">
+                    <div class="menu_up_bar">
+                        <a>MENU</a>
+                        <img alt="" src="{{ url_for('static', filename = '/new_image/index/exit.png', v = 0.1) }}" onclick="close_menu();">
+                    </div>
+                </div>
+                <div class="menu_down">
+                    <div class="menu_list">
+                        <div class="menu_list_bar">
+                            <ul>
+                                <li>
+                                    <a>Notice</a>
+                                </li>
+                                <li>
+                                    <a>Category</a>
+                                </li>
+                                <li>
+                                    <a>Economy</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="menu_ad">
+                        광고
+                    </div>
+                </div>
+            </div>
+            <div class="menu_black"></div>
+        </div>
         <div class="main">
             <div class="menu">
                 <div class="menu_bar">
-                    <img alt="" src="{{ url_for('static', filename = '/new_image/index/menu_bar.png', v = 0.1) }}">
+                    <img alt="" src="{{ url_for('static', filename = '/new_image/index/menu_bar.png', v = 0.1) }}" onclick="open_menu();">
                 </div>
                 <div class="logo">
                     <img alt="" src="{{ url_for('static', filename = '/new_image/index/new_logo.png', v = 0.1) }}">
