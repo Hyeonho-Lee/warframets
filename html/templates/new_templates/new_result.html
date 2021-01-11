@@ -21,11 +21,11 @@
     <body>
         <script>
             window.onload = function () {
-                /*var input = document.getElementById("item_name");
+                var input = document.getElementById("item_name");
                 input.addEventListener('click', function(){
                     var all_items = {{ all_item_kr | tojson }};
                     new AutoComplete(document.querySelector('#item_name'), all_items);
-                });*/
+                });
             };
         </script>
         <div class="open_menu" id="open_menu">
@@ -70,6 +70,15 @@
                 <div class="language">
                     <img alt="" src="{{ url_for('static', filename = '/new_image/index/kr.png', v = 0.1) }}">
                     <img alt="" src="{{ url_for('static', filename = '/new_image/index/en.png', v = 0.1) }}">
+                </div>
+                <div class="menu_search">
+                    <div class="menu_calender" onclick="">
+                        <img alt="" src="{{ url_for('static', filename = '/new_image/index/search_bar.png', v = 0.1) }}">
+                    </div>
+                    <div class="menu_search_value">
+                        <input type="text" id="item_name" onkeypress="if(event.keyCode==13) {input_search(); return false;}" placeholder="검색" autocomplete="yes">
+                        <img alt="" src="{{ url_for('static', filename = '/new_image/index/search.png', v = 0.1) }}" onclick="input_search()">
+                    </div>
                 </div>
             </div>
             <div class="result_content">
