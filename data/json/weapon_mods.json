@@ -1,12 +1,6 @@
 {
     "weapon_mods": [
         {
-            "name": "aero_periphery",
-            "type": "primary_mod",
-            "en_name": "Aero Periphery",
-            "kr_name": "에어로 퍼리퍼리"
-        },
-        {
             "name": "primed_firestorm",
             "type": "primary_mod",
             "en_name": "Primed Firestorm",
