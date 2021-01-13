@@ -65,7 +65,7 @@
                     <img alt="" src="{{ url_for('static', filename = '/new_image/index/menu_bar.png', v = 0.1) }}" onclick="open_menu();">
                 </div>
                 <div class="logo">
-                    <img alt="" src="{{ url_for('static', filename = '/new_image/index/new_logo.png', v = 0.1) }}">
+                    <img alt="" src="{{ url_for('static', filename = '/new_image/index/new_logo.png', v = 0.1) }}" onclick="result_exit();">
                 </div>
                 <div class="language">
                     <img alt="" src="{{ url_for('static', filename = '/new_image/index/kr.png', v = 0.1) }}">
@@ -76,7 +76,7 @@
                         <img alt="" src="{{ url_for('static', filename = '/new_image/index/search_bar.png', v = 0.1) }}">
                     </div>
                     <div class="menu_search_value">
-                        <input type="text" id="item_name" onkeypress="if(event.keyCode==13) {input_search(); return false;}" placeholder="검색" autocomplete="yes">
+                        <input type="text" id="item_name" onkeypress="if(event.keyCode==13) {input_search(); return false;}" placeholder="검색" autocomplete="off">
                         <img alt="" src="{{ url_for('static', filename = '/new_image/index/search.png', v = 0.1) }}" onclick="input_search()">
                     </div>
                 </div>

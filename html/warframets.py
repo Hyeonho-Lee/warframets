@@ -684,7 +684,7 @@ app.secret_key = random
 
 #=======================================================================#
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def new_index():
 
     today_datetime = get_today_date()
@@ -856,6 +856,11 @@ def new_index():
         down_xlabels.append(i)
     for i in t_bottom_percent:
         down_dataset.append(i)
+
+    search_date = ""
+    if request.method == 'POST':
+        value = request.form.get("search")
+        print(search_date)
 
     return render_template('/new_templates/new_index.html', **locals())
 

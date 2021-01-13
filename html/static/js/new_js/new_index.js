@@ -188,7 +188,7 @@ function calender(date_datas) {
     var before_month = date_datas.getMonth() + 1;
     for(var i = 0; i < firstDateIndex; i++) {
         first.push(String(dates[i]).substring(38, String(dates[i]).length-13));
-        dates[i] = "<div class='date' value='" + bedore_year + "-" + before_month + "-" + first[i] + "'onclick='search_result_date(this);'><span class='other'>" + first[i] + "</span></div>";
+        dates[i] = "<div class='date' name='date_value' value='" + bedore_year + "-" + before_month + "-" + first[i] + "'onclick='search_result_date(this);'><span class='other'>" + first[i] + "</span></div>";
     };
     
     date_datas.setMonth(date_datas.getMonth() + 1);
@@ -196,7 +196,7 @@ function calender(date_datas) {
     var today_month = date_datas.getMonth() + 1;
     for(var i = firstDateIndex; i < lastDateIndex + 1; i++) {
         second.push(String(dates[i]).substring(38, String(dates[i]).length-13));
-        dates[i] = "<div class='date' value='" + today_year + "-" + today_month + "-" + second[i - first.length] + "'onclick='search_result_date(this);'><span class='thiss'>" + second[i - first.length] + "</span></div>";
+        dates[i] = "<div class='date' name='date_value' value='" + today_year + "-" + today_month + "-" + second[i - first.length] + "'onclick='search_result_date(this);'><span class='thiss'>" + second[i - first.length] + "</span></div>";
     };
     
     date_datas.setMonth(date_datas.getMonth() + 1);
@@ -204,47 +204,56 @@ function calender(date_datas) {
     var next_month = date_datas.getMonth() + 1;
     for(var i = lastDateIndex + 1; i < dates.length; i++) {
         third.push(String(dates[i]).substring(38, String(dates[i]).length-13));
-        dates[i] = "<div class='date' value='" + next_year + "-" + next_month + "-" + third[i - first.length - second.length] + "'onclick='search_result_date(this);'><span class='other'>" + third[i - first.length - second.length] + "</span></div>";
+        dates[i] = "<div class='date' name='date_value' value='" + next_year + "-" + next_month + "-" + third[i - first.length - second.length] + "'onclick='search_result_date(this);'><span class='other'>" + third[i - first.length - second.length] + "</span></div>";
     };
 
     document.querySelector('.dates').innerHTML = dates.join('');
 }
 
+var cal_now = new Date();
+
 function prevMonth() {
-    var date = new Date();
-    date.setMonth(date.getMonth());
-    calender(date);
+    var today = document.getElementById("today");
+    if(cal_now.getMonth() - 1 == 0) {
+        cal_now.setMonth(cal_now.getMonth() - 2);
+        var y_m_today = String(cal_now.getFullYear()) + "-" + String(cal_now.getMonth() + 1);
+        today.innerHTML = y_m_today;
+        cal_now.setMonth(cal_now.getMonth() + 1);
+    }else {
+        cal_now.setMonth(cal_now.getMonth() - 1);
+        var y_m_today = String(cal_now.getFullYear()) + "-" + String(cal_now.getMonth());
+        today.innerHTML = y_m_today;
+    }
+
+    calender(cal_now);
 }
 
 function nextMonth() {
-    var date = new Date();
-    date.setMonth(date.getMonth() + 2);
-    calender(date);
+    if(cal_now.getMonth() + 1 > 12) {
+        var prev_month = new Date(cal_now.getFullYear(), cal_now.getMonth() + 1, 1);
+        cal_now = new Date(prev_month.getFullYear(), prev_month.getMonth(), 1);
+    }else {
+        cal_now = new Date(cal_now.getFullYear(), (cal_now.getMonth()), 1);
+    }
+    
+    var today = document.getElementById("today");
+    var y_m_today = String(cal_now.getFullYear()) + "-" + String(cal_now.getMonth() + 1);
+    today.innerHTML = y_m_today;
+    
+    cal_now.setMonth(cal_now.getMonth() + 1);
+    calender(cal_now);
 }
 
 function goToday() {
     var date = new Date();
-    date.setMonth(date.getMonth() + 1);
-    calender(date);
+    cal_now = new Date(date.getFullYear(), (date.getMonth()), 1);
     
-    /*var test = new Date();
-    var year = test.getFullYear();
-    var month = test.getMonth() + 1;
-    var date = test.getDate();
-    var str_date = year + "-" + month;
-    
-    test.setMonth(test.getMonth() - 1);
-    
-    var year = test.getFullYear();
-    var month = test.getMonth() + 1;
-    var date = test.getDate();
-    var str_date = year + "-" + month;
-    console.log(str_date);*/
-}
+    var today = document.getElementById("today");
+    var y_m_today = String(cal_now.getFullYear()) + "-" + String(cal_now.getMonth() + 1);
+    today.innerHTML = y_m_today;
 
-function search_result_date(value) {
-    var search = value.getAttribute('value');
-    console.log(search);
+    cal_now.setMonth(cal_now.getMonth() + 1);
+    calender(cal_now);
 }
 
 function result_exit() {
