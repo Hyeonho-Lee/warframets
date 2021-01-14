@@ -1,0 +1,11 @@
+,datetime,avg_price,volume,day_before,yn_before,lank,day_percent,vol_before,vol_lank,name
+175,2020-08-12,47.8,16,2.1,▲,2.0,4.6,7.0,1860.0,energy_conversion
+342,2020-08-12,74.8,15,2.5,▲,12.0,3.5,8.0,1504.0,primed_target_cracker
+67,2020-08-12,33.7,22,1.0,▲,22.0,3.1,0.0,3792.0,fragor_prime_set
+102,2020-08-12,154.0,13,4.5,▲,11.0,3.0,6.0,406.0,vengeful_charge_(kuva_lich_ephemera)
+339,2020-08-12,53.9,10,1.5,▲,12.0,2.9,-12.0,1891.0,primed_pistol_gambit
+48,2020-08-12,34.4,29,0.9,▲,-8.0,2.7,1.0,4948.0,akjagara_prime_set
+372,2020-08-12,41.7,22,1.0,▲,4.0,2.5,-1.0,2439.0,primed_pressure_point
+370,2020-08-12,66.5,15,1.4,▲,18.0,2.2,-10.0,2008.0,primed_fever_strike
+247,2020-08-12,46.9,10,1.0,▲,9.0,2.2,-4.0,4373.0,exodia_contagion
+19,2020-08-12,61.2,37,1.0,▲,38.0,1.7,-4.0,7430.0,zephyr_prime_set

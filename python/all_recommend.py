@@ -156,7 +156,7 @@ all_item, all_path, all_path_0, all_path_1 = get_all_item()
 
 date_item = []
 date_path = []
-date_value = "2020-06-14"
+date_value = "2021-01-14"
 date_dir = "/workspace/crawling/data/csv/result/date/" + date_value + "/"
 
 for i, v in enumerate(all_item):
