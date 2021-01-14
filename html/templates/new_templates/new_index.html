@@ -121,7 +121,7 @@
                         <div class="main_top">
                             <div class="main_daily">
                                 <a>Daily Search</a>
-                                <p id="main_daily"></p>
+                                <p>{{ today_datetime }}</p>
                             </div>
                             <div class="main_menu" id="menu_button">
                                 <ul>
@@ -183,7 +183,7 @@
                             <div class="day"><a>Fri</a></div>
                             <div class="day_sat"><a>Sat</a></div>
                         </div>
-                        <form method="post">
+                        <form method="post" id="post">
                             <div class="dates" id="dates"></div>
                         </form>
                     </div>
@@ -421,6 +421,7 @@
                 }
                 document.body.appendChild(form);
                 form.submit();
+                document.getElementById("post").reset();
             }
             
             function search_result_date(value) {
