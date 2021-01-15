@@ -794,7 +794,7 @@ app.secret_key = random
 
 #=======================================================================#
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/')
 def new_index():
 
     today_datetime = get_today_date()
@@ -967,209 +967,248 @@ def new_index():
     for i in t_bottom_percent:
         down_dataset.append(i)
 
-    if request.method == 'POST':
-        value = ""
-        value = request.form.get("search")
+    date_path = "/workspace/crawling/data/csv/result/date"
+    date_file = os.listdir(date_path)
+    really_today = get_today_date()
+    cut_date = today_datetime.split("-")
+    if(cut_date[2][0:1] == "0"):
+        day_1 = ""
+        day_2 = str(cut_date[2][1:2])
+    else:
+        day_1 = str(cut_date[2][0:1])
+        day_2 = str(cut_date[2][1:2])
 
-        value_1 = value.split("-")
-        if(len(value_1[1]) != 2):
-            value = value_1[0] + "-0" + value_1[1] + "-" + value_1[2]
-            if(len(value_1[2]) != 2):
-                value = value_1[0] + "-0" + value_1[1] + "-0" + value_1[2]
-        if(len(value_1[2]) != 2):
-            value = value_1[0] + "-" + value_1[1] + "-0" + value_1[2]
-            if(len(value_1[1]) != 2):
-                value = value_1[0] + "-0" + value_1[1] + "-0" + value_1[2]
+    if(cut_date[1][0:1] == "0"):
+        month_1 = ""
+        month_2 = str(cut_date[1][1:2])
+    else:
+        month_1 = str(cut_date[1][0:1])
+        month_2 = str(cut_date[1][1:2])
+    week = math.ceil(int(cut_date[2]) / 7)
+    month_value = int(cut_date[1])
 
-        date_path = "/workspace/crawling/data/csv/result/date"
-        date_result_path = date_path + "/" + value + "/result.csv"
-        date_all_top_path = date_path + "/" + value + "/all_top.csv"
-        date_all_bottom_path = date_path + "/" + value + "/all_bottom.csv"
-        date_today_top_path = date_path + "/" + value + "/today_top.csv"
-        date_today_bottom_path = date_path + "/" + value + "/today_bottom.csv"
-        date_today_volume_path = date_path + "/" + value + "/today_volume.csv"
-        date_today_all_path = date_path + "/" + value + "/today_all.csv"
-        date_file = os.listdir(date_path)
-
-        for i, v in enumerate(date_file):
-            if v == value:
-                date_result = read_csv_file(date_result_path)
-                date_all_top = read_csv_file(date_all_top_path)
-                date_all_bottom = read_csv_file(date_all_bottom_path)
-                date_today_top = read_csv_file(date_today_top_path)
-                date_today_bottom = read_csv_file(date_today_bottom_path)
-                date_today_volume = read_csv_file(date_today_volume_path)
-                date_today_all = read_csv_file(date_today_all_path)
-
-                today_datetime = value
-                all_top = date_all_top
-                all_bottom = date_all_bottom
-                today_top = date_today_top
-                today_bottom = date_today_bottom
-                today_volume = date_today_volume
-                today_all = date_today_all
-
-                all_item, all_item_kr, all_item_en, all_path, all_path_0, all_path_1, all_type, all_type_kr, all_type_en = get_all_item()
-
-                def find_path(name, types):
-                    if types == 'path':
-                        for i, v in enumerate(all_item):
-                            if str(v) == name:
-                                path = all_path[i]
-                                return path
-                    elif types == 'path_0':
-                        for i, v in enumerate(all_item):
-                            if str(v) == name:
-                                path_0 = all_path_0[i]
-                                return path_0
-                    elif types == 'path_1':
-                        for i, v in enumerate(all_item):
-                            if str(v) == name:
-                                path_1 = all_path_1[i]
-                                return path_1
-
-                a_top_name.clear()
-                a_top_kr_name.clear()
-                a_top_price.clear()
-                a_top_before.clear()
-                a_top_percent.clear()
-                a_top_path.clear()
-                a_top_path_0.clear()
-                a_top_path_1.clear()
-                a_top_name = all_top['name'].tolist()
-                a_top_kr_name = change_to_kr_path('all_top', 'in', '', value)
-                a_top_price = all_top['avg_price'].tolist()
-                a_top_before = all_top['day_before'].tolist()
-                a_top_percent = all_top['day_percent'].tolist()
-                for i in a_top_name:
-                    result = find_path(i, 'path')
-                    result_0 = find_path(i, 'path_0')
-                    result_1 = find_path(i, 'path_1')
-                    a_top_path.append(str(result))
-                    a_top_path_0.append(str(result_0))
-                    a_top_path_1.append(str(result_1))
-
-                a_bottom_name.clear()
-                a_bottom_kr_name.clear()
-                a_bottom_price.clear()
-                a_bottom_before.clear()
-                a_bottom_percent.clear()
-                a_bottom_path.clear()
-                a_bottom_path_0.clear()
-                a_bottom_path_1.clear()
-                a_bottom_name = all_bottom['name'].tolist()
-                a_bottom_kr_name = change_to_kr_path('all_bottom', 'in', '', value)
-                a_bottom_price = all_bottom['avg_price'].tolist()
-                a_bottom_before = all_bottom['day_before'].tolist()
-                a_bottom_percent = all_bottom['day_percent'].tolist()
-                for i in a_bottom_name:
-                    result = find_path(i, 'path')
-                    result_0 = find_path(i, 'path_0')
-                    result_1 = find_path(i, 'path_1')
-                    a_bottom_path.append(str(result))
-                    a_bottom_path_0.append(str(result_0))
-                    a_bottom_path_1.append(str(result_1))
-
-                t_top_name.clear()
-                t_top_kr_name.clear()
-                t_top_price.clear()
-                t_top_before.clear()
-                t_top_percent.clear()
-                t_top_path.clear()
-                t_top_path_0.clear()
-                t_top_path_1.clear()
-                t_top_name = today_top['name'].tolist()
-                t_top_kr_name = change_to_kr_path('today_top', 'in', '', value)
-                t_top_price = today_top['avg_price'].tolist()
-                t_top_before = today_top['day_before'].tolist()
-                t_top_percent = today_top['day_percent'].tolist()
-                for i in t_top_name:
-                    result = find_path(i, 'path')
-                    result_0 = find_path(i, 'path_0')
-                    result_1 = find_path(i, 'path_1')
-                    t_top_path.append(str(result))
-                    t_top_path_0.append(str(result_0))
-                    t_top_path_1.append(str(result_1))
-
-                t_bottom_name.clear()
-                t_bottom_kr_name.clear()
-                t_bottom_price.clear()
-                t_bottom_before.clear()
-                t_bottom_percent.clear()
-                t_bottom_path.clear()
-                t_bottom_path_0.clear()
-                t_bottom_path_1.clear()
-                t_bottom_name = today_bottom['name'].tolist()
-                t_bottom_kr_name = change_to_kr_path('today_bottom', 'in', '', value)
-                t_bottom_price = today_bottom['avg_price'].tolist()
-                t_bottom_before = today_bottom['day_before'].tolist()
-                t_bottom_percent = today_bottom['day_percent'].tolist()
-                for i in t_bottom_name:
-                    result = find_path(i, 'path')
-                    result_0 = find_path(i, 'path_0')
-                    result_1 = find_path(i, 'path_1')
-                    t_bottom_path.append(str(result))
-                    t_bottom_path_0.append(str(result_0))
-                    t_bottom_path_1.append(str(result_1))
-
-                get_item = []
-                get_path = []
-                etc_path = '../data/csv/etc'
-                mod_path = '../data/csv/mod'
-                warframe_path = '../data/csv/warframe'
-                weapon_path = '../data/csv/weapon'
-
-                for i, v in enumerate(os.listdir(etc_path)):
-                    path_name = '/workspace/crawling/data/csv/etc/' + str(v) + '/' + str(v) + '.csv'
-                    get_item.append(v)
-                    get_path.append(path_name)
-                for i, v in enumerate(os.listdir(mod_path)):
-                    path_name = '/workspace/crawling/data/csv/mod/' + str(v) + '/' + str(v) + '.csv'
-                    get_item.append(v)
-                    get_path.append(path_name)
-                for i, v in enumerate(os.listdir(warframe_path)):
-                    path_name = '/workspace/crawling/data/csv/warframe/' + str(v) + '/' + str(v) + '.csv'
-                    get_item.append(v)
-                    get_path.append(path_name)
-                for i, v in enumerate(os.listdir(weapon_path)):
-                    path_name = '/workspace/crawling/data/csv/weapon/' + str(v) + '/' + str(v) + '.csv'
-                    get_item.append(v)
-                    get_path.append(path_name)
-
-                def get_items(name):
-                    for i, v in enumerate(get_item):
-                        if str(v) == name:
-                            search_path = get_path[i]
-                            result = read_csv_file(search_path)
-                            return result
-
-                top_data = get_items(a_top_name[0])
-                bottom_data = get_items(a_bottom_name[0])
-                t_data_1 = get_items(t_top_name[0])
-
-                t_xlabels = top_data['datetime'].tolist()
-                t_dataset = top_data['avg_price'].tolist()
-
-                b_xlabels = bottom_data['datetime'].tolist()
-                b_dataset = bottom_data['avg_price'].tolist()
-
-                up_xlabels.clear()
-                up_dataset.clear()
-                for i in t_top_kr_name:
-                    up_xlabels.append(i)
-                for i in t_top_percent:
-                    up_dataset.append(i)
-
-                down_xlabels.clear()
-                down_dataset.clear()
-                for i in t_bottom_kr_name:
-                    down_xlabels.append(i)
-                for i in t_bottom_percent:
-                    down_dataset.append(i)
-
-                print(value, get_today_date())
-                return render_template('/new_templates/new_index.html', **locals())
     return render_template('/new_templates/new_index.html', **locals())
+###########################################################################
+@app.route('/date/', methods=['GET', 'POST'])
+def post_index():
+    value = ""
+    value = request.form.get("search")
+
+    value_1 = value.split("-")
+    if(len(value_1[1]) != 2):
+        value = value_1[0] + "-0" + value_1[1] + "-" + value_1[2]
+        if(len(value_1[2]) != 2):
+            value = value_1[0] + "-0" + value_1[1] + "-0" + value_1[2]
+    if(len(value_1[2]) != 2):
+        value = value_1[0] + "-" + value_1[1] + "-0" + value_1[2]
+        if(len(value_1[1]) != 2):
+            value = value_1[0] + "-0" + value_1[1] + "-0" + value_1[2]
+
+    date_path = "/workspace/crawling/data/csv/result/date"
+    date_result_path = date_path + "/" + value + "/result.csv"
+    date_all_top_path = date_path + "/" + value + "/all_top.csv"
+    date_all_bottom_path = date_path + "/" + value + "/all_bottom.csv"
+    date_today_top_path = date_path + "/" + value + "/today_top.csv"
+    date_today_bottom_path = date_path + "/" + value + "/today_bottom.csv"
+    date_today_volume_path = date_path + "/" + value + "/today_volume.csv"
+    date_today_all_path = date_path + "/" + value + "/today_all.csv"
+    date_file = os.listdir(date_path)
+
+    for i, v in enumerate(date_file):
+        if v == value:
+            date_result = read_csv_file(date_result_path)
+            date_all_top = read_csv_file(date_all_top_path)
+            date_all_bottom = read_csv_file(date_all_bottom_path)
+            date_today_top = read_csv_file(date_today_top_path)
+            date_today_bottom = read_csv_file(date_today_bottom_path)
+            date_today_volume = read_csv_file(date_today_volume_path)
+            date_today_all = read_csv_file(date_today_all_path)
+
+            today_datetime = value
+            all_top = date_all_top
+            all_bottom = date_all_bottom
+            today_top = date_today_top
+            today_bottom = date_today_bottom
+            today_volume = date_today_volume
+            today_all = date_today_all
+
+            cut_date = today_datetime.split("-")
+            if(cut_date[2][0:1] == "0"):
+                day_1 = ""
+                day_2 = str(cut_date[2][1:2])
+            else:
+                day_1 = str(cut_date[2][0:1])
+                day_2 = str(cut_date[2][1:2])
+
+            if(cut_date[1][0:1] == "0"):
+                month_1 = ""
+                month_2 = str(cut_date[1][1:2])
+            else:
+                month_1 = str(cut_date[1][0:1])
+                month_2 = str(cut_date[1][1:2])
+            week = math.ceil(int(cut_date[2]) / 7)
+            month_value = int(cut_date[1])
+
+            all_item, all_item_kr, all_item_en, all_path, all_path_0, all_path_1, all_type, all_type_kr, all_type_en = get_all_item()
+
+            def find_path(name, types):
+                if types == 'path':
+                    for i, v in enumerate(all_item):
+                        if str(v) == name:
+                            path = all_path[i]
+                            return path
+                elif types == 'path_0':
+                    for i, v in enumerate(all_item):
+                        if str(v) == name:
+                            path_0 = all_path_0[i]
+                            return path_0
+                elif types == 'path_1':
+                    for i, v in enumerate(all_item):
+                        if str(v) == name:
+                            path_1 = all_path_1[i]
+                            return path_1
+
+            a_top_name = []
+            a_top_kr_name = []
+            a_top_price = []
+            a_top_before = []
+            a_top_percent = []
+            a_top_path = []
+            a_top_path_0 = []
+            a_top_path_1 = []
+            a_top_name = all_top['name'].tolist()
+            a_top_kr_name = change_to_kr_path('all_top', 'in', '', value)
+            a_top_price = all_top['avg_price'].tolist()
+            a_top_before = all_top['day_before'].tolist()
+            a_top_percent = all_top['day_percent'].tolist()
+            for i in a_top_name:
+                result = find_path(i, 'path')
+                result_0 = find_path(i, 'path_0')
+                result_1 = find_path(i, 'path_1')
+                a_top_path.append(str(result))
+                a_top_path_0.append(str(result_0))
+                a_top_path_1.append(str(result_1))
+
+            a_bottom_name = []
+            a_bottom_kr_name = []
+            a_bottom_price = []
+            a_bottom_before = []
+            a_bottom_percent = []
+            a_bottom_path = []
+            a_bottom_path_0 = []
+            a_bottom_path_1 = []
+            a_bottom_name = all_bottom['name'].tolist()
+            a_bottom_kr_name = change_to_kr_path('all_bottom', 'in', '', value)
+            a_bottom_price = all_bottom['avg_price'].tolist()
+            a_bottom_before = all_bottom['day_before'].tolist()
+            a_bottom_percent = all_bottom['day_percent'].tolist()
+            for i in a_bottom_name:
+                result = find_path(i, 'path')
+                result_0 = find_path(i, 'path_0')
+                result_1 = find_path(i, 'path_1')
+                a_bottom_path.append(str(result))
+                a_bottom_path_0.append(str(result_0))
+                a_bottom_path_1.append(str(result_1))
+
+            t_top_name = []
+            t_top_kr_name = []
+            t_top_price = []
+            t_top_before = []
+            t_top_percent = []
+            t_top_path = []
+            t_top_path_0 = []
+            t_top_path_1 = []
+            t_top_name = today_top['name'].tolist()
+            t_top_kr_name = change_to_kr_path('today_top', 'in', '', value)
+            t_top_price = today_top['avg_price'].tolist()
+            t_top_before = today_top['day_before'].tolist()
+            t_top_percent = today_top['day_percent'].tolist()
+            for i in t_top_name:
+                result = find_path(i, 'path')
+                result_0 = find_path(i, 'path_0')
+                result_1 = find_path(i, 'path_1')
+                t_top_path.append(str(result))
+                t_top_path_0.append(str(result_0))
+                t_top_path_1.append(str(result_1))
+
+            t_bottom_name = []
+            t_bottom_kr_name = []
+            t_bottom_price = []
+            t_bottom_before = []
+            t_bottom_percent = []
+            t_bottom_path = []
+            t_bottom_path_0 = []
+            t_bottom_path_1 = []
+            t_bottom_name = today_bottom['name'].tolist()
+            t_bottom_kr_name = change_to_kr_path('today_bottom', 'in', '', value)
+            t_bottom_price = today_bottom['avg_price'].tolist()
+            t_bottom_before = today_bottom['day_before'].tolist()
+            t_bottom_percent = today_bottom['day_percent'].tolist()
+            for i in t_bottom_name:
+                result = find_path(i, 'path')
+                result_0 = find_path(i, 'path_0')
+                result_1 = find_path(i, 'path_1')
+                t_bottom_path.append(str(result))
+                t_bottom_path_0.append(str(result_0))
+                t_bottom_path_1.append(str(result_1))
+
+            get_item = []
+            get_path = []
+            etc_path = '../data/csv/etc'
+            mod_path = '../data/csv/mod'
+            warframe_path = '../data/csv/warframe'
+            weapon_path = '../data/csv/weapon'
+
+            for i, v in enumerate(os.listdir(etc_path)):
+                path_name = '/workspace/crawling/data/csv/etc/' + str(v) + '/' + str(v) + '.csv'
+                get_item.append(v)
+                get_path.append(path_name)
+            for i, v in enumerate(os.listdir(mod_path)):
+                path_name = '/workspace/crawling/data/csv/mod/' + str(v) + '/' + str(v) + '.csv'
+                get_item.append(v)
+                get_path.append(path_name)
+            for i, v in enumerate(os.listdir(warframe_path)):
+                path_name = '/workspace/crawling/data/csv/warframe/' + str(v) + '/' + str(v) + '.csv'
+                get_item.append(v)
+                get_path.append(path_name)
+            for i, v in enumerate(os.listdir(weapon_path)):
+                path_name = '/workspace/crawling/data/csv/weapon/' + str(v) + '/' + str(v) + '.csv'
+                get_item.append(v)
+                get_path.append(path_name)
+
+            def get_items(name):
+                for i, v in enumerate(get_item):
+                    if str(v) == name:
+                        search_path = get_path[i]
+                        result = read_csv_file(search_path)
+                        return result
+
+            top_data = get_items(a_top_name[0])
+            bottom_data = get_items(a_bottom_name[0])
+            t_data_1 = get_items(t_top_name[0])
+
+            t_xlabels = top_data['datetime'].tolist()
+            t_dataset = top_data['avg_price'].tolist()
+
+            b_xlabels = bottom_data['datetime'].tolist()
+            b_dataset = bottom_data['avg_price'].tolist()
+
+            up_xlabels = []
+            up_dataset = []
+            for i in t_top_kr_name:
+                up_xlabels.append(i)
+            for i in t_top_percent:
+                up_dataset.append(i)
+
+            down_xlabels = []
+            down_dataset = []
+            for i in t_bottom_kr_name:
+                down_xlabels.append(i)
+            for i in t_bottom_percent:
+                down_dataset.append(i)
+
+            really_today = get_today_date()
+            return render_template('/new_templates/new_index.html', **locals())
 
 #=======================================================================#
 

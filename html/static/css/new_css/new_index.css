@@ -194,7 +194,7 @@
     font-weight: bold;
     font-size: 165px;
     padding: 0;
-    margin: 5px -15px 0px 0px;
+    margin: 5px -5px 0px 0px;
     color: #ffffff;
     float: right;
 }
@@ -245,7 +245,7 @@
     font-weight: bold;
     font-size: 165px;
     padding: 0;
-    margin: 12px -5px 0px 0px;
+    margin: 12px 10px 0px 0px;
     color: #3e3f41;
     float: right;
 }
@@ -315,7 +315,7 @@
     font-weight: bold;
     font-size: 165px;
     padding: 0;
-    margin: 15px -20px 0px 0px;
+    margin: 15px -5px 0px 0px;
     color: #3e3f41;
     float: right;
 }
@@ -324,7 +324,7 @@
     font-weight: bold;
     font-size: 165px;
     padding: 0;
-    margin: 15px -22px 0px 0px;
+    margin: 15px -15px 0px 0px;
     color: #3e3f41;
     float: right;
 }
@@ -594,12 +594,23 @@
 
 .dates div {
     width: 40px;
-    height: 40px;
+    height: 36px;
     margin: 5px 23px;
+    padding: 2px 0 0 0;
     float: left;
     text-align: center;
     font-size: 23px;
     color: #3e3f41;
+}
+
+.dates_input {
+    background-color: #dfdfdf;
+    border-radius: 30px;
+}
+
+.dates_today {
+    background-color: #ff6384;
+    border-radius: 30px;
 }
 
 .other {

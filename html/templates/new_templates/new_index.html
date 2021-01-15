@@ -19,14 +19,87 @@
     <body>
         <script>
             window.onload = function () {
-                //get_today();
+                get_today();
                 
                 var input = document.getElementById("item_name");
                 input.addEventListener('click', function(){
                     var all_items = {{ all_item_kr | tojson }};
                     new AutoComplete(document.querySelector('#item_name'), all_items);
                 });
-            };
+            }
+
+            function get_today() {
+                var today = new Date();
+                var month = {{ month_value }}
+                var str_month = String(month);
+                var month_char = document.getElementById("month_char");
+
+                if(month == 1) {
+                    month_char.innerHTML = "Month Jan.";
+                }else if(month == 2) {
+                    month_char.innerHTML = "Month Feb.";
+                }else if(month == 3) {
+                    month_char.innerHTML = "Month Mar.";
+                }else if(month == 4) {
+                    month_char.innerHTML = "Month Apr.";
+                }else if(month == 5) {
+                    month_char.innerHTML = "Month May.";
+                }else if(month == 6) {
+                    month_char.innerHTML = "Month Jun.";
+                }else if(month == 7) {
+                    month_char.innerHTML = "Month Jul.";
+                }else if(month == 8) {
+                    month_char.innerHTML = "Month Aug.";
+                }else if(month == 9) {
+                    month_char.innerHTML = "Month Sep.";
+                }else if(month == 10) {
+                    month_char.innerHTML = "Month Oct.";
+                }else if(month == 11) {
+                    month_char.innerHTML = "Month Nov.";
+                }else if(month == 12) {
+                    month_char.innerHTML = "Month Dec.";
+                }else{
+                    console.log("error");
+                };
+            }
+            
+            function change_date(value) {
+                var str = value;
+                var str_0 = str.split("-")[0];
+                var str_1 = str.split("-")[1];
+                var str_2 = str.split("-")[2];
+                if(str_1.length != 2) {
+                    str = str_0 + "-0" + str_1 + "-" + str_2;
+                    if(str_2.length != 2) {
+                        str = str_0 + "-0" + str_1 + "-0" + str_2;
+                    }
+                }
+                if(str_2.length != 2) {
+                    str = str_0 + "-" + str_1 + "-0" + str_2;
+                    if(str_1.length != 2) {
+                        str = str_0 + "-0" + str_1 + "-0" + str_2;
+                    }
+                }
+                return str;
+            }
+            
+            function all_date() {
+                var all_date = [];
+                all_date = {{ date_file | tojson }};
+                var find_dates = document.getElementById("dates");
+                var child = find_dates.childNodes;
+                var today = "{{ really_today }}";
+                for(var i=0; i < child.length; i++) {
+                    var str = change_date(String(child[i].getAttribute('value')));
+                    if(all_date.includes(str)) {
+                        child[i].setAttribute("class", "date dates_input");
+                    }
+                    var today_v = change_date(today);
+                    if(str.includes(today_v)) {
+                        child[i].setAttribute("class", "date dates_today");
+                    }
+                }
+            }
         </script>
         <div class="open_menu" id="open_menu">
             <div class="menu_place">
@@ -80,8 +153,8 @@
                             <img alt="" src="{{ url_for('static', filename = '/new_image/index/menu_bar_1.png', v = 0.1) }}">
                         </div>
                         <div class="day_value">
-                            <a class="day_value_1" id="day_value_2">1</a>
-                            <a class="day_value_2" id="day_value_1">1</a>
+                            <a class="day_value_1" id="day_value_2">{{ day_2 }}</a>
+                            <a class="day_value_2" id="day_value_1">{{ day_1 }}</a>
                         </div>
                     </div>
                     <div class="week_input" onclick="today_value_open();">
@@ -91,7 +164,7 @@
                         </div>
                         <div class="week_value">
                             <p>rd</p>
-                            <a class="week_value_1" id="week_value_2">1</a>
+                            <a class="week_value_1" id="week_value_2">{{ week }}</a>
                             <a class="week_value_2" id="week_value_1"></a>
                         </div>
                     </div>
@@ -102,8 +175,8 @@
                         </div>
                         <div class="month_value">
                             <p>th</p>
-                            <a class="month_value_1" id="month_value_2">1</a>
-                            <a class="month_value_2" id="month_value_1">1</a>
+                            <a class="month_value_1" id="month_value_2">{{ month_2 }}</a>
+                            <a class="month_value_2" id="month_value_1">{{ month_1 }}</a>
                         </div>
                     </div>
                 </div>
@@ -113,7 +186,7 @@
                     </div>
                     <div class="search">
                         <input type="text" id="item_name" onkeypress="if(event.keyCode==13) {input_search(); return false;}" placeholder="검색" autocomplete="off">
-                        <img alt="" src="{{ url_for('static', filename = '/new_image/index/search.png', v = 0.1) }}" onclick="input_search()">
+                        <img alt="" src="{{ url_for('static', filename = '/new_image/index/search.png', v = 0.1) }}" onclick="input_search();">
                     </div>
                 </div>
                 <div class="main_bar">
@@ -426,8 +499,7 @@
             
             function search_result_date(value) {
                 var search = value.getAttribute('value');
-                console.log(search);
-                post_to_url('/', {search});
+                post_to_url('/date/', {search});
             }
         </script>
         <div class="footer">
