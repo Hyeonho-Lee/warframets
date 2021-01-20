@@ -18,11 +18,25 @@ first_data = all_text.split('@/@/')
 
 make_json = OrderedDict()
 
+def change_text(text):
+    result = text
+    result = result.replace('Systems Blueprint', 'Systems')
+    result = result.replace('Chassis Blueprint', 'Chassis')
+    result = result.replace('Neuroptics Blueprint', 'Neuroptics')
+    return result
+
 for i in range(0, int(len(first_data) / 4)):
     text = first_data[i * 4]
     text = text.replace('@/', '/')
     text = text.replace('@', '/')
     text = text.split('/')
+
+    re_1 = change_text(text[1])
+    re_2 = change_text(text[3])
+    re_3 = change_text(text[5])
+    re_4 = change_text(text[7])
+    re_5 = change_text(text[9])
+    re_6 = change_text(text[11])
 
     types = text[0].split(' ')
 
@@ -30,17 +44,23 @@ for i in range(0, int(len(first_data) / 4)):
     make_json[str(i)].append({
         "type": types[0],
         "relic": types[1],
-        "name_1": text[1],
+        "name_1": re_1,
+        "kr_name_1": '',
         "reward_1": text[2],
-        "name_2": text[3],
+        "name_2": re_2,
+        "kr_name_2": '',
         "reward_2": text[4],
-        "name_3": text[5],
+        "name_3": re_3,
+        "kr_name_3": '',
         "reward_3": text[6],
-        "name_4": text[7],
+        "name_4": re_4,
+        "kr_name_4": '',
         "reward_4": text[8],
-        "name_5": text[9],
+        "name_5": re_5,
+        "kr_name_5": '',
         "reward_5": text[10],
-        "name_6": text[11],
+        "name_6": re_6,
+        "kr_name_6": '',
         "reward_6": text[12]
     })
 
