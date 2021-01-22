@@ -134,15 +134,16 @@ def get_all_item():
 
     return all_item, all_path, all_path_0, all_path_1
 
-def make_file(get_path):
+def make_file(get_path, make):
+    make_folder = make
     if os.path.isfile(get_path):
-        make.to_csv(get_path, mode = 'a', header = False)
+        make_folder.to_csv(get_path, mode = 'a', header = False)
         result = pd.read_csv(get_path, index_col = 0, error_bad_lines = False)
         results = result.drop_duplicates('name', keep = 'first')
         results.to_csv(get_path, mode = 'w')
     else:
-        make.to_csv(get_path, mode = 'w')
-        make_file(get_path)
+        make_folder.to_csv(get_path, mode = 'w')
+        make_file(get_path, make_folder)
 
 def reset(date, value):
     path = '/workspace/crawling/data/csv/result/date/{date}/{value}.csv'.format(date = date, value = value)
@@ -152,119 +153,125 @@ def reset(date, value):
         reset = open(path, 'w')
         os.remove(r"/workspace/crawling/data/csv/result/date/{date}/{value}.csv".format(date = date, value = value))
 
-all_item, all_path, all_path_0, all_path_1 = get_all_item()
+def all_recommend(date_value):
+    all_item, all_path, all_path_0, all_path_1 = get_all_item()
 
-date_item = []
-date_path = []
-date_value = "2021-01-14"
-date_dir = "/workspace/crawling/data/csv/result/date/" + date_value + "/"
-
-for i, v in enumerate(all_item):
-    value = read_csv(all_path[i])
-    for i in range(0, len(value)):
-        if value['datetime'].values[i] == date_value:
-            date_item.append(v)
-            break
-
-get_item = []
-get_path = []
-etc_path = '../data/csv/etc'
-mod_path = '../data/csv/mod'
-warframe_path = '../data/csv/warframe'
-weapon_path = '../data/csv/weapon'
-
-for i, v in enumerate(os.listdir(etc_path)):
-    path_name = '/workspace/crawling/data/csv/etc/' + str(v) + '/' + str(v) + '.csv'
-    get_item.append(v)
-    get_path.append(path_name)
-for i, v in enumerate(os.listdir(mod_path)):
-    path_name = '/workspace/crawling/data/csv/mod/' + str(v) + '/' + str(v) + '.csv'
-    get_item.append(v)
-    get_path.append(path_name)
-for i, v in enumerate(os.listdir(warframe_path)):
-    path_name = '/workspace/crawling/data/csv/warframe/' + str(v) + '/' + str(v) + '.csv'
-    get_item.append(v)
-    get_path.append(path_name)
-for i, v in enumerate(os.listdir(weapon_path)):
-    path_name = '/workspace/crawling/data/csv/weapon/' + str(v) + '/' + str(v) + '.csv'
-    get_item.append(v)
-    get_path.append(path_name)
-
-for i, v in enumerate(date_item):
-    index = get_item.index(date_item[i])
-    date_path.append(get_path[index])
-
-path_1 = '/workspace/crawling/data/csv/result/date/' + date_value + '/result.csv'
-path_all_top = '/workspace/crawling/data/csv/result/date/' + date_value + '/all_top.csv'
-path_all_bottom = '/workspace/crawling/data/csv/result/date/' + date_value + '/all_bottom.csv'
-path_today_top = '/workspace/crawling/data/csv/result/date/' + date_value + '/today_top.csv'
-path_today_bottom = '/workspace/crawling/data/csv/result/date/' + date_value + '/today_bottom.csv'
-path_today_volume = '/workspace/crawling/data/csv/result/date/' + date_value + '/today_volume.csv'
-path_recommend_item = '/workspace/crawling/data/csv/result/date/' + date_value + '/recommend_item.csv'
-path_recommend_top = '/workspace/crawling/data/csv/result/date/' + date_value + '/recommend_top.csv'
-path_recommend_bottom = '/workspace/crawling/data/csv/result/date/' + date_value + '/recommend_bottom.csv'
-
-if(os.path.isdir(date_dir) == False):
-    os.makedirs(os.path.join(date_dir))
-    for i in range(0, len(date_item)):
-        make = read_csv(date_path[i])
-        make = make[make["datetime"] == date_value]
-        make['name'] = date_item[i]
-        make_file(path_1)
-    print(date_value + "가 생성 되었습니다")
-
-reset(date_value, 'result')
-for i in range(0, len(date_item)):
-    make = read_csv(date_path[i])
-    make = make[make["datetime"] == date_value]
-    make['name'] = date_item[i]
-    make_file(path_1)
-
-result_today = read_csv(path_1)
-del result_today['level_0']
-del result_today['index']
-remove_data = result_today[result_today['avg_price'] <= 30].index
-result_today = result_today.drop(remove_data)
-remove_datas = result_today[result_today['volume'] < 10].index
-result_today = result_today.drop(remove_datas)
-
-result = result_today.sort_values(by='lank', axis = 0, ascending = False)
-result = result.reset_index()
-all_top = result.head(10)
-result = result_today.sort_values(by='lank', axis = 0)
-all_bottom = result.head(10)
-
-result = result_today.sort_values(by='day_percent', axis = 0, ascending = False)
-today_top = result.head(10)
-result = result_today.sort_values(by='day_percent', axis = 0)
-today_bottom = result.head(10)
-
-result = result_today.sort_values(by='volume', axis = 0, ascending = False)
-today_volume = result.head(10)
-result = result_today.sort_values(by='vol_lank', axis = 0, ascending = False)
-recommend_item = result.head(10)
-
-result = result_today.sort_values(by='vol_before', axis = 0, ascending = False)
-recommend_top = result.head(10)
-result = result_today.sort_values(by='vol_before', axis = 0)
-recommend_bottom = result.head(10)
-
-reset(date_value, 'all_top')
-reset(date_value, 'all_bottom')
-reset(date_value, 'today_top')
-reset(date_value, 'today_bottom')
-reset(date_value, 'today_volume')
-reset(date_value, 'recommend_item')
-reset(date_value, 'recommend_top')
-reset(date_value, 'recommend_bottom')
-
-all_top.to_csv(path_all_top, mode = 'w')
-all_bottom.to_csv(path_all_bottom, mode = 'w')
-today_top.to_csv(path_today_top, mode = 'w')
-today_bottom.to_csv(path_today_bottom, mode = 'w')
-today_volume.to_csv(path_today_volume, mode = 'w')
-recommend_item.to_csv(path_recommend_item, mode ='w')
-recommend_top.to_csv(path_recommend_top, mode ='w')
-recommend_bottom.to_csv(path_recommend_bottom, mode ='w')
+    date_item = []
+    date_path = []
     
-print(date_value + "가 정리 되었습니다")
+    date_dir = "/workspace/crawling/data/csv/result/date/" + date_value + "/"
+    if(os.path.isdir(date_dir) == False):
+        for i, v in enumerate(all_item):
+            value = read_csv(all_path[i])
+            for i in range(0, len(value)):
+                if value['datetime'].values[i] == date_value:
+                    date_item.append(v)
+                    break
+
+        get_item = []
+        get_path = []
+        etc_path = '../data/csv/etc'
+        mod_path = '../data/csv/mod'
+        warframe_path = '../data/csv/warframe'
+        weapon_path = '../data/csv/weapon'
+
+        for i, v in enumerate(os.listdir(etc_path)):
+            path_name = '/workspace/crawling/data/csv/etc/' + str(v) + '/' + str(v) + '.csv'
+            get_item.append(v)
+            get_path.append(path_name)
+        for i, v in enumerate(os.listdir(mod_path)):
+            path_name = '/workspace/crawling/data/csv/mod/' + str(v) + '/' + str(v) + '.csv'
+            get_item.append(v)
+            get_path.append(path_name)
+        for i, v in enumerate(os.listdir(warframe_path)):
+            path_name = '/workspace/crawling/data/csv/warframe/' + str(v) + '/' + str(v) + '.csv'
+            get_item.append(v)
+            get_path.append(path_name)
+        for i, v in enumerate(os.listdir(weapon_path)):
+            path_name = '/workspace/crawling/data/csv/weapon/' + str(v) + '/' + str(v) + '.csv'
+            get_item.append(v)
+            get_path.append(path_name)
+
+        for i, v in enumerate(date_item):
+            index = get_item.index(date_item[i])
+            date_path.append(get_path[index])
+
+        path_1 = '/workspace/crawling/data/csv/result/date/' + date_value + '/result.csv'
+        path_all_top = '/workspace/crawling/data/csv/result/date/' + date_value + '/all_top.csv'
+        path_all_bottom = '/workspace/crawling/data/csv/result/date/' + date_value + '/all_bottom.csv'
+        path_today_top = '/workspace/crawling/data/csv/result/date/' + date_value + '/today_top.csv'
+        path_today_bottom = '/workspace/crawling/data/csv/result/date/' + date_value + '/today_bottom.csv'
+        path_today_volume = '/workspace/crawling/data/csv/result/date/' + date_value + '/today_volume.csv'
+        path_recommend_item = '/workspace/crawling/data/csv/result/date/' + date_value + '/recommend_item.csv'
+        path_recommend_top = '/workspace/crawling/data/csv/result/date/' + date_value + '/recommend_top.csv'
+        path_recommend_bottom = '/workspace/crawling/data/csv/result/date/' + date_value + '/recommend_bottom.csv'
+
+        if(os.path.isdir(date_dir) == False):
+            os.makedirs(os.path.join(date_dir))
+            for i in range(0, len(date_item)):
+                make_folder = read_csv(date_path[i])
+                make_folder = make_folder[make_folder["datetime"] == date_value]
+                make_folder['name'] = date_item[i]
+                make_file(path_1, make_folder)
+            print(date_value + "가 생성 되었습니다")
+
+        reset(date_value, 'result')
+        for i in range(0, len(date_item)):
+            make_folder = read_csv(date_path[i])
+            make_folder = make_folder[make_folder["datetime"] == date_value]
+            make_folder['name'] = date_item[i]
+            make_file(path_1, make_folder)
+
+        result_today = read_csv(path_1)
+        del result_today['level_0']
+        del result_today['index']
+        remove_data = result_today[result_today['avg_price'] <= 30].index
+        result_today = result_today.drop(remove_data)
+        remove_datas = result_today[result_today['volume'] < 10].index
+        result_today = result_today.drop(remove_datas)
+
+        result = result_today.sort_values(by='lank', axis = 0, ascending = False)
+        result = result.reset_index()
+        all_top = result.head(10)
+        result = result_today.sort_values(by='lank', axis = 0)
+        all_bottom = result.head(10)
+
+        result = result_today.sort_values(by='day_percent', axis = 0, ascending = False)
+        today_top = result.head(10)
+        result = result_today.sort_values(by='day_percent', axis = 0)
+        today_bottom = result.head(10)
+
+        result = result_today.sort_values(by='volume', axis = 0, ascending = False)
+        today_volume = result.head(10)
+        result = result_today.sort_values(by='vol_lank', axis = 0, ascending = False)
+        recommend_item = result.head(10)
+
+        result = result_today.sort_values(by='vol_before', axis = 0, ascending = False)
+        recommend_top = result.head(10)
+        result = result_today.sort_values(by='vol_before', axis = 0)
+        recommend_bottom = result.head(10)
+
+        reset(date_value, 'all_top')
+        reset(date_value, 'all_bottom')
+        reset(date_value, 'today_top')
+        reset(date_value, 'today_bottom')
+        reset(date_value, 'today_volume')
+        reset(date_value, 'recommend_item')
+        reset(date_value, 'recommend_top')
+        reset(date_value, 'recommend_bottom')
+
+        all_top.to_csv(path_all_top, mode = 'w')
+        all_bottom.to_csv(path_all_bottom, mode = 'w')
+        today_top.to_csv(path_today_top, mode = 'w')
+        today_bottom.to_csv(path_today_bottom, mode = 'w')
+        today_volume.to_csv(path_today_volume, mode = 'w')
+        recommend_item.to_csv(path_recommend_item, mode ='w')
+        recommend_top.to_csv(path_recommend_top, mode ='w')
+        recommend_bottom.to_csv(path_recommend_bottom, mode ='w')
+
+        print(date_value + "가 정리 되었습니다")
+    else:
+        print("이미 폴더가 생성 되었습니다.")
+
+date_values = "2021-01-20"
+all_recommend(date_values)

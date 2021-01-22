@@ -148,6 +148,10 @@
     border-radius: 10px;
 }
 
+.item_button div:hover {
+    cursor: pointer;
+}
+
 .item_button a {
     width: auto;
     position: absolute;

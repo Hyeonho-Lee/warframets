@@ -907,6 +907,37 @@ def new_index():
         t_bottom_path.append(str(result))
         t_bottom_path_0.append(str(result_0))
         t_bottom_path_1.append(str(result_1))
+    
+    t_all_name = []
+    t_all_kr_name = []
+    t_all_price = []
+    t_all_before = []
+    t_all_befores = []
+    t_all_volume = []
+    t_all_date = []
+    t_all_percent = []
+    t_all_lank = []
+    t_all_path = []
+    t_all_path_0 = []
+    t_all_path_1 = []
+    t_all_name = today_all['name'].tolist()
+    t_all_name_count = len(t_all_name)
+    t_all_kr_name = change_to_kr('result', 'in', '')
+    t_all_price = today_all['avg_price'].tolist()
+    t_all_before = today_all['day_before'].tolist()
+    t_all_befores = today_all['yn_before'].tolist()
+    t_all_volume = today_all['volume'].tolist()
+    t_all_date = today_all['datetime'].tolist()
+    t_all_percent = today_all['day_percent'].tolist()
+    t_all_lank = today_all['lank'].tolist()
+
+    for i in t_all_name:
+        result = find_path(i, 'path')
+        result_0 = find_path(i, 'path_0')
+        result_1 = find_path(i, 'path_1')
+        t_all_path.append(str(result))
+        t_all_path_0.append(str(result_0))
+        t_all_path_1.append(str(result_1))
 
     get_item = []
     get_path = []
