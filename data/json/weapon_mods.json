@@ -91,12 +91,6 @@
             "kr_name": "커셔스 샷"
         },
         {
-            "name": "continuous_misery",
-            "type": "rifle_mod",
-            "en_name": "Continuous Misery",
-            "kr_name": "컨티뉴어스 미져리"
-        },
-        {
             "name": "crash_course",
             "type": "rifle_mod",
             "en_name": "Crash Course",
