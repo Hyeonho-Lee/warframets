@@ -1,8 +1,6 @@
 {
     "recommend": [
         {
-            "index": 0,
-            "index_number": 184,
             "image": "./image/item_image/mod/Primed_Rubedo_Lined_Barrel/Primed_Rubedo_Lined_Barrel.png",
             "subject": "프라임드 모드 모음집",
             "name": "primed_rubedo_lined_barrel",
@@ -14,8 +12,17 @@
             "volume": 0
         },
         {
-            "index": 1,
-            "index_number": 189,
+            "image": "./image/item_image/mod/Primed_Rubedo_Lined_Barrel/Primed_Rubedo_Lined_Barrel.png",
+            "subject": "프라임드 모드 모음집",
+            "name": "primed_rubedo_lined_barrel(max)",
+            "type": "compaarchwing_modnion_mod",
+            "en_name": "Primed Rubedo-Lined Barrel(max)",
+            "kr_name": "프라임드 루비도-라인드 배럴(max)",
+            "price": 0,
+            "percent": 0,
+            "volume": 0
+        },
+        {
             "image": "./image/item_image/mod/Primed_Animal_Instinct/Primed_Animal_Instinct.png",
             "subject": "프라임드 모드 모음집",
             "name": "primed_animal_instinct",
@@ -27,8 +34,17 @@
             "volume": 0
         },
         {
-            "index": 2,
-            "index_number": 190,
+            "image": "./image/item_image/mod/Primed_Animal_Instinct/Primed_Animal_Instinct.png",
+            "subject": "프라임드 모드 모음집",
+            "name": "primed_animal_instinct(max)",
+            "type": "companion_mod",
+            "en_name": "Primed Animal Instinct(max)",
+            "kr_name": "프라임드 애니멀 인스팅트(max)",
+            "price": 0,
+            "percent": 0,
+            "volume": 0
+        },
+        {
             "image": "./image/item_image/mod/Primed_Pack_Leader/Primed_Pack_Leader.png",
             "subject": "프라임드 모드 모음집",
             "name": "primed_pack_leader",
@@ -40,8 +56,17 @@
             "volume": 0
         },
         {
-            "index": 3,
-            "index_number": 192,
+            "image": "./image/item_image/mod/Primed_Pack_Leader/Primed_Pack_Leader.png",
+            "subject": "프라임드 모드 모음집",
+            "name": "primed_pack_leader(max)",
+            "type": "companion_mod",
+            "en_name": "Primed Pack Leader(max)",
+            "kr_name": "프라임드 팩 리더(max)",
+            "price": 0,
+            "percent": 0,
+            "volume": 0
+        },
+        {
             "image": "./image/item_image/mod/Primed_Regen/Primed_Regen.png",
             "subject": "프라임드 모드 모음집",
             "name": "primed_regen",
@@ -53,8 +78,17 @@
             "volume": 0
         },
         {
-            "index": 4,
-            "index_number": 217,
+            "image": "./image/item_image/mod/Primed_Regen/Primed_Regen.png",
+            "subject": "프라임드 모드 모음집",
+            "name": "primed_regen(max)",
+            "type": "companion_mod",
+            "en_name": "Primed Regen(max)",
+            "kr_name": "프라임드 리젠(max)",
+            "price": 0,
+            "percent": 0,
+            "volume": 0
+        },
+        {
             "image": "./image/item_image/mod/Primed_Morphic_Transformer/Primed_Morphic_Transformer.png",
             "subject": "프라임드 모드 모음집",
             "name": "primed_morphic_transformer",
@@ -66,8 +100,17 @@
             "volume": 0
         },
         {
-            "index": 5,
-            "index_number": 299,
+            "image": "./image/item_image/mod/Primed_Morphic_Transformer/Primed_Morphic_Transformer.png",
+            "subject": "프라임드 모드 모음집",
+            "name": "primed_morphic_transformer(max)",
+            "type": "archwing_mod",
+            "en_name": "Primed Morphic Transformer(max)",
+            "kr_name": "프라임드 모르픽 트랜스포머(max)",
+            "price": 0,
+            "percent": 0,
+            "volume": 0
+        },
+        {
             "image": "./image/item_image/mod/Primed_Continuity/Primed_Continuity.png",
             "subject": "프라임드 모드 모음집",
             "name": "primed_continuity",
@@ -79,8 +122,17 @@
             "volume": 0
         },
         {
-            "index": 6,
-            "index_number": 300,
+            "image": "./image/item_image/mod/Primed_Continuity/Primed_Continuity.png",
+            "subject": "프라임드 모드 모음집",
+            "name": "primed_continuity(max)",
+            "type": "warframe_mod",
+            "en_name": "Primed Continuity(max)",
+            "kr_name": "프라임드 컨티뉴어티(max)",
+            "price": 0,
+            "percent": 0,
+            "volume": 0
+        },
+        {
             "image": "./image/item_image/mod/Primed_Flow/Primed_Flow.png",
             "subject": "프라임드 모드 모음집",
             "name": "primed_flow",
@@ -92,8 +144,17 @@
             "volume": 0
         },
         {
-            "index": 7,
-            "index_number": 390,
+            "image": "./image/item_image/mod/Primed_Flow/Primed_Flow.png",
+            "subject": "프라임드 모드 모음집",
+            "name": "primed_flow(max)",
+            "type": "warframe_mod",
+            "en_name": "Primed Flow(max)",
+            "kr_name": "프라임드 플로우(max)",
+            "price": 0,
+            "percent": 0,
+            "volume": 0
+        },
+        {
             "image": "./image/item_image/mod/Primed_Firestorm/Primed_Firestorm.png",
             "subject": "프라임드 모드 모음집",
             "name": "primed_firestorm",
@@ -105,8 +166,17 @@
             "volume": 0
         },
         {
-            "index": 8,
-            "index_number": 391,
+            "image": "./image/item_image/mod/Primed_Firestorm/Primed_Firestorm.png",
+            "subject": "프라임드 모드 모음집",
+            "name": "primed_firestorm(max)",
+            "type": "primary_mod",
+            "en_name": "Primed Firestorm(max)",
+            "kr_name": "프라임드 파이어스톰(max)",
+            "price": 0,
+            "percent": 0,
+            "volume": 0
+        },
+        {
             "image": "./image/item_image/mod/Primed_Fulmination/Primed_Fulmination.png",
             "subject": "프라임드 모드 모음집",
             "name": "primed_fulmination",
@@ -118,8 +188,17 @@
             "volume": 0
         },
         {
-            "index": 9,
-            "index_number": 421,
+            "image": "./image/item_image/mod/Primed_Fulmination/Primed_Fulmination.png",
+            "subject": "프라임드 모드 모음집",
+            "name": "primed_fulmination(max)",
+            "type": "pistol_mod",
+            "en_name": "Primed Fulmination(max)",
+            "kr_name": "프라임드 펄미네이션(max)",
+            "price": 0,
+            "percent": 0,
+            "volume": 0
+        },
+        {
             "image": "./image/item_image/mod/Primed_Cryo_Rounds/Primed_Cryo_Rounds.png",
             "subject": "프라임드 모드 모음집",
             "name": "primed_cryo_rounds",
@@ -131,8 +210,17 @@
             "volume": 0
         },
         {
-            "index": 10,
-            "index_number": 422,
+            "image": "./image/item_image/mod/Primed_Cryo_Rounds/Primed_Cryo_Rounds.png",
+            "subject": "프라임드 모드 모음집",
+            "name": "primed_cryo_rounds(max)",
+            "type": "primary_mod",
+            "en_name": "Primed Cryo Rounds(max)",
+            "kr_name": "프라임드 크라이오 라운즈(max)",
+            "price": 0,
+            "percent": 0,
+            "volume": 0
+        },
+        {
             "image": "./image/item_image/mod/Primed_Fast_Hands/Primed_Fast_Hands.png",
             "subject": "프라임드 모드 모음집",
             "name": "primed_fast_hands",
@@ -144,8 +232,17 @@
             "volume": 0
         },
         {
-            "index": 11,
-            "index_number": 443,
+            "image": "./image/item_image/mod/Primed_Fast_Hands/Primed_Fast_Hands.png",
+            "subject": "프라임드 모드 모음집",
+            "name": "primed_fast_hands(max)",
+            "type": "primary_mod",
+            "en_name": "Primed Fast Hands(max)",
+            "kr_name": "프라임드 패스트 핸즈(max)",
+            "price": 0,
+            "percent": 0,
+            "volume": 0
+        },
+        {
             "image": "./image/item_image/mod/Primed_Rifle_Ammo_Mutation/Primed_Rifle_Ammo_Mutation.png",
             "subject": "프라임드 모드 모음집",
             "name": "primed_rifle_ammo_mutation",
@@ -157,8 +254,17 @@
             "volume": 0
         },
         {
-            "index": 12,
-            "index_number": 469,
+            "image": "./image/item_image/mod/Primed_Rifle_Ammo_Mutation/Primed_Rifle_Ammo_Mutation.png",
+            "subject": "프라임드 모드 모음집",
+            "name": "primed_rifle_ammo_mutation(max)",
+            "type": "primary_mod",
+            "en_name": "Primed Rifle Ammo Mutation(max)",
+            "kr_name": "프라임드 라이플 애모 뮤테이션(max)",
+            "price": 0,
+            "percent": 0,
+            "volume": 0
+        },
+        {
             "image": "./image/item_image/mod/Primed_Charged_Shell/Primed_Charged_Shell.png",
             "subject": "프라임드 모드 모음집",
             "name": "primed_charged_shell",
@@ -170,8 +276,17 @@
             "volume": 0
         },
         {
-            "index": 13,
-            "index_number": 470,
+            "image": "./image/item_image/mod/Primed_Charged_Shell/Primed_Charged_Shell.png",
+            "subject": "프라임드 모드 모음집",
+            "name": "primed_charged_shell(max)",
+            "type": "primary_mod",
+            "en_name": "Primed Charged Shell(max)",
+            "kr_name": "프라임드 차지드 쉘(max)",
+            "price": 0,
+            "percent": 0,
+            "volume": 0
+        },
+        {
             "image": "./image/item_image/mod/Primed_Point_Blank/Primed_Point_Blank.png",
             "subject": "프라임드 모드 모음집",
             "name": "primed_point_blank",
@@ -183,8 +298,17 @@
             "volume": 0
         },
         {
-            "index": 14,
-            "index_number": 471,
+            "image": "./image/item_image/mod/Primed_Point_Blank/Primed_Point_Blank.png",
+            "subject": "프라임드 모드 모음집",
+            "name": "primed_point_blank(max)",
+            "type": "primary_mod",
+            "en_name": "Primed Point Blank(max)",
+            "kr_name": "프라임드 포인트 블랭크(max)",
+            "price": 0,
+            "percent": 0,
+            "volume": 0
+        },
+        {
             "image": "./image/item_image/mod/Primed_Ravage/Primed_Ravage.png",
             "subject": "프라임드 모드 모음집",
             "name": "primed_ravage",
@@ -196,8 +320,17 @@
             "volume": 0
         },
         {
-            "index": 15,
-            "index_number": 472,
+            "image": "./image/item_image/mod/Primed_Ravage/Primed_Ravage.png",
+            "subject": "프라임드 모드 모음집",
+            "name": "primed_ravage(max)",
+            "type": "primary_mod",
+            "en_name": "Primed Ravage(max)",
+            "kr_name": "프라임드 래비지(max)",
+            "price": 0,
+            "percent": 0,
+            "volume": 0
+        },
+        {
             "image": "./image/item_image/mod/Primed_Shotgun_Ammo_Mutation/Primed_Shotgun_Ammo_Mutation.png",
             "subject": "프라임드 모드 모음집",
             "name": "primed_shotgun_ammo_mutation",
@@ -209,8 +342,17 @@
             "volume": 0
         },
         {
-            "index": 16,
-            "index_number": 534,
+            "image": "./image/item_image/mod/Primed_Shotgun_Ammo_Mutation/Primed_Shotgun_Ammo_Mutation.png",
+            "subject": "프라임드 모드 모음집",
+            "name": "primed_shotgun_ammo_mutation(max)",
+            "type": "primary_mod",
+            "en_name": "Primed Shotgun Ammo Mutation(max)",
+            "kr_name": "프라임드 샷건 애모 뮤테이션(max)",
+            "price": 0,
+            "percent": 0,
+            "volume": 0
+        },
+        {
             "image": "./image/item_image/mod/Primed_Heated_Charge/Primed_Heated_Charge.png",
             "subject": "프라임드 모드 모음집",
             "name": "primed_heated_charge",
@@ -222,8 +364,17 @@
             "volume": 0
         },
         {
-            "index": 17,
-            "index_number": 535,
+            "image": "./image/item_image/mod/Primed_Heated_Charge/Primed_Heated_Charge.png",
+            "subject": "프라임드 모드 모음집",
+            "name": "primed_heated_charge(max)",
+            "type": "secondary_mod",
+            "en_name": "Primed Heated Charge(max)",
+            "kr_name": "프라임드 히티드 차지(max)",
+            "price": 0,
+            "percent": 0,
+            "volume": 0
+        },
+        {
             "image": "./image/item_image/mod/Primed_Pistol_Ammo_Mutation/Primed_Pistol_Ammo_Mutation.png",
             "subject": "프라임드 모드 모음집",
             "name": "primed_pistol_ammo_mutation",
@@ -235,8 +386,17 @@
             "volume": 0
         },
         {
-            "index": 18,
-            "index_number": 536,
+            "image": "./image/item_image/mod/Primed_Pistol_Ammo_Mutation/Primed_Pistol_Ammo_Mutation.png",
+            "subject": "프라임드 모드 모음집",
+            "name": "primed_pistol_ammo_mutation(max)",
+            "type": "secondary_mod",
+            "en_name": "Primed Pistol Ammo Mutation(max)",
+            "kr_name": "프라임드 피스톨 애모 뮤테이션(max)",
+            "price": 0,
+            "percent": 0,
+            "volume": 0
+        },
+        {
             "image": "./image/item_image/mod/Primed_Pistol_Gambit/Primed_Pistol_Gambit.png",
             "subject": "프라임드 모드 모음집",
             "name": "primed_pistol_gambit",
@@ -248,8 +408,17 @@
             "volume": 0
         },
         {
-            "index": 19,
-            "index_number": 537,
+            "image": "./image/item_image/mod/Primed_Pistol_Gambit/Primed_Pistol_Gambit.png",
+            "subject": "프라임드 모드 모음집",
+            "name": "primed_pistol_gambit(max)",
+            "type": "secondary_mod",
+            "en_name": "Primed Pistol Gambit(max)",
+            "kr_name": "프라임드 피스톨 갬빗(max)",
+            "price": 0,
+            "percent": 0,
+            "volume": 0
+        },
+        {
             "image": "./image/item_image/mod/Primed_Quickdraw/Primed_Quickdraw.png",
             "subject": "프라임드 모드 모음집",
             "name": "primed_quickdraw",
@@ -261,8 +430,17 @@
             "volume": 0
         },
         {
-            "index": 20,
-            "index_number": 538,
+            "image": "./image/item_image/mod/Primed_Quickdraw/Primed_Quickdraw.png",
+            "subject": "프라임드 모드 모음집",
+            "name": "primed_quickdraw(max)",
+            "type": "secondary_mod",
+            "en_name": "Primed Quickdraw(max)",
+            "kr_name": "프라임드 퀵드로우(max)",
+            "price": 0,
+            "percent": 0,
+            "volume": 0
+        },
+        {
             "image": "./image/item_image/mod/Primed_Slip_Magazine/Primed_Slip_Magazine.png",
             "subject": "프라임드 모드 모음집",
             "name": "primed_slip_magazine",
@@ -274,8 +452,17 @@
             "volume": 0
         },
         {
-            "index": 21,
-            "index_number": 539,
+            "image": "./image/item_image/mod/Primed_Slip_Magazine/Primed_Slip_Magazine.png",
+            "subject": "프라임드 모드 모음집",
+            "name": "primed_slip_magazine(max)",
+            "type": "secondary_mod",
+            "en_name": "Primed Slip magazine(max)",
+            "kr_name": "프라임드 슬립 매거진(max)",
+            "price": 0,
+            "percent": 0,
+            "volume": 0
+        },
+        {
             "image": "./image/item_image/mod/Primed_Target_Cracker/Primed_Target_Cracker.png",
             "subject": "프라임드 모드 모음집",
             "name": "primed_target_cracker",
@@ -287,8 +474,17 @@
             "volume": 0
         },
         {
-            "index": 22,
-            "index_number": 587,
+            "image": "./image/item_image/mod/Primed_Target_Cracker/Primed_Target_Cracker.png",
+            "subject": "프라임드 모드 모음집",
+            "name": "primed_target_cracker(max)",
+            "type": "secondary_mod",
+            "en_name": "Primed Target Cracker(max)",
+            "kr_name": "프라임드 타겟 크랙커(max)",
+            "price": 0,
+            "percent": 0,
+            "volume": 0
+        },
+        {
             "image": "./image/item_image/mod/Primed_Fever_Strike/Primed_Fever_Strike.png",
             "subject": "프라임드 모드 모음집",
             "name": "primed_fever_strike",
@@ -300,8 +496,17 @@
             "volume": 0
         },
         {
-            "index": 23,
-            "index_number": 588,
+            "image": "./image/item_image/mod/Primed_Fever_Strike/Primed_Fever_Strike.png",
+            "subject": "프라임드 모드 모음집",
+            "name": "primed_fever_strike(max)",
+            "type": "melee_mod",
+            "en_name": "Primed Fever Strike(max)",
+            "kr_name": "프라임드 피버 스트라이크(max)",
+            "price": 0,
+            "percent": 0,
+            "volume": 0
+        },
+        {
             "image": "./image/item_image/mod/Primed_Heavy_Trauma/Primed_Heavy_Trauma.png",
             "subject": "프라임드 모드 모음집",
             "name": "primed_heavy_trauma",
@@ -313,8 +518,17 @@
             "volume": 0
         },
         {
-            "index": 24,
-            "index_number": 589,
+            "image": "./image/item_image/mod/Primed_Heavy_Trauma/Primed_Heavy_Trauma.png",
+            "subject": "프라임드 모드 모음집",
+            "name": "primed_heavy_trauma(max)",
+            "type": "melee_mod",
+            "en_name": "Primed Heavy Trauma(max)(max)",
+            "kr_name": "프라임드 헤비 트라우마(max)",
+            "price": 0,
+            "percent": 0,
+            "volume": 0
+        },
+        {
             "image": "./image/item_image/mod/Primed_Pressure_Point/Primed_Pressure_Point.png",
             "subject": "프라임드 모드 모음집",
             "name": "primed_pressure_point",
@@ -326,14 +540,34 @@
             "volume": 0
         },
         {
-            "index": 25,
-            "index_number": 590,
+            "image": "./image/item_image/mod/Primed_Pressure_Point/Primed_Pressure_Point.png",
+            "subject": "프라임드 모드 모음집",
+            "name": "primed_pressure_point(max)",
+            "type": "melee_mod",
+            "en_name": "Primed Pressure Point(max)",
+            "kr_name": "프라임드 프레셔 포인트(max)",
+            "price": 0,
+            "percent": 0,
+            "volume": 0
+        },
+        {
             "image": "./image/item_image/mod/Primed_Reach/Primed_Reach.png",
             "subject": "프라임드 모드 모음집",
             "name": "primed_reach",
             "type": "melee_mod",
             "en_name": "Primed Reach",
             "kr_name": "프라임드 리치",
+            "price": 0,
+            "percent": 0,
+            "volume": 0
+        },
+        {
+            "image": "./image/item_image/mod/Primed_Reach/Primed_Reach.png",
+            "subject": "프라임드 모드 모음집",
+            "name": "primed_reach(max)",
+            "type": "melee_mod",
+            "en_name": "Primed Reach(max)",
+            "kr_name": "프라임드 리치(max)",
             "price": 0,
             "percent": 0,
             "volume": 0

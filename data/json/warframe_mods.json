@@ -25,6 +25,12 @@
             "kr_name": "프라임드 루비도-라인드 배럴"
         },
         {
+            "name": "primed_rubedo_lined_barrel(max)",
+            "type": "archwing_mod",
+            "en_name": "Primed Rubedo-Lined Barrel(max)",
+            "kr_name": "프라임드 루비도-라인드 배럴(max)"
+        },
+        {
             "name": "animal_instinct",
             "type": "companion_mod",
             "en_name": "Animal Instinct",
@@ -55,10 +61,22 @@
             "kr_name": "프라임드 애니멀 인스팅트"
         },
         {
+            "name": "primed_animal_instinct(max)",
+            "type": "companion_mod",
+            "en_name": "Primed Animal Instinct(max)",
+            "kr_name": "프라임드 애니멀 인스팅트(max)"
+        },
+        {
             "name": "primed_pack_leader",
             "type": "companion_mod",
             "en_name": "Primed Pack Leader",
             "kr_name": "프라임드 팩 리더"
+        },
+        {
+            "name": "primed_pack_leader(max)",
+            "type": "companion_mod",
+            "en_name": "Primed Pack Leader(max)",
+            "kr_name": "프라임드 팩 리더(max)"
         },
         {
             "name": "odomedic",
@@ -71,6 +89,12 @@
             "type": "companion_mod",
             "en_name": "Primed Regen",
             "kr_name": "프라임드 리젠"
+        },
+        {
+            "name": "primed_regen(max)",
+            "type": "companion_mod",
+            "en_name": "Primed Regen(max)",
+            "kr_name": "프라임드 리젠(max)"
         },
         {
             "name": "sacrifice",
@@ -221,6 +245,12 @@
             "type": "archwing_mod",
             "en_name": "Primed Morphic Transformer",
             "kr_name": "프라임드 모르픽 트랜스포머"
+        },
+        {
+            "name": "primed_morphic_transformer(max)",
+            "type": "archwing_mod",
+            "en_name": "Primed Morphic Transformer(max)",
+            "kr_name": "프라임드 모르픽 트랜스포머(max)"
         },
         {
             "name": "system_reroute",
@@ -715,10 +745,22 @@
             "kr_name": "프라임드 컨티뉴어티"
         },
         {
+            "name": "primed_continuity(max)",
+            "type": "warframe_mod",
+            "en_name": "Primed Continuity(max)",
+            "kr_name": "프라임드 컨티뉴어티(max)"
+        },
+        {
             "name": "primed_flow",
             "type": "warframe_mod",
             "en_name": "Primed Flow",
             "kr_name": "프라임드 플로우"
+        },
+        {
+            "name": "primed_flow(max)",
+            "type": "warframe_mod",
+            "en_name": "Primed Flow(max)",
+            "kr_name": "프라임드 플로우(max)"
         },
         {
             "name": "rolling_guard",

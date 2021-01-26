@@ -1135,7 +1135,9 @@ def result(get_name):
 
         if get_find == True:
             if(result.empty != True):
-
+                name_setss = name_sets
+                if name_sets.find('(max)'):
+                    name_setss = name_sets.replace('(max)', '')
                 today_datetime = get_today_date()
 
                 label = 'market'
@@ -1300,6 +1302,9 @@ def result_en(get_name):
 
         if get_find == True:
             if(result.empty != True):
+                name_setss = name_sets
+                if name_sets.find('(max)'):
+                    name_setss = name_sets.replace('(max)', '')
 
                 today_datetime = get_today_date()
 
@@ -2200,8 +2205,6 @@ def category():
     rec_len_data_0 = len(json_data["recommend"])
 
     for i in json_data["recommend"]:
-        rec_index_0.append(i["index"])
-        rec_index_number_0.append(i["index_number"])
         rec_image_0.append(i["image"])
         rec_subject_0.append(i["subject"])
         rec_name_0.append(i["name"])
@@ -2209,8 +2212,14 @@ def category():
         rec_en_name_0.append(i["en_name"])
         rec_kr_name_0.append(i["kr_name"])
 
+    for i, v in enumerate(all_item):
+        for j in range(0, rec_len_data_0):
+            if v == rec_name_0[j]:
+                rec_index_number_0.append(i)
+
     for i in range(0, rec_len_data_0):
         index = rec_index_number_0[i]
+        rec_index_0.append(i)
         rec_price_0.append(today_price[index])
         rec_percent_0.append(today_percent[index])
         rec_volume_0.append(today_volume[index])
@@ -2742,14 +2751,17 @@ def category_en():
     rec_len_data_0 = len(json_data["recommend"])
 
     for i in json_data["recommend"]:
-        rec_index_0.append(i["index"])
-        rec_index_number_0.append(i["index_number"])
         rec_image_0.append(i["image"])
         rec_subject_0.append(i["subject"])
         rec_name_0.append(i["name"])
         rec_type_0.append(i["type"])
         rec_en_name_0.append(i["en_name"])
         rec_kr_name_0.append(i["kr_name"])
+
+    for i, v in enumerate(all_item):
+        for j in range(0, rec_len_data_0):
+            if v == rec_name_0[j]:
+                rec_index_number_0.append(i)
 
     for i in range(0, rec_len_data_0):
         index = rec_index_number_0[i]
@@ -4178,4 +4190,4 @@ if __name__ == '__main__':
     #ssl_context = ssl.SSLContext(ssl.PROTOCOL_TLS)
     #ssl_context.load_cert_chain(certfile='', keyfile='', password='')
     app.static_folder = 'static'
-    app.run(host = '0.0.0.0', port = 5001, debug = False)
+    app.run(host = '0.0.0.0', port = 5000, debug = False)

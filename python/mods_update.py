@@ -23,12 +23,15 @@ def warframe_crawling(item, path, path_0):
     get_path = path
     get_path_0 = path_0
 
+    if item.find('(max)'):
+        get_item = item.replace('(max)', '')
+
     site = 'https://api.warframe.market/v1/items/{get_item}/statistics'.format(get_item = get_item)
     res = requests.get(site)
 
     html = res.text
     soup = bs(html, 'html.parser')
-    
+
     with open('/workspace/crawling/data/json/warframe_data_v2.json', 'w') as file:
         data = str(soup)
         json_data = json.loads(data)
@@ -36,14 +39,16 @@ def warframe_crawling(item, path, path_0):
         file.write(json_data_1)
 
     warframe_data = json_data_1
-    
+
     json_data = json.loads(warframe_data)
 
     result_data = pd.DataFrame(json_data['payload']['statistics_closed']['90days'])
-    
-    result_data = result_data[(result_data['mod_rank'] == 0)]
+    if item.find('(max)'):
+        result_data = result_data[(result_data['mod_rank'] == 10)]
+    else:
+        result_data = result_data[(result_data['mod_rank'] == 0)]
     #print(result_data)
-    
+
     datetime = []
     avg_price = []
     volume = []
@@ -78,12 +83,19 @@ def warframe_crawling(item, path, path_0):
             value.to_csv(get_path, mode = 'w')
             #print('새로운 데이터를 저장했습니다.') 
 
-    if os.path.isdir(get_path_0):
-        make_file(get_item, get_path)
+    if item.find('(max)'):
+        if os.path.isdir(get_path_0):
+            make_file(get_item + '(max)', get_path)
+        else:
+            os.makedirs(get_path_0)
+            make_file(get_item + '(max)', get_path)
     else:
-        #print('폴더가 없음으로 새로 만들었습니다.')
-        os.makedirs(get_path_0)
-        make_file(get_item, get_path)
+        if os.path.isdir(get_path_0):
+            make_file(get_item, get_path)
+        else:
+            #print('폴더가 없음으로 새로 만들었습니다.')
+            os.makedirs(get_path_0)
+            make_file(get_item, get_path)
 
     print(str(get_item) + ' 업데이트를 하였습니다.')
 
@@ -121,6 +133,7 @@ for i, v in enumerate(input_items):
     save_data = warframe_crawling(item, path, path_0)
     endTime = time.time() - startTime
     print(str(round(i / len(input_items) * 100)) + "% 완료했습니다. 시간: " + str(round(endTime)) + "초")
+
 
 print("업데이트가 모두 완료했습니다.")
 

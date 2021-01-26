@@ -7,10 +7,22 @@
             "kr_name": "프라임드 파이어스톰"
         },
         {
+            "name": "primed_firestorm(max)",
+            "type": "primary_mod",
+            "en_name": "Primed Firestorm(max)",
+            "kr_name": "프라임드 파이어스톰(max)"
+        },
+        {
             "name": "primed_fulmination",
             "type": "pistol_mod",
             "en_name": "Primed Fulmination",
             "kr_name": "프라임드 펄미네이션"
+        },
+        {
+            "name": "primed_fulmination(max)",
+            "type": "pistol_mod",
+            "en_name": "Primed Fulmination(max)",
+            "kr_name": "프라임드 펄미네이션(max)"
         },
         {
             "name": "hunter_munitions",
@@ -187,10 +199,22 @@
             "kr_name": "프라임드 크라이오 라운즈"
         },
         {
+            "name": "primed_cryo_rounds(max)",
+            "type": "rifle_mod",
+            "en_name": "Primed Cryo Rounds(max)",
+            "kr_name": "프라임드 크라이오 라운즈(max)"
+        },
+        {
             "name": "primed_fast_hands",
             "type": "rifle_mod",
             "en_name": "Primed Fast Hands",
             "kr_name": "프라임드 패스트 핸즈"
+        },
+        {
+            "name": "primed_fast_hands(max)",
+            "type": "rifle_mod",
+            "en_name": "Primed Fast Hands(max)",
+            "kr_name": "프라임드 패스트 핸즈(max)"
         },
         {
             "name": "proton_jet",
@@ -317,6 +341,12 @@
             "type": "assaultrifle_mod",
             "en_name": "Primed Rifle Ammo Mutation",
             "kr_name": "프라임드 라이플 애모 뮤테이션"
+        },
+        {
+            "name": "primed_rifle_ammo_mutation(max)",
+            "type": "assaultrifle_mod",
+            "en_name": "Primed Rifle Ammo Mutation(max)",
+            "kr_name": "프라임드 라이플 애모 뮤테이션(max)"
         },
         {
             "name": "tactical_reload",
@@ -475,10 +505,22 @@
             "kr_name": "프라임드 차지드 쉘"
         },
         {
+            "name": "primed_charged_shell(max)",
+            "type": "shotgun_mod",
+            "en_name": "Primed Charged Shell(max)",
+            "kr_name": "프라임드 차지드 쉘(max)"
+        },
+        {
             "name": "primed_point_blank",
             "type": "shotgun_mod",
             "en_name": "Primed Point Blank",
             "kr_name": "프라임드 포인트 블랭크"
+        },
+        {
+            "name": "primed_point_blank(max)",
+            "type": "shotgun_mod",
+            "en_name": "Primed Point Blank(max)",
+            "kr_name": "프라임드 포인트 블랭크(max)"
         },
         {
             "name": "primed_ravage",
@@ -487,10 +529,22 @@
             "kr_name": "프라임드 래비지"
         },
         {
+            "name": "primed_ravage(max)",
+            "type": "shotgun_mod",
+            "en_name": "Primed Ravage(max)",
+            "kr_name": "프라임드 래비지(max)"
+        },
+        {
             "name": "primed_shotgun_ammo_mutation",
             "type": "shotgun_mod",
             "en_name": "Primed Shotgun Ammo Mutation",
             "kr_name": "프라임드 샷건 애모 뮤테이션"
+        },
+        {
+            "name": "primed_shotgun_ammo_mutation(max)",
+            "type": "shotgun_mod",
+            "en_name": "Primed Shotgun Ammo Mutation(max)",
+            "kr_name": "프라임드 샷건 애모 뮤테이션(max)"
         },
         {
             "name": "ravage",
@@ -859,10 +913,22 @@
             "kr_name": "프라임드 히티드 차지"
         },
         {
+            "name": "primed_heated_charge(max)",
+            "type": "pistol_mod",
+            "en_name": "Primed Heated Charge(max)",
+            "kr_name": "프라임드 히티드 차지(max)"
+        },
+        {
             "name": "primed_pistol_ammo_mutation",
             "type": "pistol_mod",
             "en_name": "Primed Pistol Ammo Mutation",
             "kr_name": "프라임드 피스톨 애모 뮤테이션"
+        },
+        {
+            "name": "primed_pistol_ammo_mutation(max)",
+            "type": "pistol_mod",
+            "en_name": "Primed Pistol Ammo Mutation(max)",
+            "kr_name": "프라임드 피스톨 애모 뮤테이션(max)"
         },
         {
             "name": "primed_pistol_gambit",
@@ -871,10 +937,22 @@
             "kr_name": "프라임드 피스톨 갬빗"
         },
         {
+            "name": "primed_pistol_gambit(max)",
+            "type": "pistol_mod",
+            "en_name": "Primed Pistol Gambit(max)",
+            "kr_name": "프라임드 피스톨 갬빗(max)"
+        },
+        {
             "name": "primed_quickdraw",
             "type": "pistol_mod",
             "en_name": "Primed Quickdraw",
             "kr_name": "프라임드 퀵드로우"
+        },
+        {
+            "name": "primed_quickdraw(max)",
+            "type": "pistol_mod",
+            "en_name": "Primed Quickdraw(max)",
+            "kr_name": "프라임드 퀵드로우(max)"
         },
         {
             "name": "primed_slip_magazine",
@@ -883,10 +961,22 @@
             "kr_name": "프라임드 슬립 매거진"
         },
         {
+            "name": "primed_slip_magazine(max)",
+            "type": "pistol_mod",
+            "en_name": "Primed Slip Magazine(max)",
+            "kr_name": "프라임드 슬립 매거진(max)"
+        },
+        {
             "name": "primed_target_cracker",
             "type": "pistol_mod",
             "en_name": "Primed Target Cracker",
             "kr_name": "프라임드 타겟 크랙커"
+        },
+        {
+            "name": "primed_target_cracker(max)",
+            "type": "pistol_mod",
+            "en_name": "Primed Target Cracker(max)",
+            "kr_name": "프라임드 타겟 크랙커(max)"
         },
         {
             "name": "pummel",
@@ -1177,10 +1267,22 @@
             "kr_name": "프라임드 피버 스트라이크"
         },
         {
+            "name": "primed_fever_strike(max)",
+            "type": "melee_mod",
+            "en_name": "Primed Fever Strike(max)",
+            "kr_name": "프라임드 피버 스트라이크(max)"
+        },
+        {
             "name": "primed_heavy_trauma",
             "type": "melee_mod",
             "en_name": "Primed Heavy Trauma",
             "kr_name": "프라임드 헤비 트라우마"
+        },
+        {
+            "name": "primed_heavy_trauma(max)",
+            "type": "melee_mod",
+            "en_name": "Primed Heavy Trauma(max)",
+            "kr_name": "프라임드 헤비 트라우마(max)"
         },
         {
             "name": "primed_pressure_point",
@@ -1189,10 +1291,22 @@
             "kr_name": "프라임드 프레셔 포인트"
         },
         {
+            "name": "primed_pressure_point(max)",
+            "type": "melee_mod",
+            "en_name": "Primed Pressure Point(max)",
+            "kr_name": "프라임드 프레셔 포인트(max)"
+        },
+        {
             "name": "primed_reach",
             "type": "melee_mod",
             "en_name": "Primed Reach",
             "kr_name": "프라임드 리치"
+        },
+        {
+            "name": "primed_reach(max)",
+            "type": "melee_mod",
+            "en_name": "Primed Reach(max)",
+            "kr_name": "프라임드 리치(max)"
         },
         {
             "name": "primed_smite_corpus",
