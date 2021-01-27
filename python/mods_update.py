@@ -22,10 +22,10 @@ def warframe_crawling(item, path, path_0):
     get_item = item
     get_path = path
     get_path_0 = path_0
-
+    """
     if item.find('(max)'):
         get_item = item.replace('(max)', '')
-
+    """
     site = 'https://api.warframe.market/v1/items/{get_item}/statistics'.format(get_item = get_item)
     res = requests.get(site)
 
@@ -43,10 +43,13 @@ def warframe_crawling(item, path, path_0):
     json_data = json.loads(warframe_data)
 
     result_data = pd.DataFrame(json_data['payload']['statistics_closed']['90days'])
+    result_data = result_data[(result_data['mod_rank'] == 0)]
+    """
     if item.find('(max)'):
         result_data = result_data[(result_data['mod_rank'] == 10)]
     else:
         result_data = result_data[(result_data['mod_rank'] == 0)]
+    """
     #print(result_data)
 
     datetime = []
@@ -82,7 +85,7 @@ def warframe_crawling(item, path, path_0):
             value = pandas_value.pandas_value(get_item, 'mod')
             value.to_csv(get_path, mode = 'w')
             #print('새로운 데이터를 저장했습니다.') 
-
+    """
     if item.find('(max)'):
         if os.path.isdir(get_path_0):
             make_file(get_item + '(max)', get_path)
@@ -96,7 +99,13 @@ def warframe_crawling(item, path, path_0):
             #print('폴더가 없음으로 새로 만들었습니다.')
             os.makedirs(get_path_0)
             make_file(get_item, get_path)
-
+    """
+    if os.path.isdir(get_path_0):
+        make_file(get_item, get_path)
+    else:
+        #print('폴더가 없음으로 새로 만들었습니다.')
+        os.makedirs(get_path_0)
+        make_file(get_item, get_path)
     print(str(get_item) + ' 업데이트를 하였습니다.')
 
 ######################################################
