@@ -1717,12 +1717,6 @@
             "kr_name": "스팅잉 쏜"
         },
         {
-            "name": "sundering_weave",
-            "type": "stance_mod",
-            "en_name": "Sundering Weave",
-            "kr_name": "선더링 위브"
-        },
-        {
             "name": "swirling_tiger",
             "type": "stance_mod",
             "en_name": "Swirling Tiger",

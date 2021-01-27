@@ -20,12 +20,13 @@ import pandas_value
 def warframe_crawling(item, path, path_0):
 
     get_item = item
+    get_item2 = item
     get_path = path
     get_path_0 = path_0
-    """
+
     if item.find('(max)'):
         get_item = item.replace('(max)', '')
-    """
+
     site = 'https://api.warframe.market/v1/items/{get_item}/statistics'.format(get_item = get_item)
     res = requests.get(site)
 
@@ -43,13 +44,12 @@ def warframe_crawling(item, path, path_0):
     json_data = json.loads(warframe_data)
 
     result_data = pd.DataFrame(json_data['payload']['statistics_closed']['90days'])
-    result_data = result_data[(result_data['mod_rank'] == 0)]
-    """
-    if item.find('(max)'):
-        result_data = result_data[(result_data['mod_rank'] == 10)]
-    else:
+
+    if get_item2.find('(max)') == -1:
         result_data = result_data[(result_data['mod_rank'] == 0)]
-    """
+    else:
+        result_data = result_data[(result_data['mod_rank'] == 10)]
+
     #print(result_data)
 
     datetime = []
@@ -68,7 +68,7 @@ def warframe_crawling(item, path, path_0):
 
     all_data_list = pd.DataFrame({'datetime' : datetime, 'avg_price' : avg_price, 'volume' : volume})
     #all_data_list = all_data_list[::-1]
-    
+
     def make_file(item, path):
         get_item = item
         get_path = path
@@ -85,32 +85,32 @@ def warframe_crawling(item, path, path_0):
             value = pandas_value.pandas_value(get_item, 'mod')
             value.to_csv(get_path, mode = 'w')
             #print('새로운 데이터를 저장했습니다.') 
-    """
-    if item.find('(max)'):
-        if os.path.isdir(get_path_0):
-            make_file(get_item + '(max)', get_path)
-        else:
-            os.makedirs(get_path_0)
-            make_file(get_item + '(max)', get_path)
-    else:
+
+    if get_item2.find('(max)') == -1:
         if os.path.isdir(get_path_0):
             make_file(get_item, get_path)
+        else:
+            os.makedirs(get_path_0)
+            make_file(get_item, get_path)
+    else:
+        if os.path.isdir(get_path_0):
+            make_file(get_item2, get_path)
         else:
             #print('폴더가 없음으로 새로 만들었습니다.')
             os.makedirs(get_path_0)
-            make_file(get_item, get_path)
-    """
-    if os.path.isdir(get_path_0):
-        make_file(get_item, get_path)
-    else:
-        #print('폴더가 없음으로 새로 만들었습니다.')
-        os.makedirs(get_path_0)
-        make_file(get_item, get_path)
+            make_file(get_item2, get_path)
+
     print(str(get_item) + ' 업데이트를 하였습니다.')
 
 ######################################################
 
 startTime = time.time()
+"""
+item = 'primed_rubedo_lined_barrel'
+path = '/workspace/crawling/data/csv/mod/' + item + '/' + item + '.csv'
+path_0 = '/workspace/crawling/data/csv/mod/' + item
+save_data = warframe_crawling(item, path, path_0)
+"""
 
 input_items = input_warframe.input_item('aura_mods')
 
@@ -142,7 +142,6 @@ for i, v in enumerate(input_items):
     save_data = warframe_crawling(item, path, path_0)
     endTime = time.time() - startTime
     print(str(round(i / len(input_items) * 100)) + "% 완료했습니다. 시간: " + str(round(endTime)) + "초")
-
 
 print("업데이트가 모두 완료했습니다.")
 
