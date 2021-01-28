@@ -1146,13 +1146,14 @@ ul, ol, li {
 
 .item_name a{
     font-family: "Nanum Gothic", sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     color: #323232;
     float: left;
     position: absolute;
     top: 50%;
     left: 10%;
     transform: translate(0%, -50%);
+    text-decoration: none;
 }
 
 .item_name a:hover{
@@ -1220,6 +1221,7 @@ ul, ol, li {
     font-family: "Nanum Gothic", sans-serif;
     font-size: 11px;
     color: #2a2a2a;
+    text-decoration: none;
 }
 
 .item2_name a:hover{
