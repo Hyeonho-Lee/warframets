@@ -7,6 +7,18 @@
             "kr_name": "바자 프라임"
         },
         {
+            "name": "tenora_prime",
+            "type": "primary",
+            "en_name": "Tenora Prime",
+            "kr_name": "테노라 프라임"
+        },
+        {
+            "name": "pandero_prime",
+            "type": "secondary",
+            "en_name": "Pandero Prime",
+            "kr_name": "판데로 프라임"
+        },
+        {
             "name": "guandao_prime",
             "type": "melee",
             "en_name": "Guandao Prime",

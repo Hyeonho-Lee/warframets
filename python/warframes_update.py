@@ -28,7 +28,7 @@ def warframe_crawling(item, path, path_0):
 
     html = res.text
     soup = bs(html, 'html.parser')
-    
+
     with open('/workspace/crawling/data/json/warframe_data_v2.json', 'w') as file:
         data = str(soup)
         json_data = json.loads(data)
@@ -38,7 +38,6 @@ def warframe_crawling(item, path, path_0):
     warframe_data = json_data_1
 
     json_data = json.loads(warframe_data)
-
     result_data = pd.DataFrame(json_data['payload']['statistics_closed']['90days'])
 
     datetime = []

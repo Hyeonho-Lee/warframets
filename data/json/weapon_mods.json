@@ -235,18 +235,6 @@
             "kr_name": "라임 라운즈"
         },
         {
-            "name": "serration",
-            "type": "rifle_mod",
-            "en_name": "Serration",
-            "kr_name": "서레이션"
-        },
-        {
-            "name": "shred",
-            "type": "rifle_mod",
-            "en_name": "Shred",
-            "kr_name": "슈레드"
-        },
-        {
             "name": "sinister_reach",
             "type": "rifle_mod",
             "en_name": "Sinister Reach",
@@ -1159,12 +1147,6 @@
             "kr_name": "포커스 에너지"
         },
         {
-            "name": "fury",
-            "type": "melee_mod",
-            "en_name": "Fury",
-            "kr_name": "퓨리"
-        },
-        {
             "name": "gladiator_might",
             "type": "melee_mod",
             "en_name": "Gladiator Might",
@@ -1343,12 +1325,6 @@
             "type": "melee_mod",
             "en_name": "Quickening",
             "kr_name": "퀴크닝"
-        },
-        {
-            "name": "reflex_coil",
-            "type": "melee_mod",
-            "en_name": "Reflex Coil",
-            "kr_name": "리플렉스 코일"
         },
         {
             "name": "relentless_combination",
