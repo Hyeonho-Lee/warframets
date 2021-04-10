@@ -73,12 +73,6 @@
             "kr_name": "애자일 에임 "
         },
         {
-            "name": "ammo_drum",
-            "type": "rifle_mod",
-            "en_name": "Ammo Drum",
-            "kr_name": "에모 드럼"
-        },
-        {
             "name": "argon_scope",
             "type": "rifle_mod",
             "en_name": "Argon Scope",
