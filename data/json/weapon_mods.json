@@ -595,12 +595,6 @@
             "kr_name": "사일런트 배터리"
         },
         {
-            "name": "snap_shot",
-            "type": "shotgun_mod",
-            "en_name": "Snap Shot",
-            "kr_name": "스냡 샷"
-        },
-        {
             "name": "sweeping_serration",
             "type": "shotgun_mod",
             "en_name": "Sweeping Serration",

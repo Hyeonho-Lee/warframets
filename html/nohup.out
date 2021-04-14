@@ -1,0 +1,11 @@
+flask_app.py:2608: DeprecationWarning: The default dtype for empty Series will be 'object' instead of 'float64' in a future version. Specify a dtype explicitly to silence this warning.
+  value = {"name" : pd.Series(array_name), "en_name" : pd.Series(array_name_en), "price" : pd.Series(array_price), "percent" : pd.Series(array_percent), "volume" : pd.Series(array_volume), "path_1" : pd.Series(array_path_1)}
+172.17.0.1 - - [14/Apr/2021 09:59:14] "[37mGET /en/category/ HTTP/1.1[0m" 200 -
+172.17.0.1 - - [14/Apr/2021 09:59:47] "[37mGET /en/ HTTP/1.1[0m" 200 -
+172.17.0.1 - - [14/Apr/2021 10:03:48] "[32mGET /en HTTP/1.1[0m" 308 -
+172.17.0.1 - - [14/Apr/2021 10:03:49] "[37mGET /en/ HTTP/1.1[0m" 200 -
+172.17.0.1 - - [14/Apr/2021 10:03:51] "[37mGET /en/ HTTP/1.1[0m" 200 -
+172.17.0.1 - - [14/Apr/2021 10:03:52] "[32mGET /en/economy HTTP/1.1[0m" 308 -
+172.17.0.1 - - [14/Apr/2021 10:03:54] "[37mGET /en/economy/ HTTP/1.1[0m" 200 -
+172.17.0.1 - - [14/Apr/2021 10:03:54] "[37mGET /en/ HTTP/1.1[0m" 200 -
+172.17.0.1 - - [14/Apr/2021 10:03:55] "[37mGET /en/ HTTP/1.1[0m" 200 -

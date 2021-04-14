@@ -2430,7 +2430,7 @@ def category_en():
                 type_warframe_path_1.append(all_path_1[i])
                 type_warframe_type.append(all_type[i])
                 type_warframe_type_en.append(all_type_en[i])
-            elif all_type_en[i] == "Warframe mod":
+            elif all_type_en[i] == "Warframe Mod":
                 type_warframe_mod_item.append(all_item[i])
                 type_warframe_mod_item_en.append(all_item_en[i])
                 type_warframe_mod_path.append(all_path[i])
@@ -2446,7 +2446,7 @@ def category_en():
                 type_arcane_path_1.append(all_path_1[i])
                 type_arcane_type.append(all_type[i])
                 type_arcane_type_en.append(all_type_en[i])
-            elif all_type_en[i] == "Primary mod":
+            elif all_type_en[i] == "Primary Mod":
                 type_primary_mod_item.append(all_item[i])
                 type_primary_mod_item_en .append(all_item_en[i])
                 type_primary_mod_path.append(all_path[i])
@@ -2454,7 +2454,7 @@ def category_en():
                 type_primary_mod_path_1.append(all_path_1[i])
                 type_primary_mod_type.append(all_type[i])
                 type_primary_mod_type_en.append(all_type_en[i])
-            elif all_type_en[i] == "Secondary mod":
+            elif all_type_en[i] == "Secondary Mod":
                 type_secondary_mod_item.append(all_item[i])
                 type_secondary_mod_item_en.append(all_item_en[i])
                 type_secondary_mod_path.append(all_path[i])
@@ -2462,7 +2462,7 @@ def category_en():
                 type_secondary_mod_path_1.append(all_path_1[i])
                 type_secondary_mod_type.append(all_type[i])
                 type_secondary_mod_type_en.append(all_type_en[i])
-            elif all_type_en[i] == "Melee mod":
+            elif all_type_en[i] == "Melee Mod":
                 type_melee_mod_item.append(all_item[i])
                 type_melee_mod_item_en.append(all_item_en[i])
                 type_melee_mod_path.append(all_path[i])
@@ -2470,7 +2470,7 @@ def category_en():
                 type_melee_mod_path_1.append(all_path_1[i])
                 type_melee_mod_type.append(all_type[i])
                 type_melee_mod_type_en.append(all_type_en[i])
-            elif all_type_en[i] == "Companion mod":
+            elif all_type_en[i] == "Companion Mod":
                 type_companion_mod_item.append(all_item[i])
                 type_companion_mod_item_en.append(all_item_en[i])
                 type_companion_mod_path.append(all_path[i])
@@ -2486,7 +2486,7 @@ def category_en():
                 type_archwing_mod_path_1.append(all_path_1[i])
                 type_archwing_mod_type.append(all_type[i])
                 type_archwing_mod_type_en.append(all_type_en[i])
-            elif all_type_en[i] == "Necramech mod":
+            elif all_type_en[i] == "Necramech Mod":
                 type_necramech_mod_item.append(all_item[i])
                 type_necramech_mod_item_en.append(all_item_en[i])
                 type_necramech_mod_path.append(all_path[i])
