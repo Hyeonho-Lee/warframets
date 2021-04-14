@@ -421,8 +421,12 @@ def get_all_item():
             all_type_en.append("Melee Mod")
         elif all_type[i] == "ephemera":
             all_type_en.append("Update")
+        elif all_type[i] == "companion_mod":
+            all_type_en.append("Companion Mod")
+        elif all_type[i] == "archwing_mod":
+            all_type_en.append("Archwing Mod")
         elif all_type[i] == "necramech_mod":
-            all_type_en.append("Update")
+            all_type_en.append("Necramech Mod")
         else:
             all_type_en.append("Etc")
 
@@ -2478,7 +2482,7 @@ def category_en():
                 type_companion_mod_path_1.append(all_path_1[i])
                 type_companion_mod_type.append(all_type[i])
                 type_companion_mod_type_en.append(all_type_en[i])
-            elif all_type_en[i] == "Archwing":
+            elif all_type_en[i] == "Archwing Mod":
                 type_archwing_mod_item.append(all_item[i])
                 type_archwing_mod_item_en.append(all_item_en[i])
                 type_archwing_mod_path.append(all_path[i])
