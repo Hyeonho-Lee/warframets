@@ -98,6 +98,30 @@
     "4": [
         {
             "type": "Axi",
+            "relic": "A13",
+            "name_1": "Aksomati Prime Link",
+            "kr_name_1": "",
+            "reward_1": "Rare (2.00%)",
+            "name_2": "Orthos Prime Blueprint",
+            "kr_name_2": "",
+            "reward_2": "Uncommon (11.00%)",
+            "name_3": "Pangolin Prime Blade",
+            "kr_name_3": "",
+            "reward_3": "Uncommon (11.00%)",
+            "name_4": "Forma Blueprint",
+            "kr_name_4": "",
+            "reward_4": "Uncommon (25.33%)",
+            "name_5": "Burston Prime Receiver",
+            "kr_name_5": "",
+            "reward_5": "Uncommon (25.33%)",
+            "name_6": "Inaros Prime Systems",
+            "kr_name_6": "",
+            "reward_6": "Uncommon (25.33%)"
+        }
+    ],
+    "5": [
+        {
+            "type": "Axi",
             "relic": "A2",
             "name_1": "Aklex Prime Link",
             "kr_name_1": "",
@@ -119,7 +143,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "5": [
+    "6": [
         {
             "type": "Axi",
             "relic": "A3",
@@ -143,7 +167,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "6": [
+    "7": [
         {
             "type": "Axi",
             "relic": "A4",
@@ -167,7 +191,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "7": [
+    "8": [
         {
             "type": "Axi",
             "relic": "A5",
@@ -191,7 +215,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "8": [
+    "9": [
         {
             "type": "Axi",
             "relic": "A6",
@@ -215,7 +239,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "9": [
+    "10": [
         {
             "type": "Axi",
             "relic": "A7",
@@ -239,7 +263,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "10": [
+    "11": [
         {
             "type": "Axi",
             "relic": "A8",
@@ -263,7 +287,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "11": [
+    "12": [
         {
             "type": "Axi",
             "relic": "A9",
@@ -287,7 +311,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "12": [
+    "13": [
         {
             "type": "Axi",
             "relic": "B1",
@@ -311,7 +335,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "13": [
+    "14": [
         {
             "type": "Axi",
             "relic": "B2",
@@ -335,7 +359,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "14": [
+    "15": [
         {
             "type": "Axi",
             "relic": "B3",
@@ -359,7 +383,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "15": [
+    "16": [
         {
             "type": "Axi",
             "relic": "B4",
@@ -383,7 +407,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "16": [
+    "17": [
         {
             "type": "Axi",
             "relic": "C1",
@@ -407,7 +431,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "17": [
+    "18": [
         {
             "type": "Axi",
             "relic": "C2",
@@ -431,7 +455,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "18": [
+    "19": [
         {
             "type": "Axi",
             "relic": "C3",
@@ -455,7 +479,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "19": [
+    "20": [
         {
             "type": "Axi",
             "relic": "C4",
@@ -479,7 +503,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "20": [
+    "21": [
         {
             "type": "Axi",
             "relic": "C5",
@@ -503,7 +527,31 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "21": [
+    "22": [
+        {
+            "type": "Axi",
+            "relic": "C6",
+            "name_1": "Corinth Prime Barrel",
+            "kr_name_1": "",
+            "reward_1": "Rare (2.00%)",
+            "name_2": "Pandero Prime Barrel",
+            "kr_name_2": "",
+            "reward_2": "Uncommon (11.00%)",
+            "name_3": "Ivara Prime Systems",
+            "kr_name_3": "",
+            "reward_3": "Uncommon (11.00%)",
+            "name_4": "Pangolin Prime Handle",
+            "kr_name_4": "",
+            "reward_4": "Uncommon (25.33%)",
+            "name_5": "Karyst Prime Blueprint",
+            "kr_name_5": "",
+            "reward_5": "Uncommon (25.33%)",
+            "name_6": "Forma Blueprint",
+            "kr_name_6": "",
+            "reward_6": "Uncommon (25.33%)"
+        }
+    ],
+    "23": [
         {
             "type": "Axi",
             "relic": "D1",
@@ -527,7 +575,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "22": [
+    "24": [
         {
             "type": "Axi",
             "relic": "D2",
@@ -551,7 +599,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "23": [
+    "25": [
         {
             "type": "Axi",
             "relic": "E1",
@@ -575,7 +623,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "24": [
+    "26": [
         {
             "type": "Axi",
             "relic": "E2",
@@ -599,7 +647,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "25": [
+    "27": [
         {
             "type": "Axi",
             "relic": "G1",
@@ -623,7 +671,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "26": [
+    "28": [
         {
             "type": "Axi",
             "relic": "G2",
@@ -647,7 +695,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "27": [
+    "29": [
         {
             "type": "Axi",
             "relic": "G3",
@@ -671,7 +719,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "28": [
+    "30": [
         {
             "type": "Axi",
             "relic": "G4",
@@ -695,7 +743,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "29": [
+    "31": [
         {
             "type": "Axi",
             "relic": "H1",
@@ -719,7 +767,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "30": [
+    "32": [
         {
             "type": "Axi",
             "relic": "H2",
@@ -743,7 +791,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "31": [
+    "33": [
         {
             "type": "Axi",
             "relic": "H3",
@@ -767,7 +815,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "32": [
+    "34": [
         {
             "type": "Axi",
             "relic": "H4",
@@ -791,7 +839,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "33": [
+    "35": [
         {
             "type": "Axi",
             "relic": "H5",
@@ -815,7 +863,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "34": [
+    "36": [
         {
             "type": "Axi",
             "relic": "K1",
@@ -839,7 +887,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "35": [
+    "37": [
         {
             "type": "Axi",
             "relic": "K2",
@@ -863,7 +911,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "36": [
+    "38": [
         {
             "type": "Axi",
             "relic": "K3",
@@ -887,7 +935,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "37": [
+    "39": [
         {
             "type": "Axi",
             "relic": "K4",
@@ -911,7 +959,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "38": [
+    "40": [
         {
             "type": "Axi",
             "relic": "K5",
@@ -935,7 +983,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "39": [
+    "41": [
         {
             "type": "Axi",
             "relic": "L1",
@@ -959,7 +1007,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "40": [
+    "42": [
         {
             "type": "Axi",
             "relic": "L2",
@@ -983,7 +1031,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "41": [
+    "43": [
         {
             "type": "Axi",
             "relic": "L3",
@@ -1007,7 +1055,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "42": [
+    "44": [
         {
             "type": "Axi",
             "relic": "L4",
@@ -1031,7 +1079,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "43": [
+    "45": [
         {
             "type": "Axi",
             "relic": "L5",
@@ -1055,7 +1103,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "44": [
+    "46": [
         {
             "type": "Axi",
             "relic": "M1",
@@ -1079,7 +1127,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "45": [
+    "47": [
         {
             "type": "Axi",
             "relic": "N1",
@@ -1103,7 +1151,7 @@
             "reward_6": "Rare (2.00%)"
         }
     ],
-    "46": [
+    "48": [
         {
             "type": "Axi",
             "relic": "N2",
@@ -1127,7 +1175,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "47": [
+    "49": [
         {
             "type": "Axi",
             "relic": "N3",
@@ -1151,7 +1199,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "48": [
+    "50": [
         {
             "type": "Axi",
             "relic": "N4",
@@ -1175,7 +1223,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "49": [
+    "51": [
         {
             "type": "Axi",
             "relic": "N5",
@@ -1199,7 +1247,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "50": [
+    "52": [
         {
             "type": "Axi",
             "relic": "N6",
@@ -1223,7 +1271,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "51": [
+    "53": [
         {
             "type": "Axi",
             "relic": "O1",
@@ -1247,7 +1295,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "52": [
+    "54": [
         {
             "type": "Axi",
             "relic": "O2",
@@ -1271,7 +1319,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "53": [
+    "55": [
         {
             "type": "Axi",
             "relic": "O3",
@@ -1295,7 +1343,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "54": [
+    "56": [
         {
             "type": "Axi",
             "relic": "O4",
@@ -1319,7 +1367,31 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "55": [
+    "57": [
+        {
+            "type": "Axi",
+            "relic": "O5",
+            "name_1": "Octavia Prime Blueprint",
+            "kr_name_1": "",
+            "reward_1": "Rare (2.00%)",
+            "name_2": "Inaros Prime Chassis",
+            "kr_name_2": "",
+            "reward_2": "Uncommon (11.00%)",
+            "name_3": "Fang Prime Handle",
+            "kr_name_3": "",
+            "reward_3": "Uncommon (11.00%)",
+            "name_4": "Lex Prime Receiver",
+            "kr_name_4": "",
+            "reward_4": "Uncommon (25.33%)",
+            "name_5": "Nezha Prime Systems",
+            "kr_name_5": "",
+            "reward_5": "Uncommon (25.33%)",
+            "name_6": "Panthera Prime Blueprint",
+            "kr_name_6": "",
+            "reward_6": "Uncommon (25.33%)"
+        }
+    ],
+    "58": [
         {
             "type": "Axi",
             "relic": "P1",
@@ -1343,7 +1415,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "56": [
+    "59": [
         {
             "type": "Axi",
             "relic": "P2",
@@ -1367,7 +1439,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "57": [
+    "60": [
         {
             "type": "Axi",
             "relic": "P3",
@@ -1391,7 +1463,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "58": [
+    "61": [
         {
             "type": "Axi",
             "relic": "R1",
@@ -1415,7 +1487,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "59": [
+    "62": [
         {
             "type": "Axi",
             "relic": "R2",
@@ -1439,7 +1511,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "60": [
+    "63": [
         {
             "type": "Axi",
             "relic": "R3",
@@ -1463,7 +1535,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "61": [
+    "64": [
         {
             "type": "Axi",
             "relic": "S1",
@@ -1487,7 +1559,7 @@
             "reward_6": "Uncommon (11.00%)"
         }
     ],
-    "62": [
+    "65": [
         {
             "type": "Axi",
             "relic": "S2",
@@ -1511,7 +1583,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "63": [
+    "66": [
         {
             "type": "Axi",
             "relic": "S3",
@@ -1535,7 +1607,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "64": [
+    "67": [
         {
             "type": "Axi",
             "relic": "S4",
@@ -1559,7 +1631,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "65": [
+    "68": [
         {
             "type": "Axi",
             "relic": "S5",
@@ -1583,7 +1655,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "66": [
+    "69": [
         {
             "type": "Axi",
             "relic": "S6",
@@ -1607,7 +1679,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "67": [
+    "70": [
         {
             "type": "Axi",
             "relic": "S7",
@@ -1631,7 +1703,31 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "68": [
+    "71": [
+        {
+            "type": "Axi",
+            "relic": "S8",
+            "name_1": "Scindo Prime Blade",
+            "kr_name_1": "",
+            "reward_1": "Rare (2.00%)",
+            "name_2": "Venka Prime Blueprint",
+            "kr_name_2": "",
+            "reward_2": "Uncommon (11.00%)",
+            "name_3": "Nyx Prime Chassis",
+            "kr_name_3": "",
+            "reward_3": "Uncommon (11.00%)",
+            "name_4": "Cernos Prime Grip",
+            "kr_name_4": "",
+            "reward_4": "Uncommon (25.33%)",
+            "name_5": "Hikou Prime Blueprint",
+            "kr_name_5": "",
+            "reward_5": "Uncommon (25.33%)",
+            "name_6": "Forma Blueprint",
+            "kr_name_6": "",
+            "reward_6": "Uncommon (25.33%)"
+        }
+    ],
+    "72": [
         {
             "type": "Axi",
             "relic": "T1",
@@ -1655,7 +1751,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "69": [
+    "73": [
         {
             "type": "Axi",
             "relic": "T2",
@@ -1679,7 +1775,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "70": [
+    "74": [
         {
             "type": "Axi",
             "relic": "T3",
@@ -1703,7 +1799,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "71": [
+    "75": [
         {
             "type": "Axi",
             "relic": "T4",
@@ -1727,7 +1823,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "72": [
+    "76": [
         {
             "type": "Axi",
             "relic": "T5",
@@ -1751,7 +1847,31 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "73": [
+    "77": [
+        {
+            "type": "Axi",
+            "relic": "T6",
+            "name_1": "Tekko Prime Blade",
+            "kr_name_1": "",
+            "reward_1": "Rare (2.00%)",
+            "name_2": "Tenora Prime Stock",
+            "kr_name_2": "",
+            "reward_2": "Uncommon (11.00%)",
+            "name_3": "Wukong Prime Chassis",
+            "kr_name_3": "",
+            "reward_3": "Uncommon (11.00%)",
+            "name_4": "Forma Blueprint",
+            "kr_name_4": "",
+            "reward_4": "Uncommon (25.33%)",
+            "name_5": "Paris Prime String",
+            "kr_name_5": "",
+            "reward_5": "Uncommon (25.33%)",
+            "name_6": "Zakti Prime Receiver",
+            "kr_name_6": "",
+            "reward_6": "Uncommon (25.33%)"
+        }
+    ],
+    "78": [
         {
             "type": "Axi",
             "relic": "V1",
@@ -1775,7 +1895,31 @@
             "reward_6": "Uncommon (11.00%)"
         }
     ],
-    "74": [
+    "79": [
+        {
+            "type": "Axi",
+            "relic": "V10",
+            "name_1": "Venka Prime Gauntlet",
+            "kr_name_1": "",
+            "reward_1": "Rare (2.00%)",
+            "name_2": "Forma Blueprint",
+            "kr_name_2": "",
+            "reward_2": "Uncommon (11.00%)",
+            "name_3": "Valkyr Prime Systems",
+            "kr_name_3": "",
+            "reward_3": "Uncommon (11.00%)",
+            "name_4": "Hikou Prime Stars",
+            "kr_name_4": "",
+            "reward_4": "Uncommon (25.33%)",
+            "name_5": "Cernos Prime String",
+            "kr_name_5": "",
+            "reward_5": "Uncommon (25.33%)",
+            "name_6": "Lex Prime Receiver",
+            "kr_name_6": "",
+            "reward_6": "Uncommon (25.33%)"
+        }
+    ],
+    "80": [
         {
             "type": "Axi",
             "relic": "V2",
@@ -1799,7 +1943,7 @@
             "reward_6": "Uncommon (11.00%)"
         }
     ],
-    "75": [
+    "81": [
         {
             "type": "Axi",
             "relic": "V3",
@@ -1823,7 +1967,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "76": [
+    "82": [
         {
             "type": "Axi",
             "relic": "V4",
@@ -1847,7 +1991,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "77": [
+    "83": [
         {
             "type": "Axi",
             "relic": "V5",
@@ -1871,7 +2015,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "78": [
+    "84": [
         {
             "type": "Axi",
             "relic": "V6",
@@ -1895,7 +2039,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "79": [
+    "85": [
         {
             "type": "Axi",
             "relic": "V7",
@@ -1919,7 +2063,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "80": [
+    "86": [
         {
             "type": "Axi",
             "relic": "V8",
@@ -1943,7 +2087,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "81": [
+    "87": [
         {
             "type": "Axi",
             "relic": "V9",
@@ -1967,7 +2111,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "82": [
+    "88": [
         {
             "type": "Axi",
             "relic": "W1",
@@ -1991,7 +2135,31 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "83": [
+    "89": [
+        {
+            "type": "Axi",
+            "relic": "W2",
+            "name_1": "Wukong Prime Blueprint",
+            "kr_name_1": "",
+            "reward_1": "Rare (2.00%)",
+            "name_2": "Bronco Prime Barrel",
+            "kr_name_2": "",
+            "reward_2": "Uncommon (11.00%)",
+            "name_3": "Inaros Prime Blueprint",
+            "kr_name_3": "",
+            "reward_3": "Uncommon (11.00%)",
+            "name_4": "Baza Prime Receiver",
+            "kr_name_4": "",
+            "reward_4": "Uncommon (25.33%)",
+            "name_5": "Forma Blueprint",
+            "kr_name_5": "",
+            "reward_5": "Uncommon (25.33%)",
+            "name_6": "Tekko Prime Gauntlet",
+            "kr_name_6": "",
+            "reward_6": "Uncommon (25.33%)"
+        }
+    ],
+    "90": [
         {
             "type": "Axi",
             "relic": "Z1",
@@ -2015,7 +2183,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "84": [
+    "91": [
         {
             "type": "Lith",
             "relic": "A1",
@@ -2039,7 +2207,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "85": [
+    "92": [
         {
             "type": "Lith",
             "relic": "A2",
@@ -2063,7 +2231,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "86": [
+    "93": [
         {
             "type": "Lith",
             "relic": "A3",
@@ -2087,7 +2255,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "87": [
+    "94": [
         {
             "type": "Lith",
             "relic": "B1",
@@ -2111,7 +2279,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "88": [
+    "95": [
         {
             "type": "Lith",
             "relic": "B2",
@@ -2135,7 +2303,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "89": [
+    "96": [
         {
             "type": "Lith",
             "relic": "B3",
@@ -2159,7 +2327,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "90": [
+    "97": [
         {
             "type": "Lith",
             "relic": "B4",
@@ -2183,7 +2351,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "91": [
+    "98": [
         {
             "type": "Lith",
             "relic": "B5",
@@ -2207,7 +2375,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "92": [
+    "99": [
         {
             "type": "Lith",
             "relic": "B6",
@@ -2231,7 +2399,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "93": [
+    "100": [
         {
             "type": "Lith",
             "relic": "B7",
@@ -2255,7 +2423,31 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "94": [
+    "101": [
+        {
+            "type": "Lith",
+            "relic": "B8",
+            "name_1": "Baza Prime Blueprint",
+            "kr_name_1": "",
+            "reward_1": "Rare (2.00%)",
+            "name_2": "Ivara Prime Blueprint",
+            "kr_name_2": "",
+            "reward_2": "Uncommon (11.00%)",
+            "name_3": "Atlas Prime Chassis",
+            "kr_name_3": "",
+            "reward_3": "Uncommon (11.00%)",
+            "name_4": "Burston Prime Stock",
+            "kr_name_4": "",
+            "reward_4": "Uncommon (25.33%)",
+            "name_5": "Dethcube Prime Systems",
+            "kr_name_5": "",
+            "reward_5": "Uncommon (25.33%)",
+            "name_6": "Aksomati Prime Blueprint",
+            "kr_name_6": "",
+            "reward_6": "Uncommon (25.33%)"
+        }
+    ],
+    "102": [
         {
             "type": "Lith",
             "relic": "C1",
@@ -2279,7 +2471,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "95": [
+    "103": [
         {
             "type": "Lith",
             "relic": "C2",
@@ -2303,7 +2495,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "96": [
+    "104": [
         {
             "type": "Lith",
             "relic": "C3",
@@ -2327,7 +2519,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "97": [
+    "105": [
         {
             "type": "Lith",
             "relic": "C4",
@@ -2351,7 +2543,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "98": [
+    "106": [
         {
             "type": "Lith",
             "relic": "C5",
@@ -2375,7 +2567,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "99": [
+    "107": [
         {
             "type": "Lith",
             "relic": "C6",
@@ -2399,7 +2591,31 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "100": [
+    "108": [
+        {
+            "type": "Lith",
+            "relic": "C7",
+            "name_1": "Cernos Prime Lower Limb",
+            "kr_name_1": "",
+            "reward_1": "Rare (2.00%)",
+            "name_2": "Nyx Prime Systems",
+            "kr_name_2": "",
+            "reward_2": "Uncommon (11.00%)",
+            "name_3": "Scindo Prime Blueprint",
+            "kr_name_3": "",
+            "reward_3": "Uncommon (11.00%)",
+            "name_4": "Valkyr Prime Blueprint",
+            "kr_name_4": "",
+            "reward_4": "Uncommon (25.33%)",
+            "name_5": "Hikou Prime Pouch",
+            "kr_name_5": "",
+            "reward_5": "Uncommon (25.33%)",
+            "name_6": "Forma Blueprint",
+            "kr_name_6": "",
+            "reward_6": "Uncommon (25.33%)"
+        }
+    ],
+    "109": [
         {
             "type": "Lith",
             "relic": "D1",
@@ -2423,7 +2639,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "101": [
+    "110": [
         {
             "type": "Lith",
             "relic": "D2",
@@ -2447,7 +2663,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "102": [
+    "111": [
         {
             "type": "Lith",
             "relic": "D3",
@@ -2471,7 +2687,31 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "103": [
+    "112": [
+        {
+            "type": "Lith",
+            "relic": "D4",
+            "name_1": "Dethcube Prime Blueprint",
+            "kr_name_1": "",
+            "reward_1": "Rare (2.00%)",
+            "name_2": "Ninkondi Prime Chain",
+            "kr_name_2": "",
+            "reward_2": "Uncommon (11.00%)",
+            "name_3": "Zakti Prime Barrel",
+            "kr_name_3": "",
+            "reward_3": "Uncommon (11.00%)",
+            "name_4": "Bronco Prime Blueprint",
+            "kr_name_4": "",
+            "reward_4": "Uncommon (25.33%)",
+            "name_5": "Orthos Prime Handle",
+            "kr_name_5": "",
+            "reward_5": "Uncommon (25.33%)",
+            "name_6": "Forma Blueprint",
+            "kr_name_6": "",
+            "reward_6": "Uncommon (25.33%)"
+        }
+    ],
+    "113": [
         {
             "type": "Lith",
             "relic": "F1",
@@ -2495,7 +2735,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "104": [
+    "114": [
         {
             "type": "Lith",
             "relic": "F2",
@@ -2519,7 +2759,7 @@
             "reward_6": "Uncommon (11.00%)"
         }
     ],
-    "105": [
+    "115": [
         {
             "type": "Lith",
             "relic": "G1",
@@ -2543,7 +2783,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "106": [
+    "116": [
         {
             "type": "Lith",
             "relic": "G2",
@@ -2567,7 +2807,31 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "107": [
+    "117": [
+        {
+            "type": "Lith",
+            "relic": "G3",
+            "name_1": "Guandao Prime Handle",
+            "kr_name_1": "",
+            "reward_1": "Rare (2.00%)",
+            "name_2": "Forma Blueprint",
+            "kr_name_2": "",
+            "reward_2": "Uncommon (11.00%)",
+            "name_3": "Panthera Prime Stock",
+            "kr_name_3": "",
+            "reward_3": "Uncommon (11.00%)",
+            "name_4": "Zhuge Prime String",
+            "kr_name_4": "",
+            "reward_4": "Uncommon (25.33%)",
+            "name_5": "Octavia Prime Neuroptics",
+            "kr_name_5": "",
+            "reward_5": "Uncommon (25.33%)",
+            "name_6": "Paris Prime Upper Limb",
+            "kr_name_6": "",
+            "reward_6": "Uncommon (25.33%)"
+        }
+    ],
+    "118": [
         {
             "type": "Lith",
             "relic": "H1",
@@ -2591,7 +2855,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "108": [
+    "119": [
         {
             "type": "Lith",
             "relic": "H2",
@@ -2615,7 +2879,31 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "109": [
+    "120": [
+        {
+            "type": "Lith",
+            "relic": "I1",
+            "name_1": "Ivara Prime Chassis",
+            "kr_name_1": "",
+            "reward_1": "Rare (2.00%)",
+            "name_2": "Burston Prime Barrel",
+            "kr_name_2": "",
+            "reward_2": "Uncommon (11.00%)",
+            "name_3": "Karyst Prime Handle",
+            "kr_name_3": "",
+            "reward_3": "Uncommon (11.00%)",
+            "name_4": "Fang Prime Blade",
+            "kr_name_4": "",
+            "reward_4": "Uncommon (25.33%)",
+            "name_5": "Pandero Prime Blueprint",
+            "kr_name_5": "",
+            "reward_5": "Uncommon (25.33%)",
+            "name_6": "Forma Blueprint",
+            "kr_name_6": "",
+            "reward_6": "Uncommon (25.33%)"
+        }
+    ],
+    "121": [
         {
             "type": "Lith",
             "relic": "K1",
@@ -2639,7 +2927,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "110": [
+    "122": [
         {
             "type": "Lith",
             "relic": "K2",
@@ -2663,7 +2951,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "111": [
+    "123": [
         {
             "type": "Lith",
             "relic": "K3",
@@ -2687,7 +2975,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "112": [
+    "124": [
         {
             "type": "Lith",
             "relic": "K4",
@@ -2711,7 +2999,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "113": [
+    "125": [
         {
             "type": "Lith",
             "relic": "K5",
@@ -2735,7 +3023,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "114": [
+    "126": [
         {
             "type": "Lith",
             "relic": "L1",
@@ -2759,7 +3047,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "115": [
+    "127": [
         {
             "type": "Lith",
             "relic": "L2",
@@ -2783,7 +3071,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "116": [
+    "128": [
         {
             "type": "Lith",
             "relic": "M1",
@@ -2807,7 +3095,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "117": [
+    "129": [
         {
             "type": "Lith",
             "relic": "M2",
@@ -2831,7 +3119,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "118": [
+    "130": [
         {
             "type": "Lith",
             "relic": "M3",
@@ -2855,7 +3143,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "119": [
+    "131": [
         {
             "type": "Lith",
             "relic": "M4",
@@ -2879,7 +3167,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "120": [
+    "132": [
         {
             "type": "Lith",
             "relic": "M5",
@@ -2903,7 +3191,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "121": [
+    "133": [
         {
             "type": "Lith",
             "relic": "M6",
@@ -2927,7 +3215,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "122": [
+    "134": [
         {
             "type": "Lith",
             "relic": "M7",
@@ -2951,7 +3239,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "123": [
+    "135": [
         {
             "type": "Lith",
             "relic": "N1",
@@ -2975,7 +3263,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "124": [
+    "136": [
         {
             "type": "Lith",
             "relic": "N2",
@@ -2999,7 +3287,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "125": [
+    "137": [
         {
             "type": "Lith",
             "relic": "N3",
@@ -3023,7 +3311,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "126": [
+    "138": [
         {
             "type": "Lith",
             "relic": "N4",
@@ -3047,7 +3335,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "127": [
+    "139": [
         {
             "type": "Lith",
             "relic": "N5",
@@ -3071,7 +3359,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "128": [
+    "140": [
         {
             "type": "Lith",
             "relic": "N6",
@@ -3095,7 +3383,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "129": [
+    "141": [
         {
             "type": "Lith",
             "relic": "O1",
@@ -3119,7 +3407,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "130": [
+    "142": [
         {
             "type": "Lith",
             "relic": "O2",
@@ -3143,7 +3431,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "131": [
+    "143": [
         {
             "type": "Lith",
             "relic": "P1",
@@ -3167,7 +3455,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "132": [
+    "144": [
         {
             "type": "Lith",
             "relic": "P2",
@@ -3191,7 +3479,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "133": [
+    "145": [
         {
             "type": "Lith",
             "relic": "P3",
@@ -3215,7 +3503,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "134": [
+    "146": [
         {
             "type": "Lith",
             "relic": "P4",
@@ -3239,7 +3527,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "135": [
+    "147": [
         {
             "type": "Lith",
             "relic": "P5",
@@ -3263,7 +3551,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "136": [
+    "148": [
         {
             "type": "Lith",
             "relic": "S1",
@@ -3287,7 +3575,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "137": [
+    "149": [
         {
             "type": "Lith",
             "relic": "S10",
@@ -3311,7 +3599,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "138": [
+    "150": [
         {
             "type": "Lith",
             "relic": "S2",
@@ -3335,7 +3623,7 @@
             "reward_6": "Uncommon (11.00%)"
         }
     ],
-    "139": [
+    "151": [
         {
             "type": "Lith",
             "relic": "S3",
@@ -3359,7 +3647,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "140": [
+    "152": [
         {
             "type": "Lith",
             "relic": "S4",
@@ -3383,7 +3671,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "141": [
+    "153": [
         {
             "type": "Lith",
             "relic": "S5",
@@ -3407,7 +3695,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "142": [
+    "154": [
         {
             "type": "Lith",
             "relic": "S6",
@@ -3431,7 +3719,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "143": [
+    "155": [
         {
             "type": "Lith",
             "relic": "S7",
@@ -3455,7 +3743,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "144": [
+    "156": [
         {
             "type": "Lith",
             "relic": "S8",
@@ -3479,7 +3767,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "145": [
+    "157": [
         {
             "type": "Lith",
             "relic": "S9",
@@ -3503,7 +3791,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "146": [
+    "158": [
         {
             "type": "Lith",
             "relic": "T1",
@@ -3527,7 +3815,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "147": [
+    "159": [
         {
             "type": "Lith",
             "relic": "T2",
@@ -3551,7 +3839,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "148": [
+    "160": [
         {
             "type": "Lith",
             "relic": "T3",
@@ -3575,7 +3863,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "149": [
+    "161": [
         {
             "type": "Lith",
             "relic": "T4",
@@ -3599,7 +3887,31 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "150": [
+    "162": [
+        {
+            "type": "Lith",
+            "relic": "T5",
+            "name_1": "Tenora Prime Barrel",
+            "kr_name_1": "",
+            "reward_1": "Rare (2.00%)",
+            "name_2": "Titania Prime Neuroptics",
+            "kr_name_2": "",
+            "reward_2": "Uncommon (11.00%)",
+            "name_3": "Zhuge Prime Blueprint",
+            "kr_name_3": "",
+            "reward_3": "Uncommon (11.00%)",
+            "name_4": "Forma Blueprint",
+            "kr_name_4": "",
+            "reward_4": "Uncommon (25.33%)",
+            "name_5": "Corinth Prime Blueprint",
+            "kr_name_5": "",
+            "reward_5": "Uncommon (25.33%)",
+            "name_6": "Paris Prime Lower Limb",
+            "kr_name_6": "",
+            "reward_6": "Uncommon (25.33%)"
+        }
+    ],
+    "163": [
         {
             "type": "Lith",
             "relic": "V1",
@@ -3623,7 +3935,7 @@
             "reward_6": "Uncommon (11.00%)"
         }
     ],
-    "151": [
+    "164": [
         {
             "type": "Lith",
             "relic": "V2",
@@ -3647,7 +3959,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "152": [
+    "165": [
         {
             "type": "Lith",
             "relic": "V3",
@@ -3671,7 +3983,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "153": [
+    "166": [
         {
             "type": "Lith",
             "relic": "V4",
@@ -3695,7 +4007,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "154": [
+    "167": [
         {
             "type": "Lith",
             "relic": "V5",
@@ -3719,7 +4031,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "155": [
+    "168": [
         {
             "type": "Lith",
             "relic": "V6",
@@ -3743,7 +4055,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "156": [
+    "169": [
         {
             "type": "Lith",
             "relic": "V7",
@@ -3767,7 +4079,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "157": [
+    "170": [
         {
             "type": "Lith",
             "relic": "V8",
@@ -3791,7 +4103,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "158": [
+    "171": [
         {
             "type": "Lith",
             "relic": "W1",
@@ -3815,7 +4127,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "159": [
+    "172": [
         {
             "type": "Lith",
             "relic": "W2",
@@ -3839,7 +4151,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "160": [
+    "173": [
         {
             "type": "Lith",
             "relic": "Z1",
@@ -3863,7 +4175,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "161": [
+    "174": [
         {
             "type": "Lith",
             "relic": "Z2",
@@ -3887,7 +4199,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "162": [
+    "175": [
         {
             "type": "Meso",
             "relic": "A1",
@@ -3911,7 +4223,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "163": [
+    "176": [
         {
             "type": "Meso",
             "relic": "A2",
@@ -3935,7 +4247,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "164": [
+    "177": [
         {
             "type": "Meso",
             "relic": "B1",
@@ -3959,7 +4271,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "165": [
+    "178": [
         {
             "type": "Meso",
             "relic": "B2",
@@ -3983,7 +4295,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "166": [
+    "179": [
         {
             "type": "Meso",
             "relic": "B3",
@@ -4007,7 +4319,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "167": [
+    "180": [
         {
             "type": "Meso",
             "relic": "B4",
@@ -4031,7 +4343,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "168": [
+    "181": [
         {
             "type": "Meso",
             "relic": "C1",
@@ -4055,7 +4367,7 @@
             "reward_6": "Uncommon (11.00%)"
         }
     ],
-    "169": [
+    "182": [
         {
             "type": "Meso",
             "relic": "C2",
@@ -4079,7 +4391,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "170": [
+    "183": [
         {
             "type": "Meso",
             "relic": "C3",
@@ -4103,7 +4415,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "171": [
+    "184": [
         {
             "type": "Meso",
             "relic": "C4",
@@ -4127,7 +4439,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "172": [
+    "185": [
         {
             "type": "Meso",
             "relic": "C5",
@@ -4151,7 +4463,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "173": [
+    "186": [
         {
             "type": "Meso",
             "relic": "C6",
@@ -4175,7 +4487,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "174": [
+    "187": [
         {
             "type": "Meso",
             "relic": "D1",
@@ -4199,7 +4511,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "175": [
+    "188": [
         {
             "type": "Meso",
             "relic": "D2",
@@ -4223,7 +4535,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "176": [
+    "189": [
         {
             "type": "Meso",
             "relic": "D3",
@@ -4247,7 +4559,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "177": [
+    "190": [
         {
             "type": "Meso",
             "relic": "D4",
@@ -4271,7 +4583,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "178": [
+    "191": [
         {
             "type": "Meso",
             "relic": "D5",
@@ -4295,7 +4607,31 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "179": [
+    "192": [
+        {
+            "type": "Meso",
+            "relic": "D6",
+            "name_1": "Dethcube Prime Cerebrum",
+            "kr_name_1": "",
+            "reward_1": "Rare (2.00%)",
+            "name_2": "Aksomati Prime Barrel",
+            "kr_name_2": "",
+            "reward_2": "Uncommon (11.00%)",
+            "name_3": "Nezha Prime Blueprint",
+            "kr_name_3": "",
+            "reward_3": "Uncommon (11.00%)",
+            "name_4": "Ivara Prime Neuroptics",
+            "kr_name_4": "",
+            "reward_4": "Uncommon (25.33%)",
+            "name_5": "Octavia Prime Systems",
+            "kr_name_5": "",
+            "reward_5": "Uncommon (25.33%)",
+            "name_6": "Paris Prime Blueprint",
+            "kr_name_6": "",
+            "reward_6": "Uncommon (25.33%)"
+        }
+    ],
+    "193": [
         {
             "type": "Meso",
             "relic": "E1",
@@ -4319,7 +4655,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "180": [
+    "194": [
         {
             "type": "Meso",
             "relic": "E2",
@@ -4343,7 +4679,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "181": [
+    "195": [
         {
             "type": "Meso",
             "relic": "E3",
@@ -4367,7 +4703,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "182": [
+    "196": [
         {
             "type": "Meso",
             "relic": "E4",
@@ -4391,7 +4727,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "183": [
+    "197": [
         {
             "type": "Meso",
             "relic": "E5",
@@ -4415,7 +4751,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "184": [
+    "198": [
         {
             "type": "Meso",
             "relic": "F1",
@@ -4439,7 +4775,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "185": [
+    "199": [
         {
             "type": "Meso",
             "relic": "F2",
@@ -4463,7 +4799,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "186": [
+    "200": [
         {
             "type": "Meso",
             "relic": "F3",
@@ -4487,7 +4823,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "187": [
+    "201": [
         {
             "type": "Meso",
             "relic": "G1",
@@ -4511,7 +4847,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "188": [
+    "202": [
         {
             "type": "Meso",
             "relic": "G2",
@@ -4535,7 +4871,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "189": [
+    "203": [
         {
             "type": "Meso",
             "relic": "H1",
@@ -4559,7 +4895,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "190": [
+    "204": [
         {
             "type": "Meso",
             "relic": "I1",
@@ -4583,7 +4919,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "191": [
+    "205": [
         {
             "type": "Meso",
             "relic": "K1",
@@ -4607,7 +4943,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "192": [
+    "206": [
         {
             "type": "Meso",
             "relic": "K2",
@@ -4631,7 +4967,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "193": [
+    "207": [
         {
             "type": "Meso",
             "relic": "K3",
@@ -4655,7 +4991,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "194": [
+    "208": [
         {
             "type": "Meso",
             "relic": "L1",
@@ -4679,7 +5015,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "195": [
+    "209": [
         {
             "type": "Meso",
             "relic": "M1",
@@ -4703,7 +5039,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "196": [
+    "210": [
         {
             "type": "Meso",
             "relic": "M2",
@@ -4727,7 +5063,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "197": [
+    "211": [
         {
             "type": "Meso",
             "relic": "M3",
@@ -4751,7 +5087,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "198": [
+    "212": [
         {
             "type": "Meso",
             "relic": "N1",
@@ -4775,7 +5111,7 @@
             "reward_6": "Uncommon (11.00%)"
         }
     ],
-    "199": [
+    "213": [
         {
             "type": "Meso",
             "relic": "N10",
@@ -4799,7 +5135,31 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "200": [
+    "214": [
+        {
+            "type": "Meso",
+            "relic": "N11",
+            "name_1": "Nyx Prime Neuroptics",
+            "kr_name_1": "",
+            "reward_1": "Rare (2.00%)",
+            "name_2": "Valkyr Prime Neuroptics",
+            "kr_name_2": "",
+            "reward_2": "Uncommon (11.00%)",
+            "name_3": "Forma Blueprint",
+            "kr_name_3": "",
+            "reward_3": "Uncommon (11.00%)",
+            "name_4": "Cernos Prime Upper Limb",
+            "kr_name_4": "",
+            "reward_4": "Uncommon (25.33%)",
+            "name_5": "Scindo Prime Handle",
+            "kr_name_5": "",
+            "reward_5": "Uncommon (25.33%)",
+            "name_6": "Lex Prime Barrel",
+            "kr_name_6": "",
+            "reward_6": "Uncommon (25.33%)"
+        }
+    ],
+    "215": [
         {
             "type": "Meso",
             "relic": "N2",
@@ -4823,7 +5183,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "201": [
+    "216": [
         {
             "type": "Meso",
             "relic": "N3",
@@ -4847,7 +5207,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "202": [
+    "217": [
         {
             "type": "Meso",
             "relic": "N4",
@@ -4871,7 +5231,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "203": [
+    "218": [
         {
             "type": "Meso",
             "relic": "N5",
@@ -4895,7 +5255,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "204": [
+    "219": [
         {
             "type": "Meso",
             "relic": "N6",
@@ -4919,7 +5279,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "205": [
+    "220": [
         {
             "type": "Meso",
             "relic": "N7",
@@ -4943,7 +5303,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "206": [
+    "221": [
         {
             "type": "Meso",
             "relic": "N8",
@@ -4967,7 +5327,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "207": [
+    "222": [
         {
             "type": "Meso",
             "relic": "N9",
@@ -4991,7 +5351,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "208": [
+    "223": [
         {
             "type": "Meso",
             "relic": "O1",
@@ -5015,7 +5375,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "209": [
+    "224": [
         {
             "type": "Meso",
             "relic": "O2",
@@ -5039,7 +5399,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "210": [
+    "225": [
         {
             "type": "Meso",
             "relic": "O3",
@@ -5063,7 +5423,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "211": [
+    "226": [
         {
             "type": "Meso",
             "relic": "O4",
@@ -5087,7 +5447,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "212": [
+    "227": [
         {
             "type": "Meso",
             "relic": "P1",
@@ -5111,7 +5471,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "213": [
+    "228": [
         {
             "type": "Meso",
             "relic": "P2",
@@ -5135,7 +5495,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "214": [
+    "229": [
         {
             "type": "Meso",
             "relic": "P3",
@@ -5159,7 +5519,31 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "215": [
+    "230": [
+        {
+            "type": "Meso",
+            "relic": "P4",
+            "name_1": "Panthera Prime Barrel",
+            "kr_name_1": "",
+            "reward_1": "Rare (2.00%)",
+            "name_2": "Corinth Prime Receiver",
+            "kr_name_2": "",
+            "reward_2": "Uncommon (11.00%)",
+            "name_3": "Titania Prime Neuroptics",
+            "kr_name_3": "",
+            "reward_3": "Uncommon (11.00%)",
+            "name_4": "Braton Prime Barrel",
+            "kr_name_4": "",
+            "reward_4": "Uncommon (25.33%)",
+            "name_5": "Forma Blueprint",
+            "kr_name_5": "",
+            "reward_5": "Uncommon (25.33%)",
+            "name_6": "Burston Prime Blueprint",
+            "kr_name_6": "",
+            "reward_6": "Uncommon (25.33%)"
+        }
+    ],
+    "231": [
         {
             "type": "Meso",
             "relic": "R1",
@@ -5183,7 +5567,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "216": [
+    "232": [
         {
             "type": "Meso",
             "relic": "R2",
@@ -5207,7 +5591,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "217": [
+    "233": [
         {
             "type": "Meso",
             "relic": "R3",
@@ -5231,7 +5615,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "218": [
+    "234": [
         {
             "type": "Meso",
             "relic": "S1",
@@ -5255,7 +5639,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "219": [
+    "235": [
         {
             "type": "Meso",
             "relic": "S2",
@@ -5279,7 +5663,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "220": [
+    "236": [
         {
             "type": "Meso",
             "relic": "S3",
@@ -5303,7 +5687,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "221": [
+    "237": [
         {
             "type": "Meso",
             "relic": "S4",
@@ -5327,7 +5711,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "222": [
+    "238": [
         {
             "type": "Meso",
             "relic": "S5",
@@ -5351,7 +5735,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "223": [
+    "239": [
         {
             "type": "Meso",
             "relic": "S6",
@@ -5375,7 +5759,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "224": [
+    "240": [
         {
             "type": "Meso",
             "relic": "S7",
@@ -5399,7 +5783,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "225": [
+    "241": [
         {
             "type": "Meso",
             "relic": "S8",
@@ -5423,7 +5807,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "226": [
+    "242": [
         {
             "type": "Meso",
             "relic": "S9",
@@ -5447,7 +5831,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "227": [
+    "243": [
         {
             "type": "Meso",
             "relic": "T1",
@@ -5471,7 +5855,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "228": [
+    "244": [
         {
             "type": "Meso",
             "relic": "T2",
@@ -5495,7 +5879,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "229": [
+    "245": [
         {
             "type": "Meso",
             "relic": "T3",
@@ -5519,7 +5903,31 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "230": [
+    "246": [
+        {
+            "type": "Meso",
+            "relic": "T4",
+            "name_1": "Tenora Prime Receiver",
+            "kr_name_1": "",
+            "reward_1": "Rare (2.00%)",
+            "name_2": "Wukong Prime Systems",
+            "kr_name_2": "",
+            "reward_2": "Uncommon (11.00%)",
+            "name_3": "Paris Prime Grip",
+            "kr_name_3": "",
+            "reward_3": "Uncommon (11.00%)",
+            "name_4": "Zhuge Prime Grip",
+            "kr_name_4": "",
+            "reward_4": "Uncommon (25.33%)",
+            "name_5": "Ninkondi Prime Blueprint",
+            "kr_name_5": "",
+            "reward_5": "Uncommon (25.33%)",
+            "name_6": "Forma Blueprint",
+            "kr_name_6": "",
+            "reward_6": "Uncommon (25.33%)"
+        }
+    ],
+    "247": [
         {
             "type": "Meso",
             "relic": "V1",
@@ -5543,7 +5951,7 @@
             "reward_6": "Uncommon (11.00%)"
         }
     ],
-    "231": [
+    "248": [
         {
             "type": "Meso",
             "relic": "V2",
@@ -5567,7 +5975,7 @@
             "reward_6": "Uncommon (11.00%)"
         }
     ],
-    "232": [
+    "249": [
         {
             "type": "Meso",
             "relic": "V3",
@@ -5591,7 +5999,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "233": [
+    "250": [
         {
             "type": "Meso",
             "relic": "V4",
@@ -5615,7 +6023,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "234": [
+    "251": [
         {
             "type": "Meso",
             "relic": "V5",
@@ -5639,7 +6047,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "235": [
+    "252": [
         {
             "type": "Meso",
             "relic": "V6",
@@ -5663,7 +6071,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "236": [
+    "253": [
         {
             "type": "Meso",
             "relic": "W1",
@@ -5687,7 +6095,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "237": [
+    "254": [
         {
             "type": "Meso",
             "relic": "Z1",
@@ -5711,7 +6119,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "238": [
+    "255": [
         {
             "type": "Meso",
             "relic": "Z2",
@@ -5735,7 +6143,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "239": [
+    "256": [
         {
             "type": "Meso",
             "relic": "Z3",
@@ -5759,7 +6167,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "240": [
+    "257": [
         {
             "type": "Neo",
             "relic": "A1",
@@ -5783,7 +6191,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "241": [
+    "258": [
         {
             "type": "Neo",
             "relic": "A2",
@@ -5807,7 +6215,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "242": [
+    "259": [
         {
             "type": "Neo",
             "relic": "A3",
@@ -5831,7 +6239,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "243": [
+    "260": [
         {
             "type": "Neo",
             "relic": "A4",
@@ -5855,7 +6263,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "244": [
+    "261": [
         {
             "type": "Neo",
             "relic": "B1",
@@ -5879,7 +6287,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "245": [
+    "262": [
         {
             "type": "Neo",
             "relic": "B2",
@@ -5903,7 +6311,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "246": [
+    "263": [
         {
             "type": "Neo",
             "relic": "B3",
@@ -5927,7 +6335,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "247": [
+    "264": [
         {
             "type": "Neo",
             "relic": "B4",
@@ -5951,7 +6359,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "248": [
+    "265": [
         {
             "type": "Neo",
             "relic": "B5",
@@ -5975,7 +6383,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "249": [
+    "266": [
         {
             "type": "Neo",
             "relic": "B6",
@@ -5999,7 +6407,31 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "250": [
+    "267": [
+        {
+            "type": "Neo",
+            "relic": "B7",
+            "name_1": "Baza Prime Stock",
+            "kr_name_1": "",
+            "reward_1": "Rare (2.00%)",
+            "name_2": "Tekko Prime Blueprint",
+            "kr_name_2": "",
+            "reward_2": "Uncommon (11.00%)",
+            "name_3": "Dethcube Prime Carapace",
+            "kr_name_3": "",
+            "reward_3": "Uncommon (11.00%)",
+            "name_4": "Tenora Prime Blueprint",
+            "kr_name_4": "",
+            "reward_4": "Uncommon (25.33%)",
+            "name_5": "Braton Prime Blueprint",
+            "kr_name_5": "",
+            "reward_5": "Uncommon (25.33%)",
+            "name_6": "Aksomati Prime Receiver",
+            "kr_name_6": "",
+            "reward_6": "Uncommon (25.33%)"
+        }
+    ],
+    "268": [
         {
             "type": "Neo",
             "relic": "C1",
@@ -6023,7 +6455,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "251": [
+    "269": [
         {
             "type": "Neo",
             "relic": "D1",
@@ -6047,7 +6479,7 @@
             "reward_6": "Uncommon (11.00%)"
         }
     ],
-    "252": [
+    "270": [
         {
             "type": "Neo",
             "relic": "D2",
@@ -6071,7 +6503,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "253": [
+    "271": [
         {
             "type": "Neo",
             "relic": "E1",
@@ -6095,7 +6527,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "254": [
+    "272": [
         {
             "type": "Neo",
             "relic": "E2",
@@ -6119,7 +6551,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "255": [
+    "273": [
         {
             "type": "Neo",
             "relic": "F1",
@@ -6143,7 +6575,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "256": [
+    "274": [
         {
             "type": "Neo",
             "relic": "G1",
@@ -6167,7 +6599,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "257": [
+    "275": [
         {
             "type": "Neo",
             "relic": "G2",
@@ -6191,7 +6623,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "258": [
+    "276": [
         {
             "type": "Neo",
             "relic": "G3",
@@ -6215,7 +6647,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "259": [
+    "277": [
         {
             "type": "Neo",
             "relic": "H1",
@@ -6239,7 +6671,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "260": [
+    "278": [
         {
             "type": "Neo",
             "relic": "H2",
@@ -6263,7 +6695,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "261": [
+    "279": [
         {
             "type": "Neo",
             "relic": "I1",
@@ -6287,7 +6719,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "262": [
+    "280": [
         {
             "type": "Neo",
             "relic": "I2",
@@ -6311,7 +6743,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "263": [
+    "281": [
         {
             "type": "Neo",
             "relic": "K1",
@@ -6335,7 +6767,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "264": [
+    "282": [
         {
             "type": "Neo",
             "relic": "K2",
@@ -6359,7 +6791,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "265": [
+    "283": [
         {
             "type": "Neo",
             "relic": "L1",
@@ -6383,7 +6815,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "266": [
+    "284": [
         {
             "type": "Neo",
             "relic": "M1",
@@ -6407,7 +6839,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "267": [
+    "285": [
         {
             "type": "Neo",
             "relic": "M2",
@@ -6431,7 +6863,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "268": [
+    "286": [
         {
             "type": "Neo",
             "relic": "M3",
@@ -6455,7 +6887,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "269": [
+    "287": [
         {
             "type": "Neo",
             "relic": "N1",
@@ -6479,7 +6911,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "270": [
+    "288": [
         {
             "type": "Neo",
             "relic": "N10",
@@ -6503,7 +6935,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "271": [
+    "289": [
         {
             "type": "Neo",
             "relic": "N11",
@@ -6527,7 +6959,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "272": [
+    "290": [
         {
             "type": "Neo",
             "relic": "N12",
@@ -6551,7 +6983,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "273": [
+    "291": [
         {
             "type": "Neo",
             "relic": "N13",
@@ -6575,7 +7007,55 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "274": [
+    "292": [
+        {
+            "type": "Neo",
+            "relic": "N14",
+            "name_1": "Ninkondi Prime Handle",
+            "kr_name_1": "",
+            "reward_1": "Rare (2.00%)",
+            "name_2": "Braton Prime Receiver",
+            "kr_name_2": "",
+            "reward_2": "Uncommon (11.00%)",
+            "name_3": "Zhuge Prime Receiver",
+            "kr_name_3": "",
+            "reward_3": "Uncommon (11.00%)",
+            "name_4": "Titania Prime Chassis",
+            "kr_name_4": "",
+            "reward_4": "Uncommon (25.33%)",
+            "name_5": "Forma Blueprint",
+            "kr_name_5": "",
+            "reward_5": "Uncommon (25.33%)",
+            "name_6": "Bronco Prime Receiver",
+            "kr_name_6": "",
+            "reward_6": "Uncommon (25.33%)"
+        }
+    ],
+    "293": [
+        {
+            "type": "Neo",
+            "relic": "N15",
+            "name_1": "Nezha Prime Neuroptics",
+            "kr_name_1": "",
+            "reward_1": "Rare (2.00%)",
+            "name_2": "Atlas Prime Systems",
+            "kr_name_2": "",
+            "reward_2": "Uncommon (11.00%)",
+            "name_3": "Baza Prime Barrel",
+            "kr_name_3": "",
+            "reward_3": "Uncommon (11.00%)",
+            "name_4": "Paris Prime Blueprint",
+            "kr_name_4": "",
+            "reward_4": "Uncommon (25.33%)",
+            "name_5": "Akbronco Prime Blueprint",
+            "kr_name_5": "",
+            "reward_5": "Uncommon (25.33%)",
+            "name_6": "Forma Blueprint",
+            "kr_name_6": "",
+            "reward_6": "Uncommon (25.33%)"
+        }
+    ],
+    "294": [
         {
             "type": "Neo",
             "relic": "N2",
@@ -6599,7 +7079,7 @@
             "reward_6": "Uncommon (11.00%)"
         }
     ],
-    "275": [
+    "295": [
         {
             "type": "Neo",
             "relic": "N3",
@@ -6623,7 +7103,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "276": [
+    "296": [
         {
             "type": "Neo",
             "relic": "N4",
@@ -6647,7 +7127,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "277": [
+    "297": [
         {
             "type": "Neo",
             "relic": "N5",
@@ -6671,7 +7151,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "278": [
+    "298": [
         {
             "type": "Neo",
             "relic": "N6",
@@ -6695,7 +7175,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "279": [
+    "299": [
         {
             "type": "Neo",
             "relic": "N7",
@@ -6719,7 +7199,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "280": [
+    "300": [
         {
             "type": "Neo",
             "relic": "N8",
@@ -6743,7 +7223,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "281": [
+    "301": [
         {
             "type": "Neo",
             "relic": "N9",
@@ -6767,7 +7247,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "282": [
+    "302": [
         {
             "type": "Neo",
             "relic": "O1",
@@ -6791,7 +7271,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "283": [
+    "303": [
         {
             "type": "Neo",
             "relic": "P1",
@@ -6815,7 +7295,31 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "284": [
+    "304": [
+        {
+            "type": "Neo",
+            "relic": "P2",
+            "name_1": "Pandero Prime Receiver",
+            "kr_name_1": "",
+            "reward_1": "Rare (2.00%)",
+            "name_2": "Forma Blueprint",
+            "kr_name_2": "",
+            "reward_2": "Uncommon (11.00%)",
+            "name_3": "Titania Prime Blueprint",
+            "kr_name_3": "",
+            "reward_3": "Uncommon (11.00%)",
+            "name_4": "Aksomati Prime Receiver",
+            "kr_name_4": "",
+            "reward_4": "Uncommon (25.33%)",
+            "name_5": "Braton Prime Stock",
+            "kr_name_5": "",
+            "reward_5": "Uncommon (25.33%)",
+            "name_6": "Guandao Prime Blade",
+            "kr_name_6": "",
+            "reward_6": "Uncommon (25.33%)"
+        }
+    ],
+    "305": [
         {
             "type": "Neo",
             "relic": "R1",
@@ -6839,7 +7343,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "285": [
+    "306": [
         {
             "type": "Neo",
             "relic": "R2",
@@ -6863,7 +7367,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "286": [
+    "307": [
         {
             "type": "Neo",
             "relic": "R3",
@@ -6887,7 +7391,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "287": [
+    "308": [
         {
             "type": "Neo",
             "relic": "R4",
@@ -6911,7 +7415,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "288": [
+    "309": [
         {
             "type": "Neo",
             "relic": "S1",
@@ -6935,7 +7439,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "289": [
+    "310": [
         {
             "type": "Neo",
             "relic": "S10",
@@ -6959,7 +7463,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "290": [
+    "311": [
         {
             "type": "Neo",
             "relic": "S11",
@@ -6983,7 +7487,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "291": [
+    "312": [
         {
             "type": "Neo",
             "relic": "S12",
@@ -7007,7 +7511,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "292": [
+    "313": [
         {
             "type": "Neo",
             "relic": "S13",
@@ -7031,7 +7535,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "293": [
+    "314": [
         {
             "type": "Neo",
             "relic": "S14",
@@ -7055,7 +7559,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "294": [
+    "315": [
         {
             "type": "Neo",
             "relic": "S2",
@@ -7079,7 +7583,7 @@
             "reward_6": "Uncommon (11.00%)"
         }
     ],
-    "295": [
+    "316": [
         {
             "type": "Neo",
             "relic": "S3",
@@ -7103,7 +7607,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "296": [
+    "317": [
         {
             "type": "Neo",
             "relic": "S5",
@@ -7127,7 +7631,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "297": [
+    "318": [
         {
             "type": "Neo",
             "relic": "S6",
@@ -7151,7 +7655,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "298": [
+    "319": [
         {
             "type": "Neo",
             "relic": "S7",
@@ -7175,7 +7679,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "299": [
+    "320": [
         {
             "type": "Neo",
             "relic": "S8",
@@ -7199,7 +7703,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "300": [
+    "321": [
         {
             "type": "Neo",
             "relic": "S9",
@@ -7223,7 +7727,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "301": [
+    "322": [
         {
             "type": "Neo",
             "relic": "T1",
@@ -7247,7 +7751,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "302": [
+    "323": [
         {
             "type": "Neo",
             "relic": "T2",
@@ -7271,7 +7775,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "303": [
+    "324": [
         {
             "type": "Neo",
             "relic": "T3",
@@ -7295,7 +7799,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "304": [
+    "325": [
         {
             "type": "Neo",
             "relic": "V1",
@@ -7319,7 +7823,7 @@
             "reward_6": "Rare (2.00%)"
         }
     ],
-    "305": [
+    "326": [
         {
             "type": "Neo",
             "relic": "V2",
@@ -7343,7 +7847,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "306": [
+    "327": [
         {
             "type": "Neo",
             "relic": "V3",
@@ -7367,7 +7871,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "307": [
+    "328": [
         {
             "type": "Neo",
             "relic": "V4",
@@ -7391,7 +7895,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "308": [
+    "329": [
         {
             "type": "Neo",
             "relic": "V5",
@@ -7415,7 +7919,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "309": [
+    "330": [
         {
             "type": "Neo",
             "relic": "V6",
@@ -7439,7 +7943,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "310": [
+    "331": [
         {
             "type": "Neo",
             "relic": "V7",
@@ -7463,7 +7967,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "311": [
+    "332": [
         {
             "type": "Neo",
             "relic": "V8",
@@ -7487,7 +7991,31 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "312": [
+    "333": [
+        {
+            "type": "Neo",
+            "relic": "V9",
+            "name_1": "Valkyr Prime Chassis",
+            "kr_name_1": "",
+            "reward_1": "Rare (2.00%)",
+            "name_2": "Cernos Prime Blueprint",
+            "kr_name_2": "",
+            "reward_2": "Uncommon (11.00%)",
+            "name_3": "Lex Prime Blueprint",
+            "kr_name_3": "",
+            "reward_3": "Uncommon (11.00%)",
+            "name_4": "Venka Prime Blades",
+            "kr_name_4": "",
+            "reward_4": "Uncommon (25.33%)",
+            "name_5": "Forma Blueprint",
+            "kr_name_5": "",
+            "reward_5": "Uncommon (25.33%)",
+            "name_6": "Nyx Prime Blueprint",
+            "kr_name_6": "",
+            "reward_6": "Uncommon (25.33%)"
+        }
+    ],
+    "334": [
         {
             "type": "Neo",
             "relic": "Z1",
@@ -7511,7 +8039,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "313": [
+    "335": [
         {
             "type": "Neo",
             "relic": "Z2",
@@ -7535,7 +8063,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "314": [
+    "336": [
         {
             "type": "Neo",
             "relic": "Z3",
@@ -7559,7 +8087,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "315": [
+    "337": [
         {
             "type": "Neo",
             "relic": "Z4",
@@ -7583,7 +8111,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "316": [
+    "338": [
         {
             "type": "Neo",
             "relic": "Z5",
@@ -7607,7 +8135,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "317": [
+    "339": [
         {
             "type": "Neo",
             "relic": "Z6",
@@ -7631,7 +8159,31 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "318": [
+    "340": [
+        {
+            "type": "Neo",
+            "relic": "Z7",
+            "name_1": "Zhuge Prime Barrel",
+            "kr_name_1": "",
+            "reward_1": "Rare (2.00%)",
+            "name_2": "Octavia Prime Chassis",
+            "kr_name_2": "",
+            "reward_2": "Uncommon (11.00%)",
+            "name_3": "Akbronco Prime Link",
+            "kr_name_3": "",
+            "reward_3": "Uncommon (11.00%)",
+            "name_4": "Forma Blueprint",
+            "kr_name_4": "",
+            "reward_4": "Uncommon (25.33%)",
+            "name_5": "Wukong Prime Neuroptics",
+            "kr_name_5": "",
+            "reward_5": "Uncommon (25.33%)",
+            "name_6": "Atlas Prime Blueprint",
+            "kr_name_6": "",
+            "reward_6": "Uncommon (25.33%)"
+        }
+    ],
+    "341": [
         {
             "type": "Requiem",
             "relic": "I",
@@ -7655,7 +8207,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "319": [
+    "342": [
         {
             "type": "Requiem",
             "relic": "Ii",
@@ -7679,7 +8231,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "320": [
+    "343": [
         {
             "type": "Requiem",
             "relic": "Iii",
@@ -7703,7 +8255,7 @@
             "reward_6": "Uncommon (25.33%)"
         }
     ],
-    "321": [
+    "344": [
         {
             "type": "Requiem",
             "relic": "Iv",

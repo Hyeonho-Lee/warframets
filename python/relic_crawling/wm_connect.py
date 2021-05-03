@@ -77,5 +77,5 @@ def search_value(index):
     price.append(connect_wm(site_path_6[index]))
     return ty_name, name, price
 
-search_type, search_name, search_price  = search_value(248)
+search_type, search_name, search_price = search_value(248)
 print(search_type, search_name, search_price)
