@@ -277,12 +277,6 @@
             "kr_name": "마구스 락다운"
         },
         {
-            "name": "magus_destruct",
-            "type": "magus",
-            "en_name": "Magus Destruct",
-            "kr_name": "마구스 디스트럭트"
-        },
-        {
             "name": "magus_anomaly",
             "type": "magus",
             "en_name": "Magus Anomaly",
