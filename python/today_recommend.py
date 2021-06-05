@@ -26,8 +26,8 @@ def get_all():
 
     for i, v in enumerate(input_items_0):
         item = str(v) + '_set'
-        path = '/workspace/crawling/data/csv/warframe/' + item + '/' + item + '.csv'
-        path_0 = '/workspace/crawling/data/csv/warframe/' + item
+        path = '/home/ec2-user/environment/warframets/data/csv/warframe/' + item + '/' + item + '.csv'
+        path_0 = '/home/ec2-user/environment/warframets/data/csv/warframe/' + item
         all_item.append(item)
         all_path.append(path)
         all_path_0.append(path_0)
@@ -36,8 +36,8 @@ def get_all():
 
     for i, v in enumerate(input_items_1):
         item = str(v) + '_set'
-        path = '/workspace/crawling/data/csv/weapon/' + item + '/' + item + '.csv'
-        path_0 = '/workspace/crawling/data/csv/weapon/' + item
+        path = '/home/ec2-user/environment/warframets/data/csv/weapon/' + item + '/' + item + '.csv'
+        path_0 = '/home/ec2-user/environment/warframets/data/csv/weapon/' + item
         all_item.append(item)
         all_path.append(path)
         all_path_0.append(path_0)
@@ -46,8 +46,8 @@ def get_all():
 
     for i, v in enumerate(input_items_2):
         item = str(v)
-        path = '/workspace/crawling/data/csv/weapon/' + item + '/' + item + '.csv'
-        path_0 = '/workspace/crawling/data/csv/weapon/' + item
+        path = '/home/ec2-user/environment/warframets/data/csv/weapon/' + item + '/' + item + '.csv'
+        path_0 = '/home/ec2-user/environment/warframets/data/csv/weapon/' + item
         all_item.append(item)
         all_path.append(path)
         all_path_0.append(path_0)
@@ -56,8 +56,8 @@ def get_all():
 
     for i, v in enumerate(input_items_3):
         item = str(v)
-        path = '/workspace/crawling/data/csv/mod/' + item + '/' + item + '.csv'
-        path_0 = '/workspace/crawling/data/csv/mod/' + item
+        path = '/home/ec2-user/environment/warframets/data/csv/mod/' + item + '/' + item + '.csv'
+        path_0 = '/home/ec2-user/environment/warframets/data/csv/mod/' + item
         all_item.append(item)
         all_path.append(path)
         all_path_0.append(path_0)
@@ -66,8 +66,8 @@ def get_all():
 
     for i, v in enumerate(input_items_4):
         item = str(v)
-        path = '/workspace/crawling/data/csv/mod/' + item + '/' + item + '.csv'
-        path_0 = '/workspace/crawling/data/csv/mod/' + item
+        path = '/home/ec2-user/environment/warframets/data/csv/mod/' + item + '/' + item + '.csv'
+        path_0 = '/home/ec2-user/environment/warframets/data/csv/mod/' + item
         all_item.append(item)
         all_path.append(path)
         all_path_0.append(path_0)
@@ -76,8 +76,8 @@ def get_all():
 
     for i, v in enumerate(input_items_5):
         item = str(v)
-        path = '/workspace/crawling/data/csv/etc/' + item + '/' + item + '.csv'
-        path_0 = '/workspace/crawling/data/csv/etc/' + item
+        path = '/home/ec2-user/environment/warframets/data/csv/etc/' + item + '/' + item + '.csv'
+        path_0 = '/home/ec2-user/environment/warframets/data/csv/etc/' + item
         all_item.append(item)
         all_path.append(path)
         all_path_0.append(path_0)
@@ -86,8 +86,8 @@ def get_all():
 
     for i, v in enumerate(input_items_6):
         item = str(v)
-        path = '/workspace/crawling/data/csv/mod/' + item + '/' + item + '.csv'
-        path_0 = '/workspace/crawling/data/csv/mod/' + item
+        path = '/home/ec2-user/environment/warframets/data/csv/mod/' + item + '/' + item + '.csv'
+        path_0 = '/home/ec2-user/environment/warframets/data/csv/mod/' + item
         all_item.append(item)
         all_path.append(path)
         all_path_0.append(path_0)
@@ -113,25 +113,25 @@ def make_file(get_path):
         make_file(get_path)
 
 def reset(value):
-    path = '/workspace/crawling/data/csv/result/{value}.csv'.format(value = value)
+    path = '/home/ec2-user/environment/warframets/data/csv/result/{value}.csv'.format(value = value)
     if os.path.isfile(path):
-        os.remove(r"/workspace/crawling/data/csv/result/{value}.csv".format(value = value))
+        os.remove(r"/home/ec2-user/environment/warframets/data/csv/result/{value}.csv".format(value = value))
     else:
         reset = open(path, 'w')
-        os.remove(r"/workspace/crawling/data/csv/result/{value}.csv".format(value = value))
+        os.remove(r"/home/ec2-user/environment/warframets/data/csv/result/{value}.csv".format(value = value))
 
 item, path, path_0 = get_all()
 yesterday = date_count()
 
-path_1 = '/workspace/crawling/data/csv/result/result.csv'
-path_all_top = '/workspace/crawling/data/csv/result/all_top.csv'
-path_all_bottom = '/workspace/crawling/data/csv/result/all_bottom.csv'
-path_today_top = '/workspace/crawling/data/csv/result/today_top.csv'
-path_today_bottom = '/workspace/crawling/data/csv/result/today_bottom.csv'
-path_today_volume = '/workspace/crawling/data/csv/result/today_volume.csv'
-path_recommend_item = '/workspace/crawling/data/csv/result/recommend_item.csv'
-path_recommend_top = '/workspace/crawling/data/csv/result/recommend_top.csv'
-path_recommend_bottom = '/workspace/crawling/data/csv/result/recommend_bottom.csv'
+path_1 = '/home/ec2-user/environment/warframets/data/csv/result/result.csv'
+path_all_top = '/home/ec2-user/environment/warframets/data/csv/result/all_top.csv'
+path_all_bottom = '/home/ec2-user/environment/warframets/data/csv/result/all_bottom.csv'
+path_today_top = '/home/ec2-user/environment/warframets/data/csv/result/today_top.csv'
+path_today_bottom = '/home/ec2-user/environment/warframets/data/csv/result/today_bottom.csv'
+path_today_volume = '/home/ec2-user/environment/warframets/data/csv/result/today_volume.csv'
+path_recommend_item = '/home/ec2-user/environment/warframets/data/csv/result/recommend_item.csv'
+path_recommend_top = '/home/ec2-user/environment/warframets/data/csv/result/recommend_top.csv'
+path_recommend_bottom = '/home/ec2-user/environment/warframets/data/csv/result/recommend_bottom.csv'
 
 reset('result')
 

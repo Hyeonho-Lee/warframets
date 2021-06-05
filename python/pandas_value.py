@@ -16,7 +16,7 @@ def pandas_value(name, types):
     #warframe_name = name
     #name = warframe_name.replace(' ', '_')
     name_csv = name + '.csv'
-    path = '/workspace/crawling/data/csv/{types}/{name}/{name_csv}'.format(types = types, name = name, name_csv = name_csv)
+    path = '/home/ec2-user/environment/warframets/data/csv/{types}/{name}/{name_csv}'.format(types = types, name = name, name_csv = name_csv)
 
     result = read_csv(path)
 
@@ -76,6 +76,6 @@ def pandas_value(name, types):
     return result
 
 #item = 'loki_prime_set'
-#get_path = '/workspace/crawling/data/csv/warframe/' + item + '/' + item + '.csv'
+#get_path = '/home/ec2-user/environment/warframets/data/csv/warframe/' + item + '/' + item + '.csv'
 #value = pandas_value('loki_prime_set', 'warframe')
 #value.to_csv(get_path, mode = 'w')

@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 from dateutil.parser import parse
 from bs4 import BeautifulSoup as bs
 
-file_path = '/workspace/crawling/data/json/relic_drop_table.json'
+file_path = '/home/ec2-user/environment/warframets/data/json/relic_drop_table.json'
 with open(file_path, "r") as json_file:
     json_data = json.load(json_file)
 
@@ -37,7 +37,7 @@ for i in range(0, len(json_data)):
     test = json_data[str(i)]
     relic.append(test[0]["relic"])
     types.append(test[0]["type"])
-    image_path.append('/workspace/crawling/html/static/image/item_image/relic/')
+    image_path.append('/home/ec2-user/environment/warframets/html/static/image/item_image/relic/')
     name_1.append(test[0]["name_1"])
     name_2.append(test[0]["name_2"])
     name_3.append(test[0]["name_3"])

@@ -1,7 +1,7 @@
 import os
 from PIL import Image
 
-path = '/workspace/crawling/html/static/image/item_image/etc'
+path = '/home/ec2-user/environment/warframets/html/static/image/item_image/etc'
 path_list = os.listdir(path)
 
 file_list = []

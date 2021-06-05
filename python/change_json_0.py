@@ -5,7 +5,7 @@ import numpy as np
 from datetime import date, timedelta
 
 item = str("weapon_mods")
-path = '/workspace/crawling/data/json/{etc}.json'.format(etc = item)
+path = '/home/ec2-user/environment/warframets/data/json/{etc}.json'.format(etc = item)
 with open(path, "r") as json_file:
     json_data = json.load(json_file, strict = False)
 

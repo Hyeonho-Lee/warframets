@@ -55,8 +55,8 @@ for i, v in enumerate(input_items):
     item = item.title()
     item = item.replace('/', '_Prime')
     
-    path = '/workspace/crawling/html/static/image/item_image/warframe/' + item + '/' + item + '.png'
-    path_0 = '/workspace/crawling/html/static/image/item_image/warframe/' + item
+    path = '/home/ec2-user/environment/warframets/html/static/image/item_image/warframe/' + item + '/' + item + '.png'
+    path_0 = '/home/ec2-user/environment/warframets/html/static/image/item_image/warframe/' + item
     
     save_data = image_crawling(item, path, path_0, 'warframe')
     endTime = time.time() - startTime

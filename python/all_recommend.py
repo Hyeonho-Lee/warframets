@@ -10,7 +10,7 @@ import input_warframe
 
 def input_item(etc):
     item = str(etc)
-    path = '/workspace/crawling/data/json/{etc}.json'.format(etc = item)
+    path = '/home/ec2-user/environment/warframets/data/json/{etc}.json'.format(etc = item)
     with open(path, "r") as json_file:
         json_data = json.load(json_file)
 
@@ -45,8 +45,8 @@ def get_all_item():
 
     for i, v in enumerate(input_items_0):
         item = str(v) + '_set'
-        path = '/workspace/crawling/data/csv/warframe/' + item + '/' + item + '.csv'
-        path_0 = '/workspace/crawling/data/csv/warframe/' + item
+        path = '/home/ec2-user/environment/warframets/data/csv/warframe/' + item + '/' + item + '.csv'
+        path_0 = '/home/ec2-user/environment/warframets/data/csv/warframe/' + item
         img = str(v.title())
         path_1 = 'image/item_image/warframe/' + img + '/' + img + '.png'
         all_item.append(item)
@@ -58,8 +58,8 @@ def get_all_item():
 
     for i, v in enumerate(input_items_1):
         item = str(v) + '_set'
-        path = '/workspace/crawling/data/csv/weapon/' + item + '/' + item + '.csv'
-        path_0 = '/workspace/crawling/data/csv/weapon/' + item
+        path = '/home/ec2-user/environment/warframets/data/csv/weapon/' + item + '/' + item + '.csv'
+        path_0 = '/home/ec2-user/environment/warframets/data/csv/weapon/' + item
         img = str(v.title())
         path_1 = 'image/item_image/weapon/' + img + '/' + img + '.png'
         all_item.append(item)
@@ -71,8 +71,8 @@ def get_all_item():
 
     for i, v in enumerate(input_items_2):
         item = str(v)
-        path = '/workspace/crawling/data/csv/weapon/' + item + '/' + item + '.csv'
-        path_0 = '/workspace/crawling/data/csv/weapon/' + item
+        path = '/home/ec2-user/environment/warframets/data/csv/weapon/' + item + '/' + item + '.csv'
+        path_0 = '/home/ec2-user/environment/warframets/data/csv/weapon/' + item
         img = str(v.title())
         path_1 = 'image/item_image/weapon/' + img + '/' + img + '.png'
         all_item.append(item)
@@ -84,8 +84,8 @@ def get_all_item():
 
     for i, v in enumerate(input_items_3):
         item = str(v)
-        path = '/workspace/crawling/data/csv/mod/' + item + '/' + item + '.csv'
-        path_0 = '/workspace/crawling/data/csv/mod/' + item
+        path = '/home/ec2-user/environment/warframets/data/csv/mod/' + item + '/' + item + '.csv'
+        path_0 = '/home/ec2-user/environment/warframets/data/csv/mod/' + item
         img = str(v.title())
         path_1 = 'image/item_image/mod/' + img + '/' + img + '.png'
         all_item.append(item)
@@ -97,8 +97,8 @@ def get_all_item():
 
     for i, v in enumerate(input_items_4):
         item = str(v)
-        path = '/workspace/crawling/data/csv/mod/' + item + '/' + item + '.csv'
-        path_0 = '/workspace/crawling/data/csv/mod/' + item
+        path = '/home/ec2-user/environment/warframets/data/csv/mod/' + item + '/' + item + '.csv'
+        path_0 = '/home/ec2-user/environment/warframets/data/csv/mod/' + item
         img = str(v.title())
         path_1 = 'image/item_image/mod/' + img + '/' + img + '.png'
         all_item.append(item)
@@ -110,8 +110,8 @@ def get_all_item():
 
     for i, v in enumerate(input_items_5):
         item = str(v)
-        path = '/workspace/crawling/data/csv/etc/' + item + '/' + item + '.csv'
-        path_0 = '/workspace/crawling/data/csv/etc/' + item
+        path = '/home/ec2-user/environment/warframets/data/csv/etc/' + item + '/' + item + '.csv'
+        path_0 = '/home/ec2-user/environment/warframets/data/csv/etc/' + item
         img = str(v.title())
         path_1 = 'image/item_image/etc/' + img + '/' + img + '.png'
         all_item.append(item)
@@ -123,8 +123,8 @@ def get_all_item():
 
     for i, v in enumerate(input_items_6):
         item = str(v)
-        path = '/workspace/crawling/data/csv/mod/' + item + '/' + item + '.csv'
-        path_0 = '/workspace/crawling/data/csv/mod/' + item
+        path = '/home/ec2-user/environment/warframets/data/csv/mod/' + item + '/' + item + '.csv'
+        path_0 = '/home/ec2-user/environment/warframets/data/csv/mod/' + item
         img = str(v.title())
         path_1 = 'image/item_image/mod/' + img + '/' + img + '.png'
         all_item.append(item)
@@ -146,12 +146,12 @@ def make_file(get_path, make):
         make_file(get_path, make_folder)
 
 def reset(date, value):
-    path = '/workspace/crawling/data/csv/result/date/{date}/{value}.csv'.format(date = date, value = value)
+    path = '/home/ec2-user/environment/warframets/data/csv/result/date/{date}/{value}.csv'.format(date = date, value = value)
     if os.path.isfile(path):
-        os.remove(r"/workspace/crawling/data/csv/result/date/{date}/{value}.csv".format(date = date, value = value))
+        os.remove(r"/home/ec2-user/environment/warframets/data/csv/result/date/{date}/{value}.csv".format(date = date, value = value))
     else:
         reset = open(path, 'w')
-        os.remove(r"/workspace/crawling/data/csv/result/date/{date}/{value}.csv".format(date = date, value = value))
+        os.remove(r"/home/ec2-user/environment/warframets/data/csv/result/date/{date}/{value}.csv".format(date = date, value = value))
 
 def all_recommend(date_value):
     all_item, all_path, all_path_0, all_path_1 = get_all_item()
@@ -159,7 +159,7 @@ def all_recommend(date_value):
     date_item = []
     date_path = []
     
-    date_dir = "/workspace/crawling/data/csv/result/date/" + date_value + "/"
+    date_dir = "/home/ec2-user/environment/warframets/data/csv/result/date/" + date_value + "/"
     if(os.path.isdir(date_dir) == False):
         for i, v in enumerate(all_item):
             value = read_csv(all_path[i])
@@ -176,19 +176,19 @@ def all_recommend(date_value):
         weapon_path = '../data/csv/weapon'
 
         for i, v in enumerate(os.listdir(etc_path)):
-            path_name = '/workspace/crawling/data/csv/etc/' + str(v) + '/' + str(v) + '.csv'
+            path_name = '/home/ec2-user/environment/warframets/data/csv/etc/' + str(v) + '/' + str(v) + '.csv'
             get_item.append(v)
             get_path.append(path_name)
         for i, v in enumerate(os.listdir(mod_path)):
-            path_name = '/workspace/crawling/data/csv/mod/' + str(v) + '/' + str(v) + '.csv'
+            path_name = '/home/ec2-user/environment/warframets/data/csv/mod/' + str(v) + '/' + str(v) + '.csv'
             get_item.append(v)
             get_path.append(path_name)
         for i, v in enumerate(os.listdir(warframe_path)):
-            path_name = '/workspace/crawling/data/csv/warframe/' + str(v) + '/' + str(v) + '.csv'
+            path_name = '/home/ec2-user/environment/warframets/data/csv/warframe/' + str(v) + '/' + str(v) + '.csv'
             get_item.append(v)
             get_path.append(path_name)
         for i, v in enumerate(os.listdir(weapon_path)):
-            path_name = '/workspace/crawling/data/csv/weapon/' + str(v) + '/' + str(v) + '.csv'
+            path_name = '/home/ec2-user/environment/warframets/data/csv/weapon/' + str(v) + '/' + str(v) + '.csv'
             get_item.append(v)
             get_path.append(path_name)
 
@@ -196,15 +196,15 @@ def all_recommend(date_value):
             index = get_item.index(date_item[i])
             date_path.append(get_path[index])
 
-        path_1 = '/workspace/crawling/data/csv/result/date/' + date_value + '/result.csv'
-        path_all_top = '/workspace/crawling/data/csv/result/date/' + date_value + '/all_top.csv'
-        path_all_bottom = '/workspace/crawling/data/csv/result/date/' + date_value + '/all_bottom.csv'
-        path_today_top = '/workspace/crawling/data/csv/result/date/' + date_value + '/today_top.csv'
-        path_today_bottom = '/workspace/crawling/data/csv/result/date/' + date_value + '/today_bottom.csv'
-        path_today_volume = '/workspace/crawling/data/csv/result/date/' + date_value + '/today_volume.csv'
-        path_recommend_item = '/workspace/crawling/data/csv/result/date/' + date_value + '/recommend_item.csv'
-        path_recommend_top = '/workspace/crawling/data/csv/result/date/' + date_value + '/recommend_top.csv'
-        path_recommend_bottom = '/workspace/crawling/data/csv/result/date/' + date_value + '/recommend_bottom.csv'
+        path_1 = '/home/ec2-user/environment/warframets/data/csv/result/date/' + date_value + '/result.csv'
+        path_all_top = '/home/ec2-user/environment/warframets/data/csv/result/date/' + date_value + '/all_top.csv'
+        path_all_bottom = '/home/ec2-user/environment/warframets/data/csv/result/date/' + date_value + '/all_bottom.csv'
+        path_today_top = '/home/ec2-user/environment/warframets/data/csv/result/date/' + date_value + '/today_top.csv'
+        path_today_bottom = '/home/ec2-user/environment/warframets/data/csv/result/date/' + date_value + '/today_bottom.csv'
+        path_today_volume = '/home/ec2-user/environment/warframets/data/csv/result/date/' + date_value + '/today_volume.csv'
+        path_recommend_item = '/home/ec2-user/environment/warframets/data/csv/result/date/' + date_value + '/recommend_item.csv'
+        path_recommend_top = '/home/ec2-user/environment/warframets/data/csv/result/date/' + date_value + '/recommend_top.csv'
+        path_recommend_bottom = '/home/ec2-user/environment/warframets/data/csv/result/date/' + date_value + '/recommend_bottom.csv'
 
         if(os.path.isdir(date_dir) == False):
             os.makedirs(os.path.join(date_dir))

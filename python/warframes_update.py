@@ -29,7 +29,7 @@ def warframe_crawling(item, path, path_0):
     html = res.text
     soup = bs(html, 'html.parser')
 
-    with open('/workspace/crawling/data/json/warframe_data_v2.json', 'w') as file:
+    with open('/home/ec2-user/environment/warframets/data/json/warframe_data_v2.json', 'w') as file:
         data = str(soup)
         json_data = json.loads(data)
         json_data_1 = json.dumps(json_data, indent = 4)
@@ -89,8 +89,8 @@ input_items = input_warframe.input_item('warframes')
 
 for i, v in enumerate(input_items):
     item = str(v) + '_set'
-    path = '/workspace/crawling/data/csv/warframe/' + item + '/' + item + '.csv'
-    path_0 = '/workspace/crawling/data/csv/warframe/' + item
+    path = '/home/ec2-user/environment/warframets/data/csv/warframe/' + item + '/' + item + '.csv'
+    path_0 = '/home/ec2-user/environment/warframets/data/csv/warframe/' + item
 
     save_data = warframe_crawling(item, path, path_0)
     #save_png = data_result.write_plot(item)

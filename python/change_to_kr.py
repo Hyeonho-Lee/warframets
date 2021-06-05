@@ -22,10 +22,10 @@ def change_to_kr(csv_name, etc, text):
     item_en_name = []
     item_kr_name = []
 
-    with open('/workspace/crawling/data/json/warframes.json', 'r') as file:
+    with open('/home/ec2-user/environment/warframets/data/json/warframes.json', 'r') as file:
         json_data = json.load(file)
     result_data = json_data['warframes']
-    with open('/workspace/crawling/data/json/weapons.json', 'r') as file_1:
+    with open('/home/ec2-user/environment/warframets/data/json/weapons.json', 'r') as file_1:
         json_data_1 = json.load(file_1)
     result_data_1 = json_data_1['weapons']
 
@@ -45,7 +45,7 @@ def change_to_kr(csv_name, etc, text):
         item_en_name.append(str(en_result))
         item_kr_name.append(str(kr_result))
 
-    path = '/workspace/crawling/data/csv/result/{name}.csv'.format(name = csv_name)
+    path = '/home/ec2-user/environment/warframets/data/csv/result/{name}.csv'.format(name = csv_name)
     resource = read_csv(path)
 
     result_all = []

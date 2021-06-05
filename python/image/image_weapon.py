@@ -57,8 +57,8 @@ for i, v in enumerate(input_items):
     item = item.replace('/', '_Prime')
     #print(item)
     
-    path = '/workspace/crawling/html/static/image/item_image/weapon/' + item + '/' + item + '.png'
-    path_0 = '/workspace/crawling/html/static/image/item_image/weapon/' + item
+    path = '/home/ec2-user/environment/warframets/html/static/image/item_image/weapon/' + item + '/' + item + '.png'
+    path_0 = '/home/ec2-user/environment/warframets/html/static/image/item_image/weapon/' + item
     
     save_data = image_crawling(item, path, path_0, 'weapon')
     endTime = time.time() - startTime

@@ -65,6 +65,6 @@ for i in range(0, int(len(first_data) / 4)):
     })
 
 
-with open('/workspace/crawling/data/json/relic_drop_table.json', 'w', encoding='utf-8') as file:
+with open('/home/ec2-user/environment/warframets/data/json/relic_drop_table.json', 'w', encoding='utf-8') as file:
     json_data = json.dumps(make_json, indent = 4)
     file.write(json_data)

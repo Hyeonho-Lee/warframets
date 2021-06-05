@@ -43,7 +43,7 @@ def find_mmd(path):
     result_date = int((today_date - mnd_date).days)
     return result_date
 
-path = '/workspace/crawling/data/csv/warframe/ash_prime_set/ash_prime_set.csv'
+path = '/home/ec2-user/environment/warframets/data/csv/warframe/ash_prime_set/ash_prime_set.csv'
 result = find_mmd(path)
 
 #result.to_excel('test.xlsx')

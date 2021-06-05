@@ -38,24 +38,24 @@ def read_csv(name, types):
     path = ''
     if types == 'result':
         name_csv = name + '.csv'
-        path = '/workspace/crawling/data/csv/{types}/{name_csv}'.format(types = types, name_csv = name_csv)
+        path = '/home/ec2-user/environment/warframets/data/csv/{types}/{name_csv}'.format(types = types, name_csv = name_csv)
     elif types == 'weapon_etc':
         name_csv = name + '.csv'
-        path = '/workspace/crawling/data/csv/weapon/{names}/{name_csv}'.format(names = name, name_csv = name_csv)
+        path = '/home/ec2-user/environment/warframets/data/csv/weapon/{names}/{name_csv}'.format(names = name, name_csv = name_csv)
     elif types == 'aura_mods':
         name_csv = name + '.csv'
-        path = '/workspace/crawling/data/csv/mod/{names}/{name_csv}'.format(names = name, name_csv = name_csv)
+        path = '/home/ec2-user/environment/warframets/data/csv/mod/{names}/{name_csv}'.format(names = name, name_csv = name_csv)
     elif types == 'warframe_mods':
         name_csv = name + '.csv'
-        path = '/workspace/crawling/data/csv/mod/{names}/{name_csv}'.format(names = name, name_csv = name_csv)
+        path = '/home/ec2-user/environment/warframets/data/csv/mod/{names}/{name_csv}'.format(names = name, name_csv = name_csv)
     elif types == 'items_etc':
         name_csv = name + '.csv'
-        path = '/workspace/crawling/data/csv/etc/{names}/{name_csv}'.format(names = name, name_csv = name_csv)
+        path = '/home/ec2-user/environment/warframets/data/csv/etc/{names}/{name_csv}'.format(names = name, name_csv = name_csv)
     elif types == 'weapon_mods':
         name_csv = name + '.csv'
-        path = '/workspace/crawling/data/csv/mod/{names}/{name_csv}'.format(names = name, name_csv = name_csv)
+        path = '/home/ec2-user/environment/warframets/data/csv/mod/{names}/{name_csv}'.format(names = name, name_csv = name_csv)
     else:
-        path = '/workspace/crawling/data/csv/{types}/{name}/{name_csv}'.format(types = types, name = names, name_csv = name_csv)
+        path = '/home/ec2-user/environment/warframets/data/csv/{types}/{name}/{name_csv}'.format(types = types, name = names, name_csv = name_csv)
     get_path = path
     if os.path.isfile(get_path):
         result = pd.read_csv(get_path, index_col = 0)
@@ -69,7 +69,7 @@ def read_csv(name, types):
 
 def input_item(etc):
     item = str(etc)
-    path = '/workspace/crawling/data/json/{etc}.json'.format(etc = item)
+    path = '/home/ec2-user/environment/warframets/data/json/{etc}.json'.format(etc = item)
     with open(path, "r") as json_file:
         json_data = json.load(json_file)
 
@@ -82,7 +82,7 @@ def input_item(etc):
 
 def input_item_kr(etc):
     item = str(etc)
-    path = '/workspace/crawling/data/json/{etc}.json'.format(etc = item)
+    path = '/home/ec2-user/environment/warframets/data/json/{etc}.json'.format(etc = item)
     with open(path, "r") as json_file:
         json_data = json.load(json_file)
 
@@ -95,7 +95,7 @@ def input_item_kr(etc):
 
 def input_item_en(etc):
     item = str(etc)
-    path = '/workspace/crawling/data/json/{etc}.json'.format(etc = item)
+    path = '/home/ec2-user/environment/warframets/data/json/{etc}.json'.format(etc = item)
     with open(path, "r") as json_file:
         json_data = json.load(json_file)
 
@@ -108,7 +108,7 @@ def input_item_en(etc):
 
 def input_item_type(etc):
     item = str(etc)
-    path = '/workspace/crawling/data/json/{etc}.json'.format(etc = item)
+    path = '/home/ec2-user/environment/warframets/data/json/{etc}.json'.format(etc = item)
     with open(path, "r") as json_file:
         json_data = json.load(json_file)
 
@@ -137,8 +137,8 @@ def get_all_item():
 
     for i, v in enumerate(input_items_0):
         item = str(v) + '_set'
-        path = '/workspace/crawling/data/csv/warframe/' + item + '/' + item + '.csv'
-        path_0 = '/workspace/crawling/data/csv/warframe/' + item
+        path = '/home/ec2-user/environment/warframets/data/csv/warframe/' + item + '/' + item + '.csv'
+        path_0 = '/home/ec2-user/environment/warframets/data/csv/warframe/' + item
         img = str(v.title())
         path_1 = 'image/item_image/warframe/' + img + '/' + img + '.png'
         all_item.append(item)
@@ -165,8 +165,8 @@ def get_all_item():
 
     for i, v in enumerate(input_items_1):
         item = str(v) + '_set'
-        path = '/workspace/crawling/data/csv/weapon/' + item + '/' + item + '.csv'
-        path_0 = '/workspace/crawling/data/csv/weapon/' + item
+        path = '/home/ec2-user/environment/warframets/data/csv/weapon/' + item + '/' + item + '.csv'
+        path_0 = '/home/ec2-user/environment/warframets/data/csv/weapon/' + item
         img = str(v.title())
         path_1 = 'image/item_image/weapon/' + img + '/' + img + '.png'
         all_item.append(item)
@@ -193,8 +193,8 @@ def get_all_item():
 
     for i, v in enumerate(input_items_2):
         item = str(v)
-        path = '/workspace/crawling/data/csv/weapon/' + item + '/' + item + '.csv'
-        path_0 = '/workspace/crawling/data/csv/weapon/' + item
+        path = '/home/ec2-user/environment/warframets/data/csv/weapon/' + item + '/' + item + '.csv'
+        path_0 = '/home/ec2-user/environment/warframets/data/csv/weapon/' + item
         img = str(v.title())
         path_1 = 'image/item_image/weapon/' + img + '/' + img + '.png'
         all_item.append(item)
@@ -221,8 +221,8 @@ def get_all_item():
 
     for i, v in enumerate(input_items_3):
         item = str(v)
-        path = '/workspace/crawling/data/csv/mod/' + item + '/' + item + '.csv'
-        path_0 = '/workspace/crawling/data/csv/mod/' + item
+        path = '/home/ec2-user/environment/warframets/data/csv/mod/' + item + '/' + item + '.csv'
+        path_0 = '/home/ec2-user/environment/warframets/data/csv/mod/' + item
         img = str(v.title())
         path_1 = 'image/item_image/mod/' + img + '/' + img + '.png'
         all_item.append(item)
@@ -249,8 +249,8 @@ def get_all_item():
 
     for i, v in enumerate(input_items_4):
         item = str(v)
-        path = '/workspace/crawling/data/csv/mod/' + item + '/' + item + '.csv'
-        path_0 = '/workspace/crawling/data/csv/mod/' + item
+        path = '/home/ec2-user/environment/warframets/data/csv/mod/' + item + '/' + item + '.csv'
+        path_0 = '/home/ec2-user/environment/warframets/data/csv/mod/' + item
         img = str(v.title())
         path_1 = 'image/item_image/mod/' + img + '/' + img + '.png'
         all_item.append(item)
@@ -277,8 +277,8 @@ def get_all_item():
 
     for i, v in enumerate(input_items_5):
         item = str(v)
-        path = '/workspace/crawling/data/csv/etc/' + item + '/' + item + '.csv'
-        path_0 = '/workspace/crawling/data/csv/etc/' + item
+        path = '/home/ec2-user/environment/warframets/data/csv/etc/' + item + '/' + item + '.csv'
+        path_0 = '/home/ec2-user/environment/warframets/data/csv/etc/' + item
         img = str(v.title())
         path_1 = 'image/item_image/etc/' + img + '/' + img + '.png'
         all_item.append(item)
@@ -305,8 +305,8 @@ def get_all_item():
 
     for i, v in enumerate(input_items_6):
         item = str(v)
-        path = '/workspace/crawling/data/csv/mod/' + item + '/' + item + '.csv'
-        path_0 = '/workspace/crawling/data/csv/mod/' + item
+        path = '/home/ec2-user/environment/warframets/data/csv/mod/' + item + '/' + item + '.csv'
+        path_0 = '/home/ec2-user/environment/warframets/data/csv/mod/' + item
         img = str(v.title())
         path_1 = 'image/item_image/mod/' + img + '/' + img + '.png'
         all_item.append(item)
@@ -437,25 +437,25 @@ def change_to_kr(csv_name, etc, text):
     item_en_name = []
     item_kr_name = []
 
-    with open('/workspace/crawling/data/json/warframes.json', 'r') as file:
+    with open('/home/ec2-user/environment/warframets/data/json/warframes.json', 'r') as file:
         json_data = json.load(file)
     result_data = json_data['warframes']
-    with open('/workspace/crawling/data/json/weapons.json', 'r') as file_1:
+    with open('/home/ec2-user/environment/warframets/data/json/weapons.json', 'r') as file_1:
         json_data_1 = json.load(file_1)
     result_data_1 = json_data_1['weapons']
-    with open('/workspace/crawling/data/json/weapons_etc.json', 'r') as file_2:
+    with open('/home/ec2-user/environment/warframets/data/json/weapons_etc.json', 'r') as file_2:
         json_data_2 = json.load(file_2)
     result_data_2 = json_data_2['weapons_etc']
-    with open('/workspace/crawling/data/json/aura_mods.json', 'r') as file_3:
+    with open('/home/ec2-user/environment/warframets/data/json/aura_mods.json', 'r') as file_3:
         json_data_3 = json.load(file_3)
     result_data_3 = json_data_3['aura_mods']
-    with open('/workspace/crawling/data/json/warframe_mods.json', 'r') as file_4:
+    with open('/home/ec2-user/environment/warframets/data/json/warframe_mods.json', 'r') as file_4:
         json_data_4 = json.load(file_4)
     result_data_4 = json_data_4['warframe_mods']
-    with open('/workspace/crawling/data/json/items_etc.json', 'r') as file_5:
+    with open('/home/ec2-user/environment/warframets/data/json/items_etc.json', 'r') as file_5:
         json_data_5 = json.load(file_5)
     result_data_5 = json_data_5['items_etc']
-    with open('/workspace/crawling/data/json/weapon_mods.json', 'r') as file_6:
+    with open('/home/ec2-user/environment/warframets/data/json/weapon_mods.json', 'r') as file_6:
         json_data_6 = json.load(file_6)
     result_data_6 = json_data_6['weapon_mods']
 
@@ -515,7 +515,7 @@ def change_to_kr(csv_name, etc, text):
         item_en_name.append(str(en_result))
         item_kr_name.append(str(kr_result))
 
-    path = '/workspace/crawling/data/csv/result/{name}.csv'.format(name = csv_name)
+    path = '/home/ec2-user/environment/warframets/data/csv/result/{name}.csv'.format(name = csv_name)
     resource = read_csv_file(path)
 
     result_all = []
@@ -547,25 +547,25 @@ def change_to_en(csv_name, etc, text):
     item_en_name = []
     item_kr_name = []
 
-    with open('/workspace/crawling/data/json/warframes.json', 'r') as file:
+    with open('/home/ec2-user/environment/warframets/data/json/warframes.json', 'r') as file:
         json_data = json.load(file)
     result_data = json_data['warframes']
-    with open('/workspace/crawling/data/json/weapons.json', 'r') as file_1:
+    with open('/home/ec2-user/environment/warframets/data/json/weapons.json', 'r') as file_1:
         json_data_1 = json.load(file_1)
     result_data_1 = json_data_1['weapons']
-    with open('/workspace/crawling/data/json/weapons_etc.json', 'r') as file_2:
+    with open('/home/ec2-user/environment/warframets/data/json/weapons_etc.json', 'r') as file_2:
         json_data_2 = json.load(file_2)
     result_data_2 = json_data_2['weapons_etc']
-    with open('/workspace/crawling/data/json/aura_mods.json', 'r') as file_3:
+    with open('/home/ec2-user/environment/warframets/data/json/aura_mods.json', 'r') as file_3:
         json_data_3 = json.load(file_3)
     result_data_3 = json_data_3['aura_mods']
-    with open('/workspace/crawling/data/json/warframe_mods.json', 'r') as file_4:
+    with open('/home/ec2-user/environment/warframets/data/json/warframe_mods.json', 'r') as file_4:
         json_data_4 = json.load(file_4)
     result_data_4 = json_data_4['warframe_mods']
-    with open('/workspace/crawling/data/json/items_etc.json', 'r') as file_5:
+    with open('/home/ec2-user/environment/warframets/data/json/items_etc.json', 'r') as file_5:
         json_data_5 = json.load(file_5)
     result_data_5 = json_data_5['items_etc']
-    with open('/workspace/crawling/data/json/weapon_mods.json', 'r') as file_6:
+    with open('/home/ec2-user/environment/warframets/data/json/weapon_mods.json', 'r') as file_6:
         json_data_6 = json.load(file_6)
     result_data_6 = json_data_6['weapon_mods']
 
@@ -625,7 +625,7 @@ def change_to_en(csv_name, etc, text):
         item_en_name.append(str(en_result))
         item_kr_name.append(str(kr_result))
 
-    path = '/workspace/crawling/data/csv/result/{name}.csv'.format(name = csv_name)
+    path = '/home/ec2-user/environment/warframets/data/csv/result/{name}.csv'.format(name = csv_name)
     resource = read_csv_file(path)
 
     result_all = []
@@ -669,7 +669,7 @@ def get_visit():
 
     visit_count = session.get('visit_count') != 1
 
-    with open('/workspace/crawling/data/json/visitant.json', "r") as json_visit:
+    with open('/home/ec2-user/environment/warframets/data/json/visitant.json', "r") as json_visit:
         visit_data = json.load(json_visit)
 
     if visit_count:
@@ -683,10 +683,10 @@ def get_visit():
         year_month["count"] = visit_data["date"]["count"] + 1
         query_1["date"] = year_month
 
-        with open('/workspace/crawling/data/json/visitant.json', 'w', encoding='utf-8') as update_visit:
+        with open('/home/ec2-user/environment/warframets/data/json/visitant.json', 'w', encoding='utf-8') as update_visit:
             json.dump(query_1, update_visit, indent = 4)
 
-    with open('/workspace/crawling/data/json/visitant.json', "r") as json_visits:
+    with open('/home/ec2-user/environment/warframets/data/json/visitant.json', "r") as json_visits:
         visits_data = json.load(json_visits)
     result = visits_data["date"]["count"]
     return result
@@ -2189,7 +2189,7 @@ def category():
     #test_data = pd.DataFrame(test)
     #test_data.to_excel('test.xlsx')
 
-    path = '/workspace/crawling/data/json/recommend_0.json'
+    path = '/home/ec2-user/environment/warframets/data/json/recommend_0.json'
     with open(path, "r", encoding="UTF-8") as json_file:
         json_data = json.load(json_file, strict = False)
         json_datas = json.dumps(json_data, ensure_ascii=False)
@@ -2735,7 +2735,7 @@ def category_en():
     #test_data = pd.DataFrame(test)
     #test_data.to_excel('test.xlsx')
 
-    path = '/workspace/crawling/data/json/recommend_0.json'
+    path = '/home/ec2-user/environment/warframets/data/json/recommend_0.json'
     with open(path, "r", encoding="UTF-8") as json_file:
         json_data = json.load(json_file, strict = False)
         json_datas = json.dumps(json_data, ensure_ascii=False)
@@ -3361,7 +3361,7 @@ def notice():
     visit_count = get_visit()
     all_item, all_item_kr, all_item_en, all_path, all_path_0, all_path_1, all_type, all_type_kr, all_type_en = get_all_item()
 
-    path = '/workspace/crawling/data/json/info/notice_data.json'
+    path = '/home/ec2-user/environment/warframets/data/json/info/notice_data.json'
     with open(path, "r", encoding="UTF-8") as json_file:
         json_data_0 = json.load(json_file, strict = False)
 
@@ -3394,7 +3394,7 @@ def notice():
     youtube_0.reverse()
     date_0.reverse()
 
-    path_1 = '/workspace/crawling/data/json/info/info_data_0.json'
+    path_1 = '/home/ec2-user/environment/warframets/data/json/info/info_data_0.json'
     with open(path_1, "r", encoding="UTF-8") as json_file_1:
         json_data_1 = json.load(json_file_1, strict = False)
 
@@ -3418,7 +3418,7 @@ def notice():
         youtube_1.append(i["youtube"])
         date_1.append(i["date"])
 
-    path = '/workspace/crawling/data/json/info/info_data_2.json'
+    path = '/home/ec2-user/environment/warframets/data/json/info/info_data_2.json'
     with open(path, "r", encoding="UTF-8") as json_file:
         json_data_2 = json.load(json_file, strict = False)
 
@@ -3451,7 +3451,7 @@ def notice_en():
     visit_count = get_visit()
     all_item, all_item_kr, all_item_en, all_path, all_path_0, all_path_1, all_type, all_type_kr, all_type_en = get_all_item()
 
-    path = '/workspace/crawling/data/json/info/notice_data_en.json'
+    path = '/home/ec2-user/environment/warframets/data/json/info/notice_data_en.json'
     with open(path, "r", encoding="UTF-8") as json_file:
         json_data_0 = json.load(json_file, strict = False)
 
@@ -3484,7 +3484,7 @@ def notice_en():
     youtube_0.reverse()
     date_0.reverse()
 
-    path_1 = '/workspace/crawling/data/json/info/info_data_0.json'
+    path_1 = '/home/ec2-user/environment/warframets/data/json/info/info_data_0.json'
     with open(path_1, "r", encoding="UTF-8") as json_file_1:
         json_data_1 = json.load(json_file_1, strict = False)
 
@@ -3508,7 +3508,7 @@ def notice_en():
         youtube_1.append(i["youtube"])
         date_1.append(i["date"])
 
-    path = '/workspace/crawling/data/json/info/info_data_2.json'
+    path = '/home/ec2-user/environment/warframets/data/json/info/info_data_2.json'
     with open(path, "r", encoding="UTF-8") as json_file:
         json_data_2 = json.load(json_file, strict = False)
 
@@ -4137,19 +4137,19 @@ def new_index():
     weapon_path = '../data/csv/weapon'
 
     for i, v in enumerate(os.listdir(etc_path)):
-        path_name = '/workspace/crawling/data/csv/etc/' + str(v) + '/' + str(v) + '.csv'
+        path_name = '/home/ec2-user/environment/warframets/data/csv/etc/' + str(v) + '/' + str(v) + '.csv'
         get_item.append(v)
         get_path.append(path_name)
     for i, v in enumerate(os.listdir(mod_path)):
-        path_name = '/workspace/crawling/data/csv/mod/' + str(v) + '/' + str(v) + '.csv'
+        path_name = '/home/ec2-user/environment/warframets/data/csv/mod/' + str(v) + '/' + str(v) + '.csv'
         get_item.append(v)
         get_path.append(path_name)
     for i, v in enumerate(os.listdir(warframe_path)):
-        path_name = '/workspace/crawling/data/csv/warframe/' + str(v) + '/' + str(v) + '.csv'
+        path_name = '/home/ec2-user/environment/warframets/data/csv/warframe/' + str(v) + '/' + str(v) + '.csv'
         get_item.append(v)
         get_path.append(path_name)
     for i, v in enumerate(os.listdir(weapon_path)):
-        path_name = '/workspace/crawling/data/csv/weapon/' + str(v) + '/' + str(v) + '.csv'
+        path_name = '/home/ec2-user/environment/warframets/data/csv/weapon/' + str(v) + '/' + str(v) + '.csv'
         get_item.append(v)
         get_path.append(path_name)
 
@@ -4194,4 +4194,6 @@ if __name__ == '__main__':
     #ssl_context = ssl.SSLContext(ssl.PROTOCOL_TLS)
     #ssl_context.load_cert_chain(certfile='', keyfile='', password='')
     app.static_folder = 'static'
-    app.run(host = '0.0.0.0', port = 5001, debug = False)
+    app.run(host = '0.0.0.0', port = 8080, debug = False)
+#nohup python3 flask_app.py &
+#service cron start

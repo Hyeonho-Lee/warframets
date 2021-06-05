@@ -27,7 +27,7 @@ def find_item(path):
     #result_date = int((today_date - mnd_date).days)
     return item_data
 
-value = find_item('/workspace/crawling/data/csv/warframe/ash_prime_set/ash_prime_set.csv')
+value = find_item('/home/ec2-user/environment/warframets/data/csv/warframe/ash_prime_set/ash_prime_set.csv')
 
 input_first_date = '2020-06-01'
 input_second_date = '2020-08-01'

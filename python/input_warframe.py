@@ -13,7 +13,7 @@ from selenium import webdriver
 
 def input_item(etc):
     item = str(etc)
-    path = '/workspace/crawling/data/json/{etc}.json'.format(etc = item)
+    path = '/home/ec2-user/environment/warframets/data/json/{etc}.json'.format(etc = item)
     with open(path, "r") as json_file:
         json_data = json.load(json_file)
 

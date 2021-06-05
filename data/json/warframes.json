@@ -7,6 +7,12 @@
             "kr_name": "로키 프라임"
         },
         {
+            "name": "gara_prime",
+            "type": "warframe",
+            "en_name": "Gara Prime",
+            "kr_name": "가라 프라임"
+        },
+        {
             "name": "octavia_prime",
             "type": "warframe",
             "en_name": "Octavia Prime",

@@ -33,7 +33,7 @@ def warframe_crawling(item, path, path_0):
     html = res.text
     soup = bs(html, 'html.parser')
 
-    with open('/workspace/crawling/data/json/warframe_data_v2.json', 'w') as file:
+    with open('/home/ec2-user/environment/warframets/data/json/warframe_data_v2.json', 'w') as file:
         data = str(soup)
         json_data = json.loads(data)
         json_data_1 = json.dumps(json_data, indent = 4)
@@ -107,8 +107,8 @@ def warframe_crawling(item, path, path_0):
 startTime = time.time()
 """
 item = 'primed_rubedo_lined_barrel'
-path = '/workspace/crawling/data/csv/mod/' + item + '/' + item + '.csv'
-path_0 = '/workspace/crawling/data/csv/mod/' + item
+path = '/home/ec2-user/environment/warframets/data/csv/mod/' + item + '/' + item + '.csv'
+path_0 = '/home/ec2-user/environment/warframets/data/csv/mod/' + item
 save_data = warframe_crawling(item, path, path_0)
 """
 
@@ -116,8 +116,8 @@ input_items = input_warframe.input_item('aura_mods')
 
 for i, v in enumerate(input_items):
     item = str(v)
-    path = '/workspace/crawling/data/csv/mod/' + item + '/' + item + '.csv'
-    path_0 = '/workspace/crawling/data/csv/mod/' + item
+    path = '/home/ec2-user/environment/warframets/data/csv/mod/' + item + '/' + item + '.csv'
+    path_0 = '/home/ec2-user/environment/warframets/data/csv/mod/' + item
     save_data = warframe_crawling(item, path, path_0)
     endTime = time.time() - startTime
     print(str(round(i / len(input_items) * 100)) + "% 완료했습니다. 시간: " + str(round(endTime)) + "초")
@@ -126,8 +126,8 @@ input_items = input_warframe.input_item('warframe_mods')
 
 for i, v in enumerate(input_items):
     item = str(v)
-    path = '/workspace/crawling/data/csv/mod/' + item + '/' + item + '.csv'
-    path_0 = '/workspace/crawling/data/csv/mod/' + item
+    path = '/home/ec2-user/environment/warframets/data/csv/mod/' + item + '/' + item + '.csv'
+    path_0 = '/home/ec2-user/environment/warframets/data/csv/mod/' + item
     save_data = warframe_crawling(item, path, path_0)
     endTime = time.time() - startTime
     print(str(round(i / len(input_items) * 100)) + "% 완료했습니다. 시간: " + str(round(endTime)) + "초")
@@ -136,8 +136,8 @@ input_items = input_warframe.input_item('weapon_mods')
 
 for i, v in enumerate(input_items):
     item = str(v)
-    path = '/workspace/crawling/data/csv/mod/' + item + '/' + item + '.csv'
-    path_0 = '/workspace/crawling/data/csv/mod/' + item
+    path = '/home/ec2-user/environment/warframets/data/csv/mod/' + item + '/' + item + '.csv'
+    path_0 = '/home/ec2-user/environment/warframets/data/csv/mod/' + item
 
     save_data = warframe_crawling(item, path, path_0)
     endTime = time.time() - startTime

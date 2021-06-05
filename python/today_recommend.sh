@@ -1,5 +1,5 @@
 #!/bin/bash
-cd /workspace/crawling
+cd /home/ec2-user/environment/warframets
 sleep 5
-/usr/local/bin/python3 /workspace/crawling/python/today_recommend.py
+/usr/local/bin/python3 /home/ec2-user/environment/warframets/python/today_recommend.py
 echo "정산 하였습니다."

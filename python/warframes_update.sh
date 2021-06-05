@@ -1,5 +1,5 @@
 #!/bin/bash
-cd /workspace/crawling
+cd /home/ec2-user/environment/warframets
 sleep 5
-/usr/local/bin/python3 /workspace/crawling/python/warframes_update.py
+/usr/local/bin/python3 /home/ec2-user/environment/warframets/python/warframes_update.py
 echo "워프레임 업데이트를 하였습니다."

@@ -7,6 +7,18 @@
             "kr_name": "바자 프라임"
         },
         {
+            "name": "volnus_prime",
+            "type": "melee",
+            "en_name": "Volnus Prime",
+            "kr_name": "볼누스 프라임"
+        },
+        {
+            "name": "astilla_prime",
+            "type": "primary",
+            "en_name": "Astilla Prime",
+            "kr_name": "아스틸라 프라임"
+        },
+        {
             "name": "tenora_prime",
             "type": "primary",
             "en_name": "Tenora Prime",
