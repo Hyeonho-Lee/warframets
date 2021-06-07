@@ -13,10 +13,10 @@
         <!--<title>Warframe Trade Status (All Popular Item Statistics)</title>-->
         <!--<meta name="description" content="This is a Warframe trade status site to analyze the prices of Warframe items and show the trade status at a glance.">-->
         <meta name="keyword" content="warframe, weapon, mod, trade, platinum, price, status, market, shop, wts, set, statistics">
-        <link rel="canonical" href="https://www.warframets.shop/">
-        <link rel="alternate" href="https://www.warframets.shop/notice/">
-        <link rel="alternate" href="https://www.warframets.shop/category/">
-        <link rel="alternate" href="https://www.warframets.shop/economy/">
+        <link rel="canonical" href="https://warframets.shop/">
+        <link rel="alternate" href="https://warframets.shop/notice/">
+        <link rel="alternate" href="https://warframets.shop/category/">
+        <link rel="alternate" href="https://warframets.shop/economy/">
         <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
         <!---------------------------------------------------------------------->
         <link rel="stylesheet" type = "text/css" href = "{{ url_for('static', filename = 'css/index.css', v = 0.1) }}" />
@@ -154,44 +154,6 @@
                     </ul>
                 </li>
                 <li class="header_info">
-                    <!--<div class="header_color_box">
-                        <i class="fas fa-palette"></i>
-                        <p>Color</p>
-                        <div class="header_color_list">
-                            <div class="header_color_list_1">
-                                <a onclick="change_bg_1('#2a2a2a'); change_lb_1('#dbdcd9'); change_ft_1('#ffffff'); change_mu_1('#ff7373'); change_wp_1('#ffffff');">기본</a>
-                                <input type="color" value="#2a2a2a" disabled>
-                                <input type="color" value="#dbdcd9" disabled>
-                                <input type="color" value="#ffffff" disabled>
-                                <input type="color" value="#ff7373" disabled>
-                                <input type="color" value="#ffffff" disabled>
-                            </div>
-                            <div class="header_color_list_2">
-                                <a onclick="change_bg_1('#27343F'); change_lb_1('#BECBD0'); change_ft_1('#FFFFFF'); change_mu_1('#DF3A3A'); change_wp_1('#E9EBF1');">톰브라운</a>
-                                <input type="color" value="#27343F" disabled>
-                                <input type="color" value="#BECBD0" disabled>
-                                <input type="color" value="#FFFFFF" disabled>
-                                <input type="color" value="#DF3A3A" disabled>
-                                <input type="color" value="#E9EBF1" disabled>
-                            </div>
-                            <div class="header_color_list_3">
-                                <a onclick="change_bg_1('#A2B59F'); change_lb_1('#E2D2D2'); change_ft_1('#E3E2B4'); change_mu_1('#BFC8D7'); change_wp_1('#ffffff');">파스텔</a>
-                                <input type="color" value="#A2B59F" disabled>
-                                <input type="color" value="#E2D2D2" disabled>
-                                <input type="color" value="#E3E2B4" disabled>
-                                <input type="color" value="#BFC8D7" disabled>
-                                <input type="color" value="#ffffff" disabled>
-                            </div>
-                            <div class="header_color_list_4">
-                                <a onclick="change_ct_1();">커스텀</a>
-                                <input type="color" value="#2a2a2a" id="custom_color_1">
-                                <input type="color" value="#dbdcd9" id="custom_color_2">
-                                <input type="color" value="#ffffff" id="custom_color_3">
-                                <input type="color" value="#ff7373" id="custom_color_4">
-                                <input type="color" value="#ffffff" id="custom_color_5">
-                            </div>
-                        </div>
-                    </div>-->
                     <div class="header_language_box">
                         <i class="fas fa-globe"></i>
                         <p>KO</p>
@@ -264,7 +226,8 @@
                                 table_value.rows[{{i}}].cells[0].innerHTML = "<a>{{ t_top_percent[i - 1] }}%</a>";
                                 table_value.rows[{{i}}].cells[2].innerHTML = "<a >▲</a>";
                                 var result = table_value.rows[{{i}}].cells[1].innerText;
-                                table_value.rows[{{i}}].cells[1].innerHTML = "<div><div class='item_name'><a href='result/{{ t_top_kr_name[i - 1] }}'>{{ t_top_kr_name[i - 1] }}</a></div><div class = 'item_box'><img alt='{{ t_top_kr_name[i - 1] }}'src='{{ url_for('static', filename = t_top_path_1[i - 1], v = 0.1) }}'></div></div>";
+                                //table_value.rows[{{i}}].cells[1].innerHTML = "<div><div class='item_name' onClick=\"location.href=\'/result/{{ t_top_kr_name[i - 1] }}/\'\"><a>{{ t_top_kr_name[i - 1] }}</a></div><div class = 'item_box'><img alt='{{ t_top_kr_name[i - 1] }}'src='{{ url_for('static', filename = t_top_path_1[i - 1], v = 0.1) }}'></div></div>";
+                                table_value.rows[{{i}}].cells[1].innerHTML = "<div><div class='item_name'><a href='https://www.warframets.shop/result/{{ t_top_kr_name[i - 1] }}'>{{ t_top_kr_name[i - 1] }}</a></div><div class = 'item_box'><img alt='{{ t_top_kr_name[i - 1] }}'src='{{ url_for('static', filename = t_top_path_1[i - 1], v = 0.1) }}'></div></div>";
                                 {% endfor %}
                             }
 
@@ -275,7 +238,8 @@
                                 table_value.rows[{{i}}].cells[0].innerHTML = "<a>{{ t_bottom_percent[i - 1] }}%</a>";
                                 table_value.rows[{{i}}].cells[2].innerHTML = "<a style='color:blue;'>▼</a>";
                                 var result = table_value.rows[{{i}}].cells[1].innerText;
-                                table_value.rows[{{i}}].cells[1].innerHTML = "<div><div class='item_name'><a href='result/{{ t_bottom_kr_name[i - 1] }}'>{{ t_bottom_kr_name[i - 1] }}</a></div><div class = 'item_box'><img alt='{{ t_bottom_kr_name[i - 1] }}'src='{{ url_for('static', filename = t_bottom_path_1[i - 1], v = 0.1) }}'></div></div>";
+                                //table_value.rows[{{i}}].cells[1].innerHTML = "<div><div class='item_name' onClick=\"location.href=\'/result/{{ t_bottom_kr_name[i - 1] }}\'\"><a>{{ t_bottom_kr_name[i - 1] }}</a></div><div class = 'item_box'><img alt='{{ t_bottom_kr_name[i - 1] }}'src='{{ url_for('static', filename = t_bottom_path_1[i - 1], v = 0.1) }}'></div></div>";
+                                table_value.rows[{{i}}].cells[1].innerHTML = "<div><div class='item_name'><a href='https://www.warframets.shop/result/{{ t_bottom_kr_name[i - 1] }}'>{{ t_bottom_kr_name[i - 1] }}</a></div><div class = 'item_box'><img alt='{{ t_bottom_kr_name[i - 1] }}'src='{{ url_for('static', filename = t_bottom_path_1[i - 1], v = 0.1) }}'></div></div>";
                                 {% endfor %}
                             }
                             
@@ -341,7 +305,7 @@
                                 <tbody>
                                     {% for i in range(1, t_all_name_count + 1 ) %}
                                     <tr class = "items" onclick="">
-                                        <td class="item2_name"><a href='result/{{ t_all_kr_name[i - 1] }}'>{{ t_all_kr_name[i - 1] }}</a></td>
+                                        <td class="item2_name" onClick="location.href='/result/{{ t_all_kr_name[i - 1] }}/'"><a>{{ t_all_kr_name[i - 1] }}</a></td>
                                         <td class="item2_name"><a>{{ t_all_price[i - 1] }}</a></td>
                                         <td class="item2_name"><a>{{ t_all_befores[i - 1] }}</a></td>
                                         <td class="item2_name"><a>{{ t_all_before[i - 1] }}</a></td>
