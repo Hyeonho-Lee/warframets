@@ -7,6 +7,18 @@
             "kr_name": "프라임드 파이어스톰"
         },
         {
+            "name": "primed_chilling_grasp",
+            "type": "primary_mod",
+            "en_name": "Primed Chilling Grasp",
+            "kr_name": "프라임드 칠링 그래스프"
+        },
+        {
+            "name": "primed_chilling_grasp(max)",
+            "type": "primary_mod",
+            "en_name": "Primed Chilling Grasp(max)",
+            "kr_name": "프라임드 칠링 그래스프(max)"
+        },
+        {
             "name": "primed_firestorm(max)",
             "type": "primary_mod",
             "en_name": "Primed Firestorm(max)",

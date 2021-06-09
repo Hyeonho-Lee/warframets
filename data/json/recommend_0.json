@@ -571,6 +571,28 @@
             "price": 0,
             "percent": 0,
             "volume": 0
+        },
+        {
+            "image": "./image/item_image/mod/Primed_Chilling_Grasp/Primed_Chilling_Grasp.png",
+            "subject": "프라임드 모드 모음집",
+            "name": "primed_chilling_grasp",
+            "type": "primary_mod",
+            "en_name": "Primed Chilling Grasp",
+            "kr_name": "프라임드 칠링 그래스프",
+            "price": 0,
+            "percent": 0,
+            "volume": 0
+        },
+        {
+            "image": "./image/item_image/mod/Primed_Chilling_Grasp/Primed_Chilling_Grasp.png",
+            "subject": "프라임드 모드 모음집",
+            "name": "primed_chilling_grasp(max)",
+            "type": "primary_mod",
+            "en_name": "Primed Chilling Grasp(max)",
+            "kr_name": "프라임드 칠링 그래스프(max)",
+            "price": 0,
+            "percent": 0,
+            "volume": 0
         }
     ]
 }
