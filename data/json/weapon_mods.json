@@ -7,6 +7,72 @@
             "kr_name": "프라임드 파이어스톰"
         },
         {
+            "name": "galvanized_aptitude",
+            "type": "primary_mod",
+            "en_name": "Galvanized Aptitude",
+            "kr_name": "갈바나이즈드 앱티튜드"
+        },
+        {
+            "name": "galvanized_chamber",
+            "type": "primary_mod",
+            "en_name": "Galvanized Chamber",
+            "kr_name": "갈바나이즈드 체임버"
+        },
+        {
+            "name": "galvanized_scope",
+            "type": "primary_mod",
+            "en_name": "Galvanized Scope",
+            "kr_name": "갈바나이즈드 스코프"
+        },
+        {
+            "name": "galvanized_acceleration",
+            "type": "shotgun_mod",
+            "en_name": "Galvanized Acceleration",
+            "kr_name": "갈바나이즈드 액셀러레이션"
+        },
+        {
+            "name": "galvanized_hell",
+            "type": "shotgun_mod",
+            "en_name": "Galvanized Hell",
+            "kr_name": "갈바나이즈드 헬"
+        },
+        {
+            "name": "galvanized_savvy",
+            "type": "shotgun_mod",
+            "en_name": "Galvanized Savvy",
+            "kr_name": "갈바나이즈드 새비"
+        },
+        {
+            "name": "galvanized_crosshairs",
+            "type": "pistol_mod",
+            "en_name": "Galvanized Crosshairs",
+            "kr_name": "갈바나이즈드 크로스헤어"
+        },
+        {
+            "name": "galvanized_diffusion",
+            "type": "pistol_mod",
+            "en_name": "Galvanized Diffusion",
+            "kr_name": "갈바나이즈드 디퓨젼"
+        },
+        {
+            "name": "galvanized_shot",
+            "type": "pistol_mod",
+            "en_name": "Galvanized Shot",
+            "kr_name": "갈바나이즈드 샷"
+        },
+        {
+            "name": "primed_tactical_pump",
+            "type": "primary_mod",
+            "en_name": "Primed Tactical Pump",
+            "kr_name": "프라임드 택티컬 펌프"
+        },
+        {
+            "name": "primed_tactical_pump(max)",
+            "type": "primary_mod",
+            "en_name": "Primed Tactical Pump(max)",
+            "kr_name": "프라임드 택티컬 펌프(max)"
+        },
+        {
             "name": "primed_chilling_grasp",
             "type": "primary_mod",
             "en_name": "Primed Chilling Grasp",

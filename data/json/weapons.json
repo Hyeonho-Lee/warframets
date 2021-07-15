@@ -7,6 +7,12 @@
             "kr_name": "바자 프라임"
         },
         {
+            "name": "wolf_sledge",
+            "type": "melee",
+            "en_name": "Wolf Sledge",
+            "kr_name": "울프 슬레지"
+        },
+        {
             "name": "volnus_prime",
             "type": "melee",
             "en_name": "Volnus Prime",

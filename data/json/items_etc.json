@@ -7,6 +7,42 @@
             "kr_name": "아케인 콘시퀀스"
         },
         {
+            "name": "primary_deadhead",
+            "type": "arcane",
+            "en_name": "primary_deadhead",
+            "kr_name": "프라이머리 데드헤드"
+        },
+        {
+            "name": "primary_dexterity",
+            "type": "arcane",
+            "en_name": "primary_dexterity",
+            "kr_name": "프라이머리 덱스터리티"
+        },
+        {
+            "name": "primary_merciless",
+            "type": "arcane",
+            "en_name": "primary_merciless",
+            "kr_name": "프라이머리 머시리스"
+        },
+        {
+            "name": "secondary_deadhead",
+            "type": "arcane",
+            "en_name": "secondary_deadhead",
+            "kr_name": "세컨더리 데드헤드"
+        },
+        {
+            "name": "secondary_dexterity",
+            "type": "arcane",
+            "en_name": "secondary_dexterity",
+            "kr_name": "세컨더리 덱스터리티"
+        },
+        {
+            "name": "secondary_merciless",
+            "type": "arcane",
+            "en_name": "secondary_merciless",
+            "kr_name": "세컨더리 머시리스"
+        },
+        {
             "name": "arcane_ice",
             "type": "arcane",
             "en_name": "Arcane Ice",
