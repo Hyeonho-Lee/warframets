@@ -7,6 +7,42 @@
             "kr_name": "락타 세르노스"
         },
         {
+            "name": "halikar_wraith",
+            "type": "melee",
+            "en_name": "Halikar Wraith",
+            "kr_name": "할리카르 레이스"
+        },
+        {
+            "name": "prisma_machete",
+            "type": "melee",
+            "en_name": "Prisma Machete",
+            "kr_name": "프리즈마 마체테"
+        },
+        {
+            "name": "opticor_vandal",
+            "type": "primary",
+            "en_name": "Opticor Vandal",
+            "kr_name": "옵티코어 반달"
+        },
+        {
+            "name": "prisma_veritux",
+            "type": "primary",
+            "en_name": "Prisma Veritux",
+            "kr_name": "프리즈마 베리턱스"
+        },
+        {
+            "name": "prisma_dual_decurion",
+            "type": "melee",
+            "en_name": "Prisma Dual Decurion",
+            "kr_name": "프리즈마 듀얼 데큐리온"
+        },
+        {
+            "name": "glaxion_vandal",
+            "type": "primary",
+            "en_name": "Glaxion Vandal",
+            "kr_name": "글랙시온 반달"
+        },
+        {
             "name": "basmu_blueprint",
             "type": "primary",
             "en_name": "Basmu",
