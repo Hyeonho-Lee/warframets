@@ -3,8 +3,14 @@
         {
             "name": "baza_prime",
             "type": "primary",
-            "en_name": "Baza prime",
+            "en_name": "Baza Prime",
             "kr_name": "바자 프라임"
+        },
+        {
+            "name": "ambassador",
+            "type": "primary",
+            "en_name": "Ambassador",
+            "kr_name": "앰배서더"
         },
         {
             "name": "wolf_sledge",

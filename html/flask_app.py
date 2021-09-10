@@ -3,6 +3,8 @@ import sys
 import json
 import math
 import datetime
+import warnings
+warnings.simplefilter(action='ignore', category=FutureWarning)
 import pandas as pd
 import numpy as np
 import random

@@ -523,12 +523,6 @@
             "kr_name": "어질리티 드리프트"
         },
         {
-            "name": "armored_agility",
-            "type": "warframe_mod",
-            "en_name": "Armored Agility",
-            "kr_name": "아머드 어질리티"
-        },
-        {
             "name": "augur_accord",
             "type": "warframe_mod",
             "en_name": "Augur Accord",

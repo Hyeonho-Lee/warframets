@@ -1177,12 +1177,6 @@
             "kr_name": "드리프팅 컨택트"
         },
         {
-            "name": "enduring_affliction",
-            "type": "melee_mod",
-            "en_name": "Enduring Affliction",
-            "kr_name": "엔듀어링 어플릭션"
-        },
-        {
             "name": "enduring_strike",
             "type": "melee_mod",
             "en_name": "Enduring Strike",

@@ -1,5 +1,7 @@
 import os
 import json
+import warnings
+warnings.simplefilter(action='ignore', category=FutureWarning)
 import pandas as pd
 import numpy as np
 from datetime import date, timedelta
