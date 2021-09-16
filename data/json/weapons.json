@@ -7,6 +7,18 @@
             "kr_name": "바자 프라임"
         },
         {
+            "name": "strun_prime",
+            "type": "primary",
+            "en_name": "Strun Prime",
+            "kr_name": "스트런 프라임"
+        },
+        {
+            "name": "magnus_prime",
+            "type": "secondary",
+            "en_name": "Magnus Prime",
+            "kr_name": "매그너스 프라임"
+        },
+        {
             "name": "ambassador",
             "type": "primary",
             "en_name": "Ambassador",
