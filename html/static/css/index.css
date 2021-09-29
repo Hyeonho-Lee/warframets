@@ -154,6 +154,7 @@ ul, ol, li {
     vertical-align: middle;
     padding-left: 40px;
     padding-right: 5px;
+    text-decoration-line: none;
 }
 
 .header_logo {
@@ -244,6 +245,7 @@ ul, ol, li {
     color: #ffffff;
     z-index: 1;
     border: 1px solid #dbdcd9;
+    text-decoration: none;
 }
 
 .header_language_list_2 {
@@ -258,6 +260,7 @@ ul, ol, li {
     color: #ffffff;
     z-index: 1;
     border: 1px solid #ffffff;
+    text-decoration: none;
 }
 
 .header_language_box:hover .header_language_list {
@@ -283,6 +286,7 @@ ul, ol, li {
     color: #ffffff;
     z-index: 2;
     border: 1px solid #dbdcd9;
+    text-decoration: none;
 }
 
 .header_language_lists_2 {
@@ -297,6 +301,7 @@ ul, ol, li {
     color: #ffffff;
     z-index: 2;
     border: 1px solid #ffffff;
+    text-decoration: none;
 }
 
 .header_language:hover .header_language_lists {
@@ -532,6 +537,7 @@ ul, ol, li {
     font-family: "Nanum Gothic", sans-serif;
     font-size: 20px;
     color: #ffffff;
+    text-decoration: none;
 }
 
 .text_menu_1 {
@@ -545,6 +551,7 @@ ul, ol, li {
     font-family: "Nanum Gothic", sans-serif;
     font-size: 20px;
     color: #ffffff;
+    text-decoration: none;
 }
 
 .icon_11 i {
@@ -564,6 +571,7 @@ ul, ol, li {
     font-family: "Nanum Gothic", sans-serif;
     font-size: 20px;
     color: #ffffff;
+    text-decoration: none;
 }
 
 .text_menu_3 {
@@ -577,6 +585,7 @@ ul, ol, li {
     font-family: "Nanum Gothic", sans-serif;
     font-size: 20px;
     color: #ffffff;
+    text-decoration: none;
 }
 
 .text_menu_4 {
@@ -590,6 +599,7 @@ ul, ol, li {
     font-family: "Nanum Gothic", sans-serif;
     font-size: 20px;
     color: #ffffff;
+    text-decoration: none;
 }
 
 .mobile_menus {
@@ -657,6 +667,7 @@ ul, ol, li {
     font-family: "Nanum Gothic", sans-serif;
     font-size: 30px;
     color: #ffffff;
+    text-decoration: none;
 }
 
 .text_menus_2 {
@@ -671,6 +682,7 @@ ul, ol, li {
     font-family: "Nanum Gothic", sans-serif;
     font-size: 30px;
     color: #ffffff;
+    text-decoration: none;
 }
 
 .text_menus_3 {
@@ -685,6 +697,7 @@ ul, ol, li {
     font-family: "Nanum Gothic", sans-serif;
     font-size: 30px;
     color: #ffffff;
+    text-decoration: none;
 }
 
 .text_menus_4 {
@@ -699,6 +712,7 @@ ul, ol, li {
     font-family: "Nanum Gothic", sans-serif;
     font-size: 30px;
     color: #ffffff;
+    text-decoration: none;
 }
 
 .header_info {
@@ -750,7 +764,7 @@ ul, ol, li {
     transform: translate(10%, -50%);
     text-align: center;
     display: inline-block;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .menu {

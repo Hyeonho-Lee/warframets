@@ -12,17 +12,6 @@ import ssl
 from io import StringIO
 from flask import Flask, url_for, render_template, request, redirect, session, Response
 
-#https://www.chartjs.org/
-#https://datatables.net/
-#https://rpc-flask-app.run.goorm.io/ 홈페이지 사이트
-#https://rpc-test-app.run.goorm.io/ 테스트 사이트
-#https://icons8.com/icons 아이콘 사이트
-#https://pixlr.com/e/ 포토샵 사이트
-#https://zamezzz.tistory.com/309
-#https://offbyone.tistory.com/260
-#https://keraskorea.github.io/posts/2018-10-25-Keras%EB%A5%BC%20%ED%99%9C%EC%9A%A9%ED%95%9C%20%EC%A3%BC%EC%8B%9D%20%EA%B0%80%EA%B2%A9%20%EC%98%88%EC%B8%A1/
-#https://github.com/llSourcell/How-to-Predict-Stock-Prices-Easily-Demo/blob/master/lstm.py
-
 #=======================================================================#
 
 def read_csv_file(path):
@@ -659,7 +648,7 @@ def get_today_date():
     date = result['datetime']
     datetime = str(date[0])
     return datetime
-
+"""
 def get_visit():
     today = datetime.datetime.now()
     year = str(today.year)
@@ -692,7 +681,7 @@ def get_visit():
         visits_data = json.load(json_visits)
     result = visits_data["date"]["count"]
     return result
-
+"""
 #=======================================================================#
 
 app = Flask(__name__)
@@ -702,7 +691,7 @@ app.secret_key = random
 @app.route('/')
 def index():
 
-    visit_count = get_visit()
+    #visit_count = get_visit()
 
     today_datetime = get_today_date()
     all_top = read_csv('all_top', 'result')
@@ -851,7 +840,7 @@ def index():
 @app.route('/en/')
 def index_value_en():
 
-    visit_count = get_visit()
+    #visit_count = get_visit()
 
     today_datetime = get_today_date()
     all_top = read_csv('all_top', 'result')
@@ -1002,7 +991,7 @@ def tests():
 ######################################################################
 @app.route('/result/<get_name>/')
 def result(get_name):
-    visit_count = get_visit()
+    #visit_count = get_visit()
     all_item, all_item_kr, all_item_en, all_path, all_path_0, all_path_1, all_type, all_type_kr, all_type_en = get_all_item()
 
     def find_path(name, types):
@@ -1169,7 +1158,7 @@ def result(get_name):
 ######################################################################
 @app.route('/en/result/<get_name>/')
 def result_en(get_name):
-    visit_count = get_visit()
+    #visit_count = get_visit()
     all_item, all_item_kr, all_item_en, all_path, all_path_0, all_path_1, all_type, all_type_kr, all_type_en = get_all_item()
 
     def find_path(name, types):
@@ -1668,14 +1657,14 @@ def csv_file_download_en(get_name):
 #####################################################################
 @app.route('/error/')
 def error():
-    visit_count = get_visit()
+    #visit_count = get_visit()
     all_item, all_item_kr, all_item_en, all_path, all_path_0, all_path_1, all_type, all_type_kr, all_type_en = get_all_item()
     return render_template('error.html', **locals())
 
 #####################################################################
 @app.route('/en/error/')
 def error_en():
-    visit_count = get_visit()
+    #visit_count = get_visit()
     all_item, all_item_kr, all_item_en, all_path, all_path_0, all_path_1, all_type, all_type_kr, all_type_en = get_all_item()
     return render_template('error_en.html', **locals())
 
@@ -1688,7 +1677,7 @@ def ads():
 
 @app.route('/temp/')
 def temp():
-    visit_count = get_visit()
+    #visit_count = get_visit()
     all_item, all_item_kr, all_item_en, all_path, all_path_0, all_path_1, all_type, all_type_kr, all_type_en = get_all_item()
 
     return render_template('temp.html', **locals())
@@ -1697,7 +1686,7 @@ def temp():
 @app.route('/category/')
 def category():
 
-    visit_count = get_visit()
+    #visit_count = get_visit()
     all_item, all_item_kr, all_item_en, all_path, all_path_0, all_path_1, all_type, all_type_kr, all_type_en = get_all_item()
 
     type_primary_item = []
@@ -2243,7 +2232,7 @@ def category():
 @app.route('/en/category/')
 def category_en():
 
-    visit_count = get_visit()
+    #visit_count = get_visit()
     all_item, all_item_kr, all_item_en, all_path, all_path_0, all_path_1, all_type, all_type_kr, all_type_en = get_all_item()
 
     type_primary_item = []
@@ -2789,7 +2778,7 @@ def category_en():
 @app.route('/calculator/<get_name>/', methods=['GET', 'POST'])
 def calculator(get_name):
 
-    visit_count = get_visit()
+    #visit_count = get_visit()
     all_item, all_item_kr, all_item_en, all_path, all_path_0, all_path_1, all_type, all_type_kr, all_type_en = get_all_item()
 
     def find_path(name, types):
@@ -3072,7 +3061,7 @@ def calculator(get_name):
 @app.route('/en/calculator/<get_name>/', methods=['GET', 'POST'])
 def calculator_en(get_name):
 
-    visit_count = get_visit()
+    #visit_count = get_visit()
     all_item, all_item_kr, all_item_en, all_path, all_path_0, all_path_1, all_type, all_type_kr, all_type_en = get_all_item()
 
     def find_path(name, types):
@@ -3352,7 +3341,7 @@ def calculator_en(get_name):
 
 @app.errorhandler(404)
 def page_not_found(error):
-    visit_count = get_visit()
+    #visit_count = get_visit()
     all_item, all_item_kr, all_item_en, all_path, all_path_0, all_path_1, all_type, all_type_kr, all_type_en = get_all_item()
     return render_template('error.html', **locals()), 404
 
@@ -3360,7 +3349,7 @@ def page_not_found(error):
 
 @app.route('/notice/')
 def notice():
-    visit_count = get_visit()
+    #visit_count = get_visit()
     all_item, all_item_kr, all_item_en, all_path, all_path_0, all_path_1, all_type, all_type_kr, all_type_en = get_all_item()
 
     path = '/home/ec2-user/environment/warframets/data/json/info/notice_data.json'
@@ -3450,7 +3439,7 @@ def notice():
 
 @app.route('/en/notice/')
 def notice_en():
-    visit_count = get_visit()
+    #visit_count = get_visit()
     all_item, all_item_kr, all_item_en, all_path, all_path_0, all_path_1, all_type, all_type_kr, all_type_en = get_all_item()
 
     path = '/home/ec2-user/environment/warframets/data/json/info/notice_data_en.json'
@@ -3540,7 +3529,7 @@ def notice_en():
 
 @app.route('/economy/')
 def economy():
-    visit_count = get_visit()
+    #visit_count = get_visit()
 
     today_datetime = get_today_date()
     all_top = read_csv('all_top', 'result')
@@ -3779,7 +3768,7 @@ def economy():
 
 @app.route('/en/economy/')
 def economy_en():
-    visit_count = get_visit()
+    #visit_count = get_visit()
 
     today_datetime = get_today_date()
     all_top = read_csv('all_top', 'result')
