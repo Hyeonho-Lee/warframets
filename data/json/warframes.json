@@ -7,6 +7,12 @@
             "kr_name": "로키 프라임"
         },
         {
+            "name": "harrow_prime",
+            "type": "warframe",
+            "en_name": "Harrow Prime",
+            "kr_name": "해로우 프라임"
+        },
+        {
             "name": "nidus_prime",
             "type": "warframe",
             "en_name": "Nidus Prime",

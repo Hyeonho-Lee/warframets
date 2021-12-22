@@ -7,6 +7,18 @@
             "kr_name": "바자 프라임"
         },
         {
+            "name": "knell_prime",
+            "type": "secondary",
+            "en_name": "Knell Prime",
+            "kr_name": "넬 프라임"
+        },
+        {
+            "name": "scourge_prime",
+            "type": "melee",
+            "en_name": "Scourge Prime",
+            "kr_name": "스커지 프라임"
+        },
+        {
             "name": "strun_prime",
             "type": "primary",
             "en_name": "Strun Prime",
