@@ -7,10 +7,22 @@
             "kr_name": "바자 프라임"
         },
         {
+            "name": "nagantaka_prime",
+            "type": "primary",
+            "en_name": "Nagantaka Prime",
+            "kr_name": "나간타카 프라임"
+        },
+        {
             "name": "knell_prime",
             "type": "secondary",
             "en_name": "Knell Prime",
             "kr_name": "넬 프라임"
+        },
+        {
+            "name": "corvas_prime",
+            "type": "primary",
+            "en_name": "Corvas Prime",
+            "kr_name": "코르바스 프라임"
         },
         {
             "name": "scourge_prime",

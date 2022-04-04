@@ -7,6 +7,12 @@
             "kr_name": "로키 프라임"
         },
         {
+            "name": "garuda_prime",
+            "type": "warframe",
+            "en_name": "Garuda Prime",
+            "kr_name": "가루다 프라임"
+        },
+        {
             "name": "harrow_prime",
             "type": "warframe",
             "en_name": "Harrow Prime",
